@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>MACHINE - WFMSB622 Database</title>
+  <!-- Tell the browser to be responsive to screen width -->
+  <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+  <!-- Bootstrap 3.3.5 -->
+  <link rel="stylesheet" href="../bower/admin-lte/bootstrap/css/bootstrap.min.css">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="../bower/font-awesome/css/font-awesome.min.css">
+  <!-- Ionicons -->
+  <link rel="stylesheet" href="../bower/ionicons/css/ionicons.min.css">
+  <!-- DataTables -->
+  <link rel="stylesheet" href="../bower/datatables.net-bs/css/dataTables.bootstrap.min.css">
+  <link rel="stylesheet" href="../bower/datatables.net-buttons-bs/css/buttons.bootstrap.min.css">
+  <!-- Code Mirror -->
+  <link rel="stylesheet" href="../bower/codemirror/codemirror.css">
+  <!-- Fonts -->
+  <link href='../fonts/indieflower/indie-flower.css' rel='stylesheet' type='text/css'>
+  <link href='../fonts/source-sans-pro/source-sans-pro.css' rel='stylesheet' type='text/css'>
+
+  <!-- Theme style -->
+  <link rel="stylesheet" href="../bower/admin-lte/dist/css/AdminLTE.min.css">
+  <!-- Salvattore -->
+  <link rel="stylesheet" href="../bower/salvattore/salvattore.css">
+  <!-- AdminLTE Skins. Choose a skin from the css/skins
+       folder instead of downloading all of them to reduce the load. -->
+  <link rel="stylesheet" href="../bower/admin-lte/dist/css/skins/_all-skins.min.css">
+  <!-- SchemaSpy -->
+  <link rel="stylesheet" href="../schemaSpy.css">
+  
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+  <script src="../bower/html5shiv/html5shiv.min.js"></script>
+  <script src="../bower/respond/respond.min.js"></script>
+  <![endif]-->
+</head>
+<!-- ADD THE CLASS layout-top-nav TO REMOVE THE SIDEBAR. -->
+<body class="hold-transition skin-blue layout-top-nav">
+<div class="wrapper">
+  <header class="main-header">
+    <nav class="navbar navbar-static-top">
+      <div class="container">
+        <div class="navbar-header">
+          <a href="../index.html" class="navbar-brand"><b>WFMSB622</b> Database</a>
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse">
+            <i class="fa fa-bars"></i>
+          </button>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse pull-left" id="navbar-collapse">
+          <ul class="nav navbar-nav">
+            <li><a href="../index.html">Tables <span class="sr-only">(current)</span></a></li>            
+			<!--<li><a href="../components.html" title="List of system components">Components</a></li>-->
+			<li><a href="../columns.html" title="All of the columns in the schema">Columns</a></li>
+			<li><a href="../constraints.html" title="Useful for diagnosing error messages that just give constraint name or number">Constraints</a></li>
+			<li><a href="../relationships.html" title="Diagram of table relationships">Relationships</a></li>
+			<li><a href="../orphans.html" title="View of tables with neither parents nor children">Orphan&nbsp;Tables</a></li>				
+			<li><a href="../anomalies.html" title="Things that might not be quite right">Anomalies</a></li>
+          </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+        <!-- Navbar Right Menu -->
+
+      </div>
+      <!-- /.container-fluid -->
+    </nav>
+  </header>
+  <!-- Main content -->
+  <!-- Full Width Column -->
+  <div class="content-wrapper">
+          <!-- Content Header (Page header) -->
+      <section class="content-header">
+        <h1>MACHINE</h1></br>
+		      </section>
+      <!-- Main content -->
+      <section class="content">
+		<div class="box box-primary">
+			<div class="box-header with-border">
+			  <span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span>
+              <h3 id="Columns" class="box-title">Columns</h3>
+              <div class="box-tools pull-right">
+                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
+                </button>
+                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+              </div>
+            </div>	
+            <div class="box-body">
+				<table id="standard_table" class="table table-bordered table-striped dataTable" role="grid">
+				<thead align='left'>
+				<tr>
+				  <th>Column</th>
+				  <th>Type</th>
+				  <th>Size</th>
+				  <th title='Are nulls allowed?'>Nulls</th>
+				  <th title='Is column automatically updated?'>Auto</th>
+				  <th title='Default value'>Default</th>
+				  <th title='Columns in tables that reference this column'>Children</th>
+				  <th title='Columns in tables that are referenced by this column'>Parents</th>
+				  <th title='Comments' class="toggle"><span>Comments</span></th>
+				</tr>
+				</thead>
+				<tbody>
+				<tr>
+				 <td class='primaryKey' title='Primary Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="MACH_ID">MACH_ID</span></td>
+				 <td>NUMBER</td>
+				 <td>38</td>
+				 <td title=''></td>
+				 <td title=''></td>
+				 <td>null</td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				   <tr>
+					<td title="DOCKET.MACH_ID references MACHINE.MACH_ID via FK_DOCKET_MACH_ID">
+						<a href='DOCKET.html'>DOCKET</a><span class='relatedKey'>.MACH_ID</span>
+					</td>
+					<td class="constraint detail">
+						FK_DOCKET_MACH_ID <span title='Cascade on delete:&#10;Deletion of parent deletes child'>C</span>
+					</td>
+				   </tr>
+				   <tr>
+					<td title="VIEW_DOCKET.MACH_ID&#39;s name implies that it&#39;s a child of MACHINE.MACH_ID, but it doesn&#39;t reference that column.">
+						<a href='VIEW_DOCKET.html'>VIEW_DOCKET</a><span class='relatedKey'>.MACH_ID</span>
+					</td>
+					<td class="constraint detail">
+						Implied Constraint <span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span>
+					</td>
+				   </tr>
+				   <tr>
+					<td title="VL_DOCKET.MACH_ID&#39;s name implies that it&#39;s a child of MACHINE.MACH_ID, but it doesn&#39;t reference that column.">
+						<a href='VL_DOCKET.html'>VL_DOCKET</a><span class='relatedKey'>.MACH_ID</span>
+					</td>
+					<td class="constraint detail">
+						Implied Constraint <span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span>
+					</td>
+				   </tr>
+				  </table>				 
+				 </td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>					 
+				 </td>
+				 <td></td>
+				</tr>
+				<tr>
+				 <td class='indexedColumn' title='Indexed'><i class='fa fa-sitemap fa-rotate-120' style='padding-right: 5px;'></i><span id="MACH_NAME">MACH_NAME</span></td>
+				 <td>VARCHAR2</td>
+				 <td>40</td>
+				 <td title=''></td>
+				 <td title=''></td>
+				 <td>null</td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>				 
+				 </td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>					 
+				 </td>
+				 <td></td>
+				</tr>
+				<tr>
+				 <td><span id="MACH_DESC">MACH_DESC</span></td>
+				 <td>VARCHAR2</td>
+				 <td>100</td>
+				 <td title='nullable'>√</td>
+				 <td title=''></td>
+				 <td>null</td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>				 
+				 </td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>					 
+				 </td>
+				 <td></td>
+				</tr>
+				<tr>
+				 <td><span id="CLIENT_ID">CLIENT_ID</span></td>
+				 <td>NUMBER</td>
+				 <td>38</td>
+				 <td title=''></td>
+				 <td title=''></td>
+				 <td>1 </td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>				 
+				 </td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>					 
+				 </td>
+				 <td></td>
+				</tr>
+								</tbody>
+				</table>
+				<p title='4 columns'>Table contained <span id="recordNumber">1</span> rows<p/>
+			</div>
+		</div>
+		<div class="box box-primary">		
+			<div class="box-header with-border">
+              <i class="fa fa-sitemap"></i>
+
+              <h3 id="Indexes" class="box-title">Indexes</h3>
+
+              <div class="box-tools pull-right">
+                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
+                </button>
+                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+              </div>
+            </div>	
+			<div class="box-body">
+				<table id="indexes_table" class="table table-bordered table-striped dataTable" role="grid">
+				<thead>
+				 <tr>
+				  <th>Constraint Name</th>
+				  <th>Type</th>
+				  <th>Sort</th>
+				  <th>Column(s)</th>
+				 </tr>
+				</thead>
+				<tbody>
+				 <tr>
+				  <td class='primaryKey' title='Primary Key'><i class='icon ion-key iconkey'></i> PK_MACHINE</td>
+				  <td>Primary key</td>
+				  <td><span title='Ascending'>Asc</span></td>
+				  <td>MACH_ID</td>
+				 </tr>				 
+				 <tr>
+				  <td class='uniqueKey' title='Unique Key'><i class='icon ion-key iconkey'></i> UK_MACH_MACH_NAME</td>
+				  <td>Must be unique</td>
+				  <td><span title='Ascending'>Asc</span></td>
+				  <td>MACH_NAME</td>
+				 </tr>				 
+				</tbody>
+				</table>   			  
+			</div><!-- /.box-body -->
+		</div>
+				<div class="box box-primary">		
+			<div class="box-header with-border">
+              <i class="fa fa-code-fork"></i>
+
+              <h3 id="Relationships" class="box-title">Relationships</h3>
+
+              <div class="box-tools pull-right">
+                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
+                </button>
+                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+              </div>
+            </div>	
+			<div class="box-body">	
+			<div class="nav-tabs-custom" style="cursor: move;">
+            <!-- Tabs within a box -->
+			<h5>Close relationships within degrees of separation</h5>
+            <ul class="nav nav-tabs pull-left ui-sortable-handle">
+			  			              <li class="active"><a href="#oneDegreeImg-chart" data-toggle="tab" aria-expanded="true">One</a></li>			  			 
+			  			              <li class=""><a href="#twodegreesDegreeImg-chart" data-toggle="tab" aria-expanded="true">Two degrees</a></li>			  			 
+			  			              <li class=""><a href="#oneimpliedDegreeImg-chart" data-toggle="tab" aria-expanded="true">One implied</a></li>			  			 
+			  			              <li class=""><a href="#twoimpliedDegreeImg-chart" data-toggle="tab" aria-expanded="true">Two implied</a></li>			  			 
+            </ul>
+            <div class="tab-content no-padding">            
+				<div class="chart tab-pane active" id="oneDegreeImg-chart" style="position: relative; overflow-x:auto;">					
+					<map id="oneDegreeRelationshipsDiagram" name="oneDegreeRelationshipsDiagram">
+<area shape="rect" id="node1" href="DOCKET.html" title="DOCKET" alt="" coords="305,5,544,299">
+<area shape="rect" id="node2" href="MACHINE.html" title="MACHINE" alt="" coords="5,61,261,248">
+</map>
+
+					<a name='diagram'><img id='oneDegreeImg' src='../diagrams/MACHINE.1degree.png' usemap='#oneDegreeRelationshipsDiagram' class='diagram' border='0' alt='' align='left'></a>							
+				</div>
+				<div class="chart tab-pane " id="twodegreesDegreeImg-chart" style="position: relative; overflow-x:auto;">					
+					<map id="twoDegreesRelationshipsDiagram" name="twoDegreesRelationshipsDiagram">
+<area shape="rect" id="node1" href="AGG_USER_WRK.html" title="AGG_USER_WRK" alt="" coords="925,5,1132,93">
+<area shape="rect" id="node2" href="DOCKET.html" title="DOCKET" alt="" coords="588,783,827,1076">
+<area shape="rect" id="node3" href="PROJECT.html" title="PROJECT" alt="" coords="339,1092,493,1180">
+<area shape="rect" id="node6" href="ACTIVITY_SET.html" title="ACTIVITY_SET" alt="" coords="323,951,509,1039">
+<area shape="rect" id="node7" href="LABOR_METRIC_SEC.html" title="LABOR_METRIC_SEC" alt="" coords="5,1056,244,1144">
+<area shape="rect" id="node8" href="MACHINE.html" title="MACHINE" alt="" coords="288,641,544,828">
+<area shape="rect" id="node9" href="PART.html" title="PART" alt="" coords="355,845,477,933">
+<area shape="rect" id="node4" href="CENSUS_DATA.html" title="CENSUS_DATA" alt="" coords="933,111,1124,199">
+<area shape="rect" id="node5" href="CLOCK_PRESET.html" title="CLOCK_PRESET" alt="" coords="927,216,1131,304">
+<area shape="rect" id="node10" href="DOCKET_RDR_GRP.html" title="DOCKET_RDR_GRP" alt="" coords="915,743,1143,831">
+<area shape="rect" id="node11" href="EMP_DEF_LAB.html" title="EMP_DEF_LAB" alt="" coords="934,321,1123,409">
+<area shape="rect" id="node12" href="EMP_SCHD_DTL_LAYER.html" title="EMP_SCHD_DTL_LAYER" alt="" coords="899,427,1159,515">
+<area shape="rect" id="node13" href="EMPLOYEE_SCHED_DTL.html" title="EMPLOYEE_SCHED_DTL" alt="" coords="897,532,1161,620">
+<area shape="rect" id="node14" href="ES_ROTROW_CONFLICTS.html" title="ES_ROTROW_CONFLICTS" alt="" coords="892,637,1165,725">
+<area shape="rect" id="node15" href="ES_ROW_LM.html" title="ES_ROW_LM" alt="" coords="941,848,1116,936">
+<area shape="rect" id="node16" href="ES_SHIFT_DETAIL.html" title="ES_SHIFT_DETAIL" alt="" coords="922,1164,1135,1252">
+<area shape="rect" id="node17" href="ES_SHIFT_DETAIL_LAYER.html" title="ES_SHIFT_DETAIL_LAYER" alt="" coords="893,1375,1164,1463">
+<area shape="rect" id="node18" href="ES_SHIFT_HIST_DET.html" title="ES_SHIFT_HIST_DET" alt="" coords="911,1480,1146,1568">
+<area shape="rect" id="node19" href="LABOR_SHORTCUT_DTL.html" title="LABOR_SHORTCUT_DTL" alt="" coords="896,1585,1161,1673">
+<area shape="rect" id="node20" href="SCHED_COST_DETAIL.html" title="SCHED_COST_DETAIL" alt="" coords="906,1691,1151,1779">
+<area shape="rect" id="node21" href="SHIFT_PATTERN_SHIFT_LABOR.html" title="SHIFT_PATTERN_SHIFT_LABOR" alt="" coords="871,1796,1187,1884">
+<area shape="rect" id="node22" href="SHIFT_PREMIUM_ZONE.html" title="SHIFT_PREMIUM_ZONE" alt="" coords="902,1901,1155,1989">
+<area shape="rect" id="node23" href="SR_SUMMARY.html" title="SR_SUMMARY" alt="" coords="935,953,1122,1041">
+<area shape="rect" id="node24" href="UNSTFD_SHIFT.html" title="UNSTFD_SHIFT" alt="" coords="931,1059,1126,1147">
+<area shape="rect" id="node25" href="WORK_DETAIL.html" title="WORK_DETAIL" alt="" coords="934,1269,1123,1357">
+</map>
+
+					<a name='diagram'><img id='twodegreesDegreeImg' src='../diagrams/MACHINE.2degrees.png' usemap='#twoDegreesRelationshipsDiagram' class='diagram' border='0' alt='' align='left'></a>							
+				</div>
+				<div class="chart tab-pane " id="oneimpliedDegreeImg-chart" style="position: relative; overflow-x:auto;">					
+					<map id="oneDegreeRelationshipsDiagramImplied" name="oneDegreeRelationshipsDiagramImplied">
+<area shape="rect" id="node1" href="DOCKET.html" title="DOCKET" alt="" coords="305,57,544,351">
+<area shape="rect" id="node2" href="MACHINE.html" title="MACHINE" alt="" coords="5,113,261,300">
+<area shape="rect" id="node3" href="VIEW_DOCKET.html" title="VIEW_DOCKET" alt="" coords="588,5,827,216">
+<area shape="rect" id="node4" href="VL_DOCKET.html" title="VL_DOCKET" alt="" coords="588,265,827,505">
+</map>
+
+					<a name='diagram'><img id='oneimpliedDegreeImg' src='../diagrams/MACHINE.implied1degrees.png' usemap='#oneDegreeRelationshipsDiagramImplied' class='diagram' border='0' alt='' align='left'></a>							
+				</div>
+				<div class="chart tab-pane " id="twoimpliedDegreeImg-chart" style="position: relative; overflow-x:auto;">					
+					<map id="twoDegreesRelationshipsDiagramImplied" name="twoDegreesRelationshipsDiagramImplied">
+<area shape="rect" id="node1" href="AGG_USER_WRK.html" title="AGG_USER_WRK" alt="" coords="925,563,1132,651">
+<area shape="rect" id="node2" href="DOCKET.html" title="DOCKET" alt="" coords="588,1301,827,1595">
+<area shape="rect" id="node3" href="PROJECT.html" title="PROJECT" alt="" coords="339,1932,493,2020">
+<area shape="rect" id="node6" href="ACTIVITY_SET.html" title="ACTIVITY_SET" alt="" coords="323,537,509,625">
+<area shape="rect" id="node7" href="LABOR_METRIC_SEC.html" title="LABOR_METRIC_SEC" alt="" coords="5,1480,244,1568">
+<area shape="rect" id="node8" href="MACHINE.html" title="MACHINE" alt="" coords="288,228,544,415">
+<area shape="rect" id="node9" href="PART.html" title="PART" alt="" coords="355,432,477,520">
+<area shape="rect" id="node4" href="CENSUS_DATA.html" title="CENSUS_DATA" alt="" coords="933,1564,1124,1652">
+<area shape="rect" id="node5" href="CLOCK_PRESET.html" title="CLOCK_PRESET" alt="" coords="927,951,1131,1039">
+<area shape="rect" id="node10" href="DOCKET_RDR_GRP.html" title="DOCKET_RDR_GRP" alt="" coords="915,1128,1143,1216">
+<area shape="rect" id="node11" href="EMP_DEF_LAB.html" title="EMP_DEF_LAB" alt="" coords="934,1669,1123,1757">
+<area shape="rect" id="node12" href="EMP_SCHD_DTL_LAYER.html" title="EMP_SCHD_DTL_LAYER" alt="" coords="899,1775,1159,1863">
+<area shape="rect" id="node13" href="EMPLOYEE_SCHED_DTL.html" title="EMPLOYEE_SCHED_DTL" alt="" coords="897,1880,1161,1968">
+<area shape="rect" id="node14" href="ES_ROTROW_CONFLICTS.html" title="ES_ROTROW_CONFLICTS" alt="" coords="892,1985,1165,2073">
+<area shape="rect" id="node15" href="ES_ROW_LM.html" title="ES_ROW_LM" alt="" coords="941,2091,1116,2179">
+<area shape="rect" id="node16" href="ES_SHIFT_DETAIL.html" title="ES_SHIFT_DETAIL" alt="" coords="922,2196,1135,2284">
+<area shape="rect" id="node17" href="ES_SHIFT_DETAIL_LAYER.html" title="ES_SHIFT_DETAIL_LAYER" alt="" coords="893,2301,1164,2389">
+<area shape="rect" id="node18" href="ES_SHIFT_HIST_DET.html" title="ES_SHIFT_HIST_DET" alt="" coords="911,2407,1146,2495">
+<area shape="rect" id="node19" href="LABOR_SHORTCUT_DTL.html" title="LABOR_SHORTCUT_DTL" alt="" coords="896,2593,1161,2681">
+<area shape="rect" id="node20" href="SCHED_COST_DETAIL.html" title="SCHED_COST_DETAIL" alt="" coords="906,2699,1151,2787">
+<area shape="rect" id="node21" href="SHIFT_PATTERN_SHIFT_LABOR.html" title="SHIFT_PATTERN_SHIFT_LABOR" alt="" coords="871,2804,1187,2892">
+<area shape="rect" id="node22" href="SHIFT_PREMIUM_ZONE.html" title="SHIFT_PREMIUM_ZONE" alt="" coords="902,3017,1155,3105">
+<area shape="rect" id="node23" href="SR_SUMMARY.html" title="SR_SUMMARY" alt="" coords="935,668,1122,756">
+<area shape="rect" id="node24" href="UNSTFD_SHIFT.html" title="UNSTFD_SHIFT" alt="" coords="931,1377,1126,1465">
+<area shape="rect" id="node25" href="VIEW_DOCKET.html" title="VIEW_DOCKET" alt="" coords="909,263,1148,473">
+<area shape="rect" id="node26" href="VIEW_EMP_DEF_LAB.html" title="VIEW_EMP_DEF_LAB" alt="" coords="1286,1669,1517,1733">
+<area shape="rect" id="node27" href="VIEW_MOD_WORK_DETAIL.html" title="VIEW_MOD_WORK_DETAIL" alt="" coords="1264,1196,1539,1260">
+<area shape="rect" id="node28" href="WORK_DETAIL.html" title="WORK_DETAIL" alt="" coords="934,845,1123,933">
+<area shape="rect" id="node29" href="VIEW_PAYEXP_ADJUSTMENT.html" title="VIEW_PAYEXP_ADJUSTMENT" alt="" coords="883,1483,1175,1547">
+<area shape="rect" id="node30" href="VIEW_PAYEXP_CURRENT.html" title="VIEW_PAYEXP_CURRENT" alt="" coords="897,2512,1161,2576">
+<area shape="rect" id="node31" href="VIEW_SHIFT_PREMIUM_ZONE_FULL.html" title="VIEW_SHIFT_PREMIUM_ZONE_FULL" alt="" coords="1231,2977,1572,3041">
+<area shape="rect" id="node32" href="VIEW_WORK_DETAIL.html" title="VIEW_WORK_DETAIL" alt="" coords="1286,809,1517,873">
+<area shape="rect" id="node33" href="VIEW_WORK_DETAIL_ADJUST.html" title="VIEW_WORK_DETAIL_ADJUST" alt="" coords="1616,891,1913,955">
+<area shape="rect" id="node34" href="WORK_DETAIL_ADJUST.html" title="WORK_DETAIL_ADJUST" alt="" coords="1273,891,1529,979">
+<area shape="rect" id="node35" href="VL_CLOCK_PRESET.html" title="VL_CLOCK_PRESET" alt="" coords="1288,1055,1515,1119">
+<area shape="rect" id="node36" href="VL_DOCKET.html" title="VL_DOCKET" alt="" coords="909,5,1148,245">
+<area shape="rect" id="node37" href="VL_SHIFT_PREMIUM_ZONE.html" title="VL_SHIFT_PREMIUM_ZONE" alt="" coords="1263,3059,1540,3123">
+</map>
+
+					<a name='diagram'><img id='twoimpliedDegreeImg' src='../diagrams/MACHINE.implied2degrees.png' usemap='#twoDegreesRelationshipsDiagramImplied' class='diagram' border='0' alt='' align='left'></a>							
+				</div>
+			  			</div>
+			</div>
+		  </div><!-- /.box-body -->
+		</div>
+	      </section>
+    
+  </div>
+  <!-- /.content-wrapper -->
+  <footer class="main-footer">
+    <div>
+      <div class="pull-right hidden-xs">
+        <a href="https://github.com/schemaspy/schemaspy" title="GitHub for SchemaSpy"><i class="fa fa-github-square fa-2x"></i></a>
+        <a href="http://stackoverflow.com/questions/tagged/schemaspy" title="StackOverflow for SchemaSpy"><i class="fa fa-stack-overflow fa-2x"></i></a>
+      </div>
+      <strong>Generated by <a href="http://schemaspy.org/" class="logo-text"><i class="fa fa-database"></i> SchemaSpy 6.0.0-rc2</a></strong>
+    </div>
+    <!-- /.container -->
+  </footer>
+</div>
+<!-- ./wrapper -->
+
+<!-- jQuery 2.2.3 -->
+<script src="../bower/admin-lte/plugins/jQuery/jquery-2.2.3.min.js"></script>
+<script src="../bower/admin-lte/plugins/jQueryUI/jquery-ui.min.js"></script>
+<!-- Bootstrap 3.3.5 -->
+<script src="../bower/admin-lte/bootstrap/js/bootstrap.min.js"></script>
+<!-- DataTables -->
+<script src="../bower/datatables.net/jquery.dataTables.min.js"></script>
+<script src="../bower/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
+<script src="../bower/datatables.net-buttons/dataTables.buttons.min.js"></script>
+<script src="../bower/datatables.net-buttons-bs/js/buttons.bootstrap.min.js"></script>
+<script src="../bower/datatables.net-buttons/buttons.html5.min.js"></script>
+<script src="../bower/datatables.net-buttons/buttons.print.min.js"></script>
+<script src="../bower/datatables.net-buttons/buttons.colVis.min.js"></script>
+
+<!-- SlimScroll -->
+<script src="../bower/admin-lte/plugins/slimScroll/jquery.slimscroll.min.js"></script>
+<!-- FastClick -->
+<script src="../bower/admin-lte/plugins/fastclick/fastclick.js"></script>
+<!-- Salvattore -->
+<script src="../bower/salvattore/salvattore.min.js"></script>
+<!-- AnchorJS -->
+<script src="../bower/anchor-js/anchor.min.js"></script>
+<!-- CodeMirror -->
+<script src="../bower/codemirror/codemirror.js"></script>
+<script src="../bower/codemirror/sql.js"></script>
+<!-- AdminLTE App -->
+<script src="../bower/admin-lte/dist/js/app.min.js"></script>
+<script src="table.js"></script>
+<script src="../schemaSpy.js"></script>
+</body>
+</html>

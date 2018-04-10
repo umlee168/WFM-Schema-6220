@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>TIME_CODE_RDR_GRP - WFMSB622 Database</title>
+  <!-- Tell the browser to be responsive to screen width -->
+  <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+  <!-- Bootstrap 3.3.5 -->
+  <link rel="stylesheet" href="../bower/admin-lte/bootstrap/css/bootstrap.min.css">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="../bower/font-awesome/css/font-awesome.min.css">
+  <!-- Ionicons -->
+  <link rel="stylesheet" href="../bower/ionicons/css/ionicons.min.css">
+  <!-- DataTables -->
+  <link rel="stylesheet" href="../bower/datatables.net-bs/css/dataTables.bootstrap.min.css">
+  <link rel="stylesheet" href="../bower/datatables.net-buttons-bs/css/buttons.bootstrap.min.css">
+  <!-- Code Mirror -->
+  <link rel="stylesheet" href="../bower/codemirror/codemirror.css">
+  <!-- Fonts -->
+  <link href='../fonts/indieflower/indie-flower.css' rel='stylesheet' type='text/css'>
+  <link href='../fonts/source-sans-pro/source-sans-pro.css' rel='stylesheet' type='text/css'>
+
+  <!-- Theme style -->
+  <link rel="stylesheet" href="../bower/admin-lte/dist/css/AdminLTE.min.css">
+  <!-- Salvattore -->
+  <link rel="stylesheet" href="../bower/salvattore/salvattore.css">
+  <!-- AdminLTE Skins. Choose a skin from the css/skins
+       folder instead of downloading all of them to reduce the load. -->
+  <link rel="stylesheet" href="../bower/admin-lte/dist/css/skins/_all-skins.min.css">
+  <!-- SchemaSpy -->
+  <link rel="stylesheet" href="../schemaSpy.css">
+  
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+  <script src="../bower/html5shiv/html5shiv.min.js"></script>
+  <script src="../bower/respond/respond.min.js"></script>
+  <![endif]-->
+</head>
+<!-- ADD THE CLASS layout-top-nav TO REMOVE THE SIDEBAR. -->
+<body class="hold-transition skin-blue layout-top-nav">
+<div class="wrapper">
+  <header class="main-header">
+    <nav class="navbar navbar-static-top">
+      <div class="container">
+        <div class="navbar-header">
+          <a href="../index.html" class="navbar-brand"><b>WFMSB622</b> Database</a>
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse">
+            <i class="fa fa-bars"></i>
+          </button>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse pull-left" id="navbar-collapse">
+          <ul class="nav navbar-nav">
+            <li><a href="../index.html">Tables <span class="sr-only">(current)</span></a></li>            
+			<!--<li><a href="../components.html" title="List of system components">Components</a></li>-->
+			<li><a href="../columns.html" title="All of the columns in the schema">Columns</a></li>
+			<li><a href="../constraints.html" title="Useful for diagnosing error messages that just give constraint name or number">Constraints</a></li>
+			<li><a href="../relationships.html" title="Diagram of table relationships">Relationships</a></li>
+			<li><a href="../orphans.html" title="View of tables with neither parents nor children">Orphan&nbsp;Tables</a></li>				
+			<li><a href="../anomalies.html" title="Things that might not be quite right">Anomalies</a></li>
+          </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+        <!-- Navbar Right Menu -->
+
+      </div>
+      <!-- /.container-fluid -->
+    </nav>
+  </header>
+  <!-- Main content -->
+  <!-- Full Width Column -->
+  <div class="content-wrapper">
+          <!-- Content Header (Page header) -->
+      <section class="content-header">
+        <h1>TIME_CODE_RDR_GRP</h1></br>
+		      </section>
+      <!-- Main content -->
+      <section class="content">
+		<div class="box box-primary">
+			<div class="box-header with-border">
+			  <span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span>
+              <h3 id="Columns" class="box-title">Columns</h3>
+              <div class="box-tools pull-right">
+                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
+                </button>
+                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+              </div>
+            </div>	
+            <div class="box-body">
+				<table id="standard_table" class="table table-bordered table-striped dataTable" role="grid">
+				<thead align='left'>
+				<tr>
+				  <th>Column</th>
+				  <th>Type</th>
+				  <th>Size</th>
+				  <th title='Are nulls allowed?'>Nulls</th>
+				  <th title='Is column automatically updated?'>Auto</th>
+				  <th title='Default value'>Default</th>
+				  <th title='Columns in tables that reference this column'>Children</th>
+				  <th title='Columns in tables that are referenced by this column'>Parents</th>
+				  <th title='Comments' class="toggle"><span>Comments</span></th>
+				</tr>
+				</thead>
+				<tbody>
+				<tr>
+				 <td class='primaryKey' title='Primary Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="TCODERDRGRP_ID">TCODERDRGRP_ID</span></td>
+				 <td>NUMBER</td>
+				 <td>38</td>
+				 <td title=''></td>
+				 <td title=''></td>
+				 <td>null</td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>				 
+				 </td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>					 
+				 </td>
+				 <td></td>
+				</tr>
+				<tr>
+				 <td class='foreignKey' title='Foreign Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="TCODE_ID">TCODE_ID</span></td>
+				 <td>NUMBER</td>
+				 <td>38</td>
+				 <td title=''></td>
+				 <td title=''></td>
+				 <td>null</td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>				 
+				 </td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				   <tr>
+					<td title="TIME_CODE_RDR_GRP.TCODE_ID references TIME_CODE.TCODE_ID via FK_TCDRDRGP_TCID">
+						<a href='TIME_CODE.html'>TIME_CODE</a><span class='relatedKey'>.TCODE_ID</span>
+					</td>
+					<td class="constraint detail">
+						FK_TCDRDRGP_TCID <span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span>
+					</td>
+				   </tr>
+				  </table>					 
+				 </td>
+				 <td></td>
+				</tr>
+				<tr>
+				 <td class='foreignKey' title='Foreign Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="RDRGRP_ID">RDRGRP_ID</span></td>
+				 <td>NUMBER</td>
+				 <td>38</td>
+				 <td title=''></td>
+				 <td title=''></td>
+				 <td>null</td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>				 
+				 </td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				   <tr>
+					<td title="TIME_CODE_RDR_GRP.RDRGRP_ID references READER_GROUP.RDRGRP_ID via FK_TCDRDRGP_RGID">
+						<a href='READER_GROUP.html'>READER_GROUP</a><span class='relatedKey'>.RDRGRP_ID</span>
+					</td>
+					<td class="constraint detail">
+						FK_TCDRDRGP_RGID <span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span>
+					</td>
+				   </tr>
+				  </table>					 
+				 </td>
+				 <td></td>
+				</tr>
+				<tr>
+				 <td><span id="CLIENT_ID">CLIENT_ID</span></td>
+				 <td>NUMBER</td>
+				 <td>38</td>
+				 <td title=''></td>
+				 <td title=''></td>
+				 <td>1 </td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>				 
+				 </td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>					 
+				 </td>
+				 <td></td>
+				</tr>
+								</tbody>
+				</table>
+				<p title='4 columns'>Table contained <span id="recordNumber">0</span> rows<p/>
+			</div>
+		</div>
+		<div class="box box-primary">		
+			<div class="box-header with-border">
+              <i class="fa fa-sitemap"></i>
+
+              <h3 id="Indexes" class="box-title">Indexes</h3>
+
+              <div class="box-tools pull-right">
+                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
+                </button>
+                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+              </div>
+            </div>	
+			<div class="box-body">
+				<table id="indexes_table" class="table table-bordered table-striped dataTable" role="grid">
+				<thead>
+				 <tr>
+				  <th>Constraint Name</th>
+				  <th>Type</th>
+				  <th>Sort</th>
+				  <th>Column(s)</th>
+				 </tr>
+				</thead>
+				<tbody>
+				 <tr>
+				  <td class='primaryKey' title='Primary Key'><i class='icon ion-key iconkey'></i> PK_TCODE_RDR_GRP</td>
+				  <td>Primary key</td>
+				  <td><span title='Ascending'>Asc</span></td>
+				  <td>TCODERDRGRP_ID</td>
+				 </tr>				 
+				</tbody>
+				</table>   			  
+			</div><!-- /.box-body -->
+		</div>
+				<div class="box box-primary">		
+			<div class="box-header with-border">
+              <i class="fa fa-code-fork"></i>
+
+              <h3 id="Relationships" class="box-title">Relationships</h3>
+
+              <div class="box-tools pull-right">
+                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
+                </button>
+                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+              </div>
+            </div>	
+			<div class="box-body">	
+			<div class="nav-tabs-custom" style="cursor: move;">
+            <!-- Tabs within a box -->
+			<h5>Close relationships within degrees of separation</h5>
+            <ul class="nav nav-tabs pull-left ui-sortable-handle">
+			  			              <li class="active"><a href="#oneDegreeImg-chart" data-toggle="tab" aria-expanded="true">One</a></li>			  			 
+			  			              <li class=""><a href="#twodegreesDegreeImg-chart" data-toggle="tab" aria-expanded="true">Two degrees</a></li>			  			 
+			  			              <li class=""><a href="#oneimpliedDegreeImg-chart" data-toggle="tab" aria-expanded="true">One implied</a></li>			  			 
+			  			              <li class=""><a href="#twoimpliedDegreeImg-chart" data-toggle="tab" aria-expanded="true">Two implied</a></li>			  			 
+            </ul>
+            <div class="tab-content no-padding">            
+				<div class="chart tab-pane active" id="oneDegreeImg-chart" style="position: relative; overflow-x:auto;">					
+					<map id="oneDegreeRelationshipsDiagram" name="oneDegreeRelationshipsDiagram">
+<area shape="rect" id="node1" href="TIME_CODE_RDR_GRP.html" title="TIME_CODE_RDR_GRP" alt="" coords="335,85,652,272">
+<area shape="rect" id="node2" href="READER_GROUP.html" title="READER_GROUP" alt="" coords="21,257,275,433">
+<area shape="rect" id="node3" href="TIME_CODE.html" title="TIME_CODE" alt="" coords="5,5,291,240">
+</map>
+
+					<a name='diagram'><img id='oneDegreeImg' src='../diagrams/TIME_CODE_RDR_GRP.1degree.png' usemap='#oneDegreeRelationshipsDiagram' class='diagram' border='0' alt='' align='left'></a>							
+				</div>
+				<div class="chart tab-pane " id="twodegreesDegreeImg-chart" style="position: relative; overflow-x:auto;">					
+					<map id="twoDegreesRelationshipsDiagram" name="twoDegreesRelationshipsDiagram">
+<area shape="rect" id="node1" href="ACA_TIMECODE.html" title="ACA_TIMECODE" alt="" coords="945,1845,1143,1933">
+<area shape="rect" id="node2" href="HOUR_TYPE.html" title="HOUR_TYPE" alt="" coords="307,1780,481,1868">
+<area shape="rect" id="node3" href="TIME_CODE.html" title="TIME_CODE" alt="" coords="544,1069,829,1304">
+<area shape="rect" id="node18" href="LABOR_METRIC_SEC.html" title="LABOR_METRIC_SEC" alt="" coords="5,1552,244,1640">
+<area shape="rect" id="node29" href="COLOUR.html" title="COLOUR" alt="" coords="321,983,467,1071">
+<area shape="rect" id="node4" href="AGG_USER_WRK.html" title="AGG_USER_WRK" alt="" coords="941,1951,1147,2039">
+<area shape="rect" id="node5" href="AS_GROUP_TIME_CODE_EXCLUDE.html" title="AS_GROUP_TIME_CODE_EXCLUDE" alt="" coords="873,404,1215,492">
+<area shape="rect" id="node6" href="CLOCK_PRESET.html" title="CLOCK_PRESET" alt="" coords="942,509,1146,597">
+<area shape="rect" id="node7" href="CRIT_CLAUSE_TCODE.html" title="CRIT_CLAUSE_TCODE" alt="" coords="921,651,1167,739">
+<area shape="rect" id="node8" href="DEPARTMENT_RDR_GRP.html" title="DEPARTMENT_RDR_GRP" alt="" coords="910,2648,1178,2736">
+<area shape="rect" id="node9" href="READER_GROUP.html" title="READER_GROUP" alt="" coords="559,2856,814,3032">
+<area shape="rect" id="node24" href="READER_SERVER.html" title="READER_SERVER" alt="" coords="288,2917,500,3005">
+<area shape="rect" id="node10" href="DOCKET_RDR_GRP.html" title="DOCKET_RDR_GRP" alt="" coords="930,2753,1158,2841">
+<area shape="rect" id="node11" href="EMP_DEF_LAB.html" title="EMP_DEF_LAB" alt="" coords="949,2056,1139,2144">
+<area shape="rect" id="node12" href="EMP_SCHD_DTL_LAYER.html" title="EMP_SCHD_DTL_LAYER" alt="" coords="1287,15,1547,103">
+<area shape="rect" id="node13" href="SO_ACTIVITY.html" title="SO_ACTIVITY" alt="" coords="955,88,1133,176">
+<area shape="rect" id="node14" href="EMPLOYEE_READER_GROUP.html" title="EMPLOYEE_READER_GROUP" alt="" coords="895,2859,1193,2947">
+<area shape="rect" id="node15" href="EMPLOYEE_SCHED_DTL.html" title="EMPLOYEE_SCHED_DTL" alt="" coords="1285,1351,1549,1439">
+<area shape="rect" id="node16" href="FCST_NONPROD_TCODE.html" title="FCST_NONPROD_TCODE" alt="" coords="909,756,1179,844">
+<area shape="rect" id="node17" href="HOUR_SET_INCL_TIME_CODE.html" title="HOUR_SET_INCL_TIME_CODE" alt="" coords="892,861,1196,949">
+<area shape="rect" id="node19" href="JOB_RDR_GRP.html" title="JOB_RDR_GRP" alt="" coords="947,2964,1141,3052">
+<area shape="rect" id="node20" href="LABOR_SHORTCUT_DTL.html" title="LABOR_SHORTCUT_DTL" alt="" coords="911,2161,1177,2249">
+<area shape="rect" id="node21" href="MP_TEMPLATE_TCODE.html" title="MP_TEMPLATE_TCODE" alt="" coords="917,967,1171,1055">
+<area shape="rect" id="node22" href="PROJECT_RDR_GRP.html" title="PROJECT_RDR_GRP" alt="" coords="927,3069,1161,3157">
+<area shape="rect" id="node23" href="READER.html" title="READER" alt="" coords="973,3175,1115,3263">
+<area shape="rect" id="node25" href="SCHED_COST_DETAIL.html" title="SCHED_COST_DETAIL" alt="" coords="921,2267,1167,2355">
+<area shape="rect" id="node26" href="SHIFT_BREAK.html" title="SHIFT_BREAK" alt="" coords="951,1424,1137,1512">
+<area shape="rect" id="node27" href="SHIFT_PATTERN_SHIFT_LABOR.html" title="SHIFT_PATTERN_SHIFT_LABOR" alt="" coords="1259,577,1575,665">
+<area shape="rect" id="node28" href="SHIFT_PREMIUM_ZONE.html" title="SHIFT_PREMIUM_ZONE" alt="" coords="917,1529,1171,1617">
+<area shape="rect" id="node30" href="SP_ZONE_INCL_TIME_CODE.html" title="SP_ZONE_INCL_TIME_CODE" alt="" coords="899,1072,1189,1160">
+<area shape="rect" id="node31" href="TARGET_DETAIL_TIME_CODE.html" title="TARGET_DETAIL_TIME_CODE" alt="" coords="893,1177,1195,1265">
+<area shape="rect" id="node32" href="TIME_CODE_BALANCE.html" title="TIME_CODE_BALANCE" alt="" coords="920,1283,1168,1371">
+<area shape="rect" id="node33" href="TIME_CODE_DATA.html" title="TIME_CODE_DATA" alt="" coords="935,193,1153,281">
+<area shape="rect" id="node34" href="TIME_CODE_RDR_GRP.html" title="TIME_CODE_RDR_GRP" alt="" coords="885,2444,1203,2631">
+<area shape="rect" id="node35" href="TIME_OFF_TYPE.html" title="TIME_OFF_TYPE" alt="" coords="942,299,1146,387">
+<area shape="rect" id="node36" href="TOKE_POOL.html" title="TOKE_POOL" alt="" coords="957,1635,1131,1723">
+<area shape="rect" id="node37" href="WORK_DETAIL.html" title="WORK_DETAIL" alt="" coords="949,1740,1139,1828">
+</map>
+
+					<a name='diagram'><img id='twodegreesDegreeImg' src='../diagrams/TIME_CODE_RDR_GRP.2degrees.png' usemap='#twoDegreesRelationshipsDiagram' class='diagram' border='0' alt='' align='left'></a>							
+				</div>
+				<div class="chart tab-pane " id="oneimpliedDegreeImg-chart" style="position: relative; overflow-x:auto;">					
+					<map id="oneDegreeRelationshipsDiagramImplied" name="oneDegreeRelationshipsDiagramImplied">
+<area shape="rect" id="node1" href="TIME_CODE_RDR_GRP.html" title="TIME_CODE_RDR_GRP" alt="" coords="335,85,652,272">
+<area shape="rect" id="node2" href="READER_GROUP.html" title="READER_GROUP" alt="" coords="21,257,275,433">
+<area shape="rect" id="node3" href="TIME_CODE.html" title="TIME_CODE" alt="" coords="5,5,291,240">
+</map>
+
+					<a name='diagram'><img id='oneimpliedDegreeImg' src='../diagrams/TIME_CODE_RDR_GRP.implied1degrees.png' usemap='#oneDegreeRelationshipsDiagramImplied' class='diagram' border='0' alt='' align='left'></a>							
+				</div>
+				<div class="chart tab-pane " id="twoimpliedDegreeImg-chart" style="position: relative; overflow-x:auto;">					
+					<map id="twoDegreesRelationshipsDiagramImplied" name="twoDegreesRelationshipsDiagramImplied">
+<area shape="rect" id="node1" href="ACA_TIMECODE.html" title="ACA_TIMECODE" alt="" coords="945,576,1143,664">
+<area shape="rect" id="node2" href="HOUR_TYPE.html" title="HOUR_TYPE" alt="" coords="307,944,481,1032">
+<area shape="rect" id="node3" href="TIME_CODE.html" title="TIME_CODE" alt="" coords="544,2035,829,2270">
+<area shape="rect" id="node18" href="LABOR_METRIC_SEC.html" title="LABOR_METRIC_SEC" alt="" coords="5,944,244,1032">
+<area shape="rect" id="node29" href="COLOUR.html" title="COLOUR" alt="" coords="321,163,467,251">
+<area shape="rect" id="node4" href="AGG_USER_WRK.html" title="AGG_USER_WRK" alt="" coords="941,682,1147,770">
+<area shape="rect" id="node5" href="AS_GROUP_TIME_CODE_EXCLUDE.html" title="AS_GROUP_TIME_CODE_EXCLUDE" alt="" coords="873,2464,1215,2552">
+<area shape="rect" id="node6" href="CLOCK_PRESET.html" title="CLOCK_PRESET" alt="" coords="942,2570,1146,2658">
+<area shape="rect" id="node7" href="CRIT_CLAUSE_TCODE.html" title="CRIT_CLAUSE_TCODE" alt="" coords="921,2675,1167,2763">
+<area shape="rect" id="node8" href="DEPARTMENT_RDR_GRP.html" title="DEPARTMENT_RDR_GRP" alt="" coords="910,4151,1178,4239">
+<area shape="rect" id="node9" href="READER_GROUP.html" title="READER_GROUP" alt="" coords="559,4148,814,4324">
+<area shape="rect" id="node24" href="READER_SERVER.html" title="READER_SERVER" alt="" coords="288,4210,500,4298">
+<area shape="rect" id="node10" href="DOCKET_RDR_GRP.html" title="DOCKET_RDR_GRP" alt="" coords="930,4256,1158,4344">
+<area shape="rect" id="node11" href="EMP_DEF_LAB.html" title="EMP_DEF_LAB" alt="" coords="949,998,1139,1086">
+<area shape="rect" id="node12" href="EMP_SCHD_DTL_LAYER.html" title="EMP_SCHD_DTL_LAYER" alt="" coords="1301,192,1561,280">
+<area shape="rect" id="node13" href="SO_ACTIVITY.html" title="SO_ACTIVITY" alt="" coords="955,210,1133,298">
+<area shape="rect" id="node14" href="EMPLOYEE_READER_GROUP.html" title="EMPLOYEE_READER_GROUP" alt="" coords="895,4362,1193,4450">
+<area shape="rect" id="node15" href="EMPLOYEE_SCHED_DTL.html" title="EMPLOYEE_SCHED_DTL" alt="" coords="1299,298,1563,386">
+<area shape="rect" id="node16" href="FCST_NONPROD_TCODE.html" title="FCST_NONPROD_TCODE" alt="" coords="909,3030,1179,3118">
+<area shape="rect" id="node17" href="HOUR_SET_INCL_TIME_CODE.html" title="HOUR_SET_INCL_TIME_CODE" alt="" coords="892,1992,1196,2080">
+<area shape="rect" id="node19" href="JOB_RDR_GRP.html" title="JOB_RDR_GRP" alt="" coords="947,4467,1141,4555">
+<area shape="rect" id="node20" href="LABOR_SHORTCUT_DTL.html" title="LABOR_SHORTCUT_DTL" alt="" coords="911,787,1177,875">
+<area shape="rect" id="node21" href="MP_TEMPLATE_TCODE.html" title="MP_TEMPLATE_TCODE" alt="" coords="917,1602,1171,1690">
+<area shape="rect" id="node22" href="PROJECT_RDR_GRP.html" title="PROJECT_RDR_GRP" alt="" coords="927,4572,1161,4660">
+<area shape="rect" id="node23" href="READER.html" title="READER" alt="" coords="973,3974,1115,4062">
+<area shape="rect" id="node25" href="SCHED_COST_DETAIL.html" title="SCHED_COST_DETAIL" alt="" coords="921,892,1167,980">
+<area shape="rect" id="node26" href="SHIFT_BREAK.html" title="SHIFT_BREAK" alt="" coords="951,1460,1137,1548">
+<area shape="rect" id="node27" href="SHIFT_PATTERN_SHIFT_LABOR.html" title="SHIFT_PATTERN_SHIFT_LABOR" alt="" coords="1273,403,1589,491">
+<area shape="rect" id="node28" href="SHIFT_PREMIUM_ZONE.html" title="SHIFT_PREMIUM_ZONE" alt="" coords="917,3135,1171,3223">
+<area shape="rect" id="node30" href="SP_ZONE_INCL_TIME_CODE.html" title="SP_ZONE_INCL_TIME_CODE" alt="" coords="1287,2771,1576,2859">
+<area shape="rect" id="node31" href="TARGET_DETAIL_TIME_CODE.html" title="TARGET_DETAIL_TIME_CODE" alt="" coords="893,1707,1195,1795">
+<area shape="rect" id="node32" href="TIME_CODE_BALANCE.html" title="TIME_CODE_BALANCE" alt="" coords="920,2287,1168,2375">
+<area shape="rect" id="node33" href="TIME_CODE_DATA.html" title="TIME_CODE_DATA" alt="" coords="935,2816,1153,2904">
+<area shape="rect" id="node34" href="TIME_CODE_RDR_GRP.html" title="TIME_CODE_RDR_GRP" alt="" coords="885,3616,1203,3803">
+<area shape="rect" id="node35" href="TIME_OFF_TYPE.html" title="TIME_OFF_TYPE" alt="" coords="942,2182,1146,2270">
+<area shape="rect" id="node36" href="TOKE_POOL.html" title="TOKE_POOL" alt="" coords="957,3312,1131,3400">
+<area shape="rect" id="node37" href="VIEW_EMP_DEF_LAB.html" title="VIEW_EMP_DEF_LAB" alt="" coords="1316,998,1547,1062">
+<area shape="rect" id="node38" href="VIEW_EMPLOYEE_READER_GROUP.html" title="VIEW_EMPLOYEE_READER_GROUP" alt="" coords="1261,4208,1601,4272">
+<area shape="rect" id="node39" href="VIEW_HOUR_SET_INCL_TIME_CODE.html" title="VIEW_HOUR_SET_INCL_TIME_CODE" alt="" coords="1259,1975,1604,2039">
+<area shape="rect" id="node40" href="VIEW_MOD_WORK_DETAIL.html" title="VIEW_MOD_WORK_DETAIL" alt="" coords="1294,1278,1569,1342">
+<area shape="rect" id="node41" href="WORK_DETAIL.html" title="WORK_DETAIL" alt="" coords="949,1355,1139,1443">
+<area shape="rect" id="node42" href="VIEW_PAYEXP_ADJUSTMENT.html" title="VIEW_PAYEXP_ADJUSTMENT" alt="" coords="898,3418,1190,3482">
+<area shape="rect" id="node43" href="VIEW_PAYEXP_CURRENT.html" title="VIEW_PAYEXP_CURRENT" alt="" coords="912,3499,1176,3563">
+<area shape="rect" id="node44" href="VIEW_READER.html" title="VIEW_READER" alt="" coords="1339,4008,1523,4072">
+<area shape="rect" id="node45" href="VIEW_READER_GROUP.html" title="VIEW_READER_GROUP" alt="" coords="920,4678,1168,4742">
+<area shape="rect" id="node46" href="VIEW_SHIFT_BREAK.html" title="VIEW_SHIFT_BREAK" alt="" coords="1318,1454,1545,1518">
+<area shape="rect" id="node47" href="VIEW_SHIFT_PREMIUM_ZONE.html" title="VIEW_SHIFT_PREMIUM_ZONE" alt="" coords="1284,3203,1579,3267">
+<area shape="rect" id="node48" href="VIEW_SHIFT_PREMIUM_ZONE_FULL.html" title="VIEW_SHIFT_PREMIUM_ZONE_FULL" alt="" coords="1261,3284,1602,3348">
+<area shape="rect" id="node49" href="VIEW_SP_ZONE_INCL_TIME_CODE.html" title="VIEW_SP_ZONE_INCL_TIME_CODE" alt="" coords="1648,2920,1979,2984">
+<area shape="rect" id="node50" href="VIEW_TIME_CODE.html" title="VIEW_TIME_CODE" alt="" coords="939,459,1149,523">
+<area shape="rect" id="node51" href="VIEW_TIME_CODE_BALANCE.html" title="VIEW_TIME_CODE_BALANCE" alt="" coords="1287,2322,1576,2386">
+<area shape="rect" id="node52" href="VIEW_TIME_CODE_DATA.html" title="VIEW_TIME_CODE_DATA" alt="" coords="1302,2876,1561,2940">
+<area shape="rect" id="node53" href="VIEW_WORK_DETAIL.html" title="VIEW_WORK_DETAIL" alt="" coords="1316,1359,1547,1423">
+<area shape="rect" id="node54" href="VIEW_WORK_DETAIL_ADJUST.html" title="VIEW_WORK_DETAIL_ADJUST" alt="" coords="1665,1535,1962,1599">
+<area shape="rect" id="node55" href="WORK_DETAIL_ADJUST.html" title="WORK_DETAIL_ADJUST" alt="" coords="1303,1535,1559,1623">
+<area shape="rect" id="node56" href="VL_CLOCK_PRESET.html" title="VL_CLOCK_PRESET" alt="" coords="1318,2630,1545,2694">
+<area shape="rect" id="node57" href="VL_READER_GROUP.html" title="VL_READER_GROUP" alt="" coords="929,3892,1159,3956">
+<area shape="rect" id="node58" href="VL_SHIFT_PREMIUM_ZONE.html" title="VL_SHIFT_PREMIUM_ZONE" alt="" coords="1293,3086,1570,3150">
+<area shape="rect" id="node59" href="VL_SO_ACTIVITY.html" title="VL_SO_ACTIVITY" alt="" coords="1331,111,1532,175">
+<area shape="rect" id="node60" href="VL_TIME_CODE.html" title="VL_TIME_CODE" alt="" coords="947,92,1141,156">
+<area shape="rect" id="node61" href="VL_TIME_OFF_TYPE.html" title="VL_TIME_OFF_TYPE" alt="" coords="1318,2084,1545,2148">
+</map>
+
+					<a name='diagram'><img id='twoimpliedDegreeImg' src='../diagrams/TIME_CODE_RDR_GRP.implied2degrees.png' usemap='#twoDegreesRelationshipsDiagramImplied' class='diagram' border='0' alt='' align='left'></a>							
+				</div>
+			  			</div>
+			</div>
+		  </div><!-- /.box-body -->
+		</div>
+	      </section>
+    
+  </div>
+  <!-- /.content-wrapper -->
+  <footer class="main-footer">
+    <div>
+      <div class="pull-right hidden-xs">
+        <a href="https://github.com/schemaspy/schemaspy" title="GitHub for SchemaSpy"><i class="fa fa-github-square fa-2x"></i></a>
+        <a href="http://stackoverflow.com/questions/tagged/schemaspy" title="StackOverflow for SchemaSpy"><i class="fa fa-stack-overflow fa-2x"></i></a>
+      </div>
+      <strong>Generated by <a href="http://schemaspy.org/" class="logo-text"><i class="fa fa-database"></i> SchemaSpy 6.0.0-rc2</a></strong>
+    </div>
+    <!-- /.container -->
+  </footer>
+</div>
+<!-- ./wrapper -->
+
+<!-- jQuery 2.2.3 -->
+<script src="../bower/admin-lte/plugins/jQuery/jquery-2.2.3.min.js"></script>
+<script src="../bower/admin-lte/plugins/jQueryUI/jquery-ui.min.js"></script>
+<!-- Bootstrap 3.3.5 -->
+<script src="../bower/admin-lte/bootstrap/js/bootstrap.min.js"></script>
+<!-- DataTables -->
+<script src="../bower/datatables.net/jquery.dataTables.min.js"></script>
+<script src="../bower/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
+<script src="../bower/datatables.net-buttons/dataTables.buttons.min.js"></script>
+<script src="../bower/datatables.net-buttons-bs/js/buttons.bootstrap.min.js"></script>
+<script src="../bower/datatables.net-buttons/buttons.html5.min.js"></script>
+<script src="../bower/datatables.net-buttons/buttons.print.min.js"></script>
+<script src="../bower/datatables.net-buttons/buttons.colVis.min.js"></script>
+
+<!-- SlimScroll -->
+<script src="../bower/admin-lte/plugins/slimScroll/jquery.slimscroll.min.js"></script>
+<!-- FastClick -->
+<script src="../bower/admin-lte/plugins/fastclick/fastclick.js"></script>
+<!-- Salvattore -->
+<script src="../bower/salvattore/salvattore.min.js"></script>
+<!-- AnchorJS -->
+<script src="../bower/anchor-js/anchor.min.js"></script>
+<!-- CodeMirror -->
+<script src="../bower/codemirror/codemirror.js"></script>
+<script src="../bower/codemirror/sql.js"></script>
+<!-- AdminLTE App -->
+<script src="../bower/admin-lte/dist/js/app.min.js"></script>
+<script src="table.js"></script>
+<script src="../schemaSpy.js"></script>
+</body>
+</html>

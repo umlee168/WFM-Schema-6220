@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>ES_SHIFT_SUMMARY_SKILL - WFMSB622 Database</title>
+  <!-- Tell the browser to be responsive to screen width -->
+  <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+  <!-- Bootstrap 3.3.5 -->
+  <link rel="stylesheet" href="../bower/admin-lte/bootstrap/css/bootstrap.min.css">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="../bower/font-awesome/css/font-awesome.min.css">
+  <!-- Ionicons -->
+  <link rel="stylesheet" href="../bower/ionicons/css/ionicons.min.css">
+  <!-- DataTables -->
+  <link rel="stylesheet" href="../bower/datatables.net-bs/css/dataTables.bootstrap.min.css">
+  <link rel="stylesheet" href="../bower/datatables.net-buttons-bs/css/buttons.bootstrap.min.css">
+  <!-- Code Mirror -->
+  <link rel="stylesheet" href="../bower/codemirror/codemirror.css">
+  <!-- Fonts -->
+  <link href='../fonts/indieflower/indie-flower.css' rel='stylesheet' type='text/css'>
+  <link href='../fonts/source-sans-pro/source-sans-pro.css' rel='stylesheet' type='text/css'>
+
+  <!-- Theme style -->
+  <link rel="stylesheet" href="../bower/admin-lte/dist/css/AdminLTE.min.css">
+  <!-- Salvattore -->
+  <link rel="stylesheet" href="../bower/salvattore/salvattore.css">
+  <!-- AdminLTE Skins. Choose a skin from the css/skins
+       folder instead of downloading all of them to reduce the load. -->
+  <link rel="stylesheet" href="../bower/admin-lte/dist/css/skins/_all-skins.min.css">
+  <!-- SchemaSpy -->
+  <link rel="stylesheet" href="../schemaSpy.css">
+  
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+  <script src="../bower/html5shiv/html5shiv.min.js"></script>
+  <script src="../bower/respond/respond.min.js"></script>
+  <![endif]-->
+</head>
+<!-- ADD THE CLASS layout-top-nav TO REMOVE THE SIDEBAR. -->
+<body class="hold-transition skin-blue layout-top-nav">
+<div class="wrapper">
+  <header class="main-header">
+    <nav class="navbar navbar-static-top">
+      <div class="container">
+        <div class="navbar-header">
+          <a href="../index.html" class="navbar-brand"><b>WFMSB622</b> Database</a>
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse">
+            <i class="fa fa-bars"></i>
+          </button>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse pull-left" id="navbar-collapse">
+          <ul class="nav navbar-nav">
+            <li><a href="../index.html">Tables <span class="sr-only">(current)</span></a></li>            
+			<!--<li><a href="../components.html" title="List of system components">Components</a></li>-->
+			<li><a href="../columns.html" title="All of the columns in the schema">Columns</a></li>
+			<li><a href="../constraints.html" title="Useful for diagnosing error messages that just give constraint name or number">Constraints</a></li>
+			<li><a href="../relationships.html" title="Diagram of table relationships">Relationships</a></li>
+			<li><a href="../orphans.html" title="View of tables with neither parents nor children">Orphan&nbsp;Tables</a></li>				
+			<li><a href="../anomalies.html" title="Things that might not be quite right">Anomalies</a></li>
+          </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+        <!-- Navbar Right Menu -->
+
+      </div>
+      <!-- /.container-fluid -->
+    </nav>
+  </header>
+  <!-- Main content -->
+  <!-- Full Width Column -->
+  <div class="content-wrapper">
+          <!-- Content Header (Page header) -->
+      <section class="content-header">
+        <h1>ES_SHIFT_SUMMARY_SKILL</h1></br>
+		      </section>
+      <!-- Main content -->
+      <section class="content">
+		<div class="box box-primary">
+			<div class="box-header with-border">
+			  <span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span>
+              <h3 id="Columns" class="box-title">Columns</h3>
+              <div class="box-tools pull-right">
+                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
+                </button>
+                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+              </div>
+            </div>	
+            <div class="box-body">
+				<table id="standard_table" class="table table-bordered table-striped dataTable" role="grid">
+				<thead align='left'>
+				<tr>
+				  <th>Column</th>
+				  <th>Type</th>
+				  <th>Size</th>
+				  <th title='Are nulls allowed?'>Nulls</th>
+				  <th title='Is column automatically updated?'>Auto</th>
+				  <th title='Default value'>Default</th>
+				  <th title='Columns in tables that reference this column'>Children</th>
+				  <th title='Columns in tables that are referenced by this column'>Parents</th>
+				  <th title='Comments' class="toggle"><span>Comments</span></th>
+				</tr>
+				</thead>
+				<tbody>
+				<tr>
+				 <td class='primaryKey' title='Primary Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="SHIFTSUMSKL_ID">SHIFTSUMSKL_ID</span></td>
+				 <td>NUMBER</td>
+				 <td>38</td>
+				 <td title=''></td>
+				 <td title=''></td>
+				 <td>null</td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>				 
+				 </td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>					 
+				 </td>
+				 <td></td>
+				</tr>
+				<tr>
+				 <td class='foreignKey' title='Foreign Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="SHIFTSUM_ID">SHIFTSUM_ID</span></td>
+				 <td>NUMBER</td>
+				 <td>38</td>
+				 <td title=''></td>
+				 <td title=''></td>
+				 <td>null</td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>				 
+				 </td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				   <tr>
+					<td title="ES_SHIFT_SUMMARY_SKILL.SHIFTSUM_ID references ES_SHIFT_SUMMARY.SHIFTSUM_ID via FK_SHIFTSUM_SSID">
+						<a href='ES_SHIFT_SUMMARY.html'>ES_SHIFT_SUMMARY</a><span class='relatedKey'>.SHIFTSUM_ID</span>
+					</td>
+					<td class="constraint detail">
+						FK_SHIFTSUM_SSID <span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span>
+					</td>
+				   </tr>
+				  </table>					 
+				 </td>
+				 <td></td>
+				</tr>
+				<tr>
+				 <td class='foreignKey' title='Foreign Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="STSKL_ID">STSKL_ID</span></td>
+				 <td>NUMBER</td>
+				 <td>38</td>
+				 <td title=''></td>
+				 <td title=''></td>
+				 <td>null</td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>				 
+				 </td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				   <tr>
+					<td title="ES_SHIFT_SUMMARY_SKILL.STSKL_ID references ST_SKILL.STSKL_ID via FK_STSKL_STSKLD">
+						<a href='ST_SKILL.html'>ST_SKILL</a><span class='relatedKey'>.STSKL_ID</span>
+					</td>
+					<td class="constraint detail">
+						FK_STSKL_STSKLD <span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span>
+					</td>
+				   </tr>
+				  </table>					 
+				 </td>
+				 <td></td>
+				</tr>
+				<tr>
+				 <td><span id="SHIFTSUMSKL_LEVEL">SHIFTSUMSKL_LEVEL</span></td>
+				 <td>NUMBER</td>
+				 <td>38</td>
+				 <td title=''></td>
+				 <td title=''></td>
+				 <td>0       </td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>				 
+				 </td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>					 
+				 </td>
+				 <td></td>
+				</tr>
+				<tr>
+				 <td><span id="SHIFTSUMSKL_REQ">SHIFTSUMSKL_REQ</span></td>
+				 <td>CHAR</td>
+				 <td>1</td>
+				 <td title=''></td>
+				 <td title=''></td>
+				 <td>&#39;N&#39;     </td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>				 
+				 </td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>					 
+				 </td>
+				 <td></td>
+				</tr>
+				<tr>
+				 <td><span id="SHIFTSUMSKL_FLAG1">SHIFTSUMSKL_FLAG1</span></td>
+				 <td>CHAR</td>
+				 <td>1</td>
+				 <td title='nullable'>√</td>
+				 <td title=''></td>
+				 <td>null</td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>				 
+				 </td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>					 
+				 </td>
+				 <td></td>
+				</tr>
+				<tr>
+				 <td><span id="SHIFTSUMSKL_FLAG2">SHIFTSUMSKL_FLAG2</span></td>
+				 <td>CHAR</td>
+				 <td>1</td>
+				 <td title='nullable'>√</td>
+				 <td title=''></td>
+				 <td>null</td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>				 
+				 </td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>					 
+				 </td>
+				 <td></td>
+				</tr>
+				<tr>
+				 <td><span id="SHIFTSUMSKL_FLAG3">SHIFTSUMSKL_FLAG3</span></td>
+				 <td>CHAR</td>
+				 <td>1</td>
+				 <td title='nullable'>√</td>
+				 <td title=''></td>
+				 <td>null</td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>				 
+				 </td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>					 
+				 </td>
+				 <td></td>
+				</tr>
+				<tr>
+				 <td><span id="SHIFTSUMSKL_FLAG4">SHIFTSUMSKL_FLAG4</span></td>
+				 <td>CHAR</td>
+				 <td>1</td>
+				 <td title='nullable'>√</td>
+				 <td title=''></td>
+				 <td>null</td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>				 
+				 </td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>					 
+				 </td>
+				 <td></td>
+				</tr>
+				<tr>
+				 <td><span id="SHIFTSUMSKL_FLAG5">SHIFTSUMSKL_FLAG5</span></td>
+				 <td>CHAR</td>
+				 <td>1</td>
+				 <td title='nullable'>√</td>
+				 <td title=''></td>
+				 <td>null</td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>				 
+				 </td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>					 
+				 </td>
+				 <td></td>
+				</tr>
+				<tr>
+				 <td><span id="SHIFTSUMSKL_UDF1">SHIFTSUMSKL_UDF1</span></td>
+				 <td>VARCHAR2</td>
+				 <td>40</td>
+				 <td title='nullable'>√</td>
+				 <td title=''></td>
+				 <td>null</td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>				 
+				 </td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>					 
+				 </td>
+				 <td></td>
+				</tr>
+				<tr>
+				 <td><span id="SHIFTSUMSKL_UDF2">SHIFTSUMSKL_UDF2</span></td>
+				 <td>VARCHAR2</td>
+				 <td>40</td>
+				 <td title='nullable'>√</td>
+				 <td title=''></td>
+				 <td>null</td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>				 
+				 </td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>					 
+				 </td>
+				 <td></td>
+				</tr>
+				<tr>
+				 <td><span id="SHIFTSUMSKL_UDF3">SHIFTSUMSKL_UDF3</span></td>
+				 <td>VARCHAR2</td>
+				 <td>40</td>
+				 <td title='nullable'>√</td>
+				 <td title=''></td>
+				 <td>null</td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>				 
+				 </td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>					 
+				 </td>
+				 <td></td>
+				</tr>
+				<tr>
+				 <td><span id="SHIFTSUMSKL_UDF4">SHIFTSUMSKL_UDF4</span></td>
+				 <td>VARCHAR2</td>
+				 <td>40</td>
+				 <td title='nullable'>√</td>
+				 <td title=''></td>
+				 <td>null</td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>				 
+				 </td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>					 
+				 </td>
+				 <td></td>
+				</tr>
+				<tr>
+				 <td><span id="SHIFTSUMSKL_UDF5">SHIFTSUMSKL_UDF5</span></td>
+				 <td>VARCHAR2</td>
+				 <td>40</td>
+				 <td title='nullable'>√</td>
+				 <td title=''></td>
+				 <td>null</td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>				 
+				 </td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>					 
+				 </td>
+				 <td></td>
+				</tr>
+								</tbody>
+				</table>
+				<p title='15 columns'>Table contained <span id="recordNumber">0</span> rows<p/>
+			</div>
+		</div>
+		<div class="box box-primary">		
+			<div class="box-header with-border">
+              <i class="fa fa-sitemap"></i>
+
+              <h3 id="Indexes" class="box-title">Indexes</h3>
+
+              <div class="box-tools pull-right">
+                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
+                </button>
+                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+              </div>
+            </div>	
+			<div class="box-body">
+				<table id="indexes_table" class="table table-bordered table-striped dataTable" role="grid">
+				<thead>
+				 <tr>
+				  <th>Constraint Name</th>
+				  <th>Type</th>
+				  <th>Sort</th>
+				  <th>Column(s)</th>
+				 </tr>
+				</thead>
+				<tbody>
+				 <tr>
+				  <td class='primaryKey' title='Primary Key'><i class='icon ion-key iconkey'></i> PK_ES_SHIFT_SKILL</td>
+				  <td>Primary key</td>
+				  <td><span title='Ascending'>Asc</span></td>
+				  <td>SHIFTSUMSKL_ID</td>
+				 </tr>				 
+				 <tr>
+				  <td class='uniqueKey' title='Unique Key'><i class='icon ion-key iconkey'></i> UK_SSID_STSKLID</td>
+				  <td>Must be unique</td>
+				  <td><span title='Ascending'>Asc</span>/<span title='Ascending'>Asc</span></td>
+				  <td>SHIFTSUM_ID + STSKL_ID</td>
+				 </tr>				 
+				</tbody>
+				</table>   			  
+			</div><!-- /.box-body -->
+		</div>
+				<div class="box box-primary">		
+			<div class="box-header with-border">
+              <i class="fa fa-code-fork"></i>
+
+              <h3 id="Relationships" class="box-title">Relationships</h3>
+
+              <div class="box-tools pull-right">
+                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
+                </button>
+                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+              </div>
+            </div>	
+			<div class="box-body">	
+			<div class="nav-tabs-custom" style="cursor: move;">
+            <!-- Tabs within a box -->
+			<h5>Close relationships within degrees of separation</h5>
+            <ul class="nav nav-tabs pull-left ui-sortable-handle">
+			  			              <li class="active"><a href="#oneDegreeImg-chart" data-toggle="tab" aria-expanded="true">One</a></li>			  			 
+			  			              <li class=""><a href="#twodegreesDegreeImg-chart" data-toggle="tab" aria-expanded="true">Two degrees</a></li>			  			 
+			  			              <li class=""><a href="#oneimpliedDegreeImg-chart" data-toggle="tab" aria-expanded="true">One implied</a></li>			  			 
+			  			              <li class=""><a href="#twoimpliedDegreeImg-chart" data-toggle="tab" aria-expanded="true">Two implied</a></li>			  			 
+            </ul>
+            <div class="tab-content no-padding">            
+				<div class="chart tab-pane active" id="oneDegreeImg-chart" style="position: relative; overflow-x:auto;">					
+					<map id="oneDegreeRelationshipsDiagram" name="oneDegreeRelationshipsDiagram">
+<area shape="rect" id="node1" href="ES_SHIFT_SUMMARY_SKILL.html" title="ES_SHIFT_SUMMARY_SKILL" alt="" coords="345,232,712,741">
+<area shape="rect" id="node2" href="ES_SHIFT_SUMMARY.html" title="ES_SHIFT_SUMMARY" alt="" coords="5,5,301,533">
+<area shape="rect" id="node3" href="ST_SKILL.html" title="ST_SKILL" alt="" coords="28,551,279,727">
+</map>
+
+					<a name='diagram'><img id='oneDegreeImg' src='../diagrams/ES_SHIFT_SUMMARY_SKILL.1degree.png' usemap='#oneDegreeRelationshipsDiagram' class='diagram' border='0' alt='' align='left'></a>							
+				</div>
+				<div class="chart tab-pane " id="twodegreesDegreeImg-chart" style="position: relative; overflow-x:auto;">					
+					<map id="twoDegreesRelationshipsDiagram" name="twoDegreesRelationshipsDiagram">
+<area shape="rect" id="node1" href="CENSUS_DATA.html" title="CENSUS_DATA" alt="" coords="1179,1624,1370,1712">
+<area shape="rect" id="node2" href="ST_SKILL.html" title="ST_SKILL" alt="" coords="797,1832,1048,2008">
+<area shape="rect" id="node36" href="ST_SKILL_TYPE.html" title="ST_SKILL_TYPE" alt="" coords="521,1894,721,1982">
+<area shape="rect" id="node3" href="EMP_SCHD_DTL_LAYER.html" title="EMP_SCHD_DTL_LAYER" alt="" coords="1145,146,1405,234">
+<area shape="rect" id="node4" href="EMPLOYEE.html" title="EMPLOYEE" alt="" coords="840,258,1005,346">
+<area shape="rect" id="node5" href="WORKBRAIN_TEAM.html" title="WORKBRAIN_TEAM" alt="" coords="5,939,229,1027">
+<area shape="rect" id="node6" href="EMPLOYEE_SCHED_DTL.html" title="EMPLOYEE_SCHED_DTL" alt="" coords="1143,375,1407,463">
+<area shape="rect" id="node7" href="ES_CALL_LOG.html" title="ES_CALL_LOG" alt="" coords="1575,158,1763,246">
+<area shape="rect" id="node8" href="ES_SHIFT_SUMMARY.html" title="ES_SHIFT_SUMMARY" alt="" coords="1127,516,1423,1044">
+<area shape="rect" id="node10" href="ES_ROTATION.html" title="ES_ROTATION" alt="" coords="273,703,461,791">
+<area shape="rect" id="node11" href="ES_ROTATION_ROW.html" title="ES_ROTATION_ROW" alt="" coords="505,730,737,818">
+<area shape="rect" id="node13" href="ES_ROW_SHIFTS.html" title="ES_ROW_SHIFTS" alt="" coords="819,766,1026,854">
+<area shape="rect" id="node14" href="ES_SHIFT.html" title="ES_SHIFT" alt="" coords="846,588,999,676">
+<area shape="rect" id="node21" href="ES_TMPL_SCHEDULE_GEN.html" title="ES_TMPL_SCHEDULE_GEN" alt="" coords="781,871,1064,959">
+<area shape="rect" id="node9" href="ES_JOB_TEAM_SKILL.html" title="ES_JOB_TEAM_SKILL" alt="" coords="1154,2292,1395,2380">
+<area shape="rect" id="node12" href="ES_ROTROW_CONFLICTS.html" title="ES_ROTROW_CONFLICTS" alt="" coords="1532,19,1805,107">
+<area shape="rect" id="node15" href="ES_SHIFT_DETAIL.html" title="ES_SHIFT_DETAIL" alt="" coords="1562,519,1775,607">
+<area shape="rect" id="node16" href="ES_SHIFT_DETAIL_LAYER.html" title="ES_SHIFT_DETAIL_LAYER" alt="" coords="1533,730,1804,818">
+<area shape="rect" id="node17" href="ES_SHIFT_HIST_SKILL.html" title="ES_SHIFT_HIST_SKILL" alt="" coords="1896,1159,2143,1247">
+<area shape="rect" id="node18" href="ES_SHIFT_HISTORY.html" title="ES_SHIFT_HISTORY" alt="" coords="1554,414,1783,502">
+<area shape="rect" id="node19" href="ES_SHIFT_LOCK.html" title="ES_SHIFT_LOCK" alt="" coords="1567,294,1771,382">
+<area shape="rect" id="node20" href="ES_SHIFT_OFFER_SHIFTSUM.html" title="ES_SHIFT_OFFER_SHIFTSUM" alt="" coords="1520,835,1817,923">
+<area shape="rect" id="node22" href="ES_SHIFT_SUMMARY_SKILL.html" title="ES_SHIFT_SUMMARY_SKILL" alt="" coords="1485,1056,1852,1566">
+<area shape="rect" id="node23" href="ES_TMPL_SHIFT_REQ_SHIFT_SKL.html" title="ES_TMPL_SHIFT_REQ_SHIFT_SKL" alt="" coords="1108,2398,1441,2486">
+<area shape="rect" id="node24" href="ES_TMPL_STAFF_REQ_SKILL.html" title="ES_TMPL_STAFF_REQ_SKILL" alt="" coords="1126,1203,1423,1291">
+<area shape="rect" id="node25" href="OSB_SHIFT_POSTING.html" title="OSB_SHIFT_POSTING" alt="" coords="1547,940,1790,1028">
+<area shape="rect" id="node26" href="RTSS_PROCESS_SHIFT.html" title="RTSS_PROCESS_SHIFT" alt="" coords="1541,624,1797,712">
+<area shape="rect" id="node27" href="RTSS_SHIFT.html" title="RTSS_SHIFT" alt="" coords="1188,2503,1361,2591">
+<area shape="rect" id="node28" href="SO_CLIENT_STFDEF.html" title="SO_CLIENT_STFDEF" alt="" coords="1158,1308,1391,1396">
+<area shape="rect" id="node29" href="SO_CLIENTYP_STFDEF.html" title="SO_CLIENTYP_STFDEF" alt="" coords="1148,1414,1401,1502">
+<area shape="rect" id="node30" href="SO_HIST_INT_REQ.html" title="SO_HIST_INT_REQ" alt="" coords="1165,1519,1385,1607">
+<area shape="rect" id="node31" href="SO_INTERVAL_REQ.html" title="SO_INTERVAL_REQ" alt="" coords="1162,1730,1387,1818">
+<area shape="rect" id="node32" href="SO_SHIFT_REQ.html" title="SO_SHIFT_REQ" alt="" coords="1177,1835,1373,1923">
+<area shape="rect" id="node33" href="SR_SUMMARY.html" title="SR_SUMMARY" alt="" coords="1181,2608,1368,2696">
+<area shape="rect" id="node34" href="ST_EMP_SKILL.html" title="ST_EMP_SKILL" alt="" coords="1178,1062,1371,1150">
+<area shape="rect" id="node35" href="ST_JOB_SKILL.html" title="ST_JOB_SKILL" alt="" coords="1179,1976,1370,2064">
+<area shape="rect" id="node37" href="ST_SKILL_COURSE.html" title="ST_SKILL_COURSE" alt="" coords="1162,2082,1387,2170">
+<area shape="rect" id="node38" href="ST_SKILL_TEAM.html" title="ST_SKILL_TEAM" alt="" coords="1174,2714,1375,2802">
+<area shape="rect" id="node39" href="TM_ACTIONITEM.html" title="TM_ACTIONITEM" alt="" coords="1172,2187,1377,2275">
+<area shape="rect" id="node40" href="UNSTFD_SHIFT.html" title="UNSTFD_SHIFT" alt="" coords="1177,2819,1372,2907">
+</map>
+
+					<a name='diagram'><img id='twodegreesDegreeImg' src='../diagrams/ES_SHIFT_SUMMARY_SKILL.2degrees.png' usemap='#twoDegreesRelationshipsDiagram' class='diagram' border='0' alt='' align='left'></a>							
+				</div>
+				<div class="chart tab-pane " id="oneimpliedDegreeImg-chart" style="position: relative; overflow-x:auto;">					
+					<map id="oneDegreeRelationshipsDiagramImplied" name="oneDegreeRelationshipsDiagramImplied">
+<area shape="rect" id="node1" href="ES_SHIFT_SUMMARY_SKILL.html" title="ES_SHIFT_SUMMARY_SKILL" alt="" coords="345,232,712,741">
+<area shape="rect" id="node2" href="ES_SHIFT_SUMMARY.html" title="ES_SHIFT_SUMMARY" alt="" coords="5,5,301,533">
+<area shape="rect" id="node3" href="ST_SKILL.html" title="ST_SKILL" alt="" coords="28,551,279,727">
+</map>
+
+					<a name='diagram'><img id='oneimpliedDegreeImg' src='../diagrams/ES_SHIFT_SUMMARY_SKILL.implied1degrees.png' usemap='#oneDegreeRelationshipsDiagramImplied' class='diagram' border='0' alt='' align='left'></a>							
+				</div>
+				<div class="chart tab-pane " id="twoimpliedDegreeImg-chart" style="position: relative; overflow-x:auto;">					
+					<map id="twoDegreesRelationshipsDiagramImplied" name="twoDegreesRelationshipsDiagramImplied">
+<area shape="rect" id="node1" href="CENSUS_DATA.html" title="CENSUS_DATA" alt="" coords="1179,1131,1370,1219">
+<area shape="rect" id="node2" href="ST_SKILL.html" title="ST_SKILL" alt="" coords="797,1128,1048,1304">
+<area shape="rect" id="node36" href="ST_SKILL_TYPE.html" title="ST_SKILL_TYPE" alt="" coords="521,87,721,175">
+<area shape="rect" id="node3" href="EMP_SCHD_DTL_LAYER.html" title="EMP_SCHD_DTL_LAYER" alt="" coords="1145,2268,1405,2356">
+<area shape="rect" id="node4" href="EMPLOYEE.html" title="EMPLOYEE" alt="" coords="840,2604,1005,2692">
+<area shape="rect" id="node5" href="WORKBRAIN_TEAM.html" title="WORKBRAIN_TEAM" alt="" coords="5,2268,229,2356">
+<area shape="rect" id="node6" href="EMPLOYEE_SCHED_DTL.html" title="EMPLOYEE_SCHED_DTL" alt="" coords="1143,2373,1407,2461">
+<area shape="rect" id="node7" href="ES_CALL_LOG.html" title="ES_CALL_LOG" alt="" coords="1575,2713,1763,2801">
+<area shape="rect" id="node8" href="ES_SHIFT_SUMMARY.html" title="ES_SHIFT_SUMMARY" alt="" coords="1127,2816,1423,3344">
+<area shape="rect" id="node10" href="ES_ROTATION.html" title="ES_ROTATION" alt="" coords="273,3035,461,3123">
+<area shape="rect" id="node11" href="ES_ROTATION_ROW.html" title="ES_ROTATION_ROW" alt="" coords="505,3080,737,3168">
+<area shape="rect" id="node13" href="ES_ROW_SHIFTS.html" title="ES_ROW_SHIFTS" alt="" coords="819,3097,1026,3185">
+<area shape="rect" id="node14" href="ES_SHIFT.html" title="ES_SHIFT" alt="" coords="846,2743,999,2831">
+<area shape="rect" id="node21" href="ES_TMPL_SCHEDULE_GEN.html" title="ES_TMPL_SCHEDULE_GEN" alt="" coords="781,3203,1064,3291">
+<area shape="rect" id="node9" href="ES_JOB_TEAM_SKILL.html" title="ES_JOB_TEAM_SKILL" alt="" coords="1154,1236,1395,1324">
+<area shape="rect" id="node12" href="ES_ROTROW_CONFLICTS.html" title="ES_ROTROW_CONFLICTS" alt="" coords="1532,3381,1805,3469">
+<area shape="rect" id="node15" href="ES_SHIFT_DETAIL.html" title="ES_SHIFT_DETAIL" alt="" coords="1562,2819,1775,2907">
+<area shape="rect" id="node16" href="ES_SHIFT_DETAIL_LAYER.html" title="ES_SHIFT_DETAIL_LAYER" alt="" coords="1533,2924,1804,3012">
+<area shape="rect" id="node17" href="ES_SHIFT_HIST_SKILL.html" title="ES_SHIFT_HIST_SKILL" alt="" coords="1896,2115,2143,2203">
+<area shape="rect" id="node18" href="ES_SHIFT_HISTORY.html" title="ES_SHIFT_HISTORY" alt="" coords="1554,2608,1783,2696">
+<area shape="rect" id="node19" href="ES_SHIFT_LOCK.html" title="ES_SHIFT_LOCK" alt="" coords="1917,2819,2121,2907">
+<area shape="rect" id="node20" href="ES_SHIFT_OFFER_SHIFTSUM.html" title="ES_SHIFT_OFFER_SHIFTSUM" alt="" coords="1520,3029,1817,3117">
+<area shape="rect" id="node22" href="ES_SHIFT_SUMMARY_SKILL.html" title="ES_SHIFT_SUMMARY_SKILL" alt="" coords="1485,2081,1852,2591">
+<area shape="rect" id="node23" href="ES_TMPL_SHIFT_REQ_SHIFT_SKL.html" title="ES_TMPL_SHIFT_REQ_SHIFT_SKL" alt="" coords="1108,1341,1441,1429">
+<area shape="rect" id="node24" href="ES_TMPL_STAFF_REQ_SKILL.html" title="ES_TMPL_STAFF_REQ_SKILL" alt="" coords="1126,1447,1423,1535">
+<area shape="rect" id="node25" href="OSB_SHIFT_POSTING.html" title="OSB_SHIFT_POSTING" alt="" coords="1547,3135,1790,3223">
+<area shape="rect" id="node26" href="RTSS_PROCESS_SHIFT.html" title="RTSS_PROCESS_SHIFT" alt="" coords="1541,3240,1797,3328">
+<area shape="rect" id="node27" href="RTSS_SHIFT.html" title="RTSS_SHIFT" alt="" coords="1188,1765,1361,1853">
+<area shape="rect" id="node28" href="SO_CLIENT_STFDEF.html" title="SO_CLIENT_STFDEF" alt="" coords="1158,168,1391,256">
+<area shape="rect" id="node29" href="SO_CLIENTYP_STFDEF.html" title="SO_CLIENTYP_STFDEF" alt="" coords="1148,1552,1401,1640">
+<area shape="rect" id="node30" href="SO_HIST_INT_REQ.html" title="SO_HIST_INT_REQ" alt="" coords="1165,273,1385,361">
+<area shape="rect" id="node31" href="SO_INTERVAL_REQ.html" title="SO_INTERVAL_REQ" alt="" coords="1162,556,1387,644">
+<area shape="rect" id="node32" href="SO_SHIFT_REQ.html" title="SO_SHIFT_REQ" alt="" coords="1177,415,1373,503">
+<area shape="rect" id="node33" href="SR_SUMMARY.html" title="SR_SUMMARY" alt="" coords="1181,1871,1368,1959">
+<area shape="rect" id="node34" href="ST_EMP_SKILL.html" title="ST_EMP_SKILL" alt="" coords="1178,2479,1371,2567">
+<area shape="rect" id="node35" href="ST_JOB_SKILL.html" title="ST_JOB_SKILL" alt="" coords="1179,661,1370,749">
+<area shape="rect" id="node37" href="ST_SKILL_COURSE.html" title="ST_SKILL_COURSE" alt="" coords="1162,1025,1387,1113">
+<area shape="rect" id="node38" href="ST_SKILL_TEAM.html" title="ST_SKILL_TEAM" alt="" coords="1174,1976,1375,2064">
+<area shape="rect" id="node39" href="TM_ACTIONITEM.html" title="TM_ACTIONITEM" alt="" coords="1172,767,1377,855">
+<area shape="rect" id="node40" href="UNSTFD_SHIFT.html" title="UNSTFD_SHIFT" alt="" coords="1177,2081,1372,2169">
+<area shape="rect" id="node41" href="VIEW_SO_CL_STFDEF.html" title="VIEW_SO_CL_STFDEF" alt="" coords="1155,872,1394,936">
+<area shape="rect" id="node42" href="VIEW_SO_EMPPOS_SKL.html" title="VIEW_SO_EMPPOS_SKL" alt="" coords="1147,2187,1402,2251">
+<area shape="rect" id="node43" href="VIEW_SO_INT_REQ.html" title="VIEW_SO_INT_REQ" alt="" coords="1559,520,1778,584">
+<area shape="rect" id="node44" href="VIEW_ST_EMP_SKILL.html" title="VIEW_ST_EMP_SKILL" alt="" coords="1551,1964,1786,2028">
+<area shape="rect" id="node45" href="VIEW_ST_JOB_SKILL.html" title="VIEW_ST_JOB_SKILL" alt="" coords="1553,789,1785,853">
+<area shape="rect" id="node46" href="VIEW_ST_SKILL.html" title="VIEW_ST_SKILL" alt="" coords="1178,87,1371,151">
+<area shape="rect" id="node47" href="VIEW_ST_SKILL_COURSE.html" title="VIEW_ST_SKILL_COURSE" alt="" coords="1535,989,1802,1053">
+<area shape="rect" id="node48" href="VL_SO_CLIENT_STFDEF.html" title="VL_SO_CLIENT_STFDEF" alt="" coords="1541,255,1797,319">
+<area shape="rect" id="node49" href="VL_ST_SKILL.html" title="VL_ST_SKILL" alt="" coords="1187,5,1362,69">
+</map>
+
+					<a name='diagram'><img id='twoimpliedDegreeImg' src='../diagrams/ES_SHIFT_SUMMARY_SKILL.implied2degrees.png' usemap='#twoDegreesRelationshipsDiagramImplied' class='diagram' border='0' alt='' align='left'></a>							
+				</div>
+			  			</div>
+			</div>
+		  </div><!-- /.box-body -->
+		</div>
+	      </section>
+    
+  </div>
+  <!-- /.content-wrapper -->
+  <footer class="main-footer">
+    <div>
+      <div class="pull-right hidden-xs">
+        <a href="https://github.com/schemaspy/schemaspy" title="GitHub for SchemaSpy"><i class="fa fa-github-square fa-2x"></i></a>
+        <a href="http://stackoverflow.com/questions/tagged/schemaspy" title="StackOverflow for SchemaSpy"><i class="fa fa-stack-overflow fa-2x"></i></a>
+      </div>
+      <strong>Generated by <a href="http://schemaspy.org/" class="logo-text"><i class="fa fa-database"></i> SchemaSpy 6.0.0-rc2</a></strong>
+    </div>
+    <!-- /.container -->
+  </footer>
+</div>
+<!-- ./wrapper -->
+
+<!-- jQuery 2.2.3 -->
+<script src="../bower/admin-lte/plugins/jQuery/jquery-2.2.3.min.js"></script>
+<script src="../bower/admin-lte/plugins/jQueryUI/jquery-ui.min.js"></script>
+<!-- Bootstrap 3.3.5 -->
+<script src="../bower/admin-lte/bootstrap/js/bootstrap.min.js"></script>
+<!-- DataTables -->
+<script src="../bower/datatables.net/jquery.dataTables.min.js"></script>
+<script src="../bower/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
+<script src="../bower/datatables.net-buttons/dataTables.buttons.min.js"></script>
+<script src="../bower/datatables.net-buttons-bs/js/buttons.bootstrap.min.js"></script>
+<script src="../bower/datatables.net-buttons/buttons.html5.min.js"></script>
+<script src="../bower/datatables.net-buttons/buttons.print.min.js"></script>
+<script src="../bower/datatables.net-buttons/buttons.colVis.min.js"></script>
+
+<!-- SlimScroll -->
+<script src="../bower/admin-lte/plugins/slimScroll/jquery.slimscroll.min.js"></script>
+<!-- FastClick -->
+<script src="../bower/admin-lte/plugins/fastclick/fastclick.js"></script>
+<!-- Salvattore -->
+<script src="../bower/salvattore/salvattore.min.js"></script>
+<!-- AnchorJS -->
+<script src="../bower/anchor-js/anchor.min.js"></script>
+<!-- CodeMirror -->
+<script src="../bower/codemirror/codemirror.js"></script>
+<script src="../bower/codemirror/sql.js"></script>
+<!-- AdminLTE App -->
+<script src="../bower/admin-lte/dist/js/app.min.js"></script>
+<script src="table.js"></script>
+<script src="../schemaSpy.js"></script>
+</body>
+</html>

@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>ES_ACT_TYPE_MAP - WFMSB622 Database</title>
+  <!-- Tell the browser to be responsive to screen width -->
+  <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+  <!-- Bootstrap 3.3.5 -->
+  <link rel="stylesheet" href="../bower/admin-lte/bootstrap/css/bootstrap.min.css">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="../bower/font-awesome/css/font-awesome.min.css">
+  <!-- Ionicons -->
+  <link rel="stylesheet" href="../bower/ionicons/css/ionicons.min.css">
+  <!-- DataTables -->
+  <link rel="stylesheet" href="../bower/datatables.net-bs/css/dataTables.bootstrap.min.css">
+  <link rel="stylesheet" href="../bower/datatables.net-buttons-bs/css/buttons.bootstrap.min.css">
+  <!-- Code Mirror -->
+  <link rel="stylesheet" href="../bower/codemirror/codemirror.css">
+  <!-- Fonts -->
+  <link href='../fonts/indieflower/indie-flower.css' rel='stylesheet' type='text/css'>
+  <link href='../fonts/source-sans-pro/source-sans-pro.css' rel='stylesheet' type='text/css'>
+
+  <!-- Theme style -->
+  <link rel="stylesheet" href="../bower/admin-lte/dist/css/AdminLTE.min.css">
+  <!-- Salvattore -->
+  <link rel="stylesheet" href="../bower/salvattore/salvattore.css">
+  <!-- AdminLTE Skins. Choose a skin from the css/skins
+       folder instead of downloading all of them to reduce the load. -->
+  <link rel="stylesheet" href="../bower/admin-lte/dist/css/skins/_all-skins.min.css">
+  <!-- SchemaSpy -->
+  <link rel="stylesheet" href="../schemaSpy.css">
+  
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+  <script src="../bower/html5shiv/html5shiv.min.js"></script>
+  <script src="../bower/respond/respond.min.js"></script>
+  <![endif]-->
+</head>
+<!-- ADD THE CLASS layout-top-nav TO REMOVE THE SIDEBAR. -->
+<body class="hold-transition skin-blue layout-top-nav">
+<div class="wrapper">
+  <header class="main-header">
+    <nav class="navbar navbar-static-top">
+      <div class="container">
+        <div class="navbar-header">
+          <a href="../index.html" class="navbar-brand"><b>WFMSB622</b> Database</a>
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse">
+            <i class="fa fa-bars"></i>
+          </button>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse pull-left" id="navbar-collapse">
+          <ul class="nav navbar-nav">
+            <li><a href="../index.html">Tables <span class="sr-only">(current)</span></a></li>            
+			<!--<li><a href="../components.html" title="List of system components">Components</a></li>-->
+			<li><a href="../columns.html" title="All of the columns in the schema">Columns</a></li>
+			<li><a href="../constraints.html" title="Useful for diagnosing error messages that just give constraint name or number">Constraints</a></li>
+			<li><a href="../relationships.html" title="Diagram of table relationships">Relationships</a></li>
+			<li><a href="../orphans.html" title="View of tables with neither parents nor children">Orphan&nbsp;Tables</a></li>				
+			<li><a href="../anomalies.html" title="Things that might not be quite right">Anomalies</a></li>
+          </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+        <!-- Navbar Right Menu -->
+
+      </div>
+      <!-- /.container-fluid -->
+    </nav>
+  </header>
+  <!-- Main content -->
+  <!-- Full Width Column -->
+  <div class="content-wrapper">
+          <!-- Content Header (Page header) -->
+      <section class="content-header">
+        <h1>ES_ACT_TYPE_MAP</h1></br>
+		      </section>
+      <!-- Main content -->
+      <section class="content">
+		<div class="box box-primary">
+			<div class="box-header with-border">
+			  <span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span>
+              <h3 id="Columns" class="box-title">Columns</h3>
+              <div class="box-tools pull-right">
+                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
+                </button>
+                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+              </div>
+            </div>	
+            <div class="box-body">
+				<table id="standard_table" class="table table-bordered table-striped dataTable" role="grid">
+				<thead align='left'>
+				<tr>
+				  <th>Column</th>
+				  <th>Type</th>
+				  <th>Size</th>
+				  <th title='Are nulls allowed?'>Nulls</th>
+				  <th title='Is column automatically updated?'>Auto</th>
+				  <th title='Default value'>Default</th>
+				  <th title='Columns in tables that reference this column'>Children</th>
+				  <th title='Columns in tables that are referenced by this column'>Parents</th>
+				  <th title='Comments' class="toggle"><span>Comments</span></th>
+				</tr>
+				</thead>
+				<tbody>
+				<tr>
+				 <td class='primaryKey' title='Primary Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="ESACTTYPMP_ID">ESACTTYPMP_ID</span></td>
+				 <td>NUMBER</td>
+				 <td>38</td>
+				 <td title=''></td>
+				 <td title=''></td>
+				 <td>null</td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>				 
+				 </td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>					 
+				 </td>
+				 <td></td>
+				</tr>
+				<tr>
+				 <td class='foreignKey' title='Foreign Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="ACT_ID">ACT_ID</span></td>
+				 <td>NUMBER</td>
+				 <td>38</td>
+				 <td title=''></td>
+				 <td title=''></td>
+				 <td>null</td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>				 
+				 </td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				   <tr>
+					<td title="ES_ACT_TYPE_MAP.ACT_ID references SO_ACTIVITY.ACT_ID via FK_ESACTTYP">
+						<a href='SO_ACTIVITY.html'>SO_ACTIVITY</a><span class='relatedKey'>.ACT_ID</span>
+					</td>
+					<td class="constraint detail">
+						FK_ESACTTYP <span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span>
+					</td>
+				   </tr>
+				  </table>					 
+				 </td>
+				 <td></td>
+				</tr>
+				<tr>
+				 <td class='foreignKey' title='Foreign Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="ESACTTYPE_ID">ESACTTYPE_ID</span></td>
+				 <td>NUMBER</td>
+				 <td>38</td>
+				 <td title=''></td>
+				 <td title=''></td>
+				 <td>null</td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>				 
+				 </td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				   <tr>
+					<td title="ES_ACT_TYPE_MAP.ESACTTYPE_ID references ES_ACT_TYPE.ESACTTYPE_ID via FK_ESACT_TYP">
+						<a href='ES_ACT_TYPE.html'>ES_ACT_TYPE</a><span class='relatedKey'>.ESACTTYPE_ID</span>
+					</td>
+					<td class="constraint detail">
+						FK_ESACT_TYP <span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span>
+					</td>
+				   </tr>
+				  </table>					 
+				 </td>
+				 <td></td>
+				</tr>
+				<tr>
+				 <td><span id="ESACTTYPE_REASON_REQUIRED">ESACTTYPE_REASON_REQUIRED</span></td>
+				 <td>CHAR</td>
+				 <td>1</td>
+				 <td title=''></td>
+				 <td title=''></td>
+				 <td>&#39;N&#39; </td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>				 
+				 </td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>					 
+				 </td>
+				 <td></td>
+				</tr>
+				<tr>
+				 <td><span id="ESACTTYPE_COMMENTS_REQUIRED">ESACTTYPE_COMMENTS_REQUIRED</span></td>
+				 <td>CHAR</td>
+				 <td>1</td>
+				 <td title=''></td>
+				 <td title=''></td>
+				 <td>&#39;N&#39; </td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>				 
+				 </td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>					 
+				 </td>
+				 <td></td>
+				</tr>
+				<tr>
+				 <td><span id="ESACTTYPE_SHOW">ESACTTYPE_SHOW</span></td>
+				 <td>CHAR</td>
+				 <td>1</td>
+				 <td title=''></td>
+				 <td title=''></td>
+				 <td>&#39;Y&#39; </td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>				 
+				 </td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>					 
+				 </td>
+				 <td></td>
+				</tr>
+								</tbody>
+				</table>
+				<p title='6 columns'>Table contained <span id="recordNumber">0</span> rows<p/>
+			</div>
+		</div>
+		<div class="box box-primary">		
+			<div class="box-header with-border">
+              <i class="fa fa-sitemap"></i>
+
+              <h3 id="Indexes" class="box-title">Indexes</h3>
+
+              <div class="box-tools pull-right">
+                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
+                </button>
+                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+              </div>
+            </div>	
+			<div class="box-body">
+				<table id="indexes_table" class="table table-bordered table-striped dataTable" role="grid">
+				<thead>
+				 <tr>
+				  <th>Constraint Name</th>
+				  <th>Type</th>
+				  <th>Sort</th>
+				  <th>Column(s)</th>
+				 </tr>
+				</thead>
+				<tbody>
+				 <tr>
+				  <td class='primaryKey' title='Primary Key'><i class='icon ion-key iconkey'></i> PK_ACTTYPMP_ID</td>
+				  <td>Primary key</td>
+				  <td><span title='Ascending'>Asc</span></td>
+				  <td>ESACTTYPMP_ID</td>
+				 </tr>				 
+				 <tr>
+				  <td title='Indexed'>IDX_ACT_TYPE</td>
+				  <td>Performance</td>
+				  <td><span title='Ascending'>Asc</span>/<span title='Ascending'>Asc</span></td>
+				  <td>ACT_ID + ESACTTYPE_ID</td>
+				 </tr>				 
+				 <tr>
+				  <td class='uniqueKey' title='Unique Key'><i class='icon ion-key iconkey'></i> UK_ACTTYPMP_ACT</td>
+				  <td>Must be unique</td>
+				  <td><span title='Ascending'>Asc</span></td>
+				  <td>ACT_ID</td>
+				 </tr>				 
+				</tbody>
+				</table>   			  
+			</div><!-- /.box-body -->
+		</div>
+				<div class="box box-primary">		
+			<div class="box-header with-border">
+              <i class="fa fa-code-fork"></i>
+
+              <h3 id="Relationships" class="box-title">Relationships</h3>
+
+              <div class="box-tools pull-right">
+                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
+                </button>
+                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+              </div>
+            </div>	
+			<div class="box-body">	
+			<div class="nav-tabs-custom" style="cursor: move;">
+            <!-- Tabs within a box -->
+			<h5>Close relationships within degrees of separation</h5>
+            <ul class="nav nav-tabs pull-left ui-sortable-handle">
+			  			              <li class="active"><a href="#oneDegreeImg-chart" data-toggle="tab" aria-expanded="true">One</a></li>			  			 
+			  			              <li class=""><a href="#twodegreesDegreeImg-chart" data-toggle="tab" aria-expanded="true">Two degrees</a></li>			  			 
+			  			              <li class=""><a href="#oneimpliedDegreeImg-chart" data-toggle="tab" aria-expanded="true">One implied</a></li>			  			 
+			  			              <li class=""><a href="#twoimpliedDegreeImg-chart" data-toggle="tab" aria-expanded="true">Two implied</a></li>			  			 
+            </ul>
+            <div class="tab-content no-padding">            
+				<div class="chart tab-pane active" id="oneDegreeImg-chart" style="position: relative; overflow-x:auto;">					
+					<map id="oneDegreeRelationshipsDiagram" name="oneDegreeRelationshipsDiagram">
+<area shape="rect" id="node1" href="ES_ACT_TYPE_MAP.html" title="ES_ACT_TYPE_MAP" alt="" coords="276,85,704,331">
+<area shape="rect" id="node2" href="SO_ACTIVITY.html" title="SO_ACTIVITY" alt="" coords="5,5,232,240">
+<area shape="rect" id="node3" href="ES_ACT_TYPE.html" title="ES_ACT_TYPE" alt="" coords="15,257,222,404">
+</map>
+
+					<a name='diagram'><img id='oneDegreeImg' src='../diagrams/ES_ACT_TYPE_MAP.1degree.png' usemap='#oneDegreeRelationshipsDiagram' class='diagram' border='0' alt='' align='left'></a>							
+				</div>
+				<div class="chart tab-pane " id="twodegreesDegreeImg-chart" style="position: relative; overflow-x:auto;">					
+					<map id="twoDegreesRelationshipsDiagram" name="twoDegreesRelationshipsDiagram">
+<area shape="rect" id="node1" href="CENSUS_DATA.html" title="CENSUS_DATA" alt="" coords="887,2034,1077,2122">
+<area shape="rect" id="node2" href="SO_ACTIVITY.html" title="SO_ACTIVITY" alt="" coords="497,1242,724,1477">
+<area shape="rect" id="node4" href="TIME_CODE.html" title="TIME_CODE" alt="" coords="240,2281,409,2369">
+<area shape="rect" id="node13" href="COLOUR.html" title="COLOUR" alt="" coords="5,653,152,741">
+<area shape="rect" id="node20" href="SO_SCHEDULE_GROUP.html" title="SO_SCHEDULE_GROUP" alt="" coords="196,454,453,542">
+<area shape="rect" id="node3" href="EMP_SCHD_DTL_LAYER.html" title="EMP_SCHD_DTL_LAYER" alt="" coords="852,2281,1112,2369">
+<area shape="rect" id="node5" href="EMPLOYEE_SCHED_DTL.html" title="EMPLOYEE_SCHED_DTL" alt="" coords="850,2386,1114,2474">
+<area shape="rect" id="node6" href="ES_ACT_TYPE_MAP.html" title="ES_ACT_TYPE_MAP" alt="" coords="768,2597,1196,2842">
+<area shape="rect" id="node7" href="ES_ACT_TYPE.html" title="ES_ACT_TYPE" alt="" coords="507,2658,714,2805">
+<area shape="rect" id="node8" href="ES_ACTIVITY_REASON.html" title="ES_ACTIVITY_REASON" alt="" coords="859,2175,1105,2263">
+<area shape="rect" id="node9" href="ES_ACTIVITY_SHIFT_STATUS.html" title="ES_ACTIVITY_SHIFT_STATUS" alt="" coords="834,665,1130,753">
+<area shape="rect" id="node10" href="ES_RELIEF_ACTIVITY.html" title="ES_RELIEF_ACTIVITY" alt="" coords="863,770,1101,858">
+<area shape="rect" id="node11" href="ES_ROTROW_ASGMT.html" title="ES_ROTROW_ASGMT" alt="" coords="862,875,1102,963">
+<area shape="rect" id="node12" href="ES_SHIFT_ATTRIBUTE.html" title="ES_SHIFT_ATTRIBUTE" alt="" coords="859,33,1105,121">
+<area shape="rect" id="node14" href="ES_SHIFT_BREAK.html" title="ES_SHIFT_BREAK" alt="" coords="1240,1067,1453,1155">
+<area shape="rect" id="node15" href="ES_SHIFT_DETAIL.html" title="ES_SHIFT_DETAIL" alt="" coords="875,981,1089,1069">
+<area shape="rect" id="node16" href="ES_SHIFT_DETAIL_LAYER.html" title="ES_SHIFT_DETAIL_LAYER" alt="" coords="847,1086,1117,1174">
+<area shape="rect" id="node17" href="ES_SHIFT_HIST_DET.html" title="ES_SHIFT_HIST_DET" alt="" coords="865,1191,1099,1279">
+<area shape="rect" id="node18" href="RTSS_SHIFT.html" title="RTSS_SHIFT" alt="" coords="895,1297,1069,1385">
+<area shape="rect" id="node19" href="SHIFT_PATTERN_SHIFT_LABOR.html" title="SHIFT_PATTERN_SHIFT_LABOR" alt="" coords="824,2491,1140,2579">
+<area shape="rect" id="node21" href="SO_CLIENT_STFDEF.html" title="SO_CLIENT_STFDEF" alt="" coords="865,454,1099,542">
+<area shape="rect" id="node22" href="SO_EMP_GRP_ACTRUL.html" title="SO_EMP_GRP_ACTRUL" alt="" coords="855,1402,1109,1490">
+<area shape="rect" id="node23" href="SO_EVENT_DETAIL.html" title="SO_EVENT_DETAIL" alt="" coords="871,559,1093,647">
+<area shape="rect" id="node24" href="SO_HIST_INT_REQ.html" title="SO_HIST_INT_REQ" alt="" coords="872,138,1092,226">
+<area shape="rect" id="node25" href="SO_INTERVAL_REQ.html" title="SO_INTERVAL_REQ" alt="" coords="869,243,1095,331">
+<area shape="rect" id="node26" href="SO_SHIFT_ACTIVITY.html" title="SO_SHIFT_ACTIVITY" alt="" coords="867,349,1097,437">
+<area shape="rect" id="node27" href="SO_TASK_TMPLT.html" title="SO_TASK_TMPLT" alt="" coords="877,1507,1087,1595">
+<area shape="rect" id="node28" href="SR_SHIFT_OFFSET.html" title="SR_SHIFT_OFFSET" alt="" coords="871,1613,1093,1701">
+<area shape="rect" id="node29" href="SR_SUMMARY.html" title="SR_SUMMARY" alt="" coords="889,1718,1075,1806">
+<area shape="rect" id="node30" href="TM_ACTIONITEM.html" title="TM_ACTIONITEM" alt="" coords="879,1823,1085,1911">
+<area shape="rect" id="node31" href="UNSTFD_SHIFT.html" title="UNSTFD_SHIFT" alt="" coords="885,1929,1079,2017">
+</map>
+
+					<a name='diagram'><img id='twodegreesDegreeImg' src='../diagrams/ES_ACT_TYPE_MAP.2degrees.png' usemap='#twoDegreesRelationshipsDiagram' class='diagram' border='0' alt='' align='left'></a>							
+				</div>
+				<div class="chart tab-pane " id="oneimpliedDegreeImg-chart" style="position: relative; overflow-x:auto;">					
+					<map id="oneDegreeRelationshipsDiagramImplied" name="oneDegreeRelationshipsDiagramImplied">
+<area shape="rect" id="node1" href="ES_ACT_TYPE_MAP.html" title="ES_ACT_TYPE_MAP" alt="" coords="276,85,704,331">
+<area shape="rect" id="node2" href="SO_ACTIVITY.html" title="SO_ACTIVITY" alt="" coords="5,5,232,240">
+<area shape="rect" id="node3" href="ES_ACT_TYPE.html" title="ES_ACT_TYPE" alt="" coords="15,257,222,404">
+</map>
+
+					<a name='diagram'><img id='oneimpliedDegreeImg' src='../diagrams/ES_ACT_TYPE_MAP.implied1degrees.png' usemap='#oneDegreeRelationshipsDiagramImplied' class='diagram' border='0' alt='' align='left'></a>							
+				</div>
+				<div class="chart tab-pane " id="twoimpliedDegreeImg-chart" style="position: relative; overflow-x:auto;">					
+					<map id="twoDegreesRelationshipsDiagramImplied" name="twoDegreesRelationshipsDiagramImplied">
+<area shape="rect" id="node1" href="CENSUS_DATA.html" title="CENSUS_DATA" alt="" coords="887,2317,1077,2405">
+<area shape="rect" id="node2" href="SO_ACTIVITY.html" title="SO_ACTIVITY" alt="" coords="497,1610,724,1845">
+<area shape="rect" id="node4" href="TIME_CODE.html" title="TIME_CODE" alt="" coords="240,2605,409,2693">
+<area shape="rect" id="node13" href="COLOUR.html" title="COLOUR" alt="" coords="5,2422,152,2510">
+<area shape="rect" id="node20" href="SO_SCHEDULE_GROUP.html" title="SO_SCHEDULE_GROUP" alt="" coords="196,382,453,470">
+<area shape="rect" id="node3" href="EMP_SCHD_DTL_LAYER.html" title="EMP_SCHD_DTL_LAYER" alt="" coords="852,2750,1112,2838">
+<area shape="rect" id="node5" href="EMPLOYEE_SCHED_DTL.html" title="EMPLOYEE_SCHED_DTL" alt="" coords="850,2856,1114,2944">
+<area shape="rect" id="node6" href="ES_ACT_TYPE_MAP.html" title="ES_ACT_TYPE_MAP" alt="" coords="768,2961,1196,3206">
+<area shape="rect" id="node7" href="ES_ACT_TYPE.html" title="ES_ACT_TYPE" alt="" coords="507,3121,714,3268">
+<area shape="rect" id="node8" href="ES_ACTIVITY_REASON.html" title="ES_ACTIVITY_REASON" alt="" coords="859,1402,1105,1490">
+<area shape="rect" id="node9" href="ES_ACTIVITY_SHIFT_STATUS.html" title="ES_ACTIVITY_SHIFT_STATUS" alt="" coords="834,1508,1130,1596">
+<area shape="rect" id="node10" href="ES_RELIEF_ACTIVITY.html" title="ES_RELIEF_ACTIVITY" alt="" coords="863,1613,1101,1701">
+<area shape="rect" id="node11" href="ES_ROTROW_ASGMT.html" title="ES_ROTROW_ASGMT" alt="" coords="862,1754,1102,1842">
+<area shape="rect" id="node12" href="ES_SHIFT_ATTRIBUTE.html" title="ES_SHIFT_ATTRIBUTE" alt="" coords="859,2422,1105,2510">
+<area shape="rect" id="node14" href="ES_SHIFT_BREAK.html" title="ES_SHIFT_BREAK" alt="" coords="1299,2457,1512,2545">
+<area shape="rect" id="node15" href="ES_SHIFT_DETAIL.html" title="ES_SHIFT_DETAIL" alt="" coords="875,1860,1089,1948">
+<area shape="rect" id="node16" href="ES_SHIFT_DETAIL_LAYER.html" title="ES_SHIFT_DETAIL_LAYER" alt="" coords="847,2001,1117,2089">
+<area shape="rect" id="node17" href="ES_SHIFT_HIST_DET.html" title="ES_SHIFT_HIST_DET" alt="" coords="865,2106,1099,2194">
+<area shape="rect" id="node18" href="RTSS_SHIFT.html" title="RTSS_SHIFT" alt="" coords="895,2212,1069,2300">
+<area shape="rect" id="node19" href="SHIFT_PATTERN_SHIFT_LABOR.html" title="SHIFT_PATTERN_SHIFT_LABOR" alt="" coords="824,2645,1140,2733">
+<area shape="rect" id="node21" href="SO_CLIENT_STFDEF.html" title="SO_CLIENT_STFDEF" alt="" coords="865,100,1099,188">
+<area shape="rect" id="node22" href="SO_EMP_GRP_ACTRUL.html" title="SO_EMP_GRP_ACTRUL" alt="" coords="855,770,1109,858">
+<area shape="rect" id="node23" href="SO_EVENT_DETAIL.html" title="SO_EVENT_DETAIL" alt="" coords="871,488,1093,576">
+<area shape="rect" id="node24" href="SO_HIST_INT_REQ.html" title="SO_HIST_INT_REQ" alt="" coords="872,277,1092,365">
+<area shape="rect" id="node25" href="SO_INTERVAL_REQ.html" title="SO_INTERVAL_REQ" alt="" coords="869,382,1095,470">
+<area shape="rect" id="node26" href="SO_SHIFT_ACTIVITY.html" title="SO_SHIFT_ACTIVITY" alt="" coords="867,593,1097,681">
+<area shape="rect" id="node27" href="SO_TASK_TMPLT.html" title="SO_TASK_TMPLT" alt="" coords="877,876,1087,964">
+<area shape="rect" id="node28" href="SR_SHIFT_OFFSET.html" title="SR_SHIFT_OFFSET" alt="" coords="871,981,1093,1069">
+<area shape="rect" id="node29" href="SR_SUMMARY.html" title="SR_SUMMARY" alt="" coords="889,1086,1075,1174">
+<area shape="rect" id="node30" href="TM_ACTIONITEM.html" title="TM_ACTIONITEM" alt="" coords="879,1192,1085,1280">
+<area shape="rect" id="node31" href="UNSTFD_SHIFT.html" title="UNSTFD_SHIFT" alt="" coords="885,1297,1079,1385">
+<area shape="rect" id="node32" href="VIEW_ES_EFFECTIVE_SHIFT_DATA.html" title="VIEW_ES_EFFECTIVE_SHIFT_DATA" alt="" coords="1240,2136,1571,2200">
+<area shape="rect" id="node33" href="VIEW_SO_DAILY_SKD.html" title="VIEW_SO_DAILY_SKD" alt="" coords="1288,593,1523,657">
+<area shape="rect" id="node34" href="VL_ES_ACT_TYPE.html" title="VL_ES_ACT_TYPE" alt="" coords="877,3224,1087,3288">
+<area shape="rect" id="node35" href="VL_SO_ACTIVITY.html" title="VL_SO_ACTIVITY" alt="" coords="881,2564,1083,2628">
+<area shape="rect" id="node36" href="VL_SO_CLIENT_STFDEF.html" title="VL_SO_CLIENT_STFDEF" alt="" coords="1277,100,1533,164">
+<area shape="rect" id="node37" href="VL_SO_EVENT_DETAIL.html" title="VL_SO_EVENT_DETAIL" alt="" coords="1283,488,1528,552">
+</map>
+
+					<a name='diagram'><img id='twoimpliedDegreeImg' src='../diagrams/ES_ACT_TYPE_MAP.implied2degrees.png' usemap='#twoDegreesRelationshipsDiagramImplied' class='diagram' border='0' alt='' align='left'></a>							
+				</div>
+			  			</div>
+			</div>
+		  </div><!-- /.box-body -->
+		</div>
+	      </section>
+    
+  </div>
+  <!-- /.content-wrapper -->
+  <footer class="main-footer">
+    <div>
+      <div class="pull-right hidden-xs">
+        <a href="https://github.com/schemaspy/schemaspy" title="GitHub for SchemaSpy"><i class="fa fa-github-square fa-2x"></i></a>
+        <a href="http://stackoverflow.com/questions/tagged/schemaspy" title="StackOverflow for SchemaSpy"><i class="fa fa-stack-overflow fa-2x"></i></a>
+      </div>
+      <strong>Generated by <a href="http://schemaspy.org/" class="logo-text"><i class="fa fa-database"></i> SchemaSpy 6.0.0-rc2</a></strong>
+    </div>
+    <!-- /.container -->
+  </footer>
+</div>
+<!-- ./wrapper -->
+
+<!-- jQuery 2.2.3 -->
+<script src="../bower/admin-lte/plugins/jQuery/jquery-2.2.3.min.js"></script>
+<script src="../bower/admin-lte/plugins/jQueryUI/jquery-ui.min.js"></script>
+<!-- Bootstrap 3.3.5 -->
+<script src="../bower/admin-lte/bootstrap/js/bootstrap.min.js"></script>
+<!-- DataTables -->
+<script src="../bower/datatables.net/jquery.dataTables.min.js"></script>
+<script src="../bower/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
+<script src="../bower/datatables.net-buttons/dataTables.buttons.min.js"></script>
+<script src="../bower/datatables.net-buttons-bs/js/buttons.bootstrap.min.js"></script>
+<script src="../bower/datatables.net-buttons/buttons.html5.min.js"></script>
+<script src="../bower/datatables.net-buttons/buttons.print.min.js"></script>
+<script src="../bower/datatables.net-buttons/buttons.colVis.min.js"></script>
+
+<!-- SlimScroll -->
+<script src="../bower/admin-lte/plugins/slimScroll/jquery.slimscroll.min.js"></script>
+<!-- FastClick -->
+<script src="../bower/admin-lte/plugins/fastclick/fastclick.js"></script>
+<!-- Salvattore -->
+<script src="../bower/salvattore/salvattore.min.js"></script>
+<!-- AnchorJS -->
+<script src="../bower/anchor-js/anchor.min.js"></script>
+<!-- CodeMirror -->
+<script src="../bower/codemirror/codemirror.js"></script>
+<script src="../bower/codemirror/sql.js"></script>
+<!-- AdminLTE App -->
+<script src="../bower/admin-lte/dist/js/app.min.js"></script>
+<script src="table.js"></script>
+<script src="../schemaSpy.js"></script>
+</body>
+</html>

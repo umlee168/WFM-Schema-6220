@@ -1,0 +1,1426 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>VL_SHIFT_PREMIUM_ZONE - WFMSB622 Database</title>
+  <!-- Tell the browser to be responsive to screen width -->
+  <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+  <!-- Bootstrap 3.3.5 -->
+  <link rel="stylesheet" href="../bower/admin-lte/bootstrap/css/bootstrap.min.css">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="../bower/font-awesome/css/font-awesome.min.css">
+  <!-- Ionicons -->
+  <link rel="stylesheet" href="../bower/ionicons/css/ionicons.min.css">
+  <!-- DataTables -->
+  <link rel="stylesheet" href="../bower/datatables.net-bs/css/dataTables.bootstrap.min.css">
+  <link rel="stylesheet" href="../bower/datatables.net-buttons-bs/css/buttons.bootstrap.min.css">
+  <!-- Code Mirror -->
+  <link rel="stylesheet" href="../bower/codemirror/codemirror.css">
+  <!-- Fonts -->
+  <link href='../fonts/indieflower/indie-flower.css' rel='stylesheet' type='text/css'>
+  <link href='../fonts/source-sans-pro/source-sans-pro.css' rel='stylesheet' type='text/css'>
+
+  <!-- Theme style -->
+  <link rel="stylesheet" href="../bower/admin-lte/dist/css/AdminLTE.min.css">
+  <!-- Salvattore -->
+  <link rel="stylesheet" href="../bower/salvattore/salvattore.css">
+  <!-- AdminLTE Skins. Choose a skin from the css/skins
+       folder instead of downloading all of them to reduce the load. -->
+  <link rel="stylesheet" href="../bower/admin-lte/dist/css/skins/_all-skins.min.css">
+  <!-- SchemaSpy -->
+  <link rel="stylesheet" href="../schemaSpy.css">
+  
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+  <script src="../bower/html5shiv/html5shiv.min.js"></script>
+  <script src="../bower/respond/respond.min.js"></script>
+  <![endif]-->
+</head>
+<!-- ADD THE CLASS layout-top-nav TO REMOVE THE SIDEBAR. -->
+<body class="hold-transition skin-blue layout-top-nav">
+<div class="wrapper">
+  <header class="main-header">
+    <nav class="navbar navbar-static-top">
+      <div class="container">
+        <div class="navbar-header">
+          <a href="../index.html" class="navbar-brand"><b>WFMSB622</b> Database</a>
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse">
+            <i class="fa fa-bars"></i>
+          </button>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse pull-left" id="navbar-collapse">
+          <ul class="nav navbar-nav">
+            <li><a href="../index.html">Tables <span class="sr-only">(current)</span></a></li>            
+			<!--<li><a href="../components.html" title="List of system components">Components</a></li>-->
+			<li><a href="../columns.html" title="All of the columns in the schema">Columns</a></li>
+			<li><a href="../constraints.html" title="Useful for diagnosing error messages that just give constraint name or number">Constraints</a></li>
+			<li><a href="../relationships.html" title="Diagram of table relationships">Relationships</a></li>
+			<li><a href="../orphans.html" title="View of tables with neither parents nor children">Orphan&nbsp;Tables</a></li>				
+			<li><a href="../anomalies.html" title="Things that might not be quite right">Anomalies</a></li>
+          </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+        <!-- Navbar Right Menu -->
+
+      </div>
+      <!-- /.container-fluid -->
+    </nav>
+  </header>
+  <!-- Main content -->
+  <!-- Full Width Column -->
+  <div class="content-wrapper">
+          <!-- Content Header (Page header) -->
+      <section class="content-header">
+        <h1>VL_SHIFT_PREMIUM_ZONE</h1></br>
+		      </section>
+      <!-- Main content -->
+      <section class="content">
+		<div class="box box-primary">
+			<div class="box-header with-border">
+			  <span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span>
+              <h3 id="Columns" class="box-title">Columns</h3>
+              <div class="box-tools pull-right">
+                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
+                </button>
+                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+              </div>
+            </div>	
+            <div class="box-body">
+				<table id="standard_table" class="table table-bordered table-striped dataTable" role="grid">
+				<thead align='left'>
+				<tr>
+				  <th>Column</th>
+				  <th>Type</th>
+				  <th>Size</th>
+				  <th title='Are nulls allowed?'>Nulls</th>
+				  <th title='Is column automatically updated?'>Auto</th>
+				  <th title='Default value'>Default</th>
+				  <th title='Columns in tables that reference this column'>Children</th>
+				  <th title='Columns in tables that are referenced by this column'>Parents</th>
+				  <th title='Comments' class="toggle"><span>Comments</span></th>
+				</tr>
+				</thead>
+				<tbody>
+				<tr>
+				 <td class='foreignKey' title='Foreign Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="SPZONE_ID">SPZONE_ID</span></td>
+				 <td>NUMBER</td>
+				 <td>38</td>
+				 <td title=''></td>
+				 <td title=''></td>
+				 <td>null</td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>				 
+				 </td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				   <tr>
+					<td title="VL_SHIFT_PREMIUM_ZONE.SPZONE_ID&#39;s name implies that it&#39;s a child of SHIFT_PREMIUM_ZONE.SPZONE_ID, but it doesn&#39;t reference that column.">
+						<a href='SHIFT_PREMIUM_ZONE.html'>SHIFT_PREMIUM_ZONE</a><span class='relatedKey'>.SPZONE_ID</span>
+					</td>
+					<td class="constraint detail">
+						Implied Constraint <span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span>
+					</td>
+				   </tr>
+				  </table>					 
+				 </td>
+				 <td></td>
+				</tr>
+				<tr>
+				 <td><span id="SPZONE_NAME">SPZONE_NAME</span></td>
+				 <td>VARCHAR2</td>
+				 <td>40</td>
+				 <td title=''></td>
+				 <td title=''></td>
+				 <td>null</td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>				 
+				 </td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>					 
+				 </td>
+				 <td></td>
+				</tr>
+				<tr>
+				 <td><span id="SPZONE_DESC">SPZONE_DESC</span></td>
+				 <td>VARCHAR2</td>
+				 <td>100</td>
+				 <td title='nullable'>√</td>
+				 <td title=''></td>
+				 <td>null</td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>				 
+				 </td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>					 
+				 </td>
+				 <td></td>
+				</tr>
+				<tr>
+				 <td><span id="SPZONE_START_TIME">SPZONE_START_TIME</span></td>
+				 <td>DATE</td>
+				 <td>7</td>
+				 <td title=''></td>
+				 <td title=''></td>
+				 <td>null</td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>				 
+				 </td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>					 
+				 </td>
+				 <td></td>
+				</tr>
+				<tr>
+				 <td><span id="SPZONE_END_TIME">SPZONE_END_TIME</span></td>
+				 <td>DATE</td>
+				 <td>7</td>
+				 <td title=''></td>
+				 <td title=''></td>
+				 <td>null</td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>				 
+				 </td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>					 
+				 </td>
+				 <td></td>
+				</tr>
+				<tr>
+				 <td class='foreignKey' title='Foreign Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="TCODE_ID">TCODE_ID</span></td>
+				 <td>NUMBER</td>
+				 <td>38</td>
+				 <td title=''></td>
+				 <td title=''></td>
+				 <td>null</td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>				 
+				 </td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				   <tr>
+					<td title="VL_SHIFT_PREMIUM_ZONE.TCODE_ID&#39;s name implies that it&#39;s a child of TIME_CODE.TCODE_ID, but it doesn&#39;t reference that column.">
+						<a href='TIME_CODE.html'>TIME_CODE</a><span class='relatedKey'>.TCODE_ID</span>
+					</td>
+					<td class="constraint detail">
+						Implied Constraint <span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span>
+					</td>
+				   </tr>
+				  </table>					 
+				 </td>
+				 <td></td>
+				</tr>
+				<tr>
+				 <td class='foreignKey' title='Foreign Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="HTYPE_ID">HTYPE_ID</span></td>
+				 <td>NUMBER</td>
+				 <td>38</td>
+				 <td title='nullable'>√</td>
+				 <td title=''></td>
+				 <td>null</td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>				 
+				 </td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				   <tr>
+					<td title="VL_SHIFT_PREMIUM_ZONE.HTYPE_ID&#39;s name implies that it&#39;s a child of HOUR_TYPE.HTYPE_ID, but it doesn&#39;t reference that column.">
+						<a href='HOUR_TYPE.html'>HOUR_TYPE</a><span class='relatedKey'>.HTYPE_ID</span>
+					</td>
+					<td class="constraint detail">
+						Implied Constraint <span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span>
+					</td>
+				   </tr>
+				  </table>					 
+				 </td>
+				 <td></td>
+				</tr>
+				<tr>
+				 <td><span id="CALCGRP_NAME">CALCGRP_NAME</span></td>
+				 <td>VARCHAR2</td>
+				 <td>400</td>
+				 <td title='nullable'>√</td>
+				 <td title=''></td>
+				 <td>null</td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>				 
+				 </td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>					 
+				 </td>
+				 <td></td>
+				</tr>
+				<tr>
+				 <td><span id="SHFTPAT_NAME">SHFTPAT_NAME</span></td>
+				 <td>VARCHAR2</td>
+				 <td>400</td>
+				 <td title='nullable'>√</td>
+				 <td title=''></td>
+				 <td>null</td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>				 
+				 </td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>					 
+				 </td>
+				 <td></td>
+				</tr>
+				<tr>
+				 <td><span id="DAYTYP_NAME">DAYTYP_NAME</span></td>
+				 <td>VARCHAR2</td>
+				 <td>400</td>
+				 <td title='nullable'>√</td>
+				 <td title=''></td>
+				 <td>null</td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>				 
+				 </td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>					 
+				 </td>
+				 <td></td>
+				</tr>
+				<tr>
+				 <td><span id="SHFT_NAME">SHFT_NAME</span></td>
+				 <td>VARCHAR2</td>
+				 <td>400</td>
+				 <td title='nullable'>√</td>
+				 <td title=''></td>
+				 <td>null</td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>				 
+				 </td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>					 
+				 </td>
+				 <td></td>
+				</tr>
+				<tr>
+				 <td><span id="SPZONE_RATE">SPZONE_RATE</span></td>
+				 <td>NUMBER</td>
+				 <td>10,5</td>
+				 <td title=''></td>
+				 <td title=''></td>
+				 <td>null</td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>				 
+				 </td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>					 
+				 </td>
+				 <td></td>
+				</tr>
+				<tr>
+				 <td><span id="SPZONE_MAX_MINUTES">SPZONE_MAX_MINUTES</span></td>
+				 <td>NUMBER</td>
+				 <td>38</td>
+				 <td title=''></td>
+				 <td title=''></td>
+				 <td>null</td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>				 
+				 </td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>					 
+				 </td>
+				 <td></td>
+				</tr>
+				<tr>
+				 <td><span id="SPZONE_MAX_DOLLARS">SPZONE_MAX_DOLLARS</span></td>
+				 <td>NUMBER</td>
+				 <td>10,5</td>
+				 <td title=''></td>
+				 <td title=''></td>
+				 <td>null</td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>				 
+				 </td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>					 
+				 </td>
+				 <td></td>
+				</tr>
+				<tr>
+				 <td><span id="SPZONE_SZS_TIME">SPZONE_SZS_TIME</span></td>
+				 <td>DATE</td>
+				 <td>7</td>
+				 <td title='nullable'>√</td>
+				 <td title=''></td>
+				 <td>null</td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>				 
+				 </td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>					 
+				 </td>
+				 <td></td>
+				</tr>
+				<tr>
+				 <td><span id="SPZONE_SZE_TIME">SPZONE_SZE_TIME</span></td>
+				 <td>DATE</td>
+				 <td>7</td>
+				 <td title='nullable'>√</td>
+				 <td title=''></td>
+				 <td>null</td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>				 
+				 </td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>					 
+				 </td>
+				 <td></td>
+				</tr>
+				<tr>
+				 <td><span id="SPZONE_EZS_TIME">SPZONE_EZS_TIME</span></td>
+				 <td>DATE</td>
+				 <td>7</td>
+				 <td title='nullable'>√</td>
+				 <td title=''></td>
+				 <td>null</td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>				 
+				 </td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>					 
+				 </td>
+				 <td></td>
+				</tr>
+				<tr>
+				 <td><span id="SPZONE_EZE_TIME">SPZONE_EZE_TIME</span></td>
+				 <td>DATE</td>
+				 <td>7</td>
+				 <td title='nullable'>√</td>
+				 <td title=''></td>
+				 <td>null</td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>				 
+				 </td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>					 
+				 </td>
+				 <td></td>
+				</tr>
+				<tr>
+				 <td><span id="SPZONE_PERCENTAGE">SPZONE_PERCENTAGE</span></td>
+				 <td>CHAR</td>
+				 <td>1</td>
+				 <td title=''></td>
+				 <td title=''></td>
+				 <td>null</td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>				 
+				 </td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>					 
+				 </td>
+				 <td></td>
+				</tr>
+				<tr>
+				 <td><span id="SPZONE_INCL_TCODE_NAMES">SPZONE_INCL_TCODE_NAMES</span></td>
+				 <td>VARCHAR2</td>
+				 <td>4000</td>
+				 <td title='nullable'>√</td>
+				 <td title=''></td>
+				 <td>null</td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>				 
+				 </td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>					 
+				 </td>
+				 <td></td>
+				</tr>
+				<tr>
+				 <td><span id="SPZONE_INCL_HTYPE_NAMES">SPZONE_INCL_HTYPE_NAMES</span></td>
+				 <td>VARCHAR2</td>
+				 <td>4000</td>
+				 <td title='nullable'>√</td>
+				 <td title=''></td>
+				 <td>null</td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>				 
+				 </td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>					 
+				 </td>
+				 <td></td>
+				</tr>
+				<tr>
+				 <td><span id="SPZONE_MIN_MINUTES">SPZONE_MIN_MINUTES</span></td>
+				 <td>NUMBER</td>
+				 <td>38</td>
+				 <td title='nullable'>√</td>
+				 <td title=''></td>
+				 <td>null</td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>				 
+				 </td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>					 
+				 </td>
+				 <td></td>
+				</tr>
+				<tr>
+				 <td><span id="SPZONE_MW_BEFORE">SPZONE_MW_BEFORE</span></td>
+				 <td>DATE</td>
+				 <td>7</td>
+				 <td title='nullable'>√</td>
+				 <td title=''></td>
+				 <td>null</td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>				 
+				 </td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>					 
+				 </td>
+				 <td></td>
+				</tr>
+				<tr>
+				 <td><span id="SPZONE_MW_AFTER">SPZONE_MW_AFTER</span></td>
+				 <td>DATE</td>
+				 <td>7</td>
+				 <td title='nullable'>√</td>
+				 <td title=''></td>
+				 <td>null</td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>				 
+				 </td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>					 
+				 </td>
+				 <td></td>
+				</tr>
+				<tr>
+				 <td><span id="SPZONE_SKD_UNSKD">SPZONE_SKD_UNSKD</span></td>
+				 <td>VARCHAR2</td>
+				 <td>1</td>
+				 <td title='nullable'>√</td>
+				 <td title=''></td>
+				 <td>null</td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>				 
+				 </td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>					 
+				 </td>
+				 <td></td>
+				</tr>
+				<tr>
+				 <td><span id="SPZONE_BEST_OF_GRP">SPZONE_BEST_OF_GRP</span></td>
+				 <td>VARCHAR2</td>
+				 <td>40</td>
+				 <td title='nullable'>√</td>
+				 <td title=''></td>
+				 <td>null</td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>				 
+				 </td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>					 
+				 </td>
+				 <td></td>
+				</tr>
+				<tr>
+				 <td><span id="SPZONE_SHFT_TO_CHK">SPZONE_SHFT_TO_CHK</span></td>
+				 <td>VARCHAR2</td>
+				 <td>40</td>
+				 <td title=''></td>
+				 <td title=''></td>
+				 <td>null</td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>				 
+				 </td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>					 
+				 </td>
+				 <td></td>
+				</tr>
+				<tr>
+				 <td><span id="SPZONE_UPDATE_FLDS">SPZONE_UPDATE_FLDS</span></td>
+				 <td>VARCHAR2</td>
+				 <td>40</td>
+				 <td title='nullable'>√</td>
+				 <td title=''></td>
+				 <td>null</td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>				 
+				 </td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>					 
+				 </td>
+				 <td></td>
+				</tr>
+				<tr>
+				 <td><span id="SPZONE_OT_MULTIPLY">SPZONE_OT_MULTIPLY</span></td>
+				 <td>CHAR</td>
+				 <td>1</td>
+				 <td title='nullable'>√</td>
+				 <td title=''></td>
+				 <td>null</td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>				 
+				 </td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>					 
+				 </td>
+				 <td></td>
+				</tr>
+				<tr>
+				 <td><span id="SPZONE_USE_MINUTES">SPZONE_USE_MINUTES</span></td>
+				 <td>NUMBER</td>
+				 <td>38</td>
+				 <td title='nullable'>√</td>
+				 <td title=''></td>
+				 <td>null</td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>				 
+				 </td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>					 
+				 </td>
+				 <td></td>
+				</tr>
+				<tr>
+				 <td><span id="SPZONE_MW_MINUTES">SPZONE_MW_MINUTES</span></td>
+				 <td>VARCHAR2</td>
+				 <td>40</td>
+				 <td title='nullable'>√</td>
+				 <td title=''></td>
+				 <td>null</td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>				 
+				 </td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>					 
+				 </td>
+				 <td></td>
+				</tr>
+				<tr>
+				 <td><span id="SPZONE_MWMIN_START">SPZONE_MWMIN_START</span></td>
+				 <td>DATE</td>
+				 <td>7</td>
+				 <td title='nullable'>√</td>
+				 <td title=''></td>
+				 <td>null</td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>				 
+				 </td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>					 
+				 </td>
+				 <td></td>
+				</tr>
+				<tr>
+				 <td><span id="SPZONE_MWMIN_END">SPZONE_MWMIN_END</span></td>
+				 <td>DATE</td>
+				 <td>7</td>
+				 <td title='nullable'>√</td>
+				 <td title=''></td>
+				 <td>null</td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>				 
+				 </td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>					 
+				 </td>
+				 <td></td>
+				</tr>
+				<tr>
+				 <td><span id="SPZONE_APPLY_TYPE">SPZONE_APPLY_TYPE</span></td>
+				 <td>VARCHAR2</td>
+				 <td>40</td>
+				 <td title=''></td>
+				 <td title=''></td>
+				 <td>null</td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>				 
+				 </td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>					 
+				 </td>
+				 <td></td>
+				</tr>
+				<tr>
+				 <td><span id="CLIENT_ID">CLIENT_ID</span></td>
+				 <td>NUMBER</td>
+				 <td>0</td>
+				 <td title='nullable'>√</td>
+				 <td title=''></td>
+				 <td>null</td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>				 
+				 </td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>					 
+				 </td>
+				 <td></td>
+				</tr>
+				<tr>
+				 <td><span id="SPZONE_LBM_PERM">SPZONE_LBM_PERM</span></td>
+				 <td>VARCHAR2</td>
+				 <td>1</td>
+				 <td title='nullable'>√</td>
+				 <td title=''></td>
+				 <td>null</td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>				 
+				 </td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>					 
+				 </td>
+				 <td></td>
+				</tr>
+				<tr>
+				 <td class='foreignKey' title='Foreign Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="JOB_ID">JOB_ID</span></td>
+				 <td>NUMBER</td>
+				 <td>38</td>
+				 <td title='nullable'>√</td>
+				 <td title=''></td>
+				 <td>null</td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>				 
+				 </td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				   <tr>
+					<td title="VL_SHIFT_PREMIUM_ZONE.JOB_ID&#39;s name implies that it&#39;s a child of JOB.JOB_ID, but it doesn&#39;t reference that column.">
+						<a href='JOB.html'>JOB</a><span class='relatedKey'>.JOB_ID</span>
+					</td>
+					<td class="constraint detail">
+						Implied Constraint <span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span>
+					</td>
+				   </tr>
+				  </table>					 
+				 </td>
+				 <td></td>
+				</tr>
+				<tr>
+				 <td class='foreignKey' title='Foreign Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="DEPT_ID">DEPT_ID</span></td>
+				 <td>NUMBER</td>
+				 <td>38</td>
+				 <td title='nullable'>√</td>
+				 <td title=''></td>
+				 <td>null</td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>				 
+				 </td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				   <tr>
+					<td title="VL_SHIFT_PREMIUM_ZONE.DEPT_ID&#39;s name implies that it&#39;s a child of DEPARTMENT.DEPT_ID, but it doesn&#39;t reference that column.">
+						<a href='DEPARTMENT.html'>DEPARTMENT</a><span class='relatedKey'>.DEPT_ID</span>
+					</td>
+					<td class="constraint detail">
+						Implied Constraint <span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span>
+					</td>
+				   </tr>
+				  </table>					 
+				 </td>
+				 <td></td>
+				</tr>
+				<tr>
+				 <td class='foreignKey' title='Foreign Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="DOCK_ID">DOCK_ID</span></td>
+				 <td>NUMBER</td>
+				 <td>38</td>
+				 <td title='nullable'>√</td>
+				 <td title=''></td>
+				 <td>null</td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>				 
+				 </td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				   <tr>
+					<td title="VL_SHIFT_PREMIUM_ZONE.DOCK_ID&#39;s name implies that it&#39;s a child of DOCKET.DOCK_ID, but it doesn&#39;t reference that column.">
+						<a href='DOCKET.html'>DOCKET</a><span class='relatedKey'>.DOCK_ID</span>
+					</td>
+					<td class="constraint detail">
+						Implied Constraint <span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span>
+					</td>
+				   </tr>
+				  </table>					 
+				 </td>
+				 <td></td>
+				</tr>
+				<tr>
+				 <td class='foreignKey' title='Foreign Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="PROJ_ID">PROJ_ID</span></td>
+				 <td>NUMBER</td>
+				 <td>38</td>
+				 <td title='nullable'>√</td>
+				 <td title=''></td>
+				 <td>null</td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>				 
+				 </td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				   <tr>
+					<td title="VL_SHIFT_PREMIUM_ZONE.PROJ_ID&#39;s name implies that it&#39;s a child of PROJECT.PROJ_ID, but it doesn&#39;t reference that column.">
+						<a href='PROJECT.html'>PROJECT</a><span class='relatedKey'>.PROJ_ID</span>
+					</td>
+					<td class="constraint detail">
+						Implied Constraint <span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span>
+					</td>
+				   </tr>
+				  </table>					 
+				 </td>
+				 <td></td>
+				</tr>
+				<tr>
+				 <td><span id="QUANTITY">QUANTITY</span></td>
+				 <td>NUMBER</td>
+				 <td>20,10</td>
+				 <td title='nullable'>√</td>
+				 <td title=''></td>
+				 <td>null</td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>				 
+				 </td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>					 
+				 </td>
+				 <td></td>
+				</tr>
+				<tr>
+				 <td><span id="SPZONE_POPLT_TIME_FLAG">SPZONE_POPLT_TIME_FLAG</span></td>
+				 <td>CHAR</td>
+				 <td>1</td>
+				 <td title=''></td>
+				 <td title=''></td>
+				 <td>null</td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>				 
+				 </td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>					 
+				 </td>
+				 <td></td>
+				</tr>
+				<tr>
+				 <td><span id="SPZONE_HTYPE_MULTIPLY">SPZONE_HTYPE_MULTIPLY</span></td>
+				 <td>CHAR</td>
+				 <td>1</td>
+				 <td title=''></td>
+				 <td title=''></td>
+				 <td>null</td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>				 
+				 </td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>					 
+				 </td>
+				 <td></td>
+				</tr>
+				<tr>
+				 <td><span id="SPZONE_INCL_SHIFT_IDS">SPZONE_INCL_SHIFT_IDS</span></td>
+				 <td>VARCHAR2</td>
+				 <td>400</td>
+				 <td title='nullable'>√</td>
+				 <td title=''></td>
+				 <td>null</td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>				 
+				 </td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>					 
+				 </td>
+				 <td></td>
+				</tr>
+				<tr>
+				 <td><span id="SPZONE_INCL_SHFTPAT_IDS">SPZONE_INCL_SHFTPAT_IDS</span></td>
+				 <td>VARCHAR2</td>
+				 <td>400</td>
+				 <td title='nullable'>√</td>
+				 <td title=''></td>
+				 <td>null</td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>				 
+				 </td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>					 
+				 </td>
+				 <td></td>
+				</tr>
+				<tr>
+				 <td><span id="SPZONE_INCL_JOB_IDS">SPZONE_INCL_JOB_IDS</span></td>
+				 <td>VARCHAR2</td>
+				 <td>400</td>
+				 <td title='nullable'>√</td>
+				 <td title=''></td>
+				 <td>null</td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>				 
+				 </td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>					 
+				 </td>
+				 <td></td>
+				</tr>
+				<tr>
+				 <td><span id="SPZONE_INCL_DEPT_IDS">SPZONE_INCL_DEPT_IDS</span></td>
+				 <td>VARCHAR2</td>
+				 <td>400</td>
+				 <td title='nullable'>√</td>
+				 <td title=''></td>
+				 <td>null</td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>				 
+				 </td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>					 
+				 </td>
+				 <td></td>
+				</tr>
+				<tr>
+				 <td><span id="SPZONE_INCL_DOCK_IDS">SPZONE_INCL_DOCK_IDS</span></td>
+				 <td>VARCHAR2</td>
+				 <td>400</td>
+				 <td title='nullable'>√</td>
+				 <td title=''></td>
+				 <td>null</td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>				 
+				 </td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>					 
+				 </td>
+				 <td></td>
+				</tr>
+				<tr>
+				 <td><span id="SPZONE_INCL_PROJ_IDS">SPZONE_INCL_PROJ_IDS</span></td>
+				 <td>VARCHAR2</td>
+				 <td>400</td>
+				 <td title='nullable'>√</td>
+				 <td title=''></td>
+				 <td>null</td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>				 
+				 </td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>					 
+				 </td>
+				 <td></td>
+				</tr>
+				<tr>
+				 <td><span id="SPZONE_MIN_QUANTITY">SPZONE_MIN_QUANTITY</span></td>
+				 <td>NUMBER</td>
+				 <td>20,10</td>
+				 <td title='nullable'>√</td>
+				 <td title=''></td>
+				 <td>null</td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>				 
+				 </td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>					 
+				 </td>
+				 <td></td>
+				</tr>
+				<tr>
+				 <td><span id="SPZONE_MAX_QUANTITY">SPZONE_MAX_QUANTITY</span></td>
+				 <td>NUMBER</td>
+				 <td>20,10</td>
+				 <td title='nullable'>√</td>
+				 <td title=''></td>
+				 <td>null</td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>				 
+				 </td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>					 
+				 </td>
+				 <td></td>
+				</tr>
+				<tr>
+				 <td><span id="SPZONE_MW_STA_AFT_TIME">SPZONE_MW_STA_AFT_TIME</span></td>
+				 <td>DATE</td>
+				 <td>7</td>
+				 <td title='nullable'>√</td>
+				 <td title=''></td>
+				 <td>null</td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>				 
+				 </td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>					 
+				 </td>
+				 <td></td>
+				</tr>
+				<tr>
+				 <td><span id="SPZONE_MW_END_BFR_TIME">SPZONE_MW_END_BFR_TIME</span></td>
+				 <td>DATE</td>
+				 <td>7</td>
+				 <td title='nullable'>√</td>
+				 <td title=''></td>
+				 <td>null</td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>				 
+				 </td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>					 
+				 </td>
+				 <td></td>
+				</tr>
+				<tr>
+				 <td><span id="SPZONE_SCH_RNG_STA_TIME">SPZONE_SCH_RNG_STA_TIME</span></td>
+				 <td>DATE</td>
+				 <td>7</td>
+				 <td title='nullable'>√</td>
+				 <td title=''></td>
+				 <td>null</td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>				 
+				 </td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>					 
+				 </td>
+				 <td></td>
+				</tr>
+				<tr>
+				 <td><span id="SPZONE_SCH_RNG_END_TIME">SPZONE_SCH_RNG_END_TIME</span></td>
+				 <td>DATE</td>
+				 <td>7</td>
+				 <td title='nullable'>√</td>
+				 <td title=''></td>
+				 <td>null</td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>				 
+				 </td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>					 
+				 </td>
+				 <td></td>
+				</tr>
+				<tr>
+				 <td><span id="VL_WBL_ID">VL_WBL_ID</span></td>
+				 <td>VARCHAR2</td>
+				 <td>0</td>
+				 <td title='nullable'>√</td>
+				 <td title=''></td>
+				 <td>null</td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>				 
+				 </td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>					 
+				 </td>
+				 <td></td>
+				</tr>
+				<tr>
+				 <td><span id="SPZONE_LOC_NAME">SPZONE_LOC_NAME</span></td>
+				 <td>VARCHAR2</td>
+				 <td>40</td>
+				 <td title=''></td>
+				 <td title=''></td>
+				 <td>null</td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>				 
+				 </td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>					 
+				 </td>
+				 <td></td>
+				</tr>
+				<tr>
+				 <td><span id="SPZONE_LOC_DESC">SPZONE_LOC_DESC</span></td>
+				 <td>VARCHAR2</td>
+				 <td>100</td>
+				 <td title='nullable'>√</td>
+				 <td title=''></td>
+				 <td>null</td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>				 
+				 </td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>					 
+				 </td>
+				 <td></td>
+				</tr>
+								</tbody>
+				</table>
+				<p title='58 columns'>Table contained <span id="recordNumber">0</span> rows<p/>
+			</div>
+		</div>
+				<div class="box box-primary">		
+			<div class="box-header with-border">
+              <i class="fa fa-code-fork"></i>
+
+              <h3 id="Relationships" class="box-title">Relationships</h3>
+
+              <div class="box-tools pull-right">
+                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
+                </button>
+                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+              </div>
+            </div>	
+			<div class="box-body">	
+			<div class="nav-tabs-custom" style="cursor: move;">
+            <!-- Tabs within a box -->
+			<h5>Close relationships within degrees of separation</h5>
+            <ul class="nav nav-tabs pull-left ui-sortable-handle">
+			  			              <li class="active"><a href="#oneDegreeImg-chart" data-toggle="tab" aria-expanded="true">One</a></li>			  			 
+			  			              <li class=""><a href="#oneimpliedDegreeImg-chart" data-toggle="tab" aria-expanded="true">One implied</a></li>			  			 
+			  			              <li class=""><a href="#twoimpliedDegreeImg-chart" data-toggle="tab" aria-expanded="true">Two implied</a></li>			  			 
+            </ul>
+            <div class="tab-content no-padding">            
+				<div class="chart tab-pane active" id="oneDegreeImg-chart" style="position: relative; overflow-x:auto;">					
+					<map id="oneDegreeRelationshipsDiagram" name="oneDegreeRelationshipsDiagram">
+<area shape="rect" id="node1" href="VL_SHIFT_PREMIUM_ZONE.html" title="VL_SHIFT_PREMIUM_ZONE" alt="" coords="5,5,408,1752">
+</map>
+
+					<a name='diagram'><img id='oneDegreeImg' src='../diagrams/VL_SHIFT_PREMIUM_ZONE.1degree.png' usemap='#oneDegreeRelationshipsDiagram' class='diagram' border='0' alt='' align='left'></a>							
+				</div>
+				<div class="chart tab-pane " id="oneimpliedDegreeImg-chart" style="position: relative; overflow-x:auto;">					
+					<map id="oneDegreeRelationshipsDiagramImplied" name="oneDegreeRelationshipsDiagramImplied">
+<area shape="rect" id="node1" href="DOCKET.html" title="DOCKET" alt="" coords="301,964,539,1257">
+<area shape="rect" id="node2" href="PROJECT.html" title="PROJECT" alt="" coords="16,1235,223,1411">
+<area shape="rect" id="node3" href="SHIFT_PREMIUM_ZONE.html" title="SHIFT_PREMIUM_ZONE" alt="" coords="607,595,899,917">
+<area shape="rect" id="node4" href="DEPARTMENT.html" title="DEPARTMENT" alt="" coords="317,741,523,947">
+<area shape="rect" id="node5" href="HOUR_TYPE.html" title="HOUR_TYPE" alt="" coords="5,348,233,524">
+<area shape="rect" id="node6" href="JOB.html" title="JOB" alt="" coords="303,548,537,724">
+<area shape="rect" id="node7" href="TIME_CODE.html" title="TIME_CODE" alt="" coords="277,260,563,495">
+<area shape="rect" id="node8" href="VL_SHIFT_PREMIUM_ZONE.html" title="VL_SHIFT_PREMIUM_ZONE" alt="" coords="943,5,1345,1752">
+</map>
+
+					<a name='diagram'><img id='oneimpliedDegreeImg' src='../diagrams/VL_SHIFT_PREMIUM_ZONE.implied1degrees.png' usemap='#oneDegreeRelationshipsDiagramImplied' class='diagram' border='0' alt='' align='left'></a>							
+				</div>
+				<div class="chart tab-pane " id="twoimpliedDegreeImg-chart" style="position: relative; overflow-x:auto;">					
+					<map id="twoDegreesRelationshipsDiagramImplied" name="twoDegreesRelationshipsDiagramImplied">
+<area shape="rect" id="node1" href="ACA_TIMECODE.html" title="ACA_TIMECODE" alt="" coords="961,2877,1159,2965">
+<area shape="rect" id="node2" href="HOUR_TYPE.html" title="HOUR_TYPE" alt="" coords="288,3277,516,3453">
+<area shape="rect" id="node3" href="TIME_CODE.html" title="TIME_CODE" alt="" coords="560,1602,845,1837">
+<area shape="rect" id="node19" href="LABOR_METRIC_SEC.html" title="LABOR_METRIC_SEC" alt="" coords="5,5374,244,5462">
+<area shape="rect" id="node64" href="COLOUR.html" title="COLOUR" alt="" coords="329,2005,475,2093">
+<area shape="rect" id="node4" href="AGG_USER_WRK.html" title="AGG_USER_WRK" alt="" coords="1347,3911,1554,3999">
+<area shape="rect" id="node5" href="DEPARTMENT.html" title="DEPARTMENT" alt="" coords="957,4285,1163,4490">
+<area shape="rect" id="node6" href="DOCKET.html" title="DOCKET" alt="" coords="941,4939,1179,5233">
+<area shape="rect" id="node7" href="JOB.html" title="JOB" alt="" coords="943,7631,1177,7807">
+<area shape="rect" id="node8" href="PROJECT.html" title="PROJECT" alt="" coords="599,4719,806,4895">
+<area shape="rect" id="node9" href="WORKBRAIN_TEAM.html" title="WORKBRAIN_TEAM" alt="" coords="591,3654,815,3742">
+<area shape="rect" id="node21" href="ACTIVITY_SET.html" title="ACTIVITY_SET" alt="" coords="610,11158,795,11246">
+<area shape="rect" id="node22" href="MACHINE.html" title="MACHINE" alt="" coords="628,11053,777,11141">
+<area shape="rect" id="node23" href="PART.html" title="PART" alt="" coords="642,10947,763,11035">
+<area shape="rect" id="node10" href="AS_EMP_TEAM_PRIORITY_BY_SHIFT.html" title="AS_EMP_TEAM_PRIORITY_BY_SHIFT" alt="" coords="1275,6777,1627,6865">
+<area shape="rect" id="node11" href="AS_GROUP_TIME_CODE_EXCLUDE.html" title="AS_GROUP_TIME_CODE_EXCLUDE" alt="" coords="889,782,1231,870">
+<area shape="rect" id="node12" href="CENSUS_DATA.html" title="CENSUS_DATA" alt="" coords="1355,6250,1546,6338">
+<area shape="rect" id="node13" href="SO_ACTIVITY.html" title="SO_ACTIVITY" alt="" coords="971,2474,1149,2562">
+<area shape="rect" id="node14" href="CLOCK_PRESET.html" title="CLOCK_PRESET" alt="" coords="1349,7995,1553,8083">
+<area shape="rect" id="node15" href="CRIT_CLAUSE_HTYPE.html" title="CRIT_CLAUSE_HTYPE" alt="" coords="581,3279,825,3367">
+<area shape="rect" id="node16" href="CRIT_CLAUSE_JOB.html" title="CRIT_CLAUSE_JOB" alt="" coords="1339,8853,1563,8941">
+<area shape="rect" id="node17" href="CRIT_CLAUSE_TCODE.html" title="CRIT_CLAUSE_TCODE" alt="" coords="937,887,1183,975">
+<area shape="rect" id="node18" href="CS_STAFFING_LEVEL.html" title="CS_STAFFING_LEVEL" alt="" coords="1331,4690,1570,4778">
+<area shape="rect" id="node20" href="DEPARTMENT_RDR_GRP.html" title="DEPARTMENT_RDR_GRP" alt="" coords="1317,4161,1585,4249">
+<area shape="rect" id="node24" href="DOCKET_RDR_GRP.html" title="DOCKET_RDR_GRP" alt="" coords="1337,6073,1565,6161">
+<area shape="rect" id="node25" href="EMP_DEF_LAB.html" title="EMP_DEF_LAB" alt="" coords="1356,5682,1545,5770">
+<area shape="rect" id="node26" href="EMP_SCHD_DTL_LAYER.html" title="EMP_SCHD_DTL_LAYER" alt="" coords="1321,3033,1581,3121">
+<area shape="rect" id="node27" href="EMP_SP_ZONE.html" title="EMP_SP_ZONE" alt="" coords="1777,1610,1967,1698">
+<area shape="rect" id="node28" href="SHIFT_PREMIUM_ZONE.html" title="SHIFT_PREMIUM_ZONE" alt="" coords="1305,1347,1597,1670">
+<area shape="rect" id="node29" href="EMPLOYEE_JOB.html" title="EMPLOYEE_JOB" alt="" coords="1349,10122,1553,10210">
+<area shape="rect" id="node30" href="EMPLOYEE_JOB_POSTING.html" title="EMPLOYEE_JOB_POSTING" alt="" coords="1310,10615,1591,10703">
+<area shape="rect" id="node31" href="EMPLOYEE_SCHED_DTL.html" title="EMPLOYEE_SCHED_DTL" alt="" coords="1319,3138,1583,3226">
+<area shape="rect" id="node32" href="ES_CLIST_EMPLOYEE.html" title="ES_CLIST_EMPLOYEE" alt="" coords="1328,8958,1573,9046">
+<area shape="rect" id="node33" href="ES_JOB_ASSOCIATION.html" title="ES_JOB_ASSOCIATION" alt="" coords="1326,9063,1575,9151">
+<area shape="rect" id="node34" href="ES_ROTROW_CONFLICTS.html" title="ES_ROTROW_CONFLICTS" alt="" coords="1314,5363,1587,5451">
+<area shape="rect" id="node35" href="ES_ROW_LM.html" title="ES_ROW_LM" alt="" coords="1363,5469,1538,5557">
+<area shape="rect" id="node36" href="ES_SHIFT_DETAIL.html" title="ES_SHIFT_DETAIL" alt="" coords="1344,4479,1557,4567">
+<area shape="rect" id="node37" href="ES_SHIFT_DETAIL_LAYER.html" title="ES_SHIFT_DETAIL_LAYER" alt="" coords="1315,4831,1586,4919">
+<area shape="rect" id="node38" href="ES_SHIFT_HIST_DET.html" title="ES_SHIFT_HIST_DET" alt="" coords="1333,4585,1568,4673">
+<area shape="rect" id="node39" href="ES_SHIFT_TYPE_TEAM.html" title="ES_SHIFT_TYPE_TEAM" alt="" coords="1325,6882,1576,6970">
+<area shape="rect" id="node40" href="ES_STAFFING_REQ.html" title="ES_STAFFING_REQ" alt="" coords="1339,9205,1563,9293">
+<area shape="rect" id="node41" href="ES_TMPL_SHIFT_REQ.html" title="ES_TMPL_SHIFT_REQ" alt="" coords="1329,9310,1573,9398">
+<area shape="rect" id="node42" href="ES_TMPL_STAFF_REQ.html" title="ES_TMPL_STAFF_REQ" alt="" coords="1327,9415,1574,9503">
+<area shape="rect" id="node43" href="ES_WORKLOAD_REQ.html" title="ES_WORKLOAD_REQ" alt="" coords="1332,6987,1569,7075">
+<area shape="rect" id="node44" href="FCST_NONPROD_HTYPE.html" title="FCST_NONPROD_HTYPE" alt="" coords="570,3853,835,3941">
+<area shape="rect" id="node45" href="FCST_NONPROD_TCODE.html" title="FCST_NONPROD_TCODE" alt="" coords="925,1182,1195,1270">
+<area shape="rect" id="node46" href="HOUR_SET_DET.html" title="HOUR_SET_DET" alt="" coords="601,3066,804,3154">
+<area shape="rect" id="node47" href="HOUR_SET_INCL_TIME_CODE.html" title="HOUR_SET_INCL_TIME_CODE" alt="" coords="908,322,1212,410">
+<area shape="rect" id="node48" href="HOUR_TYPE_DATA.html" title="HOUR_TYPE_DATA" alt="" coords="592,4071,813,4159">
+<area shape="rect" id="node49" href="JOB_RATE.html" title="JOB_RATE" alt="" coords="1371,10793,1531,10881">
+<area shape="rect" id="node50" href="JOB_RDR_GRP.html" title="JOB_RDR_GRP" alt="" coords="1354,9734,1547,9822">
+<area shape="rect" id="node51" href="JOB_TEAM.html" title="JOB_TEAM" alt="" coords="1370,6671,1531,6759">
+<area shape="rect" id="node52" href="JP_JOB_POSTING.html" title="JP_JOB_POSTING" alt="" coords="1343,10898,1558,10986">
+<area shape="rect" id="node53" href="LABOR_SHORTCUT_DTL.html" title="LABOR_SHORTCUT_DTL" alt="" coords="1318,3806,1583,3894">
+<area shape="rect" id="node54" href="MP_DAILY_OVERRIDE.html" title="MP_DAILY_OVERRIDE" alt="" coords="1330,6566,1571,6654">
+<area shape="rect" id="node55" href="MP_TEMPLATE_OVERRIDE.html" title="MP_TEMPLATE_OVERRIDE" alt="" coords="1311,6355,1590,6443">
+<area shape="rect" id="node56" href="MP_TEMPLATE_REQUIREMENT.html" title="MP_TEMPLATE_REQUIREMENT" alt="" coords="1294,6461,1607,6549">
+<area shape="rect" id="node57" href="MP_TEMPLATE_TCODE.html" title="MP_TEMPLATE_TCODE" alt="" coords="933,1323,1187,1411">
+<area shape="rect" id="node58" href="PROJECT_RDR_GRP.html" title="PROJECT_RDR_GRP" alt="" coords="943,5682,1177,5770">
+<area shape="rect" id="node59" href="RTSS_SHIFT.html" title="RTSS_SHIFT" alt="" coords="1364,2609,1537,2697">
+<area shape="rect" id="node60" href="SB_SCHD_BID_SPAT.html" title="SB_SCHD_BID_SPAT" alt="" coords="1334,8534,1567,8622">
+<area shape="rect" id="node61" href="SCHED_COST_DETAIL.html" title="SCHED_COST_DETAIL" alt="" coords="1328,4937,1573,5025">
+<area shape="rect" id="node62" href="SHIFT_BREAK.html" title="SHIFT_BREAK" alt="" coords="967,1891,1153,1979">
+<area shape="rect" id="node63" href="SHIFT_PATTERN_SHIFT_LABOR.html" title="SHIFT_PATTERN_SHIFT_LABOR" alt="" coords="1293,2927,1609,3015">
+<area shape="rect" id="node65" href="SO_CLIENT_STFDEF.html" title="SO_CLIENT_STFDEF" alt="" coords="1334,2714,1567,2802">
+<area shape="rect" id="node66" href="SO_CLIENTYP_STFDEF.html" title="SO_CLIENTYP_STFDEF" alt="" coords="1324,9839,1577,9927">
+<area shape="rect" id="node67" href="SO_EVENT_DETAIL.html" title="SO_EVENT_DETAIL" alt="" coords="1340,2326,1561,2414">
+<area shape="rect" id="node68" href="SO_HIST_INT_REQ.html" title="SO_HIST_INT_REQ" alt="" coords="1341,3279,1561,3367">
+<area shape="rect" id="node69" href="SO_INTERVAL_REQ.html" title="SO_INTERVAL_REQ" alt="" coords="1338,5895,1563,5983">
+<area shape="rect" id="node70" href="SO_POSN_SET_ELMTS.html" title="SO_POSN_SET_ELMTS" alt="" coords="1325,9945,1577,10033">
+<area shape="rect" id="node71" href="SO_SHIFT_DETAIL.html" title="SO_SHIFT_DETAIL" alt="" coords="1343,8747,1559,8835">
+<area shape="rect" id="node72" href="SO_SHIFT_REQ.html" title="SO_SHIFT_REQ" alt="" coords="1353,10227,1549,10315">
+<area shape="rect" id="node73" href="SP_ZONE_INCL_TIME_CODE.html" title="SP_ZONE_INCL_TIME_CODE" alt="" coords="1727,511,2017,599">
+<area shape="rect" id="node74" href="SR_SHIFT_OFFSET.html" title="SR_SHIFT_OFFSET" alt="" coords="1340,2431,1561,2519">
+<area shape="rect" id="node75" href="SR_SUMMARY.html" title="SR_SUMMARY" alt="" coords="1357,4374,1544,4462">
+<area shape="rect" id="node76" href="ST_JOB_SKILL.html" title="ST_JOB_SKILL" alt="" coords="1355,9629,1546,9717">
+<area shape="rect" id="node77" href="TARGET_DETAIL_JOB.html" title="TARGET_DETAIL_JOB" alt="" coords="1329,10369,1572,10457">
+<area shape="rect" id="node78" href="TARGET_DETAIL_TIME_CODE.html" title="TARGET_DETAIL_TIME_CODE" alt="" coords="909,1429,1211,1517">
+<area shape="rect" id="node79" href="TIME_CODE_BALANCE.html" title="TIME_CODE_BALANCE" alt="" coords="936,463,1184,551">
+<area shape="rect" id="node80" href="TIME_CODE_DATA.html" title="TIME_CODE_DATA" alt="" coords="951,641,1169,729">
+<area shape="rect" id="node81" href="TIME_CODE_RDR_GRP.html" title="TIME_CODE_RDR_GRP" alt="" coords="934,1570,1186,1658">
+<area shape="rect" id="node82" href="TIME_OFF_TYPE.html" title="TIME_OFF_TYPE" alt="" coords="958,1077,1162,1165">
+<area shape="rect" id="node83" href="TM_ACTIONITEM_JOB.html" title="TM_ACTIONITEM_JOB" alt="" coords="1328,10474,1573,10562">
+<area shape="rect" id="node84" href="TOKE_POOL.html" title="TOKE_POOL" alt="" coords="973,2982,1147,3070">
+<area shape="rect" id="node85" href="UNSTFD_SHIFT.html" title="UNSTFD_SHIFT" alt="" coords="1353,5258,1548,5346">
+<area shape="rect" id="node86" href="VIEW_CENSUSDT_REQ.html" title="VIEW_CENSUSDT_REQ" alt="" coords="1749,8666,1995,8730">
+<area shape="rect" id="node87" href="VIEW_DOCKET.html" title="VIEW_DOCKET" alt="" coords="1357,11157,1544,11221">
+<area shape="rect" id="node88" href="VIEW_EMP_DEF_LAB.html" title="VIEW_EMP_DEF_LAB" alt="" coords="1757,5682,1987,5746">
+<area shape="rect" id="node89" href="VIEW_EMPLOYEE_JOB.html" title="VIEW_EMPLOYEE_JOB" alt="" coords="1749,10103,1995,10167">
+<area shape="rect" id="node90" href="VIEW_EMPLOYEE_JOB_POSTING.html" title="VIEW_EMPLOYEE_JOB_POSTING" alt="" coords="1711,10557,2033,10621">
+<area shape="rect" id="node91" href="VIEW_HOUR_SET_DET.html" title="VIEW_HOUR_SET_DET" alt="" coords="938,3123,1182,3187">
+<area shape="rect" id="node92" href="VIEW_HOUR_SET_INCL_TIME_CODE.html" title="VIEW_HOUR_SET_INCL_TIME_CODE" alt="" coords="1278,355,1623,419">
+<area shape="rect" id="node93" href="VIEW_JOB_RATE.html" title="VIEW_JOB_RATE" alt="" coords="1771,10763,1973,10827">
+<area shape="rect" id="node94" href="VIEW_MOD_EMPLOYEE_JOB.html" title="VIEW_MOD_EMPLOYEE_JOB" alt="" coords="1727,10241,2017,10305">
+<area shape="rect" id="node95" href="VIEW_MOD_EMPLOYEE_JOB_POSTING.html" title="VIEW_MOD_EMPLOYEE_JOB_POSTING" alt="" coords="1689,10667,2055,10731">
+<area shape="rect" id="node96" href="VIEW_MOD_WORK_DETAIL.html" title="VIEW_MOD_WORK_DETAIL" alt="" coords="1735,1975,2009,2039">
+<area shape="rect" id="node97" href="WORK_DETAIL.html" title="WORK_DETAIL" alt="" coords="1356,3466,1545,3554">
+<area shape="rect" id="node98" href="VIEW_PAYEXP_ADJUSTMENT.html" title="VIEW_PAYEXP_ADJUSTMENT" alt="" coords="1305,3385,1597,3449">
+<area shape="rect" id="node99" href="VIEW_PAYEXP_CURRENT.html" title="VIEW_PAYEXP_CURRENT" alt="" coords="1319,3689,1583,3753">
+<area shape="rect" id="node100" href="VIEW_SB_SHIFT.html" title="VIEW_SB_SHIFT" alt="" coords="1775,8463,1969,8527">
+<area shape="rect" id="node101" href="VIEW_SHIFT_BREAK.html" title="VIEW_SHIFT_BREAK" alt="" coords="1337,1891,1564,1955">
+<area shape="rect" id="node102" href="VIEW_SHIFT_PREMIUM_ZONE.html" title="VIEW_SHIFT_PREMIUM_ZONE" alt="" coords="1725,222,2019,286">
+<area shape="rect" id="node103" href="VIEW_SHIFT_PREMIUM_ZONE_FULL.html" title="VIEW_SHIFT_PREMIUM_ZONE_FULL" alt="" coords="1701,5149,2043,5213">
+<area shape="rect" id="node104" href="VIEW_SO_ACTSFTHR.html" title="VIEW_SO_ACTSFTHR" alt="" coords="1755,8747,1989,8811">
+<area shape="rect" id="node105" href="VIEW_SO_AVAIL_INFO.html" title="VIEW_SO_AVAIL_INFO" alt="" coords="1333,7309,1569,7373">
+<area shape="rect" id="node106" href="VIEW_SO_CL_STFDEF.html" title="VIEW_SO_CL_STFDEF" alt="" coords="1331,7390,1570,7454">
+<area shape="rect" id="node107" href="VIEW_SO_DAILY_SKD.html" title="VIEW_SO_DAILY_SKD" alt="" coords="1755,8585,1989,8649">
+<area shape="rect" id="node108" href="VIEW_SO_EMP_CSTDET.html" title="VIEW_SO_EMP_CSTDET" alt="" coords="1323,7471,1578,7535">
+<area shape="rect" id="node109" href="VIEW_SO_EMP_POS.html" title="VIEW_SO_EMP_POS" alt="" coords="1338,7553,1563,7617">
+<area shape="rect" id="node110" href="VIEW_SO_EMP_WORK.html" title="VIEW_SO_EMP_WORK" alt="" coords="1331,7634,1571,7698">
+<area shape="rect" id="node111" href="VIEW_SO_EMPPOS_SKL.html" title="VIEW_SO_EMPPOS_SKL" alt="" coords="1323,7715,1578,7779">
+<area shape="rect" id="node112" href="VIEW_SO_INT_REQ.html" title="VIEW_SO_INT_REQ" alt="" coords="1763,6014,1981,6078">
+<area shape="rect" id="node113" href="VIEW_SO_NET_STAFF.html" title="VIEW_SO_NET_STAFF" alt="" coords="1331,7833,1570,7897">
+<area shape="rect" id="node114" href="VIEW_SO_NETSTF_REQ.html" title="VIEW_SO_NETSTF_REQ" alt="" coords="1324,7914,1577,7978">
+<area shape="rect" id="node115" href="VIEW_SO_NETSTFRAW.html" title="VIEW_SO_NETSTFRAW" alt="" coords="1328,8101,1573,8165">
+<area shape="rect" id="node116" href="VIEW_SO_POSPAY.html" title="VIEW_SO_POSPAY" alt="" coords="1344,8182,1557,8246">
+<area shape="rect" id="node117" href="VIEW_SO_PROD_RESPS.html" title="VIEW_SO_PROD_RESPS" alt="" coords="1323,8263,1578,8327">
+<area shape="rect" id="node118" href="VIEW_SO_SCHED.html" title="VIEW_SO_SCHED" alt="" coords="1769,8981,1975,9045">
+<area shape="rect" id="node119" href="VIEW_SO_SKDEMPACT.html" title="VIEW_SO_SKDEMPACT" alt="" coords="1749,9490,1995,9554">
+<area shape="rect" id="node120" href="VIEW_SP_ZONE_INCL_TIME_CODE.html" title="VIEW_SP_ZONE_INCL_TIME_CODE" alt="" coords="2117,511,2448,575">
+<area shape="rect" id="node121" href="VIEW_ST_JOB_SKILL.html" title="VIEW_ST_JOB_SKILL" alt="" coords="1756,9585,1988,9649">
+<area shape="rect" id="node122" href="VIEW_TIME_CODE.html" title="VIEW_TIME_CODE" alt="" coords="955,2033,1165,2097">
+<area shape="rect" id="node123" href="VIEW_TIME_CODE_BALANCE.html" title="VIEW_TIME_CODE_BALANCE" alt="" coords="1306,486,1595,550">
+<area shape="rect" id="node124" href="VIEW_TIME_CODE_DATA.html" title="VIEW_TIME_CODE_DATA" alt="" coords="1321,590,1580,654">
+<area shape="rect" id="node125" href="VIEW_VR_EMPLOYEE_SCHEDULE.html" title="VIEW_VR_EMPLOYEE_SCHEDULE" alt="" coords="1288,8345,1613,8409">
+<area shape="rect" id="node126" href="VIEW_WORK_DETAIL.html" title="VIEW_WORK_DETAIL" alt="" coords="1757,3983,1987,4047">
+<area shape="rect" id="node127" href="VIEW_WORK_DETAIL_ADJUST.html" title="VIEW_WORK_DETAIL_ADJUST" alt="" coords="2134,4194,2431,4258">
+<area shape="rect" id="node128" href="WORK_DETAIL_ADJUST.html" title="WORK_DETAIL_ADJUST" alt="" coords="1744,4194,2000,4282">
+<area shape="rect" id="node129" href="VL_CLOCK_PRESET.html" title="VL_CLOCK_PRESET" alt="" coords="1759,8189,1985,8253">
+<area shape="rect" id="node130" href="VL_DEPARTMENT.html" title="VL_DEPARTMENT" alt="" coords="1346,3607,1555,3671">
+<area shape="rect" id="node131" href="VL_DOCKET.html" title="VL_DOCKET" alt="" coords="1366,11075,1535,11139">
+<area shape="rect" id="node132" href="VL_HOUR_TYPE.html" title="VL_HOUR_TYPE" alt="" coords="604,5967,801,6031">
+<area shape="rect" id="node133" href="VL_JOB.html" title="VL_JOB" alt="" coords="1383,11238,1518,11302">
+<area shape="rect" id="node134" href="VL_JP_JOB_POSTING.html" title="VL_JP_JOB_POSTING" alt="" coords="1753,10927,1991,10991">
+<area shape="rect" id="node135" href="VL_PROJECT.html" title="VL_PROJECT" alt="" coords="972,10830,1148,10894">
+<area shape="rect" id="node136" href="VL_SHIFT_PREMIUM_ZONE.html" title="VL_SHIFT_PREMIUM_ZONE" alt="" coords="1671,2057,2073,3803">
+<area shape="rect" id="node137" href="VL_SO_ACTIVITY.html" title="VL_SO_ACTIVITY" alt="" coords="1350,178,1551,242">
+<area shape="rect" id="node138" href="VL_SO_CLIENT_STFDEF.html" title="VL_SO_CLIENT_STFDEF" alt="" coords="1744,3902,2000,3966">
+<area shape="rect" id="node139" href="VL_SO_EVENT_DETAIL.html" title="VL_SO_EVENT_DETAIL" alt="" coords="1749,3821,1995,3885">
+<area shape="rect" id="node140" href="VL_TIME_CODE.html" title="VL_TIME_CODE" alt="" coords="963,2795,1157,2859">
+<area shape="rect" id="node141" href="VL_TIME_OFF_TYPE.html" title="VL_TIME_OFF_TYPE" alt="" coords="1337,979,1564,1043">
+</map>
+
+					<a name='diagram'><img id='twoimpliedDegreeImg' src='../diagrams/VL_SHIFT_PREMIUM_ZONE.implied2degrees.png' usemap='#twoDegreesRelationshipsDiagramImplied' class='diagram' border='0' alt='' align='left'></a>							
+				</div>
+			  			</div>
+			</div>
+		  </div><!-- /.box-body -->
+		</div>
+		<div class="box box-primary">		
+			<div class="box-header with-border">
+			  <i class="fa fa-file-code-o"></i>
+
+			  <h3 id="ViewDefinition" class="box-title">View Definition</h3>
+
+			  <div class="box-tools pull-right">
+				<button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
+				</button>
+				<button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+			  </div>
+			</div>	
+			<div class="box-body">
+				<textarea id="code" name="code" rows="" style="display: none;">SELECT &#10;    SHIFT_PREMIUM_ZONE.SPZONE_ID,&#10;    SHIFT_PREMIUM_ZONE.SPZONE_NAME,&#10;    SHIFT_PREMIUM_ZONE.SPZONE_DESC,&#10;    SHIFT_PREMIUM_ZONE.SPZONE_START_TIME,&#10;    SHIFT_PREMIUM_ZONE.SPZONE_END_TIME,&#10;    SHIFT_PREMIUM_ZONE.TCODE_ID,&#10;    SHIFT_PREMIUM_ZONE.HTYPE_ID,&#10;    SHIFT_PREMIUM_ZONE.CALCGRP_NAME,&#10;    SHIFT_PREMIUM_ZONE.SHFTPAT_NAME,&#10;    SHIFT_PREMIUM_ZONE.DAYTYP_NAME,&#10;    SHIFT_PREMIUM_ZONE.SHFT_NAME,&#10;    SHIFT_PREMIUM_ZONE.SPZONE_RATE,&#10;    SHIFT_PREMIUM_ZONE.SPZONE_MAX_MINUTES,&#10;    SHIFT_PREMIUM_ZONE.SPZONE_MAX_DOLLARS,&#10;    SHIFT_PREMIUM_ZONE.SPZONE_SZS_TIME,&#10;    SHIFT_PREMIUM_ZONE.SPZONE_SZE_TIME,&#10;    SHIFT_PREMIUM_ZONE.SPZONE_EZS_TIME,&#10;    SHIFT_PREMIUM_ZONE.SPZONE_EZE_TIME,&#10;    SHIFT_PREMIUM_ZONE.SPZONE_PERCENTAGE,&#10;    SHIFT_PREMIUM_ZONE.SPZONE_INCL_TCODE_NAMES,&#10;    SHIFT_PREMIUM_ZONE.SPZONE_INCL_HTYPE_NAMES,&#10;    SHIFT_PREMIUM_ZONE.SPZONE_MIN_MINUTES,&#10;    SHIFT_PREMIUM_ZONE.SPZONE_MW_BEFORE,&#10;    SHIFT_PREMIUM_ZONE.SPZONE_MW_AFTER,&#10;    SHIFT_PREMIUM_ZONE.SPZONE_SKD_UNSKD,&#10;    SHIFT_PREMIUM_ZONE.SPZONE_BEST_OF_GRP,&#10;    SHIFT_PREMIUM_ZONE.SPZONE_SHFT_TO_CHK,&#10;    SHIFT_PREMIUM_ZONE.SPZONE_UPDATE_FLDS,&#10;    SHIFT_PREMIUM_ZONE.SPZONE_OT_MULTIPLY,&#10;    SHIFT_PREMIUM_ZONE.SPZONE_USE_MINUTES,&#10;    SHIFT_PREMIUM_ZONE.SPZONE_MW_MINUTES,&#10;    SHIFT_PREMIUM_ZONE.SPZONE_MWMIN_START,&#10;    SHIFT_PREMIUM_ZONE.SPZONE_MWMIN_END,&#10;    SHIFT_PREMIUM_ZONE.SPZONE_APPLY_TYPE,&#10;    1,&#10;    SHIFT_PREMIUM_ZONE.SPZONE_LBM_PERM,&#10;    SHIFT_PREMIUM_ZONE.JOB_ID,&#10;    SHIFT_PREMIUM_ZONE.DEPT_ID,&#10;    SHIFT_PREMIUM_ZONE.DOCK_ID,&#10;    SHIFT_PREMIUM_ZONE.PROJ_ID,&#10;    SHIFT_PREMIUM_ZONE.QUANTITY,&#10;    SHIFT_PREMIUM_ZONE.SPZONE_POPLT_TIME_FLAG,&#10;    SHIFT_PREMIUM_ZONE.SPZONE_HTYPE_MULTIPLY,&#10;    SHIFT_PREMIUM_ZONE.SPZONE_INCL_SHIFT_IDS,&#10;    SHIFT_PREMIUM_ZONE.SPZONE_INCL_SHFTPAT_IDS,&#10;    SHIFT_PREMIUM_ZONE.SPZONE_INCL_JOB_IDS,&#10;    SHIFT_PREMIUM_ZONE.SPZONE_INCL_DEPT_IDS,&#10;    SHIFT_PREMIUM_ZONE.SPZONE_INCL_DOCK_IDS,&#10;    SHIFT_PREMIUM_ZONE.SPZONE_INCL_PROJ_IDS,&#10;    SHIFT_PREMIUM_ZONE.SPZONE_MIN_QUANTITY,&#10;    SHIFT_PREMIUM_ZONE.SPZONE_MAX_QUANTITY,&#10;    SHIFT_PREMIUM_ZONE.SPZONE_MW_STA_AFT_TIME,&#10;    SHIFT_PREMIUM_ZONE.SPZONE_MW_END_BFR_TIME,&#10;    SHIFT_PREMIUM_ZONE.SPZONE_SCH_RNG_STA_TIME,&#10;    SHIFT_PREMIUM_ZONE.SPZONE_SCH_RNG_END_TIME,&#10;    NULL,&#10;    SHIFT_PREMIUM_ZONE.SPZONE_NAME,&#10;    SHIFT_PREMIUM_ZONE.SPZONE_DESC&#10;FROM SHIFT_PREMIUM_ZONE</textarea>
+				<div style="padding-top: 5px;"><hr></div>
+				<div class="box box-solid">
+					<div class="box-header with-border">
+					  <i class="fa fa-puzzle-piece"></i>
+					  <h3 class="box-title">Possibly Referenced Tables/Views</h3>
+					</div>
+					<!-- /.box-header -->
+					<div class="box-body">
+					  <ul class="list-unstyled">
+						<li><a href="SHIFT_PREMIUM_ZONE.html">SHIFT_PREMIUM_ZONE</a></li>
+					  </ul>
+					</div>
+					<!-- /.box-body -->
+				 </div>					
+			</div><!-- /.box-body -->			
+		</div>		
+	      </section>
+    
+  </div>
+  <!-- /.content-wrapper -->
+  <footer class="main-footer">
+    <div>
+      <div class="pull-right hidden-xs">
+        <a href="https://github.com/schemaspy/schemaspy" title="GitHub for SchemaSpy"><i class="fa fa-github-square fa-2x"></i></a>
+        <a href="http://stackoverflow.com/questions/tagged/schemaspy" title="StackOverflow for SchemaSpy"><i class="fa fa-stack-overflow fa-2x"></i></a>
+      </div>
+      <strong>Generated by <a href="http://schemaspy.org/" class="logo-text"><i class="fa fa-database"></i> SchemaSpy 6.0.0-rc2</a></strong>
+    </div>
+    <!-- /.container -->
+  </footer>
+</div>
+<!-- ./wrapper -->
+
+<!-- jQuery 2.2.3 -->
+<script src="../bower/admin-lte/plugins/jQuery/jquery-2.2.3.min.js"></script>
+<script src="../bower/admin-lte/plugins/jQueryUI/jquery-ui.min.js"></script>
+<!-- Bootstrap 3.3.5 -->
+<script src="../bower/admin-lte/bootstrap/js/bootstrap.min.js"></script>
+<!-- DataTables -->
+<script src="../bower/datatables.net/jquery.dataTables.min.js"></script>
+<script src="../bower/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
+<script src="../bower/datatables.net-buttons/dataTables.buttons.min.js"></script>
+<script src="../bower/datatables.net-buttons-bs/js/buttons.bootstrap.min.js"></script>
+<script src="../bower/datatables.net-buttons/buttons.html5.min.js"></script>
+<script src="../bower/datatables.net-buttons/buttons.print.min.js"></script>
+<script src="../bower/datatables.net-buttons/buttons.colVis.min.js"></script>
+
+<!-- SlimScroll -->
+<script src="../bower/admin-lte/plugins/slimScroll/jquery.slimscroll.min.js"></script>
+<!-- FastClick -->
+<script src="../bower/admin-lte/plugins/fastclick/fastclick.js"></script>
+<!-- Salvattore -->
+<script src="../bower/salvattore/salvattore.min.js"></script>
+<!-- AnchorJS -->
+<script src="../bower/anchor-js/anchor.min.js"></script>
+<!-- CodeMirror -->
+<script src="../bower/codemirror/codemirror.js"></script>
+<script src="../bower/codemirror/sql.js"></script>
+<!-- AdminLTE App -->
+<script src="../bower/admin-lte/dist/js/app.min.js"></script>
+<script src="table.js"></script>
+<script src="../schemaSpy.js"></script>
+</body>
+</html>

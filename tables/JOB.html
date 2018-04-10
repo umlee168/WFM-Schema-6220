@@ -1,0 +1,2090 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>JOB - WFMSB622 Database</title>
+  <!-- Tell the browser to be responsive to screen width -->
+  <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+  <!-- Bootstrap 3.3.5 -->
+  <link rel="stylesheet" href="../bower/admin-lte/bootstrap/css/bootstrap.min.css">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="../bower/font-awesome/css/font-awesome.min.css">
+  <!-- Ionicons -->
+  <link rel="stylesheet" href="../bower/ionicons/css/ionicons.min.css">
+  <!-- DataTables -->
+  <link rel="stylesheet" href="../bower/datatables.net-bs/css/dataTables.bootstrap.min.css">
+  <link rel="stylesheet" href="../bower/datatables.net-buttons-bs/css/buttons.bootstrap.min.css">
+  <!-- Code Mirror -->
+  <link rel="stylesheet" href="../bower/codemirror/codemirror.css">
+  <!-- Fonts -->
+  <link href='../fonts/indieflower/indie-flower.css' rel='stylesheet' type='text/css'>
+  <link href='../fonts/source-sans-pro/source-sans-pro.css' rel='stylesheet' type='text/css'>
+
+  <!-- Theme style -->
+  <link rel="stylesheet" href="../bower/admin-lte/dist/css/AdminLTE.min.css">
+  <!-- Salvattore -->
+  <link rel="stylesheet" href="../bower/salvattore/salvattore.css">
+  <!-- AdminLTE Skins. Choose a skin from the css/skins
+       folder instead of downloading all of them to reduce the load. -->
+  <link rel="stylesheet" href="../bower/admin-lte/dist/css/skins/_all-skins.min.css">
+  <!-- SchemaSpy -->
+  <link rel="stylesheet" href="../schemaSpy.css">
+  
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+  <script src="../bower/html5shiv/html5shiv.min.js"></script>
+  <script src="../bower/respond/respond.min.js"></script>
+  <![endif]-->
+</head>
+<!-- ADD THE CLASS layout-top-nav TO REMOVE THE SIDEBAR. -->
+<body class="hold-transition skin-blue layout-top-nav">
+<div class="wrapper">
+  <header class="main-header">
+    <nav class="navbar navbar-static-top">
+      <div class="container">
+        <div class="navbar-header">
+          <a href="../index.html" class="navbar-brand"><b>WFMSB622</b> Database</a>
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse">
+            <i class="fa fa-bars"></i>
+          </button>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse pull-left" id="navbar-collapse">
+          <ul class="nav navbar-nav">
+            <li><a href="../index.html">Tables <span class="sr-only">(current)</span></a></li>            
+			<!--<li><a href="../components.html" title="List of system components">Components</a></li>-->
+			<li><a href="../columns.html" title="All of the columns in the schema">Columns</a></li>
+			<li><a href="../constraints.html" title="Useful for diagnosing error messages that just give constraint name or number">Constraints</a></li>
+			<li><a href="../relationships.html" title="Diagram of table relationships">Relationships</a></li>
+			<li><a href="../orphans.html" title="View of tables with neither parents nor children">Orphan&nbsp;Tables</a></li>				
+			<li><a href="../anomalies.html" title="Things that might not be quite right">Anomalies</a></li>
+          </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+        <!-- Navbar Right Menu -->
+
+      </div>
+      <!-- /.container-fluid -->
+    </nav>
+  </header>
+  <!-- Main content -->
+  <!-- Full Width Column -->
+  <div class="content-wrapper">
+          <!-- Content Header (Page header) -->
+      <section class="content-header">
+        <h1>JOB</h1></br>
+		      </section>
+      <!-- Main content -->
+      <section class="content">
+		<div class="box box-primary">
+			<div class="box-header with-border">
+			  <span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span>
+              <h3 id="Columns" class="box-title">Columns</h3>
+              <div class="box-tools pull-right">
+                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
+                </button>
+                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+              </div>
+            </div>	
+            <div class="box-body">
+				<table id="standard_table" class="table table-bordered table-striped dataTable" role="grid">
+				<thead align='left'>
+				<tr>
+				  <th>Column</th>
+				  <th>Type</th>
+				  <th>Size</th>
+				  <th title='Are nulls allowed?'>Nulls</th>
+				  <th title='Is column automatically updated?'>Auto</th>
+				  <th title='Default value'>Default</th>
+				  <th title='Columns in tables that reference this column'>Children</th>
+				  <th title='Columns in tables that are referenced by this column'>Parents</th>
+				  <th title='Comments' class="toggle"><span>Comments</span></th>
+				</tr>
+				</thead>
+				<tbody>
+				<tr>
+				 <td class='primaryKey' title='Primary Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="JOB_ID">JOB_ID</span></td>
+				 <td>NUMBER</td>
+				 <td>38</td>
+				 <td title=''></td>
+				 <td title=''></td>
+				 <td>null</td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				   <tr>
+					<td title="AGG_USER_WRK.JOB_ID references JOB.JOB_ID via FK_AGUSR_JOB">
+						<a href='AGG_USER_WRK.html'>AGG_USER_WRK</a><span class='relatedKey'>.JOB_ID</span>
+					</td>
+					<td class="constraint detail">
+						FK_AGUSR_JOB <span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span>
+					</td>
+				   </tr>
+				   <tr>
+					<td title="AS_EMP_TEAM_PRIORITY_BY_SHIFT.JOB_ID references JOB.JOB_ID via FK_ASETPS_JOB_ID">
+						<a href='AS_EMP_TEAM_PRIORITY_BY_SHIFT.html'>AS_EMP_TEAM_PRIORITY_BY_SHIFT</a><span class='relatedKey'>.JOB_ID</span>
+					</td>
+					<td class="constraint detail">
+						FK_ASETPS_JOB_ID <span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span>
+					</td>
+				   </tr>
+				   <tr>
+					<td title="CENSUS_DATA.JOB_ID references JOB.JOB_ID via FK_CENSDT_JOB_ID">
+						<a href='CENSUS_DATA.html'>CENSUS_DATA</a><span class='relatedKey'>.JOB_ID</span>
+					</td>
+					<td class="constraint detail">
+						FK_CENSDT_JOB_ID <span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span>
+					</td>
+				   </tr>
+				   <tr>
+					<td title="CLOCK_PRESET.JOB_ID references JOB.JOB_ID via FK_JOB_ID">
+						<a href='CLOCK_PRESET.html'>CLOCK_PRESET</a><span class='relatedKey'>.JOB_ID</span>
+					</td>
+					<td class="constraint detail">
+						FK_JOB_ID <span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span>
+					</td>
+				   </tr>
+				   <tr>
+					<td title="CRIT_CLAUSE_JOB.JOB_ID references JOB.JOB_ID via FK_CRCJ_JOB_ID">
+						<a href='CRIT_CLAUSE_JOB.html'>CRIT_CLAUSE_JOB</a><span class='relatedKey'>.JOB_ID</span>
+					</td>
+					<td class="constraint detail">
+						FK_CRCJ_JOB_ID <span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span>
+					</td>
+				   </tr>
+				   <tr>
+					<td title="CS_STAFFING_LEVEL.JOB_ID references JOB.JOB_ID via FK_CSSTFLVL_JOBID">
+						<a href='CS_STAFFING_LEVEL.html'>CS_STAFFING_LEVEL</a><span class='relatedKey'>.JOB_ID</span>
+					</td>
+					<td class="constraint detail">
+						FK_CSSTFLVL_JOBID <span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span>
+					</td>
+				   </tr>
+				   <tr>
+					<td title="EMP_DEF_LAB.JOB_ID references JOB.JOB_ID via FK_EDLA_JOB_ID">
+						<a href='EMP_DEF_LAB.html'>EMP_DEF_LAB</a><span class='relatedKey'>.JOB_ID</span>
+					</td>
+					<td class="constraint detail">
+						FK_EDLA_JOB_ID <span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span>
+					</td>
+				   </tr>
+				   <tr>
+					<td title="EMP_SCHD_DTL_LAYER.JOB_ID references JOB.JOB_ID via FK_ESCHDL_JOB_ID">
+						<a href='EMP_SCHD_DTL_LAYER.html'>EMP_SCHD_DTL_LAYER</a><span class='relatedKey'>.JOB_ID</span>
+					</td>
+					<td class="constraint detail">
+						FK_ESCHDL_JOB_ID <span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span>
+					</td>
+				   </tr>
+				   <tr>
+					<td title="EMPLOYEE_JOB.JOB_ID references JOB.JOB_ID via FK_EMPJOB_JOB_ID">
+						<a href='EMPLOYEE_JOB.html'>EMPLOYEE_JOB</a><span class='relatedKey'>.JOB_ID</span>
+					</td>
+					<td class="constraint detail">
+						FK_EMPJOB_JOB_ID <span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span>
+					</td>
+				   </tr>
+				   <tr>
+					<td title="EMPLOYEE_JOB_POSTING.JOB_ID references JOB.JOB_ID via FK_EMPJBPST_JOB_ID">
+						<a href='EMPLOYEE_JOB_POSTING.html'>EMPLOYEE_JOB_POSTING</a><span class='relatedKey'>.JOB_ID</span>
+					</td>
+					<td class="constraint detail">
+						FK_EMPJBPST_JOB_ID <span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span>
+					</td>
+				   </tr>
+				   <tr>
+					<td title="EMPLOYEE_SCHED_DTL.JOB_ID references JOB.JOB_ID via FK_ESCHD_JOB_ID">
+						<a href='EMPLOYEE_SCHED_DTL.html'>EMPLOYEE_SCHED_DTL</a><span class='relatedKey'>.JOB_ID</span>
+					</td>
+					<td class="constraint detail">
+						FK_ESCHD_JOB_ID <span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span>
+					</td>
+				   </tr>
+				   <tr>
+					<td title="ES_CLIST_EMPLOYEE.JOB_ID references JOB.JOB_ID via FK_CLISTEMP_JOBID">
+						<a href='ES_CLIST_EMPLOYEE.html'>ES_CLIST_EMPLOYEE</a><span class='relatedKey'>.JOB_ID</span>
+					</td>
+					<td class="constraint detail">
+						FK_CLISTEMP_JOBID <span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span>
+					</td>
+				   </tr>
+				   <tr>
+					<td title="ES_JOB_ASSOCIATION.JOB_ASSOC_ID references JOB.JOB_ID via FK_JOBASSOC_JOBASSOC_ID">
+						<a href='ES_JOB_ASSOCIATION.html'>ES_JOB_ASSOCIATION</a><span class='relatedKey'>.JOB_ASSOC_ID</span>
+					</td>
+					<td class="constraint detail">
+						FK_JOBASSOC_JOBASSOC_ID <span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span>
+					</td>
+				   </tr>
+				   <tr>
+					<td title="ES_JOB_ASSOCIATION.JOB_ID references JOB.JOB_ID via FK_JOBASSOC_JOB_ID">
+						<a href='ES_JOB_ASSOCIATION.html'>ES_JOB_ASSOCIATION</a><span class='relatedKey'>.JOB_ID</span>
+					</td>
+					<td class="constraint detail">
+						FK_JOBASSOC_JOB_ID <span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span>
+					</td>
+				   </tr>
+				   <tr>
+					<td title="ES_ROTROW_CONFLICTS.JOB_ID references JOB.JOB_ID via FK_RRCONFL_JOB_ID">
+						<a href='ES_ROTROW_CONFLICTS.html'>ES_ROTROW_CONFLICTS</a><span class='relatedKey'>.JOB_ID</span>
+					</td>
+					<td class="constraint detail">
+						FK_RRCONFL_JOB_ID <span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span>
+					</td>
+				   </tr>
+				   <tr>
+					<td title="ES_ROW_LM.JOB_ID references JOB.JOB_ID via FK_ROWLM_JOBID">
+						<a href='ES_ROW_LM.html'>ES_ROW_LM</a><span class='relatedKey'>.JOB_ID</span>
+					</td>
+					<td class="constraint detail">
+						FK_ROWLM_JOBID <span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span>
+					</td>
+				   </tr>
+				   <tr>
+					<td title="ES_SHIFT_DETAIL.JOB_ID references JOB.JOB_ID via FK_SHIFTDTL_JOB_ID">
+						<a href='ES_SHIFT_DETAIL.html'>ES_SHIFT_DETAIL</a><span class='relatedKey'>.JOB_ID</span>
+					</td>
+					<td class="constraint detail">
+						FK_SHIFTDTL_JOB_ID <span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span>
+					</td>
+				   </tr>
+				   <tr>
+					<td title="ES_SHIFT_DETAIL_LAYER.JOB_ID references JOB.JOB_ID via FK_SDL_JOB_ID">
+						<a href='ES_SHIFT_DETAIL_LAYER.html'>ES_SHIFT_DETAIL_LAYER</a><span class='relatedKey'>.JOB_ID</span>
+					</td>
+					<td class="constraint detail">
+						FK_SDL_JOB_ID <span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span>
+					</td>
+				   </tr>
+				   <tr>
+					<td title="ES_SHIFT_HIST_DET.JOB_ID references JOB.JOB_ID via FK_SHIFTHISTDET_JOB_ID">
+						<a href='ES_SHIFT_HIST_DET.html'>ES_SHIFT_HIST_DET</a><span class='relatedKey'>.JOB_ID</span>
+					</td>
+					<td class="constraint detail">
+						FK_SHIFTHISTDET_JOB_ID <span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span>
+					</td>
+				   </tr>
+				   <tr>
+					<td title="ES_SHIFT_TYPE_TEAM.JOB_ID references JOB.JOB_ID via FK_SHFTTYPTM_JOB_ID">
+						<a href='ES_SHIFT_TYPE_TEAM.html'>ES_SHIFT_TYPE_TEAM</a><span class='relatedKey'>.JOB_ID</span>
+					</td>
+					<td class="constraint detail">
+						FK_SHFTTYPTM_JOB_ID <span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span>
+					</td>
+				   </tr>
+				   <tr>
+					<td title="ES_STAFFING_REQ.JOB_ID references JOB.JOB_ID via FK_STAFFREQ_JOBID">
+						<a href='ES_STAFFING_REQ.html'>ES_STAFFING_REQ</a><span class='relatedKey'>.JOB_ID</span>
+					</td>
+					<td class="constraint detail">
+						FK_STAFFREQ_JOBID <span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span>
+					</td>
+				   </tr>
+				   <tr>
+					<td title="ES_TMPL_SHIFT_REQ.JOB_ID references JOB.JOB_ID via FK_ETSHR_JOB_ID">
+						<a href='ES_TMPL_SHIFT_REQ.html'>ES_TMPL_SHIFT_REQ</a><span class='relatedKey'>.JOB_ID</span>
+					</td>
+					<td class="constraint detail">
+						FK_ETSHR_JOB_ID <span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span>
+					</td>
+				   </tr>
+				   <tr>
+					<td title="ES_TMPL_STAFF_REQ.JOB_ID references JOB.JOB_ID via FK_ETSR_JOB_ID">
+						<a href='ES_TMPL_STAFF_REQ.html'>ES_TMPL_STAFF_REQ</a><span class='relatedKey'>.JOB_ID</span>
+					</td>
+					<td class="constraint detail">
+						FK_ETSR_JOB_ID <span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span>
+					</td>
+				   </tr>
+				   <tr>
+					<td title="ES_WORKLOAD_REQ.JOB_ID references JOB.JOB_ID via FK_WLR_JOB_ID">
+						<a href='ES_WORKLOAD_REQ.html'>ES_WORKLOAD_REQ</a><span class='relatedKey'>.JOB_ID</span>
+					</td>
+					<td class="constraint detail">
+						FK_WLR_JOB_ID <span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span>
+					</td>
+				   </tr>
+				   <tr>
+					<td title="JOB_RATE.JOB_ID references JOB.JOB_ID via FK_JOB_RATE_JOB_ID">
+						<a href='JOB_RATE.html'>JOB_RATE</a><span class='relatedKey'>.JOB_ID</span>
+					</td>
+					<td class="constraint detail">
+						FK_JOB_RATE_JOB_ID <span title='Cascade on delete:&#10;Deletion of parent deletes child'>C</span>
+					</td>
+				   </tr>
+				   <tr>
+					<td title="JOB_RDR_GRP.JOB_ID references JOB.JOB_ID via FK_JOBRDRGP_JBID">
+						<a href='JOB_RDR_GRP.html'>JOB_RDR_GRP</a><span class='relatedKey'>.JOB_ID</span>
+					</td>
+					<td class="constraint detail">
+						FK_JOBRDRGP_JBID <span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span>
+					</td>
+				   </tr>
+				   <tr>
+					<td title="JOB_TEAM.JOB_ID references JOB.JOB_ID via FK_JOBTEAM_JOB_ID">
+						<a href='JOB_TEAM.html'>JOB_TEAM</a><span class='relatedKey'>.JOB_ID</span>
+					</td>
+					<td class="constraint detail">
+						FK_JOBTEAM_JOB_ID <span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span>
+					</td>
+				   </tr>
+				   <tr>
+					<td title="JP_JOB_POSTING.JOB_ID&#39;s name implies that it&#39;s a child of JOB.JOB_ID, but it doesn&#39;t reference that column.">
+						<a href='JP_JOB_POSTING.html'>JP_JOB_POSTING</a><span class='relatedKey'>.JOB_ID</span>
+					</td>
+					<td class="constraint detail">
+						Implied Constraint <span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span>
+					</td>
+				   </tr>
+				   <tr>
+					<td title="LABOR_SHORTCUT_DTL.JOB_ID references JOB.JOB_ID via FK_LSCD_JOB_ID">
+						<a href='LABOR_SHORTCUT_DTL.html'>LABOR_SHORTCUT_DTL</a><span class='relatedKey'>.JOB_ID</span>
+					</td>
+					<td class="constraint detail">
+						FK_LSCD_JOB_ID <span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span>
+					</td>
+				   </tr>
+				   <tr>
+					<td title="MP_DAILY_OVERRIDE.JOB_ID references JOB.JOB_ID via FK_MPDO_JOB_ID">
+						<a href='MP_DAILY_OVERRIDE.html'>MP_DAILY_OVERRIDE</a><span class='relatedKey'>.JOB_ID</span>
+					</td>
+					<td class="constraint detail">
+						FK_MPDO_JOB_ID <span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span>
+					</td>
+				   </tr>
+				   <tr>
+					<td title="MP_TEMPLATE_OVERRIDE.JOB_ID references JOB.JOB_ID via FK_MPTO_JOB_ID">
+						<a href='MP_TEMPLATE_OVERRIDE.html'>MP_TEMPLATE_OVERRIDE</a><span class='relatedKey'>.JOB_ID</span>
+					</td>
+					<td class="constraint detail">
+						FK_MPTO_JOB_ID <span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span>
+					</td>
+				   </tr>
+				   <tr>
+					<td title="MP_TEMPLATE_REQUIREMENT.JOB_ID references JOB.JOB_ID via FK_MPTR_JOB_ID">
+						<a href='MP_TEMPLATE_REQUIREMENT.html'>MP_TEMPLATE_REQUIREMENT</a><span class='relatedKey'>.JOB_ID</span>
+					</td>
+					<td class="constraint detail">
+						FK_MPTR_JOB_ID <span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span>
+					</td>
+				   </tr>
+				   <tr>
+					<td title="RTSS_SHIFT.JOB_ID references JOB.JOB_ID via FK_RTSSHFT_JOB_ID">
+						<a href='RTSS_SHIFT.html'>RTSS_SHIFT</a><span class='relatedKey'>.JOB_ID</span>
+					</td>
+					<td class="constraint detail">
+						FK_RTSSHFT_JOB_ID <span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span>
+					</td>
+				   </tr>
+				   <tr>
+					<td title="SB_SCHD_BID_SPAT.JOB_ID references JOB.JOB_ID via FK_SB_SHFTPAT_JBID">
+						<a href='SB_SCHD_BID_SPAT.html'>SB_SCHD_BID_SPAT</a><span class='relatedKey'>.JOB_ID</span>
+					</td>
+					<td class="constraint detail">
+						FK_SB_SHFTPAT_JBID <span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span>
+					</td>
+				   </tr>
+				   <tr>
+					<td title="SCHED_COST_DETAIL.JOB_ID references JOB.JOB_ID via FK_SCD_JOB_ID">
+						<a href='SCHED_COST_DETAIL.html'>SCHED_COST_DETAIL</a><span class='relatedKey'>.JOB_ID</span>
+					</td>
+					<td class="constraint detail">
+						FK_SCD_JOB_ID <span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span>
+					</td>
+				   </tr>
+				   <tr>
+					<td title="SHIFT_PATTERN_SHIFT_LABOR.JOB_ID references JOB.JOB_ID via FK_SPSLAB_JOB_ID">
+						<a href='SHIFT_PATTERN_SHIFT_LABOR.html'>SHIFT_PATTERN_SHIFT_LABOR</a><span class='relatedKey'>.JOB_ID</span>
+					</td>
+					<td class="constraint detail">
+						FK_SPSLAB_JOB_ID <span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span>
+					</td>
+				   </tr>
+				   <tr>
+					<td title="SHIFT_PREMIUM_ZONE.JOB_ID references JOB.JOB_ID via FK_SPZ_JOB_ID">
+						<a href='SHIFT_PREMIUM_ZONE.html'>SHIFT_PREMIUM_ZONE</a><span class='relatedKey'>.JOB_ID</span>
+					</td>
+					<td class="constraint detail">
+						FK_SPZ_JOB_ID <span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span>
+					</td>
+				   </tr>
+				   <tr>
+					<td title="SO_CLIENT_STFDEF.JOB_ID references JOB.JOB_ID via FK_CSD_JOB_ID">
+						<a href='SO_CLIENT_STFDEF.html'>SO_CLIENT_STFDEF</a><span class='relatedKey'>.JOB_ID</span>
+					</td>
+					<td class="constraint detail">
+						FK_CSD_JOB_ID <span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span>
+					</td>
+				   </tr>
+				   <tr>
+					<td title="SO_CLIENTYP_STFDEF.JOB_ID references JOB.JOB_ID via FK_CTSD_JOB_ID">
+						<a href='SO_CLIENTYP_STFDEF.html'>SO_CLIENTYP_STFDEF</a><span class='relatedKey'>.JOB_ID</span>
+					</td>
+					<td class="constraint detail">
+						FK_CTSD_JOB_ID <span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span>
+					</td>
+				   </tr>
+				   <tr>
+					<td title="SO_EVENT_DETAIL.JOB_ID references JOB.JOB_ID via FK_EVT_JOB_ID">
+						<a href='SO_EVENT_DETAIL.html'>SO_EVENT_DETAIL</a><span class='relatedKey'>.JOB_ID</span>
+					</td>
+					<td class="constraint detail">
+						FK_EVT_JOB_ID <span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span>
+					</td>
+				   </tr>
+				   <tr>
+					<td title="SO_HIST_INT_REQ.JOB_ID references JOB.JOB_ID via FK_HSTINTRQ_JOBID">
+						<a href='SO_HIST_INT_REQ.html'>SO_HIST_INT_REQ</a><span class='relatedKey'>.JOB_ID</span>
+					</td>
+					<td class="constraint detail">
+						FK_HSTINTRQ_JOBID <span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span>
+					</td>
+				   </tr>
+				   <tr>
+					<td title="SO_INTERVAL_REQ.JOB_ID references JOB.JOB_ID via FK_INTRQ_JOB_ID">
+						<a href='SO_INTERVAL_REQ.html'>SO_INTERVAL_REQ</a><span class='relatedKey'>.JOB_ID</span>
+					</td>
+					<td class="constraint detail">
+						FK_INTRQ_JOB_ID <span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span>
+					</td>
+				   </tr>
+				   <tr>
+					<td title="SO_POSN_SET_ELMTS.JOB_ID references JOB.JOB_ID via FK_POSNSE_PARNT">
+						<a href='SO_POSN_SET_ELMTS.html'>SO_POSN_SET_ELMTS</a><span class='relatedKey'>.JOB_ID</span>
+					</td>
+					<td class="constraint detail">
+						FK_POSNSE_PARNT <span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span>
+					</td>
+				   </tr>
+				   <tr>
+					<td title="SO_POSN_SET_ELMTS.JOB_ID_CHILD references JOB.JOB_ID via FK_POSNSE_CHILD">
+						<a href='SO_POSN_SET_ELMTS.html'>SO_POSN_SET_ELMTS</a><span class='relatedKey'>.JOB_ID_CHILD</span>
+					</td>
+					<td class="constraint detail">
+						FK_POSNSE_CHILD <span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span>
+					</td>
+				   </tr>
+				   <tr>
+					<td title="SO_SHIFT_DETAIL.JOB_ID references JOB.JOB_ID via FK_SHFTDET_JOB_ID">
+						<a href='SO_SHIFT_DETAIL.html'>SO_SHIFT_DETAIL</a><span class='relatedKey'>.JOB_ID</span>
+					</td>
+					<td class="constraint detail">
+						FK_SHFTDET_JOB_ID <span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span>
+					</td>
+				   </tr>
+				   <tr>
+					<td title="SO_SHIFT_REQ.JOB_ID references JOB.JOB_ID via FK_SHRQ_JOB_ID">
+						<a href='SO_SHIFT_REQ.html'>SO_SHIFT_REQ</a><span class='relatedKey'>.JOB_ID</span>
+					</td>
+					<td class="constraint detail">
+						FK_SHRQ_JOB_ID <span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span>
+					</td>
+				   </tr>
+				   <tr>
+					<td title="SR_SHIFT_OFFSET.JOB_ID references JOB.JOB_ID via FK_SRSHO_JOB_ID">
+						<a href='SR_SHIFT_OFFSET.html'>SR_SHIFT_OFFSET</a><span class='relatedKey'>.JOB_ID</span>
+					</td>
+					<td class="constraint detail">
+						FK_SRSHO_JOB_ID <span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span>
+					</td>
+				   </tr>
+				   <tr>
+					<td title="SR_SUMMARY.JOB_ID references JOB.JOB_ID via FK_SRSMRY_JOBID">
+						<a href='SR_SUMMARY.html'>SR_SUMMARY</a><span class='relatedKey'>.JOB_ID</span>
+					</td>
+					<td class="constraint detail">
+						FK_SRSMRY_JOBID <span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span>
+					</td>
+				   </tr>
+				   <tr>
+					<td title="ST_JOB_SKILL.JOB_ID references JOB.JOB_ID via FK_SJS_JOB_ID">
+						<a href='ST_JOB_SKILL.html'>ST_JOB_SKILL</a><span class='relatedKey'>.JOB_ID</span>
+					</td>
+					<td class="constraint detail">
+						FK_SJS_JOB_ID <span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span>
+					</td>
+				   </tr>
+				   <tr>
+					<td title="TARGET_DETAIL_JOB.JOB_ID references JOB.JOB_ID via FK_TGTDJ_JOB_ID">
+						<a href='TARGET_DETAIL_JOB.html'>TARGET_DETAIL_JOB</a><span class='relatedKey'>.JOB_ID</span>
+					</td>
+					<td class="constraint detail">
+						FK_TGTDJ_JOB_ID <span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span>
+					</td>
+				   </tr>
+				   <tr>
+					<td title="TM_ACTIONITEM_JOB.JOB_ID references JOB.JOB_ID via FK_AIJOB_JOB_ID">
+						<a href='TM_ACTIONITEM_JOB.html'>TM_ACTIONITEM_JOB</a><span class='relatedKey'>.JOB_ID</span>
+					</td>
+					<td class="constraint detail">
+						FK_AIJOB_JOB_ID <span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span>
+					</td>
+				   </tr>
+				   <tr>
+					<td title="UNSTFD_SHIFT.JOB_ID references JOB.JOB_ID via FK_UNSTSHFT_JOBID">
+						<a href='UNSTFD_SHIFT.html'>UNSTFD_SHIFT</a><span class='relatedKey'>.JOB_ID</span>
+					</td>
+					<td class="constraint detail">
+						FK_UNSTSHFT_JOBID <span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span>
+					</td>
+				   </tr>
+				   <tr>
+					<td title="VIEW_CENSUSDT_REQ.JOB_ID&#39;s name implies that it&#39;s a child of JOB.JOB_ID, but it doesn&#39;t reference that column.">
+						<a href='VIEW_CENSUSDT_REQ.html'>VIEW_CENSUSDT_REQ</a><span class='relatedKey'>.JOB_ID</span>
+					</td>
+					<td class="constraint detail">
+						Implied Constraint <span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span>
+					</td>
+				   </tr>
+				   <tr>
+					<td title="VIEW_EMP_DEF_LAB.JOB_ID&#39;s name implies that it&#39;s a child of JOB.JOB_ID, but it doesn&#39;t reference that column.">
+						<a href='VIEW_EMP_DEF_LAB.html'>VIEW_EMP_DEF_LAB</a><span class='relatedKey'>.JOB_ID</span>
+					</td>
+					<td class="constraint detail">
+						Implied Constraint <span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span>
+					</td>
+				   </tr>
+				   <tr>
+					<td title="VIEW_EMPLOYEE_JOB.JOB_ID&#39;s name implies that it&#39;s a child of JOB.JOB_ID, but it doesn&#39;t reference that column.">
+						<a href='VIEW_EMPLOYEE_JOB.html'>VIEW_EMPLOYEE_JOB</a><span class='relatedKey'>.JOB_ID</span>
+					</td>
+					<td class="constraint detail">
+						Implied Constraint <span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span>
+					</td>
+				   </tr>
+				   <tr>
+					<td title="VIEW_EMPLOYEE_JOB_POSTING.JOB_ID&#39;s name implies that it&#39;s a child of JOB.JOB_ID, but it doesn&#39;t reference that column.">
+						<a href='VIEW_EMPLOYEE_JOB_POSTING.html'>VIEW_EMPLOYEE_JOB_POSTING</a><span class='relatedKey'>.JOB_ID</span>
+					</td>
+					<td class="constraint detail">
+						Implied Constraint <span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span>
+					</td>
+				   </tr>
+				   <tr>
+					<td title="VIEW_JOB_RATE.JOB_ID&#39;s name implies that it&#39;s a child of JOB.JOB_ID, but it doesn&#39;t reference that column.">
+						<a href='VIEW_JOB_RATE.html'>VIEW_JOB_RATE</a><span class='relatedKey'>.JOB_ID</span>
+					</td>
+					<td class="constraint detail">
+						Implied Constraint <span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span>
+					</td>
+				   </tr>
+				   <tr>
+					<td title="VIEW_MOD_EMPLOYEE_JOB.JOB_ID&#39;s name implies that it&#39;s a child of JOB.JOB_ID, but it doesn&#39;t reference that column.">
+						<a href='VIEW_MOD_EMPLOYEE_JOB.html'>VIEW_MOD_EMPLOYEE_JOB</a><span class='relatedKey'>.JOB_ID</span>
+					</td>
+					<td class="constraint detail">
+						Implied Constraint <span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span>
+					</td>
+				   </tr>
+				   <tr>
+					<td title="VIEW_MOD_EMPLOYEE_JOB_POSTING.JOB_ID&#39;s name implies that it&#39;s a child of JOB.JOB_ID, but it doesn&#39;t reference that column.">
+						<a href='VIEW_MOD_EMPLOYEE_JOB_POSTING.html'>VIEW_MOD_EMPLOYEE_JOB_POSTING</a><span class='relatedKey'>.JOB_ID</span>
+					</td>
+					<td class="constraint detail">
+						Implied Constraint <span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span>
+					</td>
+				   </tr>
+				   <tr>
+					<td title="VIEW_MOD_WORK_DETAIL.JOB_ID&#39;s name implies that it&#39;s a child of JOB.JOB_ID, but it doesn&#39;t reference that column.">
+						<a href='VIEW_MOD_WORK_DETAIL.html'>VIEW_MOD_WORK_DETAIL</a><span class='relatedKey'>.JOB_ID</span>
+					</td>
+					<td class="constraint detail">
+						Implied Constraint <span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span>
+					</td>
+				   </tr>
+				   <tr>
+					<td title="VIEW_PAYEXP_ADJUSTMENT.JOB_ID&#39;s name implies that it&#39;s a child of JOB.JOB_ID, but it doesn&#39;t reference that column.">
+						<a href='VIEW_PAYEXP_ADJUSTMENT.html'>VIEW_PAYEXP_ADJUSTMENT</a><span class='relatedKey'>.JOB_ID</span>
+					</td>
+					<td class="constraint detail">
+						Implied Constraint <span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span>
+					</td>
+				   </tr>
+				   <tr>
+					<td title="VIEW_PAYEXP_CURRENT.JOB_ID&#39;s name implies that it&#39;s a child of JOB.JOB_ID, but it doesn&#39;t reference that column.">
+						<a href='VIEW_PAYEXP_CURRENT.html'>VIEW_PAYEXP_CURRENT</a><span class='relatedKey'>.JOB_ID</span>
+					</td>
+					<td class="constraint detail">
+						Implied Constraint <span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span>
+					</td>
+				   </tr>
+				   <tr>
+					<td title="VIEW_SB_SHIFT.JOB_ID&#39;s name implies that it&#39;s a child of JOB.JOB_ID, but it doesn&#39;t reference that column.">
+						<a href='VIEW_SB_SHIFT.html'>VIEW_SB_SHIFT</a><span class='relatedKey'>.JOB_ID</span>
+					</td>
+					<td class="constraint detail">
+						Implied Constraint <span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span>
+					</td>
+				   </tr>
+				   <tr>
+					<td title="VIEW_SHIFT_PREMIUM_ZONE_FULL.JOB_ID&#39;s name implies that it&#39;s a child of JOB.JOB_ID, but it doesn&#39;t reference that column.">
+						<a href='VIEW_SHIFT_PREMIUM_ZONE_FULL.html'>VIEW_SHIFT_PREMIUM_ZONE_FULL</a><span class='relatedKey'>.JOB_ID</span>
+					</td>
+					<td class="constraint detail">
+						Implied Constraint <span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span>
+					</td>
+				   </tr>
+				   <tr>
+					<td title="VIEW_SO_ACTSFTHR.JOB_ID&#39;s name implies that it&#39;s a child of JOB.JOB_ID, but it doesn&#39;t reference that column.">
+						<a href='VIEW_SO_ACTSFTHR.html'>VIEW_SO_ACTSFTHR</a><span class='relatedKey'>.JOB_ID</span>
+					</td>
+					<td class="constraint detail">
+						Implied Constraint <span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span>
+					</td>
+				   </tr>
+				   <tr>
+					<td title="VIEW_SO_AVAIL_INFO.JOB_ID&#39;s name implies that it&#39;s a child of JOB.JOB_ID, but it doesn&#39;t reference that column.">
+						<a href='VIEW_SO_AVAIL_INFO.html'>VIEW_SO_AVAIL_INFO</a><span class='relatedKey'>.JOB_ID</span>
+					</td>
+					<td class="constraint detail">
+						Implied Constraint <span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span>
+					</td>
+				   </tr>
+				   <tr>
+					<td title="VIEW_SO_CL_STFDEF.JOB_ID&#39;s name implies that it&#39;s a child of JOB.JOB_ID, but it doesn&#39;t reference that column.">
+						<a href='VIEW_SO_CL_STFDEF.html'>VIEW_SO_CL_STFDEF</a><span class='relatedKey'>.JOB_ID</span>
+					</td>
+					<td class="constraint detail">
+						Implied Constraint <span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span>
+					</td>
+				   </tr>
+				   <tr>
+					<td title="VIEW_SO_DAILY_SKD.JOB_ID&#39;s name implies that it&#39;s a child of JOB.JOB_ID, but it doesn&#39;t reference that column.">
+						<a href='VIEW_SO_DAILY_SKD.html'>VIEW_SO_DAILY_SKD</a><span class='relatedKey'>.JOB_ID</span>
+					</td>
+					<td class="constraint detail">
+						Implied Constraint <span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span>
+					</td>
+				   </tr>
+				   <tr>
+					<td title="VIEW_SO_EMP_CSTDET.JOB_ID&#39;s name implies that it&#39;s a child of JOB.JOB_ID, but it doesn&#39;t reference that column.">
+						<a href='VIEW_SO_EMP_CSTDET.html'>VIEW_SO_EMP_CSTDET</a><span class='relatedKey'>.JOB_ID</span>
+					</td>
+					<td class="constraint detail">
+						Implied Constraint <span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span>
+					</td>
+				   </tr>
+				   <tr>
+					<td title="VIEW_SO_EMP_POS.JOB_ID&#39;s name implies that it&#39;s a child of JOB.JOB_ID, but it doesn&#39;t reference that column.">
+						<a href='VIEW_SO_EMP_POS.html'>VIEW_SO_EMP_POS</a><span class='relatedKey'>.JOB_ID</span>
+					</td>
+					<td class="constraint detail">
+						Implied Constraint <span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span>
+					</td>
+				   </tr>
+				   <tr>
+					<td title="VIEW_SO_EMP_WORK.JOB_ID&#39;s name implies that it&#39;s a child of JOB.JOB_ID, but it doesn&#39;t reference that column.">
+						<a href='VIEW_SO_EMP_WORK.html'>VIEW_SO_EMP_WORK</a><span class='relatedKey'>.JOB_ID</span>
+					</td>
+					<td class="constraint detail">
+						Implied Constraint <span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span>
+					</td>
+				   </tr>
+				   <tr>
+					<td title="VIEW_SO_EMPPOS_SKL.JOB_ID&#39;s name implies that it&#39;s a child of JOB.JOB_ID, but it doesn&#39;t reference that column.">
+						<a href='VIEW_SO_EMPPOS_SKL.html'>VIEW_SO_EMPPOS_SKL</a><span class='relatedKey'>.JOB_ID</span>
+					</td>
+					<td class="constraint detail">
+						Implied Constraint <span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span>
+					</td>
+				   </tr>
+				   <tr>
+					<td title="VIEW_SO_INT_REQ.JOB_ID&#39;s name implies that it&#39;s a child of JOB.JOB_ID, but it doesn&#39;t reference that column.">
+						<a href='VIEW_SO_INT_REQ.html'>VIEW_SO_INT_REQ</a><span class='relatedKey'>.JOB_ID</span>
+					</td>
+					<td class="constraint detail">
+						Implied Constraint <span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span>
+					</td>
+				   </tr>
+				   <tr>
+					<td title="VIEW_SO_NET_STAFF.JOB_ID&#39;s name implies that it&#39;s a child of JOB.JOB_ID, but it doesn&#39;t reference that column.">
+						<a href='VIEW_SO_NET_STAFF.html'>VIEW_SO_NET_STAFF</a><span class='relatedKey'>.JOB_ID</span>
+					</td>
+					<td class="constraint detail">
+						Implied Constraint <span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span>
+					</td>
+				   </tr>
+				   <tr>
+					<td title="VIEW_SO_NETSTF_REQ.JOB_ID&#39;s name implies that it&#39;s a child of JOB.JOB_ID, but it doesn&#39;t reference that column.">
+						<a href='VIEW_SO_NETSTF_REQ.html'>VIEW_SO_NETSTF_REQ</a><span class='relatedKey'>.JOB_ID</span>
+					</td>
+					<td class="constraint detail">
+						Implied Constraint <span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span>
+					</td>
+				   </tr>
+				   <tr>
+					<td title="VIEW_SO_NETSTFRAW.JOB_ID&#39;s name implies that it&#39;s a child of JOB.JOB_ID, but it doesn&#39;t reference that column.">
+						<a href='VIEW_SO_NETSTFRAW.html'>VIEW_SO_NETSTFRAW</a><span class='relatedKey'>.JOB_ID</span>
+					</td>
+					<td class="constraint detail">
+						Implied Constraint <span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span>
+					</td>
+				   </tr>
+				   <tr>
+					<td title="VIEW_SO_POSPAY.JOB_ID&#39;s name implies that it&#39;s a child of JOB.JOB_ID, but it doesn&#39;t reference that column.">
+						<a href='VIEW_SO_POSPAY.html'>VIEW_SO_POSPAY</a><span class='relatedKey'>.JOB_ID</span>
+					</td>
+					<td class="constraint detail">
+						Implied Constraint <span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span>
+					</td>
+				   </tr>
+				   <tr>
+					<td title="VIEW_SO_PROD_RESPS.JOB_ID&#39;s name implies that it&#39;s a child of JOB.JOB_ID, but it doesn&#39;t reference that column.">
+						<a href='VIEW_SO_PROD_RESPS.html'>VIEW_SO_PROD_RESPS</a><span class='relatedKey'>.JOB_ID</span>
+					</td>
+					<td class="constraint detail">
+						Implied Constraint <span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span>
+					</td>
+				   </tr>
+				   <tr>
+					<td title="VIEW_SO_SCHED.JOB_ID&#39;s name implies that it&#39;s a child of JOB.JOB_ID, but it doesn&#39;t reference that column.">
+						<a href='VIEW_SO_SCHED.html'>VIEW_SO_SCHED</a><span class='relatedKey'>.JOB_ID</span>
+					</td>
+					<td class="constraint detail">
+						Implied Constraint <span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span>
+					</td>
+				   </tr>
+				   <tr>
+					<td title="VIEW_SO_SKDEMPACT.JOB_ID&#39;s name implies that it&#39;s a child of JOB.JOB_ID, but it doesn&#39;t reference that column.">
+						<a href='VIEW_SO_SKDEMPACT.html'>VIEW_SO_SKDEMPACT</a><span class='relatedKey'>.JOB_ID</span>
+					</td>
+					<td class="constraint detail">
+						Implied Constraint <span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span>
+					</td>
+				   </tr>
+				   <tr>
+					<td title="VIEW_ST_JOB_SKILL.JOB_ID&#39;s name implies that it&#39;s a child of JOB.JOB_ID, but it doesn&#39;t reference that column.">
+						<a href='VIEW_ST_JOB_SKILL.html'>VIEW_ST_JOB_SKILL</a><span class='relatedKey'>.JOB_ID</span>
+					</td>
+					<td class="constraint detail">
+						Implied Constraint <span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span>
+					</td>
+				   </tr>
+				   <tr>
+					<td title="VIEW_VR_EMPLOYEE_SCHEDULE.JOB_ID&#39;s name implies that it&#39;s a child of JOB.JOB_ID, but it doesn&#39;t reference that column.">
+						<a href='VIEW_VR_EMPLOYEE_SCHEDULE.html'>VIEW_VR_EMPLOYEE_SCHEDULE</a><span class='relatedKey'>.JOB_ID</span>
+					</td>
+					<td class="constraint detail">
+						Implied Constraint <span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span>
+					</td>
+				   </tr>
+				   <tr>
+					<td title="VIEW_WORK_DETAIL.JOB_ID&#39;s name implies that it&#39;s a child of JOB.JOB_ID, but it doesn&#39;t reference that column.">
+						<a href='VIEW_WORK_DETAIL.html'>VIEW_WORK_DETAIL</a><span class='relatedKey'>.JOB_ID</span>
+					</td>
+					<td class="constraint detail">
+						Implied Constraint <span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span>
+					</td>
+				   </tr>
+				   <tr>
+					<td title="VIEW_WORK_DETAIL_ADJUST.JOB_ID&#39;s name implies that it&#39;s a child of JOB.JOB_ID, but it doesn&#39;t reference that column.">
+						<a href='VIEW_WORK_DETAIL_ADJUST.html'>VIEW_WORK_DETAIL_ADJUST</a><span class='relatedKey'>.JOB_ID</span>
+					</td>
+					<td class="constraint detail">
+						Implied Constraint <span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span>
+					</td>
+				   </tr>
+				   <tr>
+					<td title="VL_CLOCK_PRESET.JOB_ID&#39;s name implies that it&#39;s a child of JOB.JOB_ID, but it doesn&#39;t reference that column.">
+						<a href='VL_CLOCK_PRESET.html'>VL_CLOCK_PRESET</a><span class='relatedKey'>.JOB_ID</span>
+					</td>
+					<td class="constraint detail">
+						Implied Constraint <span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span>
+					</td>
+				   </tr>
+				   <tr>
+					<td title="VL_JOB.JOB_ID&#39;s name implies that it&#39;s a child of JOB.JOB_ID, but it doesn&#39;t reference that column.">
+						<a href='VL_JOB.html'>VL_JOB</a><span class='relatedKey'>.JOB_ID</span>
+					</td>
+					<td class="constraint detail">
+						Implied Constraint <span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span>
+					</td>
+				   </tr>
+				   <tr>
+					<td title="VL_JP_JOB_POSTING.JOB_ID&#39;s name implies that it&#39;s a child of JOB.JOB_ID, but it doesn&#39;t reference that column.">
+						<a href='VL_JP_JOB_POSTING.html'>VL_JP_JOB_POSTING</a><span class='relatedKey'>.JOB_ID</span>
+					</td>
+					<td class="constraint detail">
+						Implied Constraint <span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span>
+					</td>
+				   </tr>
+				   <tr>
+					<td title="VL_SHIFT_PREMIUM_ZONE.JOB_ID&#39;s name implies that it&#39;s a child of JOB.JOB_ID, but it doesn&#39;t reference that column.">
+						<a href='VL_SHIFT_PREMIUM_ZONE.html'>VL_SHIFT_PREMIUM_ZONE</a><span class='relatedKey'>.JOB_ID</span>
+					</td>
+					<td class="constraint detail">
+						Implied Constraint <span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span>
+					</td>
+				   </tr>
+				   <tr>
+					<td title="VL_SO_CLIENT_STFDEF.JOB_ID&#39;s name implies that it&#39;s a child of JOB.JOB_ID, but it doesn&#39;t reference that column.">
+						<a href='VL_SO_CLIENT_STFDEF.html'>VL_SO_CLIENT_STFDEF</a><span class='relatedKey'>.JOB_ID</span>
+					</td>
+					<td class="constraint detail">
+						Implied Constraint <span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span>
+					</td>
+				   </tr>
+				   <tr>
+					<td title="VL_SO_EVENT_DETAIL.JOB_ID&#39;s name implies that it&#39;s a child of JOB.JOB_ID, but it doesn&#39;t reference that column.">
+						<a href='VL_SO_EVENT_DETAIL.html'>VL_SO_EVENT_DETAIL</a><span class='relatedKey'>.JOB_ID</span>
+					</td>
+					<td class="constraint detail">
+						Implied Constraint <span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span>
+					</td>
+				   </tr>
+				   <tr>
+					<td title="WORK_DETAIL.JOB_ID references JOB.JOB_ID via FK_WRKD_JOB_ID">
+						<a href='WORK_DETAIL.html'>WORK_DETAIL</a><span class='relatedKey'>.JOB_ID</span>
+					</td>
+					<td class="constraint detail">
+						FK_WRKD_JOB_ID <span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span>
+					</td>
+				   </tr>
+				   <tr>
+					<td title="WORK_DETAIL_ADJUST.JOB_ID&#39;s name implies that it&#39;s a child of JOB.JOB_ID, but it doesn&#39;t reference that column.">
+						<a href='WORK_DETAIL_ADJUST.html'>WORK_DETAIL_ADJUST</a><span class='relatedKey'>.JOB_ID</span>
+					</td>
+					<td class="constraint detail">
+						Implied Constraint <span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span>
+					</td>
+				   </tr>
+				  </table>				 
+				 </td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>					 
+				 </td>
+				 <td></td>
+				</tr>
+				<tr>
+				 <td class='indexedColumn' title='Indexed'><i class='fa fa-sitemap fa-rotate-120' style='padding-right: 5px;'></i><span id="JOB_NAME">JOB_NAME</span></td>
+				 <td>VARCHAR2</td>
+				 <td>40</td>
+				 <td title=''></td>
+				 <td title=''></td>
+				 <td>null</td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>				 
+				 </td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>					 
+				 </td>
+				 <td></td>
+				</tr>
+				<tr>
+				 <td><span id="JOB_DESC">JOB_DESC</span></td>
+				 <td>VARCHAR2</td>
+				 <td>100</td>
+				 <td title='nullable'>√</td>
+				 <td title=''></td>
+				 <td>null</td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>				 
+				 </td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>					 
+				 </td>
+				 <td></td>
+				</tr>
+				<tr>
+				 <td><span id="JOB_START_DATE">JOB_START_DATE</span></td>
+				 <td>DATE</td>
+				 <td>7</td>
+				 <td title=''></td>
+				 <td title=''></td>
+				 <td>TRUNC(SYSDATE)</td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>				 
+				 </td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>					 
+				 </td>
+				 <td></td>
+				</tr>
+				<tr>
+				 <td><span id="JOB_END_DATE">JOB_END_DATE</span></td>
+				 <td>DATE</td>
+				 <td>7</td>
+				 <td title=''></td>
+				 <td title=''></td>
+				 <td>TRUNC(SYSDATE)</td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>				 
+				 </td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>					 
+				 </td>
+				 <td></td>
+				</tr>
+				<tr>
+				 <td><span id="JOB_FLAG1">JOB_FLAG1</span></td>
+				 <td>VARCHAR2</td>
+				 <td>1</td>
+				 <td title='nullable'>√</td>
+				 <td title=''></td>
+				 <td>null</td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>				 
+				 </td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>					 
+				 </td>
+				 <td></td>
+				</tr>
+				<tr>
+				 <td><span id="JOB_FLAG2">JOB_FLAG2</span></td>
+				 <td>VARCHAR2</td>
+				 <td>1</td>
+				 <td title='nullable'>√</td>
+				 <td title=''></td>
+				 <td>null</td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>				 
+				 </td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>					 
+				 </td>
+				 <td></td>
+				</tr>
+				<tr>
+				 <td><span id="JOB_FLAG3">JOB_FLAG3</span></td>
+				 <td>VARCHAR2</td>
+				 <td>1</td>
+				 <td title='nullable'>√</td>
+				 <td title=''></td>
+				 <td>null</td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>				 
+				 </td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>					 
+				 </td>
+				 <td></td>
+				</tr>
+				<tr>
+				 <td><span id="JOB_FLAG4">JOB_FLAG4</span></td>
+				 <td>VARCHAR2</td>
+				 <td>1</td>
+				 <td title='nullable'>√</td>
+				 <td title=''></td>
+				 <td>null</td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>				 
+				 </td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>					 
+				 </td>
+				 <td></td>
+				</tr>
+				<tr>
+				 <td><span id="JOB_FLAG5">JOB_FLAG5</span></td>
+				 <td>VARCHAR2</td>
+				 <td>1</td>
+				 <td title='nullable'>√</td>
+				 <td title=''></td>
+				 <td>null</td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>				 
+				 </td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>					 
+				 </td>
+				 <td></td>
+				</tr>
+				<tr>
+				 <td><span id="JOB_REFKEY1">JOB_REFKEY1</span></td>
+				 <td>NUMBER</td>
+				 <td>38</td>
+				 <td title='nullable'>√</td>
+				 <td title=''></td>
+				 <td>null</td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>				 
+				 </td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>					 
+				 </td>
+				 <td></td>
+				</tr>
+				<tr>
+				 <td><span id="JOB_REFKEY2">JOB_REFKEY2</span></td>
+				 <td>NUMBER</td>
+				 <td>38</td>
+				 <td title='nullable'>√</td>
+				 <td title=''></td>
+				 <td>null</td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>				 
+				 </td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>					 
+				 </td>
+				 <td></td>
+				</tr>
+				<tr>
+				 <td><span id="JOB_REFKEY3">JOB_REFKEY3</span></td>
+				 <td>NUMBER</td>
+				 <td>38</td>
+				 <td title='nullable'>√</td>
+				 <td title=''></td>
+				 <td>null</td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>				 
+				 </td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>					 
+				 </td>
+				 <td></td>
+				</tr>
+				<tr>
+				 <td><span id="JOB_REFKEY4">JOB_REFKEY4</span></td>
+				 <td>NUMBER</td>
+				 <td>38</td>
+				 <td title='nullable'>√</td>
+				 <td title=''></td>
+				 <td>null</td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>				 
+				 </td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>					 
+				 </td>
+				 <td></td>
+				</tr>
+				<tr>
+				 <td><span id="JOB_REFKEY5">JOB_REFKEY5</span></td>
+				 <td>NUMBER</td>
+				 <td>38</td>
+				 <td title='nullable'>√</td>
+				 <td title=''></td>
+				 <td>null</td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>				 
+				 </td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>					 
+				 </td>
+				 <td></td>
+				</tr>
+				<tr>
+				 <td><span id="JOB_VAL1">JOB_VAL1</span></td>
+				 <td>VARCHAR2</td>
+				 <td>40</td>
+				 <td title='nullable'>√</td>
+				 <td title=''></td>
+				 <td>null</td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>				 
+				 </td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>					 
+				 </td>
+				 <td></td>
+				</tr>
+				<tr>
+				 <td><span id="JOB_VAL2">JOB_VAL2</span></td>
+				 <td>VARCHAR2</td>
+				 <td>40</td>
+				 <td title='nullable'>√</td>
+				 <td title=''></td>
+				 <td>null</td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>				 
+				 </td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>					 
+				 </td>
+				 <td></td>
+				</tr>
+				<tr>
+				 <td><span id="JOB_VAL3">JOB_VAL3</span></td>
+				 <td>VARCHAR2</td>
+				 <td>40</td>
+				 <td title='nullable'>√</td>
+				 <td title=''></td>
+				 <td>null</td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>				 
+				 </td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>					 
+				 </td>
+				 <td></td>
+				</tr>
+				<tr>
+				 <td><span id="JOB_VAL4">JOB_VAL4</span></td>
+				 <td>VARCHAR2</td>
+				 <td>40</td>
+				 <td title='nullable'>√</td>
+				 <td title=''></td>
+				 <td>null</td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>				 
+				 </td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>					 
+				 </td>
+				 <td></td>
+				</tr>
+				<tr>
+				 <td><span id="JOB_VAL5">JOB_VAL5</span></td>
+				 <td>VARCHAR2</td>
+				 <td>40</td>
+				 <td title='nullable'>√</td>
+				 <td title=''></td>
+				 <td>null</td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>				 
+				 </td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>					 
+				 </td>
+				 <td></td>
+				</tr>
+				<tr>
+				 <td><span id="JOB_VAL6">JOB_VAL6</span></td>
+				 <td>VARCHAR2</td>
+				 <td>40</td>
+				 <td title='nullable'>√</td>
+				 <td title=''></td>
+				 <td>null</td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>				 
+				 </td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>					 
+				 </td>
+				 <td></td>
+				</tr>
+				<tr>
+				 <td><span id="JOB_VAL7">JOB_VAL7</span></td>
+				 <td>VARCHAR2</td>
+				 <td>40</td>
+				 <td title='nullable'>√</td>
+				 <td title=''></td>
+				 <td>null</td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>				 
+				 </td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>					 
+				 </td>
+				 <td></td>
+				</tr>
+				<tr>
+				 <td><span id="JOB_VAL8">JOB_VAL8</span></td>
+				 <td>VARCHAR2</td>
+				 <td>40</td>
+				 <td title='nullable'>√</td>
+				 <td title=''></td>
+				 <td>null</td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>				 
+				 </td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>					 
+				 </td>
+				 <td></td>
+				</tr>
+				<tr>
+				 <td><span id="JOB_VAL9">JOB_VAL9</span></td>
+				 <td>VARCHAR2</td>
+				 <td>40</td>
+				 <td title='nullable'>√</td>
+				 <td title=''></td>
+				 <td>null</td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>				 
+				 </td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>					 
+				 </td>
+				 <td></td>
+				</tr>
+				<tr>
+				 <td><span id="JOB_VAL10">JOB_VAL10</span></td>
+				 <td>VARCHAR2</td>
+				 <td>40</td>
+				 <td title='nullable'>√</td>
+				 <td title=''></td>
+				 <td>null</td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>				 
+				 </td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>					 
+				 </td>
+				 <td></td>
+				</tr>
+				<tr>
+				 <td class='foreignKey' title='Foreign Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="LMS_ID">LMS_ID</span></td>
+				 <td>NUMBER</td>
+				 <td>38</td>
+				 <td title=''></td>
+				 <td title=''></td>
+				 <td>-1</td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>				 
+				 </td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				   <tr>
+					<td title="JOB.LMS_ID references LABOR_METRIC_SEC.LMS_ID via FK_JOB_LMSID">
+						<a href='LABOR_METRIC_SEC.html'>LABOR_METRIC_SEC</a><span class='relatedKey'>.LMS_ID</span>
+					</td>
+					<td class="constraint detail">
+						FK_JOB_LMSID <span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span>
+					</td>
+				   </tr>
+				  </table>					 
+				 </td>
+				 <td></td>
+				</tr>
+				<tr>
+				 <td><span id="CLIENT_ID">CLIENT_ID</span></td>
+				 <td>NUMBER</td>
+				 <td>38</td>
+				 <td title=''></td>
+				 <td title=''></td>
+				 <td>1 </td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>				 
+				 </td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>					 
+				 </td>
+				 <td></td>
+				</tr>
+				<tr>
+				 <td><span id="JOB_PREFKEYHOLDER">JOB_PREFKEYHOLDER</span></td>
+				 <td>VARCHAR2</td>
+				 <td>1</td>
+				 <td title='nullable'>√</td>
+				 <td title=''></td>
+				 <td>null</td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>				 
+				 </td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>					 
+				 </td>
+				 <td></td>
+				</tr>
+				<tr>
+				 <td><span id="JOB_SHIFT_OFFSET">JOB_SHIFT_OFFSET</span></td>
+				 <td>NUMBER</td>
+				 <td>38</td>
+				 <td title='nullable'>√</td>
+				 <td title=''></td>
+				 <td>null</td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>				 
+				 </td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>					 
+				 </td>
+				 <td></td>
+				</tr>
+				<tr>
+				 <td><span id="JOB_TIP">JOB_TIP</span></td>
+				 <td>VARCHAR2</td>
+				 <td>1</td>
+				 <td title='nullable'>√</td>
+				 <td title=''></td>
+				 <td>null</td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>				 
+				 </td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>					 
+				 </td>
+				 <td></td>
+				</tr>
+				<tr>
+				 <td><span id="JOB_TIP_CALCULATN">JOB_TIP_CALCULATN</span></td>
+				 <td>VARCHAR2</td>
+				 <td>40</td>
+				 <td title='nullable'>√</td>
+				 <td title=''></td>
+				 <td>null</td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>				 
+				 </td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>					 
+				 </td>
+				 <td></td>
+				</tr>
+				<tr>
+				 <td><span id="JOB_INFERRED_TIP">JOB_INFERRED_TIP</span></td>
+				 <td>VARCHAR2</td>
+				 <td>40</td>
+				 <td title='nullable'>√</td>
+				 <td title=''></td>
+				 <td>null</td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>				 
+				 </td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>					 
+				 </td>
+				 <td></td>
+				</tr>
+				<tr>
+				 <td><span id="JOB_UNAUTH">JOB_UNAUTH</span></td>
+				 <td>VARCHAR2</td>
+				 <td>1</td>
+				 <td title=''></td>
+				 <td title=''></td>
+				 <td>&#39;N&#39; </td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>				 
+				 </td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>					 
+				 </td>
+				 <td></td>
+				</tr>
+				<tr>
+				 <td><span id="JOB_EXC_FRM_QLFY">JOB_EXC_FRM_QLFY</span></td>
+				 <td>VARCHAR2</td>
+				 <td>1</td>
+				 <td title='nullable'>√</td>
+				 <td title=''></td>
+				 <td>null</td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>				 
+				 </td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>					 
+				 </td>
+				 <td></td>
+				</tr>
+				<tr>
+				 <td><span id="JOB_RPT_HCTYPE">JOB_RPT_HCTYPE</span></td>
+				 <td>VARCHAR2</td>
+				 <td>1</td>
+				 <td title='nullable'>√</td>
+				 <td title=''></td>
+				 <td>null</td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>				 
+				 </td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>					 
+				 </td>
+				 <td></td>
+				</tr>
+				<tr>
+				 <td><span id="JOB_CODE">JOB_CODE</span></td>
+				 <td>VARCHAR2</td>
+				 <td>5</td>
+				 <td title='nullable'>√</td>
+				 <td title=''></td>
+				 <td>null</td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>				 
+				 </td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>					 
+				 </td>
+				 <td></td>
+				</tr>
+				<tr>
+				 <td><span id="JOB_PBJ_TITLE_CODE">JOB_PBJ_TITLE_CODE</span></td>
+				 <td>VARCHAR2</td>
+				 <td>10</td>
+				 <td title='nullable'>√</td>
+				 <td title=''></td>
+				 <td>null</td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>				 
+				 </td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>					 
+				 </td>
+				 <td></td>
+				</tr>
+								</tbody>
+				</table>
+				<p title='37 columns'>Table contained <span id="recordNumber">9</span> rows<p/>
+			</div>
+		</div>
+		<div class="box box-primary">		
+			<div class="box-header with-border">
+              <i class="fa fa-sitemap"></i>
+
+              <h3 id="Indexes" class="box-title">Indexes</h3>
+
+              <div class="box-tools pull-right">
+                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
+                </button>
+                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+              </div>
+            </div>	
+			<div class="box-body">
+				<table id="indexes_table" class="table table-bordered table-striped dataTable" role="grid">
+				<thead>
+				 <tr>
+				  <th>Constraint Name</th>
+				  <th>Type</th>
+				  <th>Sort</th>
+				  <th>Column(s)</th>
+				 </tr>
+				</thead>
+				<tbody>
+				 <tr>
+				  <td class='primaryKey' title='Primary Key'><i class='icon ion-key iconkey'></i> PK_JOB</td>
+				  <td>Primary key</td>
+				  <td><span title='Ascending'>Asc</span></td>
+				  <td>JOB_ID</td>
+				 </tr>				 
+				 <tr>
+				  <td class='uniqueKey' title='Unique Key'><i class='icon ion-key iconkey'></i> UK_JOB_NAME</td>
+				  <td>Must be unique</td>
+				  <td><span title='Ascending'>Asc</span></td>
+				  <td>JOB_NAME</td>
+				 </tr>				 
+				</tbody>
+				</table>   			  
+			</div><!-- /.box-body -->
+		</div>
+				<div class="box box-primary">		
+			<div class="box-header with-border">
+              <i class="fa fa-code-fork"></i>
+
+              <h3 id="Relationships" class="box-title">Relationships</h3>
+
+              <div class="box-tools pull-right">
+                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
+                </button>
+                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+              </div>
+            </div>	
+			<div class="box-body">	
+			<div class="nav-tabs-custom" style="cursor: move;">
+            <!-- Tabs within a box -->
+			<h5>Close relationships within degrees of separation</h5>
+            <ul class="nav nav-tabs pull-left ui-sortable-handle">
+			  			              <li class="active"><a href="#oneDegreeImg-chart" data-toggle="tab" aria-expanded="true">One</a></li>			  			 
+			  			              <li class=""><a href="#twodegreesDegreeImg-chart" data-toggle="tab" aria-expanded="true">Two degrees</a></li>			  			 
+			  			              <li class=""><a href="#oneimpliedDegreeImg-chart" data-toggle="tab" aria-expanded="true">One implied</a></li>			  			 
+			  			              <li class=""><a href="#twoimpliedDegreeImg-chart" data-toggle="tab" aria-expanded="true">Two implied</a></li>			  			 
+            </ul>
+            <div class="tab-content no-padding">            
+				<div class="chart tab-pane active" id="oneDegreeImg-chart" style="position: relative; overflow-x:auto;">					
+					<map id="oneDegreeRelationshipsDiagram" name="oneDegreeRelationshipsDiagram">
+<area shape="rect" id="node1" href="AGG_USER_WRK.html" title="AGG_USER_WRK" alt="" coords="718,5,970,563">
+<area shape="rect" id="node2" href="JOB.html" title="JOB" alt="" coords="288,8245,624,9400">
+<area shape="rect" id="node25" href="LABOR_METRIC_SEC.html" title="LABOR_METRIC_SEC" alt="" coords="5,8981,244,9128">
+<area shape="rect" id="node3" href="AS_EMP_TEAM_PRIORITY_BY_SHIFT.html" title="AS_EMP_TEAM_PRIORITY_BY_SHIFT" alt="" coords="668,580,1020,844">
+<area shape="rect" id="node4" href="CENSUS_DATA.html" title="CENSUS_DATA" alt="" coords="736,861,952,1243">
+<area shape="rect" id="node5" href="CLOCK_PRESET.html" title="CLOCK_PRESET" alt="" coords="742,1260,946,1612">
+<area shape="rect" id="node6" href="CRIT_CLAUSE_JOB.html" title="CRIT_CLAUSE_JOB" alt="" coords="732,1629,956,1805">
+<area shape="rect" id="node7" href="CS_STAFFING_LEVEL.html" title="CS_STAFFING_LEVEL" alt="" coords="725,1823,963,2057">
+<area shape="rect" id="node8" href="EMP_DEF_LAB.html" title="EMP_DEF_LAB" alt="" coords="738,2075,950,2397">
+<area shape="rect" id="node9" href="EMP_SCHD_DTL_LAYER.html" title="EMP_SCHD_DTL_LAYER" alt="" coords="714,2415,974,2972">
+<area shape="rect" id="node10" href="EMPLOYEE_JOB.html" title="EMPLOYEE_JOB" alt="" coords="729,2989,959,3195">
+<area shape="rect" id="node11" href="EMPLOYEE_JOB_POSTING.html" title="EMPLOYEE_JOB_POSTING" alt="" coords="703,3212,985,3447">
+<area shape="rect" id="node12" href="EMPLOYEE_SCHED_DTL.html" title="EMPLOYEE_SCHED_DTL" alt="" coords="712,3464,976,4021">
+<area shape="rect" id="node13" href="ES_CLIST_EMPLOYEE.html" title="ES_CLIST_EMPLOYEE" alt="" coords="702,4039,986,4244">
+<area shape="rect" id="node14" href="ES_JOB_ASSOCIATION.html" title="ES_JOB_ASSOCIATION" alt="" coords="719,4261,969,4437">
+<area shape="rect" id="node15" href="ES_ROTROW_CONFLICTS.html" title="ES_ROTROW_CONFLICTS" alt="" coords="707,4455,981,4836">
+<area shape="rect" id="node16" href="ES_ROW_LM.html" title="ES_ROW_LM" alt="" coords="726,4853,962,5235">
+<area shape="rect" id="node17" href="ES_SHIFT_DETAIL.html" title="ES_SHIFT_DETAIL" alt="" coords="727,5252,961,5897">
+<area shape="rect" id="node18" href="ES_SHIFT_DETAIL_LAYER.html" title="ES_SHIFT_DETAIL_LAYER" alt="" coords="709,5915,979,6267">
+<area shape="rect" id="node19" href="ES_SHIFT_HIST_DET.html" title="ES_SHIFT_HIST_DET" alt="" coords="707,6284,981,6695">
+<area shape="rect" id="node20" href="ES_SHIFT_TYPE_TEAM.html" title="ES_SHIFT_TYPE_TEAM" alt="" coords="678,6712,1010,6947">
+<area shape="rect" id="node21" href="ES_STAFFING_REQ.html" title="ES_STAFFING_REQ" alt="" coords="732,6964,956,7169">
+<area shape="rect" id="node22" href="ES_TMPL_SHIFT_REQ.html" title="ES_TMPL_SHIFT_REQ" alt="" coords="722,7187,966,7392">
+<area shape="rect" id="node23" href="ES_TMPL_STAFF_REQ.html" title="ES_TMPL_STAFF_REQ" alt="" coords="721,7409,967,7615">
+<area shape="rect" id="node24" href="ES_WORKLOAD_REQ.html" title="ES_WORKLOAD_REQ" alt="" coords="725,7632,963,7867">
+<area shape="rect" id="node26" href="JOB_RATE.html" title="JOB_RATE" alt="" coords="707,7884,981,8089">
+<area shape="rect" id="node27" href="JOB_RDR_GRP.html" title="JOB_RDR_GRP" alt="" coords="747,8107,941,8283">
+<area shape="rect" id="node28" href="JOB_TEAM.html" title="JOB_TEAM" alt="" coords="720,8300,968,8564">
+<area shape="rect" id="node29" href="LABOR_SHORTCUT_DTL.html" title="LABOR_SHORTCUT_DTL" alt="" coords="711,8581,977,8963">
+<area shape="rect" id="node30" href="MP_DAILY_OVERRIDE.html" title="MP_DAILY_OVERRIDE" alt="" coords="723,8980,965,9244">
+<area shape="rect" id="node31" href="MP_TEMPLATE_OVERRIDE.html" title="MP_TEMPLATE_OVERRIDE" alt="" coords="705,9261,983,9584">
+<area shape="rect" id="node32" href="MP_TEMPLATE_REQUIREMENT.html" title="MP_TEMPLATE_REQUIREMENT" alt="" coords="687,9601,1001,9865">
+<area shape="rect" id="node33" href="RTSS_SHIFT.html" title="RTSS_SHIFT" alt="" coords="723,9883,965,10117">
+<area shape="rect" id="node34" href="SB_SCHD_BID_SPAT.html" title="SB_SCHD_BID_SPAT" alt="" coords="727,10135,961,10340">
+<area shape="rect" id="node35" href="SCHED_COST_DETAIL.html" title="SCHED_COST_DETAIL" alt="" coords="721,10357,967,10709">
+<area shape="rect" id="node36" href="SHIFT_PATTERN_SHIFT_LABOR.html" title="SHIFT_PATTERN_SHIFT_LABOR" alt="" coords="686,10727,1002,11137">
+<area shape="rect" id="node37" href="SHIFT_PREMIUM_ZONE.html" title="SHIFT_PREMIUM_ZONE" alt="" coords="698,11155,990,11477">
+<area shape="rect" id="node38" href="SO_CLIENT_STFDEF.html" title="SO_CLIENT_STFDEF" alt="" coords="726,11495,962,11876">
+<area shape="rect" id="node39" href="SO_CLIENTYP_STFDEF.html" title="SO_CLIENTYP_STFDEF" alt="" coords="717,11893,971,12128">
+<area shape="rect" id="node40" href="SO_EVENT_DETAIL.html" title="SO_EVENT_DETAIL" alt="" coords="729,12145,959,12468">
+<area shape="rect" id="node41" href="SO_HIST_INT_REQ.html" title="SO_HIST_INT_REQ" alt="" coords="731,12485,957,12779">
+<area shape="rect" id="node42" href="SO_INTERVAL_REQ.html" title="SO_INTERVAL_REQ" alt="" coords="695,12796,993,13119">
+<area shape="rect" id="node43" href="SO_POSN_SET_ELMTS.html" title="SO_POSN_SET_ELMTS" alt="" coords="718,13136,970,13288">
+<area shape="rect" id="node44" href="SO_SHIFT_DETAIL.html" title="SO_SHIFT_DETAIL" alt="" coords="728,13305,960,13628">
+<area shape="rect" id="node45" href="SO_SHIFT_REQ.html" title="SO_SHIFT_REQ" alt="" coords="741,13645,947,13939">
+<area shape="rect" id="node46" href="SR_SHIFT_OFFSET.html" title="SR_SHIFT_OFFSET" alt="" coords="731,13956,957,14161">
+<area shape="rect" id="node47" href="SR_SUMMARY.html" title="SR_SUMMARY" alt="" coords="743,14179,945,14531">
+<area shape="rect" id="node48" href="ST_JOB_SKILL.html" title="ST_JOB_SKILL" alt="" coords="746,14548,942,14724">
+<area shape="rect" id="node49" href="TARGET_DETAIL_JOB.html" title="TARGET_DETAIL_JOB" alt="" coords="723,14741,965,14917">
+<area shape="rect" id="node50" href="TM_ACTIONITEM_JOB.html" title="TM_ACTIONITEM_JOB" alt="" coords="721,14935,967,15087">
+<area shape="rect" id="node51" href="UNSTFD_SHIFT.html" title="UNSTFD_SHIFT" alt="" coords="729,15104,959,15515">
+<area shape="rect" id="node52" href="WORK_DETAIL.html" title="WORK_DETAIL" alt="" coords="732,15532,956,15884">
+</map>
+
+					<a name='diagram'><img id='oneDegreeImg' src='../diagrams/JOB.1degree.png' usemap='#oneDegreeRelationshipsDiagram' class='diagram' border='0' alt='' align='left'></a>							
+				</div>
+				<div class="chart tab-pane " id="twodegreesDegreeImg-chart" style="position: relative; overflow-x:auto;">					
+					<map id="twoDegreesRelationshipsDiagram" name="twoDegreesRelationshipsDiagram">
+<area shape="rect" id="node1" href="AGG_USER_WRK.html" title="AGG_USER_WRK" alt="" coords="1653,420,1905,977">
+<area shape="rect" id="node2" href="CALC_GROUP.html" title="CALC_GROUP" alt="" coords="302,2228,487,2316">
+<area shape="rect" id="node3" href="COGNOS_RPRT_CRIT.html" title="COGNOS_RPRT_CRIT" alt="" coords="1281,775,1524,863">
+<area shape="rect" id="node4" href="COGNOS_MAPPING.html" title="COGNOS_MAPPING" alt="" coords="902,844,1127,932">
+<area shape="rect" id="node5" href="DEPARTMENT.html" title="DEPARTMENT" alt="" coords="922,6311,1107,6399">
+<area shape="rect" id="node6" href="DOCKET.html" title="DOCKET" alt="" coords="942,4641,1087,4729">
+<area shape="rect" id="node7" href="EMPLOYEE.html" title="EMPLOYEE" alt="" coords="591,3245,757,3333">
+<area shape="rect" id="node8" href="HOUR_TYPE.html" title="HOUR_TYPE" alt="" coords="308,4077,481,4165">
+<area shape="rect" id="node9" href="JOB.html" title="JOB" alt="" coords="847,8124,1183,9279">
+<area shape="rect" id="node10" href="PAY_GROUP.html" title="PAY_GROUP" alt="" coords="308,2123,481,2211">
+<area shape="rect" id="node11" href="PROJECT.html" title="PROJECT" alt="" coords="597,4732,751,4820">
+<area shape="rect" id="node12" href="TIME_CODE.html" title="TIME_CODE" alt="" coords="589,3140,759,3228">
+<area shape="rect" id="node13" href="WORKBRAIN_TEAM.html" title="WORKBRAIN_TEAM" alt="" coords="13,7392,237,7480">
+<area shape="rect" id="node14" href="WORKBRAIN_USER.html" title="WORKBRAIN_USER" alt="" coords="903,739,1127,827">
+<area shape="rect" id="node28" href="LABOR_METRIC_SEC.html" title="LABOR_METRIC_SEC" alt="" coords="5,4075,244,4221">
+<area shape="rect" id="node34" href="SHIFT_PATTERN.html" title="SHIFT_PATTERN" alt="" coords="293,4532,497,4620">
+<area shape="rect" id="node15" href="AS_EMP_TEAM_PRIORITY_BY_SHIFT.html" title="AS_EMP_TEAM_PRIORITY_BY_SHIFT" alt="" coords="1227,349,1579,613">
+<area shape="rect" id="node16" href="ES_SHIFT_DISP_LABEL.html" title="ES_SHIFT_DISP_LABEL" alt="" coords="889,484,1141,572">
+<area shape="rect" id="node17" href="ES_SHIFT_TYPE.html" title="ES_SHIFT_TYPE" alt="" coords="914,2497,1115,2585">
+<area shape="rect" id="node18" href="CENSUS_DATA.html" title="CENSUS_DATA" alt="" coords="1295,11853,1511,12235">
+<area shape="rect" id="node19" href="SO_ACTIVITY.html" title="SO_ACTIVITY" alt="" coords="926,11744,1103,11832">
+<area shape="rect" id="node20" href="CENSUS_TEAM.html" title="CENSUS_TEAM" alt="" coords="298,11721,491,11809">
+<area shape="rect" id="node21" href="DAY_PART.html" title="DAY_PART" alt="" coords="935,11929,1094,12017">
+<area shape="rect" id="node22" href="ST_SKILL.html" title="ST_SKILL" alt="" coords="939,13335,1091,13423">
+<area shape="rect" id="node90" href="SO_SCHEDULE_GROUP.html" title="SO_SCHEDULE_GROUP" alt="" coords="545,14988,803,15076">
+<area shape="rect" id="node23" href="CLOCK_PRESET.html" title="CLOCK_PRESET" alt="" coords="1301,3351,1505,3703">
+<area shape="rect" id="node24" href="CLOCK_TRAN_TYPE.html" title="CLOCK_TRAN_TYPE" alt="" coords="899,3327,1131,3415">
+<area shape="rect" id="node25" href="CRIT_CLAUSE_JOB.html" title="CRIT_CLAUSE_JOB" alt="" coords="1291,13977,1515,14153">
+<area shape="rect" id="node26" href="CRITERIA.html" title="CRITERIA" alt="" coords="939,14009,1090,14097">
+<area shape="rect" id="node27" href="CS_STAFFING_LEVEL.html" title="CS_STAFFING_LEVEL" alt="" coords="1283,10843,1522,11077">
+<area shape="rect" id="node29" href="EMP_DEF_LAB.html" title="EMP_DEF_LAB" alt="" coords="1297,1427,1509,1749">
+<area shape="rect" id="node30" href="EMP_SCHD_DTL_LAYER.html" title="EMP_SCHD_DTL_LAYER" alt="" coords="1273,5053,1533,5611">
+<area shape="rect" id="node31" href="EMPLOYEE_SCHEDULE.html" title="EMPLOYEE_SCHEDULE" alt="" coords="887,5665,1143,5753">
+<area shape="rect" id="node38" href="SHIFT.html" title="SHIFT" alt="" coords="599,5665,749,5753">
+<area shape="rect" id="node32" href="EMP_SP_ZONE.html" title="EMP_SP_ZONE" alt="" coords="1684,2139,1875,2227">
+<area shape="rect" id="node33" href="SHIFT_PREMIUM_ZONE.html" title="SHIFT_PREMIUM_ZONE" alt="" coords="1257,2136,1549,2459">
+<area shape="rect" id="node35" href="EMPLOYEE_JOB.html" title="EMPLOYEE_JOB" alt="" coords="1287,2476,1518,2681">
+<area shape="rect" id="node36" href="EMPLOYEE_JOB_POSTING.html" title="EMPLOYEE_JOB_POSTING" alt="" coords="1262,2699,1543,2933">
+<area shape="rect" id="node37" href="EMPLOYEE_SCHED_DTL.html" title="EMPLOYEE_SCHED_DTL" alt="" coords="1271,5628,1535,6185">
+<area shape="rect" id="node39" href="ES_CLIST_EMPLOYEE.html" title="ES_CLIST_EMPLOYEE" alt="" coords="1261,2951,1545,3156">
+<area shape="rect" id="node40" href="ES_CALL_LIST.html" title="ES_CALL_LIST" alt="" coords="921,3068,1109,3156">
+<area shape="rect" id="node41" href="ES_JOB_ASSOCIATION.html" title="ES_JOB_ASSOCIATION" alt="" coords="1278,8027,1527,8203">
+<area shape="rect" id="node42" href="ES_JOB_TEAM_SKILL.html" title="ES_JOB_TEAM_SKILL" alt="" coords="1659,12956,1900,13044">
+<area shape="rect" id="node43" href="JOB_TEAM.html" title="JOB_TEAM" alt="" coords="1279,12769,1527,13033">
+<area shape="rect" id="node44" href="ES_RELIEF_BLOCK.html" title="ES_RELIEF_BLOCK" alt="" coords="903,7119,1127,7207">
+<area shape="rect" id="node45" href="ES_ROTATION.html" title="ES_ROTATION" alt="" coords="301,7392,489,7480">
+<area shape="rect" id="node46" href="ES_ROTATION_ROW.html" title="ES_ROTATION_ROW" alt="" coords="558,7160,790,7248">
+<area shape="rect" id="node47" href="ES_ROTATION_VERSION.html" title="ES_ROTATION_VERSION" alt="" coords="883,7703,1146,7791">
+<area shape="rect" id="node48" href="ES_ROTROW_CONFLICTS.html" title="ES_ROTROW_CONFLICTS" alt="" coords="1266,9623,1539,10004">
+<area shape="rect" id="node49" href="ES_SHIFT_SUMMARY.html" title="ES_SHIFT_SUMMARY" alt="" coords="896,6977,1133,7065">
+<area shape="rect" id="node50" href="ES_ROW_LM.html" title="ES_ROW_LM" alt="" coords="1285,3720,1521,4101">
+<area shape="rect" id="node51" href="CMPLNC_GROUP.html" title="CMPLNC_GROUP" alt="" coords="910,3987,1119,4075">
+<area shape="rect" id="node52" href="ES_SCHEDULE_TEMPLATE.html" title="ES_SCHEDULE_TEMPLATE" alt="" coords="874,13564,1155,13652">
+<area shape="rect" id="node53" href="ES_SHIFT_DETAIL.html" title="ES_SHIFT_DETAIL" alt="" coords="1285,7004,1520,7649">
+<area shape="rect" id="node54" href="ES_BOOKOFF_COMMENTS.html" title="ES_BOOKOFF_COMMENTS" alt="" coords="873,7492,1156,7580">
+<area shape="rect" id="node55" href="ES_LEAVE_REASON.html" title="ES_LEAVE_REASON" alt="" coords="901,7597,1128,7685">
+<area shape="rect" id="node56" href="OVERRIDE.html" title="OVERRIDE" alt="" coords="934,7224,1095,7312">
+<area shape="rect" id="node57" href="ES_SHIFT_STATUS.html" title="ES_SHIFT_STATUS" alt="" coords="904,6767,1125,6855">
+<area shape="rect" id="node58" href="ES_SHIFT_DETAIL_LAYER.html" title="ES_SHIFT_DETAIL_LAYER" alt="" coords="1267,6635,1538,6987">
+<area shape="rect" id="node59" href="ES_SHIFT_DETAIL_LAYER_TYPE.html" title="ES_SHIFT_DETAIL_LAYER_TYPE" alt="" coords="855,6872,1174,6960">
+<area shape="rect" id="node60" href="ES_SHIFT_HIST_DET.html" title="ES_SHIFT_HIST_DET" alt="" coords="1643,6236,1916,6647">
+<area shape="rect" id="node61" href="ES_SHIFT_HISTORY.html" title="ES_SHIFT_HISTORY" alt="" coords="1288,3245,1517,3333">
+<area shape="rect" id="node62" href="ES_SHIFT_TYPE_TEAM.html" title="ES_SHIFT_TYPE_TEAM" alt="" coords="1237,6347,1569,6581">
+<area shape="rect" id="node63" href="ES_STAFFING_REQ.html" title="ES_STAFFING_REQ" alt="" coords="1291,10021,1515,10227">
+<area shape="rect" id="node64" href="ES_TMPL_SHIFT_REQ.html" title="ES_TMPL_SHIFT_REQ" alt="" coords="1281,13532,1525,13737">
+<area shape="rect" id="node65" href="ES_TMPL_SHIFT_REQ_SHIFT.html" title="ES_TMPL_SHIFT_REQ_SHIFT" alt="" coords="1631,13535,1927,13623">
+<area shape="rect" id="node66" href="ES_TMPL_STAFF_REQ.html" title="ES_TMPL_STAFF_REQ" alt="" coords="1279,13755,1526,13960">
+<area shape="rect" id="node67" href="ES_TMPL_STAFF_REQ_DAY.html" title="ES_TMPL_STAFF_REQ_DAY" alt="" coords="1637,13757,1922,13845">
+<area shape="rect" id="node68" href="ES_TMPL_STAFF_REQ_SKILL.html" title="ES_TMPL_STAFF_REQ_SKILL" alt="" coords="1631,13969,1928,14057">
+<area shape="rect" id="node69" href="ES_WORKLOAD_REQ.html" title="ES_WORKLOAD_REQ" alt="" coords="1284,7739,1521,7973">
+<area shape="rect" id="node70" href="ES_WORKLOAD_SOURCE.html" title="ES_WORKLOAD_SOURCE" alt="" coords="880,7859,1149,7947">
+<area shape="rect" id="node71" href="HOLIDAY.html" title="HOLIDAY" alt="" coords="321,47,468,135">
+<area shape="rect" id="node72" href="JOB_RATE.html" title="JOB_RATE" alt="" coords="1265,8220,1540,8425">
+<area shape="rect" id="node73" href="JOB_RDR_GRP.html" title="JOB_RDR_GRP" alt="" coords="1306,14207,1499,14383">
+<area shape="rect" id="node74" href="READER_GROUP.html" title="READER_GROUP" alt="" coords="911,14268,1118,14356">
+<area shape="rect" id="node75" href="LABMET_SEC_GRP.html" title="LABMET_SEC_GRP" alt="" coords="563,2159,785,2247">
+<area shape="rect" id="node76" href="LABOR_SHORTCUT_DTL.html" title="LABOR_SHORTCUT_DTL" alt="" coords="1270,4119,1535,4500">
+<area shape="rect" id="node77" href="LABOR_SHORTCUT.html" title="LABOR_SHORTCUT" alt="" coords="901,2963,1128,3051">
+<area shape="rect" id="node78" href="LABOR_SHORTCUT_SEC.html" title="LABOR_SHORTCUT_SEC" alt="" coords="1270,916,1535,1004">
+<area shape="rect" id="node79" href="MP_DAILY_OVERRIDE.html" title="MP_DAILY_OVERRIDE" alt="" coords="1282,8720,1523,8984">
+<area shape="rect" id="node80" href="MP_TEMPLATE.html" title="MP_TEMPLATE" alt="" coords="918,9332,1111,9420">
+<area shape="rect" id="node81" href="MP_TEMPLATE_OVERRIDE.html" title="MP_TEMPLATE_OVERRIDE" alt="" coords="1263,9001,1542,9324">
+<area shape="rect" id="node82" href="MP_TEMPLATE_REQUIREMENT.html" title="MP_TEMPLATE_REQUIREMENT" alt="" coords="1246,9341,1559,9605">
+<area shape="rect" id="node83" href="RTSS_SHIFT.html" title="RTSS_SHIFT" alt="" coords="1282,13244,1523,13479">
+<area shape="rect" id="node84" href="RTSS_SHIFT_REQ.html" title="RTSS_SHIFT_REQ" alt="" coords="1672,13247,1887,13335">
+<area shape="rect" id="node85" href="SB_SCHD_BID.html" title="SB_SCHD_BID" alt="" coords="1309,64,1496,152">
+<area shape="rect" id="node86" href="SB_SCHD_BID_BID.html" title="SB_SCHD_BID_BID" alt="" coords="1984,28,2205,116">
+<area shape="rect" id="node87" href="SB_SCHD_BID_SPAT.html" title="SB_SCHD_BID_SPAT" alt="" coords="1663,137,1896,343">
+<area shape="rect" id="node88" href="SB_SCHD_BID_EMP.html" title="SB_SCHD_BID_EMP" alt="" coords="1981,140,2209,228">
+<area shape="rect" id="node89" href="SCHED_COST_DETAIL.html" title="SCHED_COST_DETAIL" alt="" coords="1280,1767,1525,2119">
+<area shape="rect" id="node95" href="SO_CLIENT_TYPE.html" title="SO_CLIENT_TYPE" alt="" coords="288,15415,501,15503">
+<area shape="rect" id="node91" href="SHIFT_PATTERN_SHIFT_LABOR.html" title="SHIFT_PATTERN_SHIFT_LABOR" alt="" coords="1245,4589,1561,5000">
+<area shape="rect" id="node92" href="SO_CLIENT_STFDEF.html" title="SO_CLIENT_STFDEF" alt="" coords="1285,14544,1521,14925">
+<area shape="rect" id="node93" href="SO_DISTRIBUTION.html" title="SO_DISTRIBUTION" alt="" coords="905,15859,1125,15947">
+<area shape="rect" id="node94" href="SO_CLIENTYP_STFDEF.html" title="SO_CLIENTYP_STFDEF" alt="" coords="1276,15745,1529,15980">
+<area shape="rect" id="node96" href="SO_SHIFT_STAFF_REQ.html" title="SO_SHIFT_STAFF_REQ" alt="" coords="889,15753,1140,15841">
+<area shape="rect" id="node97" href="SO_EMPLOYEE_GROUP.html" title="SO_EMPLOYEE_GROUP" alt="" coords="885,13145,1144,13233">
+<area shape="rect" id="node98" href="SO_EVENT_DETAIL.html" title="SO_EVENT_DETAIL" alt="" coords="1287,12252,1518,12575">
+<area shape="rect" id="node99" href="SO_EVENT_TYPE.html" title="SO_EVENT_TYPE" alt="" coords="910,12279,1119,12367">
+<area shape="rect" id="node100" href="SO_EVT_EMP_AV_OVRD.html" title="SO_EVT_EMP_AV_OVRD" alt="" coords="1651,12197,1908,12285">
+<area shape="rect" id="node101" href="SO_HIST_INT_REQ.html" title="SO_HIST_INT_REQ" alt="" coords="1667,15147,1892,15440">
+<area shape="rect" id="node102" href="SO_INTERVAL_TYPE.html" title="SO_INTERVAL_TYPE" alt="" coords="899,16000,1131,16088">
+<area shape="rect" id="node103" href="SO_REGEN_SCHEDULE.html" title="SO_REGEN_SCHEDULE" alt="" coords="1275,14943,1531,15031">
+<area shape="rect" id="node106" href="SO_SCHEDULE.html" title="SO_SCHEDULE" alt="" coords="918,15149,1111,15237">
+<area shape="rect" id="node104" href="SO_INTERVAL_OVER.html" title="SO_INTERVAL_OVER" alt="" coords="1663,14725,1896,14813">
+<area shape="rect" id="node105" href="SO_INTERVAL_REQ.html" title="SO_INTERVAL_REQ" alt="" coords="1253,15156,1552,15479">
+<area shape="rect" id="node107" href="SO_LOCPROP_WORKLD.html" title="SO_LOCPROP_WORKLD" alt="" coords="1649,14515,1910,14603">
+<area shape="rect" id="node108" href="SO_POSN_SET_ELMTS.html" title="SO_POSN_SET_ELMTS" alt="" coords="1277,8479,1529,8631">
+<area shape="rect" id="node109" href="SO_PREFERREDTIME_SOURCE.html" title="SO_PREFERREDTIME_SOURCE" alt="" coords="1623,15041,1936,15129">
+<area shape="rect" id="node110" href="SO_SCHEDULED_SHIFT.html" title="SO_SCHEDULED_SHIFT" alt="" coords="1274,15496,1531,15584">
+<area shape="rect" id="node111" href="SO_SHIFT_ACTIVITY.html" title="SO_SHIFT_ACTIVITY" alt="" coords="1980,14955,2209,15043">
+<area shape="rect" id="node112" href="SO_SHIFT_DETAIL.html" title="SO_SHIFT_DETAIL" alt="" coords="1663,14175,1895,14497">
+<area shape="rect" id="node113" href="SO_SHIFT_REQ.html" title="SO_SHIFT_REQ" alt="" coords="1676,15457,1883,15751">
+<area shape="rect" id="node114" href="SO_STDVOL_OVER.html" title="SO_STDVOL_OVER" alt="" coords="1669,14620,1890,14708">
+<area shape="rect" id="node115" href="SO_STFDEF_DIST_OVR.html" title="SO_STFDEF_DIST_OVR" alt="" coords="1653,14831,1906,14919">
+<area shape="rect" id="node116" href="SO_VOLUME_WORKLOAD.html" title="SO_VOLUME_WORKLOAD" alt="" coords="1644,14936,1915,15024">
+<area shape="rect" id="node117" href="SR_DETAIL.html" title="SR_DETAIL" alt="" coords="1698,12660,1861,12748">
+<area shape="rect" id="node118" href="SR_SUMMARY.html" title="SR_SUMMARY" alt="" coords="1302,10280,1503,10632">
+<area shape="rect" id="node119" href="SR_SHIFT_OFFSET.html" title="SR_SHIFT_OFFSET" alt="" coords="1290,11559,1515,11764">
+<area shape="rect" id="node120" href="SR_SUM_PRIORITY.html" title="SR_SUM_PRIORITY" alt="" coords="1667,10884,1891,10972">
+<area shape="rect" id="node121" href="ST_JOB_SKILL.html" title="ST_JOB_SKILL" alt="" coords="1305,13051,1501,13227">
+<area shape="rect" id="node122" href="TARGET_DETAIL.html" title="TARGET_DETAIL" alt="" coords="572,10597,776,10685">
+<area shape="rect" id="node123" href="TARGET_DETAIL_JOB.html" title="TARGET_DETAIL_JOB" alt="" coords="1281,10649,1524,10825">
+<area shape="rect" id="node124" href="TM_ACTIONITEM.html" title="TM_ACTIONITEM" alt="" coords="1300,12592,1505,12680">
+<area shape="rect" id="node125" href="TM_ACTIONITEM_JOB.html" title="TM_ACTIONITEM_JOB" alt="" coords="1657,11969,1902,12121">
+<area shape="rect" id="node126" href="UNSTFD_SHIFT.html" title="UNSTFD_SHIFT" alt="" coords="1287,11095,1518,11505">
+<area shape="rect" id="node127" href="WORK_DETAIL.html" title="WORK_DETAIL" alt="" coords="1291,1021,1515,1373">
+<area shape="rect" id="node128" href="WORK_SUMMARY.html" title="WORK_SUMMARY" alt="" coords="908,2013,1121,2101">
+</map>
+
+					<a name='diagram'><img id='twodegreesDegreeImg' src='../diagrams/JOB.2degrees.png' usemap='#twoDegreesRelationshipsDiagram' class='diagram' border='0' alt='' align='left'></a>							
+				</div>
+				<div class="chart tab-pane " id="oneimpliedDegreeImg-chart" style="position: relative; overflow-x:auto;">					
+					<map id="oneDegreeRelationshipsDiagramImplied" name="oneDegreeRelationshipsDiagramImplied">
+<area shape="rect" id="node1" href="AGG_USER_WRK.html" title="AGG_USER_WRK" alt="" coords="718,5,970,563">
+<area shape="rect" id="node2" href="JOB.html" title="JOB" alt="" coords="288,12283,624,13437">
+<area shape="rect" id="node25" href="LABOR_METRIC_SEC.html" title="LABOR_METRIC_SEC" alt="" coords="5,15059,244,15205">
+<area shape="rect" id="node3" href="AS_EMP_TEAM_PRIORITY_BY_SHIFT.html" title="AS_EMP_TEAM_PRIORITY_BY_SHIFT" alt="" coords="668,580,1020,844">
+<area shape="rect" id="node4" href="CENSUS_DATA.html" title="CENSUS_DATA" alt="" coords="736,861,952,1243">
+<area shape="rect" id="node5" href="CLOCK_PRESET.html" title="CLOCK_PRESET" alt="" coords="742,1741,946,2093">
+<area shape="rect" id="node6" href="CRIT_CLAUSE_JOB.html" title="CRIT_CLAUSE_JOB" alt="" coords="732,1296,956,1472">
+<area shape="rect" id="node7" href="CS_STAFFING_LEVEL.html" title="CS_STAFFING_LEVEL" alt="" coords="725,1489,963,1724">
+<area shape="rect" id="node8" href="EMP_DEF_LAB.html" title="EMP_DEF_LAB" alt="" coords="738,2721,950,3044">
+<area shape="rect" id="node9" href="EMP_SCHD_DTL_LAYER.html" title="EMP_SCHD_DTL_LAYER" alt="" coords="714,2111,974,2668">
+<area shape="rect" id="node10" href="EMPLOYEE_JOB.html" title="EMPLOYEE_JOB" alt="" coords="729,9581,959,9787">
+<area shape="rect" id="node11" href="EMPLOYEE_JOB_POSTING.html" title="EMPLOYEE_JOB_POSTING" alt="" coords="703,10925,985,11160">
+<area shape="rect" id="node12" href="EMPLOYEE_SCHED_DTL.html" title="EMPLOYEE_SCHED_DTL" alt="" coords="712,3061,976,3619">
+<area shape="rect" id="node13" href="ES_CLIST_EMPLOYEE.html" title="ES_CLIST_EMPLOYEE" alt="" coords="702,3636,986,3841">
+<area shape="rect" id="node14" href="ES_JOB_ASSOCIATION.html" title="ES_JOB_ASSOCIATION" alt="" coords="719,3859,969,4035">
+<area shape="rect" id="node15" href="ES_ROTROW_CONFLICTS.html" title="ES_ROTROW_CONFLICTS" alt="" coords="707,4052,981,4433">
+<area shape="rect" id="node16" href="ES_ROW_LM.html" title="ES_ROW_LM" alt="" coords="726,4451,962,4832">
+<area shape="rect" id="node17" href="ES_SHIFT_DETAIL.html" title="ES_SHIFT_DETAIL" alt="" coords="727,4849,961,5495">
+<area shape="rect" id="node18" href="ES_SHIFT_DETAIL_LAYER.html" title="ES_SHIFT_DETAIL_LAYER" alt="" coords="709,5512,979,5864">
+<area shape="rect" id="node19" href="ES_SHIFT_HIST_DET.html" title="ES_SHIFT_HIST_DET" alt="" coords="707,5881,981,6292">
+<area shape="rect" id="node20" href="ES_SHIFT_TYPE_TEAM.html" title="ES_SHIFT_TYPE_TEAM" alt="" coords="678,6309,1010,6544">
+<area shape="rect" id="node21" href="ES_STAFFING_REQ.html" title="ES_STAFFING_REQ" alt="" coords="732,6561,956,6767">
+<area shape="rect" id="node22" href="ES_TMPL_SHIFT_REQ.html" title="ES_TMPL_SHIFT_REQ" alt="" coords="722,6784,966,6989">
+<area shape="rect" id="node23" href="ES_TMPL_STAFF_REQ.html" title="ES_TMPL_STAFF_REQ" alt="" coords="721,7007,967,7212">
+<area shape="rect" id="node24" href="ES_WORKLOAD_REQ.html" title="ES_WORKLOAD_REQ" alt="" coords="725,7229,963,7464">
+<area shape="rect" id="node26" href="JOB_RATE.html" title="JOB_RATE" alt="" coords="707,11693,981,11899">
+<area shape="rect" id="node27" href="JOB_RDR_GRP.html" title="JOB_RDR_GRP" alt="" coords="747,7517,941,7693">
+<area shape="rect" id="node28" href="JOB_TEAM.html" title="JOB_TEAM" alt="" coords="720,7711,968,7975">
+<area shape="rect" id="node29" href="JP_JOB_POSTING.html" title="JP_JOB_POSTING" alt="" coords="718,13645,970,13792">
+<area shape="rect" id="node30" href="LABOR_SHORTCUT_DTL.html" title="LABOR_SHORTCUT_DTL" alt="" coords="711,8028,977,8409">
+<area shape="rect" id="node31" href="MP_DAILY_OVERRIDE.html" title="MP_DAILY_OVERRIDE" alt="" coords="723,8427,965,8691">
+<area shape="rect" id="node32" href="MP_TEMPLATE_OVERRIDE.html" title="MP_TEMPLATE_OVERRIDE" alt="" coords="705,8708,983,9031">
+<area shape="rect" id="node33" href="MP_TEMPLATE_REQUIREMENT.html" title="MP_TEMPLATE_REQUIREMENT" alt="" coords="687,9048,1001,9312">
+<area shape="rect" id="node34" href="RTSS_SHIFT.html" title="RTSS_SHIFT" alt="" coords="723,9329,965,9564">
+<area shape="rect" id="node35" href="SB_SCHD_BID_SPAT.html" title="SB_SCHD_BID_SPAT" alt="" coords="727,13845,961,14051">
+<area shape="rect" id="node36" href="SCHED_COST_DETAIL.html" title="SCHED_COST_DETAIL" alt="" coords="721,9804,967,10156">
+<area shape="rect" id="node37" href="SHIFT_PATTERN_SHIFT_LABOR.html" title="SHIFT_PATTERN_SHIFT_LABOR" alt="" coords="686,10173,1002,10584">
+<area shape="rect" id="node38" href="SHIFT_PREMIUM_ZONE.html" title="SHIFT_PREMIUM_ZONE" alt="" coords="698,14140,990,14463">
+<area shape="rect" id="node39" href="SO_CLIENT_STFDEF.html" title="SO_CLIENT_STFDEF" alt="" coords="726,14516,962,14897">
+<area shape="rect" id="node40" href="SO_CLIENTYP_STFDEF.html" title="SO_CLIENTYP_STFDEF" alt="" coords="717,10673,971,10908">
+<area shape="rect" id="node41" href="SO_EVENT_DETAIL.html" title="SO_EVENT_DETAIL" alt="" coords="729,15817,959,16140">
+<area shape="rect" id="node42" href="SO_HIST_INT_REQ.html" title="SO_HIST_INT_REQ" alt="" coords="731,11177,957,11471">
+<area shape="rect" id="node43" href="SO_INTERVAL_REQ.html" title="SO_INTERVAL_REQ" alt="" coords="695,16193,993,16516">
+<area shape="rect" id="node44" href="SO_POSN_SET_ELMTS.html" title="SO_POSN_SET_ELMTS" alt="" coords="718,11524,970,11676">
+<area shape="rect" id="node45" href="SO_SHIFT_DETAIL.html" title="SO_SHIFT_DETAIL" alt="" coords="728,18768,960,19091">
+<area shape="rect" id="node46" href="SO_SHIFT_REQ.html" title="SO_SHIFT_REQ" alt="" coords="741,11916,947,12209">
+<area shape="rect" id="node47" href="SR_SHIFT_OFFSET.html" title="SR_SHIFT_OFFSET" alt="" coords="731,12227,957,12432">
+<area shape="rect" id="node48" href="SR_SUMMARY.html" title="SR_SUMMARY" alt="" coords="743,12449,945,12801">
+<area shape="rect" id="node49" href="ST_JOB_SKILL.html" title="ST_JOB_SKILL" alt="" coords="746,19408,942,19584">
+<area shape="rect" id="node50" href="TARGET_DETAIL_JOB.html" title="TARGET_DETAIL_JOB" alt="" coords="723,12855,965,13031">
+<area shape="rect" id="node51" href="TM_ACTIONITEM_JOB.html" title="TM_ACTIONITEM_JOB" alt="" coords="721,13048,967,13200">
+<area shape="rect" id="node52" href="UNSTFD_SHIFT.html" title="UNSTFD_SHIFT" alt="" coords="729,13217,959,13628">
+<area shape="rect" id="node53" href="VIEW_CENSUSDT_REQ.html" title="VIEW_CENSUSDT_REQ" alt="" coords="1124,1012,1371,1193">
+<area shape="rect" id="node54" href="VIEW_EMP_DEF_LAB.html" title="VIEW_EMP_DEF_LAB" alt="" coords="1132,5037,1363,5336">
+<area shape="rect" id="node55" href="VIEW_EMPLOYEE_JOB.html" title="VIEW_EMPLOYEE_JOB" alt="" coords="1125,8737,1370,8889">
+<area shape="rect" id="node56" href="VIEW_EMPLOYEE_JOB_POSTING.html" title="VIEW_EMPLOYEE_JOB_POSTING" alt="" coords="1086,10747,1409,10869">
+<area shape="rect" id="node57" href="VIEW_JOB_RATE.html" title="VIEW_JOB_RATE" alt="" coords="1110,12221,1385,12344">
+<area shape="rect" id="node58" href="VIEW_MOD_EMPLOYEE_JOB.html" title="VIEW_MOD_EMPLOYEE_JOB" alt="" coords="1103,10043,1392,10195">
+<area shape="rect" id="node59" href="VIEW_MOD_EMPLOYEE_JOB_POSTING.html" title="VIEW_MOD_EMPLOYEE_JOB_POSTING" alt="" coords="1064,11172,1431,11295">
+<area shape="rect" id="node60" href="VIEW_MOD_WORK_DETAIL.html" title="VIEW_MOD_WORK_DETAIL" alt="" coords="1110,19480,1385,19808">
+<area shape="rect" id="node61" href="WORK_DETAIL.html" title="WORK_DETAIL" alt="" coords="732,19673,956,20025">
+<area shape="rect" id="node62" href="VIEW_PAYEXP_ADJUSTMENT.html" title="VIEW_PAYEXP_ADJUSTMENT" alt="" coords="698,14951,990,15367">
+<area shape="rect" id="node63" href="VIEW_PAYEXP_CURRENT.html" title="VIEW_PAYEXP_CURRENT" alt="" coords="712,15384,976,15800">
+<area shape="rect" id="node64" href="VIEW_SB_SHIFT.html" title="VIEW_SB_SHIFT" alt="" coords="1133,13865,1361,14017">
+<area shape="rect" id="node65" href="VIEW_SHIFT_PREMIUM_ZONE_FULL.html" title="VIEW_SHIFT_PREMIUM_ZONE_FULL" alt="" coords="1077,14043,1418,14312">
+<area shape="rect" id="node66" href="VIEW_SO_ACTSFTHR.html" title="VIEW_SO_ACTSFTHR" alt="" coords="1131,17957,1364,18197">
+<area shape="rect" id="node67" href="VIEW_SO_AVAIL_INFO.html" title="VIEW_SO_AVAIL_INFO" alt="" coords="719,16533,969,16773">
+<area shape="rect" id="node68" href="VIEW_SO_CL_STFDEF.html" title="VIEW_SO_CL_STFDEF" alt="" coords="725,16791,963,16972">
+<area shape="rect" id="node69" href="VIEW_SO_DAILY_SKD.html" title="VIEW_SO_DAILY_SKD" alt="" coords="1129,18509,1366,18779">
+<area shape="rect" id="node70" href="VIEW_SO_EMP_CSTDET.html" title="VIEW_SO_EMP_CSTDET" alt="" coords="717,17025,971,17177">
+<area shape="rect" id="node71" href="VIEW_SO_EMP_POS.html" title="VIEW_SO_EMP_POS" alt="" coords="720,17195,968,17376">
+<area shape="rect" id="node72" href="VIEW_SO_EMP_WORK.html" title="VIEW_SO_EMP_WORK" alt="" coords="724,17393,964,17575">
+<area shape="rect" id="node73" href="VIEW_SO_EMPPOS_SKL.html" title="VIEW_SO_EMPPOS_SKL" alt="" coords="717,17592,971,17803">
+<area shape="rect" id="node74" href="VIEW_SO_INT_REQ.html" title="VIEW_SO_INT_REQ" alt="" coords="1098,16529,1397,16769">
+<area shape="rect" id="node75" href="VIEW_SO_NET_STAFF.html" title="VIEW_SO_NET_STAFF" alt="" coords="725,17856,963,18008">
+<area shape="rect" id="node76" href="VIEW_SO_NETSTF_REQ.html" title="VIEW_SO_NETSTF_REQ" alt="" coords="717,18025,971,18177">
+<area shape="rect" id="node77" href="VIEW_SO_NETSTFRAW.html" title="VIEW_SO_NETSTFRAW" alt="" coords="721,18195,967,18405">
+<area shape="rect" id="node78" href="VIEW_SO_POSPAY.html" title="VIEW_SO_POSPAY" alt="" coords="737,18423,951,18545">
+<area shape="rect" id="node79" href="VIEW_SO_PROD_RESPS.html" title="VIEW_SO_PROD_RESPS" alt="" coords="717,18563,971,18715">
+<area shape="rect" id="node80" href="VIEW_SO_SCHED.html" title="VIEW_SO_SCHED" alt="" coords="1131,18796,1364,19065">
+<area shape="rect" id="node81" href="VIEW_SO_SKDEMPACT.html" title="VIEW_SO_SKDEMPACT" alt="" coords="1124,19083,1371,19293">
+<area shape="rect" id="node82" href="VIEW_ST_JOB_SKILL.html" title="VIEW_ST_JOB_SKILL" alt="" coords="1131,19311,1363,19463">
+<area shape="rect" id="node83" href="VIEW_VR_EMPLOYEE_SCHEDULE.html" title="VIEW_VR_EMPLOYEE_SCHEDULE" alt="" coords="681,19144,1007,19355">
+<area shape="rect" id="node84" href="VIEW_WORK_DETAIL.html" title="VIEW_WORK_DETAIL" alt="" coords="1132,19825,1363,20124">
+<area shape="rect" id="node85" href="VIEW_WORK_DETAIL_ADJUST.html" title="VIEW_WORK_DETAIL_ADJUST" alt="" coords="1475,20351,1772,20737">
+<area shape="rect" id="node86" href="WORK_DETAIL_ADJUST.html" title="WORK_DETAIL_ADJUST" alt="" coords="1099,20141,1395,20699">
+<area shape="rect" id="node87" href="VL_CLOCK_PRESET.html" title="VL_CLOCK_PRESET" alt="" coords="1125,2149,1369,2419">
+<area shape="rect" id="node88" href="VL_JOB.html" title="VL_JOB" alt="" coords="727,20752,961,20875">
+<area shape="rect" id="node89" href="VL_JP_JOB_POSTING.html" title="VL_JP_JOB_POSTING" alt="" coords="1121,13721,1373,13844">
+<area shape="rect" id="node90" href="VL_SHIFT_PREMIUM_ZONE.html" title="VL_SHIFT_PREMIUM_ZONE" alt="" coords="1101,14341,1393,14611">
+<area shape="rect" id="node91" href="VL_SO_CLIENT_STFDEF.html" title="VL_SO_CLIENT_STFDEF" alt="" coords="1119,14723,1375,14992">
+<area shape="rect" id="node92" href="VL_SO_EVENT_DETAIL.html" title="VL_SO_EVENT_DETAIL" alt="" coords="1125,15880,1370,16179">
+</map>
+
+					<a name='diagram'><img id='oneimpliedDegreeImg' src='../diagrams/JOB.implied1degrees.png' usemap='#oneDegreeRelationshipsDiagramImplied' class='diagram' border='0' alt='' align='left'></a>							
+				</div>
+				<div class="chart tab-pane " id="twoimpliedDegreeImg-chart" style="position: relative; overflow-x:auto;">					
+					<map id="twoDegreesRelationshipsDiagramImplied" name="twoDegreesRelationshipsDiagramImplied">
+<area shape="rect" id="node1" href="AC_EVENT_LOG.html" title="AC_EVENT_LOG" alt="" coords="1767,1393,1967,1481">
+<area shape="rect" id="node2" href="EMPLOYEE.html" title="EMPLOYEE" alt="" coords="647,1820,812,1908">
+<area shape="rect" id="node3" href="WORK_DETAIL.html" title="WORK_DETAIL" alt="" coords="1352,4699,1576,5051">
+<area shape="rect" id="node5" href="CALC_GROUP.html" title="CALC_GROUP" alt="" coords="327,3156,512,3244">
+<area shape="rect" id="node12" href="PAY_GROUP.html" title="PAY_GROUP" alt="" coords="333,2395,506,2483">
+<area shape="rect" id="node39" href="SHIFT_PATTERN.html" title="SHIFT_PATTERN" alt="" coords="317,2500,521,2588">
+<area shape="rect" id="node8" href="DEPARTMENT.html" title="DEPARTMENT" alt="" coords="983,10496,1169,10584">
+<area shape="rect" id="node9" href="DOCKET.html" title="DOCKET" alt="" coords="1003,3844,1149,3932">
+<area shape="rect" id="node10" href="HOUR_TYPE.html" title="HOUR_TYPE" alt="" coords="333,5773,506,5861">
+<area shape="rect" id="node11" href="JOB.html" title="JOB" alt="" coords="908,17039,1244,18193">
+<area shape="rect" id="node13" href="PROJECT.html" title="PROJECT" alt="" coords="653,6392,806,6480">
+<area shape="rect" id="node14" href="TIME_CODE.html" title="TIME_CODE" alt="" coords="645,6611,814,6699">
+<area shape="rect" id="node15" href="WORKBRAIN_TEAM.html" title="WORKBRAIN_TEAM" alt="" coords="307,12168,531,12256">
+<area shape="rect" id="node149" href="WORK_SUMMARY.html" title="WORK_SUMMARY" alt="" coords="969,3445,1183,3533">
+<area shape="rect" id="node4" href="AGG_USER_WRK.html" title="AGG_USER_WRK" alt="" coords="1741,2219,1993,2776">
+<area shape="rect" id="node6" href="COGNOS_RPRT_CRIT.html" title="COGNOS_RPRT_CRIT" alt="" coords="1343,1536,1585,1624">
+<area shape="rect" id="node7" href="COGNOS_MAPPING.html" title="COGNOS_MAPPING" alt="" coords="963,1555,1189,1643">
+<area shape="rect" id="node16" href="WORKBRAIN_USER.html" title="WORKBRAIN_USER" alt="" coords="964,1163,1188,1251">
+<area shape="rect" id="node33" href="LABOR_METRIC_SEC.html" title="LABOR_METRIC_SEC" alt="" coords="5,9804,244,9951">
+<area shape="rect" id="node17" href="AMX_OVERRIDE.html" title="AMX_OVERRIDE" alt="" coords="1365,14984,1563,15072">
+<area shape="rect" id="node18" href="AMX_OVR_CODE.html" title="AMX_OVR_CODE" alt="" coords="973,20943,1179,21031">
+<area shape="rect" id="node19" href="SO_SCHEDULE_GROUP.html" title="SO_SCHEDULE_GROUP" alt="" coords="601,22312,858,22400">
+<area shape="rect" id="node102" href="SO_DISTRIBUTION.html" title="SO_DISTRIBUTION" alt="" coords="309,22349,529,22437">
+<area shape="rect" id="node104" href="SO_CLIENT_TYPE.html" title="SO_CLIENT_TYPE" alt="" coords="313,22172,526,22260">
+<area shape="rect" id="node105" href="SO_VOLUME_TYPE.html" title="SO_VOLUME_TYPE" alt="" coords="13,22259,236,22347">
+<area shape="rect" id="node20" href="AS_EMP_TEAM_PRIORITY_BY_SHIFT.html" title="AS_EMP_TEAM_PRIORITY_BY_SHIFT" alt="" coords="1288,2143,1640,2407">
+<area shape="rect" id="node21" href="ES_SHIFT_DISP_LABEL.html" title="ES_SHIFT_DISP_LABEL" alt="" coords="950,2109,1202,2197">
+<area shape="rect" id="node22" href="ES_SHIFT_TYPE.html" title="ES_SHIFT_TYPE" alt="" coords="975,2575,1177,2663">
+<area shape="rect" id="node23" href="CENSUS_DATA.html" title="CENSUS_DATA" alt="" coords="1356,12869,1572,13251">
+<area shape="rect" id="node24" href="SO_ACTIVITY.html" title="SO_ACTIVITY" alt="" coords="987,14343,1165,14431">
+<area shape="rect" id="node25" href="CENSUS_TEAM.html" title="CENSUS_TEAM" alt="" coords="979,15159,1173,15247">
+<area shape="rect" id="node26" href="DAY_PART.html" title="DAY_PART" alt="" coords="997,12688,1155,12776">
+<area shape="rect" id="node27" href="ST_SKILL.html" title="ST_SKILL" alt="" coords="1000,19543,1152,19631">
+<area shape="rect" id="node28" href="CLOCK_PRESET.html" title="CLOCK_PRESET" alt="" coords="1362,6135,1566,6487">
+<area shape="rect" id="node29" href="CLOCK_TRAN_TYPE.html" title="CLOCK_TRAN_TYPE" alt="" coords="960,6173,1192,6261">
+<area shape="rect" id="node30" href="CRIT_CLAUSE_JOB.html" title="CRIT_CLAUSE_JOB" alt="" coords="1352,15449,1576,15625">
+<area shape="rect" id="node31" href="CRITERIA.html" title="CRITERIA" alt="" coords="1001,12793,1151,12881">
+<area shape="rect" id="node32" href="CS_STAFFING_LEVEL.html" title="CS_STAFFING_LEVEL" alt="" coords="1345,13896,1583,14131">
+<area shape="rect" id="node34" href="EMP_DEF_LAB.html" title="EMP_DEF_LAB" alt="" coords="1358,5104,1570,5427">
+<area shape="rect" id="node35" href="EMP_SCHD_DTL_LAYER.html" title="EMP_SCHD_DTL_LAYER" alt="" coords="1334,7841,1594,8399">
+<area shape="rect" id="node36" href="EMPLOYEE_SCHEDULE.html" title="EMPLOYEE_SCHEDULE" alt="" coords="948,8659,1204,8747">
+<area shape="rect" id="node43" href="SHIFT.html" title="SHIFT" alt="" coords="655,9663,804,9751">
+<area shape="rect" id="node37" href="EMP_SP_ZONE.html" title="EMP_SP_ZONE" alt="" coords="1772,7637,1963,7725">
+<area shape="rect" id="node38" href="SHIFT_PREMIUM_ZONE.html" title="SHIFT_PREMIUM_ZONE" alt="" coords="1318,9027,1610,9349">
+<area shape="rect" id="node40" href="EMPLOYEE_JOB.html" title="EMPLOYEE_JOB" alt="" coords="1349,5624,1579,5829">
+<area shape="rect" id="node41" href="EMPLOYEE_JOB_POSTING.html" title="EMPLOYEE_JOB_POSTING" alt="" coords="1323,6792,1605,7027">
+<area shape="rect" id="node42" href="EMPLOYEE_SCHED_DTL.html" title="EMPLOYEE_SCHED_DTL" alt="" coords="1332,8416,1596,8973">
+<area shape="rect" id="node44" href="ES_CLIST_EMPLOYEE.html" title="ES_CLIST_EMPLOYEE" alt="" coords="1322,800,1606,1005">
+<area shape="rect" id="node45" href="ES_CALL_LIST.html" title="ES_CALL_LIST" alt="" coords="982,905,1170,993">
+<area shape="rect" id="node46" href="ES_JOB_ASSOCIATION.html" title="ES_JOB_ASSOCIATION" alt="" coords="1339,17741,1589,17917">
+<area shape="rect" id="node47" href="ES_JOB_TEAM_SKILL.html" title="ES_JOB_TEAM_SKILL" alt="" coords="1747,19579,1988,19667">
+<area shape="rect" id="node48" href="JOB_TEAM.html" title="JOB_TEAM" alt="" coords="1340,18893,1588,19157">
+<area shape="rect" id="node49" href="ES_RELIEF_BLOCK.html" title="ES_RELIEF_BLOCK" alt="" coords="964,728,1188,816">
+<area shape="rect" id="node50" href="ES_ROTATION.html" title="ES_ROTATION" alt="" coords="635,13121,823,13209">
+<area shape="rect" id="node51" href="ES_ROTATION_ROW.html" title="ES_ROTATION_ROW" alt="" coords="960,13121,1192,13209">
+<area shape="rect" id="node52" href="ES_ROTATION_VERSION.html" title="ES_ROTATION_VERSION" alt="" coords="945,13227,1207,13315">
+<area shape="rect" id="node53" href="ES_ROTROW_CONFLICTS.html" title="ES_ROTROW_CONFLICTS" alt="" coords="1731,10456,2004,10837">
+<area shape="rect" id="node54" href="ES_SHIFT_SUMMARY.html" title="ES_SHIFT_SUMMARY" alt="" coords="1345,10569,1583,10657">
+<area shape="rect" id="node55" href="ES_ROW_LM.html" title="ES_ROW_LM" alt="" coords="1346,9475,1582,9856">
+<area shape="rect" id="node56" href="CMPLNC_GROUP.html" title="CMPLNC_GROUP" alt="" coords="971,9332,1181,9420">
+<area shape="rect" id="node57" href="ES_SCHEDULE_TEMPLATE.html" title="ES_SCHEDULE_TEMPLATE" alt="" coords="935,14465,1217,14553">
+<area shape="rect" id="node58" href="ES_SHIFT_DETAIL.html" title="ES_SHIFT_DETAIL" alt="" coords="1750,4660,1985,5305">
+<area shape="rect" id="node59" href="ES_BOOKOFF_COMMENTS.html" title="ES_BOOKOFF_COMMENTS" alt="" coords="1323,3189,1605,3277">
+<area shape="rect" id="node60" href="ES_LEAVE_REASON.html" title="ES_LEAVE_REASON" alt="" coords="1351,3331,1577,3419">
+<area shape="rect" id="node61" href="OVERRIDE.html" title="OVERRIDE" alt="" coords="1383,1785,1545,1873">
+<area shape="rect" id="node62" href="ES_SHIFT_STATUS.html" title="ES_SHIFT_STATUS" alt="" coords="1353,14220,1575,14308">
+<area shape="rect" id="node63" href="ES_SHIFT_DETAIL_LAYER.html" title="ES_SHIFT_DETAIL_LAYER" alt="" coords="1732,12976,2003,13328">
+<area shape="rect" id="node64" href="ES_SHIFT_DETAIL_LAYER_TYPE.html" title="ES_SHIFT_DETAIL_LAYER_TYPE" alt="" coords="1305,16704,1623,16792">
+<area shape="rect" id="node65" href="ES_SHIFT_HIST_DET.html" title="ES_SHIFT_HIST_DET" alt="" coords="2123,4857,2397,5268">
+<area shape="rect" id="node66" href="ES_SHIFT_HISTORY.html" title="ES_SHIFT_HISTORY" alt="" coords="1753,1216,1982,1304">
+<area shape="rect" id="node67" href="ES_SHIFT_LOCK.html" title="ES_SHIFT_LOCK" alt="" coords="2158,1556,2362,1644">
+<area shape="rect" id="node68" href="ES_SHIFT_TYPE_TEAM.html" title="ES_SHIFT_TYPE_TEAM" alt="" coords="1298,12009,1630,12244">
+<area shape="rect" id="node69" href="ES_STAFFING_REQ.html" title="ES_STAFFING_REQ" alt="" coords="1352,13268,1576,13473">
+<area shape="rect" id="node70" href="ES_TMPL_SHIFT_REQ.html" title="ES_TMPL_SHIFT_REQ" alt="" coords="1342,14433,1586,14639">
+<area shape="rect" id="node71" href="ES_TMPL_SHIFT_REQ_SHIFT.html" title="ES_TMPL_SHIFT_REQ_SHIFT" alt="" coords="1719,14436,2015,14524">
+<area shape="rect" id="node72" href="ES_TMPL_STAFF_REQ.html" title="ES_TMPL_STAFF_REQ" alt="" coords="1341,14761,1587,14967">
+<area shape="rect" id="node73" href="ES_TMPL_STAFF_REQ_DAY.html" title="ES_TMPL_STAFF_REQ_DAY" alt="" coords="1725,14764,2010,14852">
+<area shape="rect" id="node74" href="ES_TMPL_STAFF_REQ_SKILL.html" title="ES_TMPL_STAFF_REQ_SKILL" alt="" coords="1719,18605,2016,18693">
+<area shape="rect" id="node75" href="ES_WORKLOAD_REQ.html" title="ES_WORKLOAD_REQ" alt="" coords="1345,15197,1583,15432">
+<area shape="rect" id="node76" href="ES_WORKLOAD_SOURCE.html" title="ES_WORKLOAD_SOURCE" alt="" coords="941,14944,1211,15032">
+<area shape="rect" id="node77" href="HOLIDAY.html" title="HOLIDAY" alt="" coords="346,17041,493,17129">
+<area shape="rect" id="node78" href="JOB_RATE.html" title="JOB_RATE" alt="" coords="1327,17483,1601,17688">
+<area shape="rect" id="node79" href="JOB_RDR_GRP.html" title="JOB_RDR_GRP" alt="" coords="1367,15643,1561,15819">
+<area shape="rect" id="node80" href="READER_GROUP.html" title="READER_GROUP" alt="" coords="973,12899,1179,12987">
+<area shape="rect" id="node81" href="JP_JOB_POSTING.html" title="JP_JOB_POSTING" alt="" coords="1338,16540,1590,16687">
+<area shape="rect" id="node82" href="JP_JOB_POSTING_BID.html" title="JP_JOB_POSTING_BID" alt="" coords="1743,5767,1992,5855">
+<area shape="rect" id="node83" href="JP_JOB_POSTING_OVERRIDE.html" title="JP_JOB_POSTING_OVERRIDE" alt="" coords="1717,5661,2018,5749">
+<area shape="rect" id="node84" href="LABMET_SEC_GRP.html" title="LABMET_SEC_GRP" alt="" coords="618,2944,841,3032">
+<area shape="rect" id="node85" href="LABOR_SHORTCUT_DTL.html" title="LABOR_SHORTCUT_DTL" alt="" coords="1331,9873,1597,10255">
+<area shape="rect" id="node86" href="LABOR_SHORTCUT.html" title="LABOR_SHORTCUT" alt="" coords="963,13368,1189,13456">
+<area shape="rect" id="node87" href="LABOR_SHORTCUT_SEC.html" title="LABOR_SHORTCUT_SEC" alt="" coords="1331,14656,1597,14744">
+<area shape="rect" id="node88" href="MP_DAILY_OVERRIDE.html" title="MP_DAILY_OVERRIDE" alt="" coords="1343,11620,1585,11884">
+<area shape="rect" id="node89" href="MP_TEMPLATE.html" title="MP_TEMPLATE" alt="" coords="979,9545,1173,9633">
+<area shape="rect" id="node90" href="MP_TEMPLATE_OVERRIDE.html" title="MP_TEMPLATE_OVERRIDE" alt="" coords="1325,10999,1603,11321">
+<area shape="rect" id="node91" href="MP_TEMPLATE_REQUIREMENT.html" title="MP_TEMPLATE_REQUIREMENT" alt="" coords="1307,11339,1621,11603">
+<area shape="rect" id="node92" href="RTSS_SHIFT.html" title="RTSS_SHIFT" alt="" coords="1343,17051,1585,17285">
+<area shape="rect" id="node93" href="RTSS_SHIFT_REQ.html" title="RTSS_SHIFT_REQ" alt="" coords="1760,17053,1975,17141">
+<area shape="rect" id="node94" href="SB_SCHD_BID.html" title="SB_SCHD_BID" alt="" coords="1371,1023,1557,1111">
+<area shape="rect" id="node95" href="SB_SCHD_BID_BID.html" title="SB_SCHD_BID_BID" alt="" coords="2149,217,2371,305">
+<area shape="rect" id="node96" href="SB_SCHD_BID_SPAT.html" title="SB_SCHD_BID_SPAT" alt="" coords="1751,320,1984,525">
+<area shape="rect" id="node97" href="SB_SCHD_BID_EMP.html" title="SB_SCHD_BID_EMP" alt="" coords="2146,404,2374,492">
+<area shape="rect" id="node98" href="SCHED_COST_DETAIL.html" title="SCHED_COST_DETAIL" alt="" coords="1341,7044,1587,7396">
+<area shape="rect" id="node99" href="SHIFT_PATTERN_SHIFT_LABOR.html" title="SHIFT_PATTERN_SHIFT_LABOR" alt="" coords="1306,7413,1622,7824">
+<area shape="rect" id="node100" href="SHIFT_PATTERN_SHIFTS.html" title="SHIFT_PATTERN_SHIFTS" alt="" coords="943,9227,1209,9315">
+<area shape="rect" id="node101" href="SO_CLIENT_STFDEF.html" title="SO_CLIENT_STFDEF" alt="" coords="1346,22316,1582,22697">
+<area shape="rect" id="node103" href="SO_SHIFT_STAFF_REQ.html" title="SO_SHIFT_STAFF_REQ" alt="" coords="951,22244,1201,22332">
+<area shape="rect" id="node107" href="SO_INTERVAL_TYPE.html" title="SO_INTERVAL_TYPE" alt="" coords="9,23148,241,23236">
+<area shape="rect" id="node106" href="SO_CLIENTYP_STFDEF.html" title="SO_CLIENTYP_STFDEF" alt="" coords="1337,20901,1591,21136">
+<area shape="rect" id="node108" href="SO_EMPLOYEE_GROUP.html" title="SO_EMPLOYEE_GROUP" alt="" coords="947,22017,1205,22105">
+<area shape="rect" id="node109" href="SO_EVENT_DETAIL.html" title="SO_EVENT_DETAIL" alt="" coords="1349,19652,1579,19975">
+<area shape="rect" id="node110" href="SO_EVENT_TYPE.html" title="SO_EVENT_TYPE" alt="" coords="971,21048,1181,21136">
+<area shape="rect" id="node111" href="SO_EVT_EMP_AV_OVRD.html" title="SO_EVT_EMP_AV_OVRD" alt="" coords="1739,14600,1996,14688">
+<area shape="rect" id="node112" href="SO_HIST_INT_REQ.html" title="SO_HIST_INT_REQ" alt="" coords="1755,21665,1980,21959">
+<area shape="rect" id="node113" href="SO_REGEN_SCHEDULE.html" title="SO_REGEN_SCHEDULE" alt="" coords="1336,23547,1592,23635">
+<area shape="rect" id="node116" href="SO_SCHEDULE.html" title="SO_SCHEDULE" alt="" coords="979,23547,1173,23635">
+<area shape="rect" id="node114" href="SO_INTERVAL_OVER.html" title="SO_INTERVAL_OVER" alt="" coords="1751,22233,1984,22321">
+<area shape="rect" id="node115" href="SO_INTERVAL_REQ.html" title="SO_INTERVAL_REQ" alt="" coords="1315,21297,1613,21620">
+<area shape="rect" id="node117" href="SO_LOCPROP_WORKLD.html" title="SO_LOCPROP_WORKLD" alt="" coords="1737,22339,1998,22427">
+<area shape="rect" id="node118" href="SO_POSN_SET_ELMTS.html" title="SO_POSN_SET_ELMTS" alt="" coords="1338,18007,1590,18159">
+<area shape="rect" id="node119" href="SO_PREFERREDTIME_SOURCE.html" title="SO_PREFERREDTIME_SOURCE" alt="" coords="1711,22569,2024,22657">
+<area shape="rect" id="node120" href="SO_SCHEDULED_SHIFT.html" title="SO_SCHEDULED_SHIFT" alt="" coords="1335,23724,1593,23812">
+<area shape="rect" id="node121" href="SO_SHIFT_ACTIVITY.html" title="SO_SHIFT_ACTIVITY" alt="" coords="2145,23440,2375,23528">
+<area shape="rect" id="node122" href="SO_SHIFT_DETAIL.html" title="SO_SHIFT_DETAIL" alt="" coords="1751,23323,1983,23645">
+<area shape="rect" id="node123" href="SO_SHIFT_REQ.html" title="SO_SHIFT_REQ" alt="" coords="1764,23663,1971,23956">
+<area shape="rect" id="node124" href="SO_STDVOL_OVER.html" title="SO_STDVOL_OVER" alt="" coords="1757,22444,1978,22532">
+<area shape="rect" id="node125" href="SO_STFDEF_DIST_OVR.html" title="SO_STFDEF_DIST_OVR" alt="" coords="1741,24081,1994,24169">
+<area shape="rect" id="node126" href="SO_VOLUME_WORKLOAD.html" title="SO_VOLUME_WORKLOAD" alt="" coords="1732,24187,2003,24275">
+<area shape="rect" id="node127" href="SP_ZONE_INCL_TIME_CODE.html" title="SP_ZONE_INCL_TIME_CODE" alt="" coords="1723,9297,2012,9385">
+<area shape="rect" id="node128" href="SR_DETAIL.html" title="SR_DETAIL" alt="" coords="1786,12688,1949,12776">
+<area shape="rect" id="node129" href="SR_SUMMARY.html" title="SR_SUMMARY" alt="" coords="1363,13527,1565,13879">
+<area shape="rect" id="node130" href="SR_SHIFT_OFFSET.html" title="SR_SHIFT_OFFSET" alt="" coords="1351,15836,1577,16041">
+<area shape="rect" id="node131" href="SR_SUM_PRIORITY.html" title="SR_SUM_PRIORITY" alt="" coords="1755,13437,1979,13525">
+<area shape="rect" id="node132" href="ST_JOB_SKILL.html" title="ST_JOB_SKILL" alt="" coords="1366,19351,1562,19527">
+<area shape="rect" id="node133" href="TARGET_DETAIL.html" title="TARGET_DETAIL" alt="" coords="627,15085,831,15173">
+<area shape="rect" id="node134" href="TARGET_DETAIL_JOB.html" title="TARGET_DETAIL_JOB" alt="" coords="1343,16059,1585,16235">
+<area shape="rect" id="node135" href="TM_ACTIONITEM.html" title="TM_ACTIONITEM" alt="" coords="1361,18392,1567,18480">
+<area shape="rect" id="node136" href="TM_ACTIONITEM_JOB.html" title="TM_ACTIONITEM_JOB" alt="" coords="1745,18363,1990,18515">
+<area shape="rect" id="node137" href="UNSTFD_SHIFT.html" title="UNSTFD_SHIFT" alt="" coords="1349,12297,1579,12708">
+<area shape="rect" id="node138" href="VIEW_AC_EVENT_LOG.html" title="VIEW_AC_EVENT_LOG" alt="" coords="2139,1475,2381,1539">
+<area shape="rect" id="node139" href="VIEW_CENSUSDT_REQ.html" title="VIEW_CENSUSDT_REQ" alt="" coords="1744,15804,1991,15985">
+<area shape="rect" id="node140" href="VIEW_EMP_DEF_LAB.html" title="VIEW_EMP_DEF_LAB" alt="" coords="1752,4028,1983,4327">
+<area shape="rect" id="node141" href="VIEW_EMPLOYEE_JOB.html" title="VIEW_EMPLOYEE_JOB" alt="" coords="1745,5492,1990,5644">
+<area shape="rect" id="node142" href="VIEW_EMPLOYEE_JOB_POSTING.html" title="VIEW_EMPLOYEE_JOB_POSTING" alt="" coords="1706,13859,2029,13981">
+<area shape="rect" id="node143" href="VIEW_JOB_RATE.html" title="VIEW_JOB_RATE" alt="" coords="1730,17559,2005,17681">
+<area shape="rect" id="node144" href="VIEW_LABMET_SEC_GRP.html" title="VIEW_LABMET_SEC_GRP" alt="" coords="944,3040,1208,3104">
+<area shape="rect" id="node145" href="VIEW_MOD_ACEVENT_LOG.html" title="VIEW_MOD_ACEVENT_LOG" alt="" coords="2121,1393,2399,1457">
+<area shape="rect" id="node146" href="VIEW_MOD_EMPLOYEE_JOB.html" title="VIEW_MOD_EMPLOYEE_JOB" alt="" coords="1723,5323,2012,5475">
+<area shape="rect" id="node147" href="VIEW_MOD_EMPLOYEE_JOB_POSTING.html" title="VIEW_MOD_EMPLOYEE_JOB_POSTING" alt="" coords="1684,14223,2051,14345">
+<area shape="rect" id="node148" href="VIEW_MOD_WORK_DETAIL.html" title="VIEW_MOD_WORK_DETAIL" alt="" coords="1730,5872,2005,6200">
+<area shape="rect" id="node151" href="PAYROLL_EXPORT_TYPE.html" title="PAYROLL_EXPORT_TYPE" alt="" coords="595,3641,864,3729">
+<area shape="rect" id="node150" href="VIEW_PAYEXP_ADJUSTMENT.html" title="VIEW_PAYEXP_ADJUSTMENT" alt="" coords="1318,4157,1610,4573">
+<area shape="rect" id="node152" href="VIEW_PAYEXP_CURRENT.html" title="VIEW_PAYEXP_CURRENT" alt="" coords="1332,3724,1596,4140">
+<area shape="rect" id="node153" href="VIEW_SB_EMP_SHIFT.html" title="VIEW_SB_EMP_SHIFT" alt="" coords="2142,323,2378,387">
+<area shape="rect" id="node154" href="VIEW_SB_PATTERN.html" title="VIEW_SB_PATTERN" alt="" coords="2149,136,2371,200">
+<area shape="rect" id="node155" href="VIEW_SB_SHIFT.html" title="VIEW_SB_SHIFT" alt="" coords="2146,991,2374,1143">
+<area shape="rect" id="node156" href="VIEW_SB_SHIFT_PAT.html" title="VIEW_SB_SHIFT_PAT" alt="" coords="2144,544,2376,608">
+<area shape="rect" id="node157" href="VIEW_SB_SHIFT_SHFT.html" title="VIEW_SB_SHIFT_SHFT" alt="" coords="2139,656,2381,720">
+<area shape="rect" id="node158" href="VIEW_SHIFT_PREMIUM_ZONE.html" title="VIEW_SHIFT_PREMIUM_ZONE" alt="" coords="1720,6611,2015,6675">
+<area shape="rect" id="node159" href="VIEW_SHIFT_PREMIUM_ZONE_FULL.html" title="VIEW_SHIFT_PREMIUM_ZONE_FULL" alt="" coords="1697,9011,2038,9280">
+<area shape="rect" id="node160" href="VIEW_SO_ACTSFTHR.html" title="VIEW_SO_ACTSFTHR" alt="" coords="2476,20623,2709,20863">
+<area shape="rect" id="node161" href="VIEW_SO_AVAIL_INFO.html" title="VIEW_SO_AVAIL_INFO" alt="" coords="1742,19321,1993,19561">
+<area shape="rect" id="node162" href="VIEW_SO_CL_STFDEF.html" title="VIEW_SO_CL_STFDEF" alt="" coords="1345,21637,1583,21819">
+<area shape="rect" id="node163" href="VIEW_SO_DAILY_SKD.html" title="VIEW_SO_DAILY_SKD" alt="" coords="2474,23421,2711,23691">
+<area shape="rect" id="node164" href="VIEW_SO_EMP_CSTDET.html" title="VIEW_SO_EMP_CSTDET" alt="" coords="1337,16845,1591,16997">
+<area shape="rect" id="node165" href="VIEW_SO_EMP_POS.html" title="VIEW_SO_EMP_POS" alt="" coords="1340,20559,1588,20740">
+<area shape="rect" id="node166" href="VIEW_SO_EMP_WORK.html" title="VIEW_SO_EMP_WORK" alt="" coords="1344,20360,1584,20541">
+<area shape="rect" id="node167" href="VIEW_SO_EMPPOS_SKL.html" title="VIEW_SO_EMPPOS_SKL" alt="" coords="1337,19992,1591,20203">
+<area shape="rect" id="node168" href="VIEW_SO_INT_REQ.html" title="VIEW_SO_INT_REQ" alt="" coords="1718,21976,2017,22216">
+<area shape="rect" id="node169" href="VIEW_SO_NET_STAFF.html" title="VIEW_SO_NET_STAFF" alt="" coords="1345,23161,1583,23313">
+<area shape="rect" id="node170" href="VIEW_SO_NETSTF_REQ.html" title="VIEW_SO_NETSTF_REQ" alt="" coords="1337,22992,1591,23144">
+<area shape="rect" id="node171" href="VIEW_SO_NETSTFRAW.html" title="VIEW_SO_NETSTFRAW" alt="" coords="1341,21872,1587,22083">
+<area shape="rect" id="node172" href="VIEW_SO_POSPAY.html" title="VIEW_SO_POSPAY" alt="" coords="1357,20220,1571,20343">
+<area shape="rect" id="node173" href="VIEW_SO_PROD_RESPS.html" title="VIEW_SO_PROD_RESPS" alt="" coords="1337,22787,1591,22939">
+<area shape="rect" id="node174" href="VIEW_SO_SCHED.html" title="VIEW_SO_SCHED" alt="" coords="2143,22675,2377,22944">
+<area shape="rect" id="node175" href="VIEW_SO_SKDEMP_POS.html" title="VIEW_SO_SKDEMP_POS" alt="" coords="2131,23359,2389,23423">
+<area shape="rect" id="node176" href="VIEW_SO_SKDEMPACT.html" title="VIEW_SO_SKDEMPACT" alt="" coords="2469,23193,2716,23404">
+<area shape="rect" id="node177" href="VIEW_SP_ZONE_INCL_TIME_CODE.html" title="VIEW_SP_ZONE_INCL_TIME_CODE" alt="" coords="2095,9297,2425,9361">
+<area shape="rect" id="node178" href="VIEW_ST_JOB_SKILL.html" title="VIEW_ST_JOB_SKILL" alt="" coords="1751,19152,1983,19304">
+<area shape="rect" id="node179" href="VIEW_VR_EMPLOYEE_SCHEDULE.html" title="VIEW_VR_EMPLOYEE_SCHEDULE" alt="" coords="1301,284,1627,495">
+<area shape="rect" id="node180" href="VIEW_WORK_DETAIL.html" title="VIEW_WORK_DETAIL" alt="" coords="1752,4344,1983,4643">
+<area shape="rect" id="node181" href="VIEW_WORK_DETAIL_ADJUST.html" title="VIEW_WORK_DETAIL_ADJUST" alt="" coords="2111,3309,2409,3696">
+<area shape="rect" id="node182" href="WORK_DETAIL_ADJUST.html" title="WORK_DETAIL_ADJUST" alt="" coords="1719,3309,2015,3867">
+<area shape="rect" id="node183" href="VL_CLOCK_PRESET.html" title="VL_CLOCK_PRESET" alt="" coords="1745,6253,1989,6523">
+<area shape="rect" id="node184" href="VL_DEPARTMENT.html" title="VL_DEPARTMENT" alt="" coords="1359,10344,1569,10408">
+<area shape="rect" id="node185" href="VL_DOCKET.html" title="VL_DOCKET" alt="" coords="1379,2928,1549,2992">
+<area shape="rect" id="node186" href="VL_HOLIDAY.html" title="VL_HOLIDAY" alt="" coords="644,17101,815,17165">
+<area shape="rect" id="node187" href="VL_HOUR_TYPE.html" title="VL_HOUR_TYPE" alt="" coords="631,9581,828,9645">
+<area shape="rect" id="node188" href="VL_JOB.html" title="VL_JOB" alt="" coords="1347,19211,1581,19333">
+<area shape="rect" id="node189" href="VL_JP_JOB_POSTING.html" title="VL_JP_JOB_POSTING" alt="" coords="1741,17196,1993,17319">
+<area shape="rect" id="node190" href="VL_LABOR_METRIC_SEC.html" title="VL_LABOR_METRIC_SEC" alt="" coords="288,2169,551,2233">
+<area shape="rect" id="node191" href="VL_PROJECT.html" title="VL_PROJECT" alt="" coords="988,13004,1164,13068">
+<area shape="rect" id="node192" href="VL_SHIFT_PREMIUM_ZONE.html" title="VL_SHIFT_PREMIUM_ZONE" alt="" coords="1721,7743,2013,8012">
+<area shape="rect" id="node193" href="VL_SO_CLIENT_STFDEF.html" title="VL_SO_CLIENT_STFDEF" alt="" coords="1739,21379,1995,21648">
+<area shape="rect" id="node194" href="VL_SO_EVENT_DETAIL.html" title="VL_SO_EVENT_DETAIL" alt="" coords="1745,20315,1990,20613">
+<area shape="rect" id="node195" href="VL_TIME_CODE.html" title="VL_TIME_CODE" alt="" coords="979,9759,1173,9823">
+</map>
+
+					<a name='diagram'><img id='twoimpliedDegreeImg' src='../diagrams/JOB.implied2degrees.png' usemap='#twoDegreesRelationshipsDiagramImplied' class='diagram' border='0' alt='' align='left'></a>							
+				</div>
+			  			</div>
+			</div>
+		  </div><!-- /.box-body -->
+		</div>
+	      </section>
+    
+  </div>
+  <!-- /.content-wrapper -->
+  <footer class="main-footer">
+    <div>
+      <div class="pull-right hidden-xs">
+        <a href="https://github.com/schemaspy/schemaspy" title="GitHub for SchemaSpy"><i class="fa fa-github-square fa-2x"></i></a>
+        <a href="http://stackoverflow.com/questions/tagged/schemaspy" title="StackOverflow for SchemaSpy"><i class="fa fa-stack-overflow fa-2x"></i></a>
+      </div>
+      <strong>Generated by <a href="http://schemaspy.org/" class="logo-text"><i class="fa fa-database"></i> SchemaSpy 6.0.0-rc2</a></strong>
+    </div>
+    <!-- /.container -->
+  </footer>
+</div>
+<!-- ./wrapper -->
+
+<!-- jQuery 2.2.3 -->
+<script src="../bower/admin-lte/plugins/jQuery/jquery-2.2.3.min.js"></script>
+<script src="../bower/admin-lte/plugins/jQueryUI/jquery-ui.min.js"></script>
+<!-- Bootstrap 3.3.5 -->
+<script src="../bower/admin-lte/bootstrap/js/bootstrap.min.js"></script>
+<!-- DataTables -->
+<script src="../bower/datatables.net/jquery.dataTables.min.js"></script>
+<script src="../bower/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
+<script src="../bower/datatables.net-buttons/dataTables.buttons.min.js"></script>
+<script src="../bower/datatables.net-buttons-bs/js/buttons.bootstrap.min.js"></script>
+<script src="../bower/datatables.net-buttons/buttons.html5.min.js"></script>
+<script src="../bower/datatables.net-buttons/buttons.print.min.js"></script>
+<script src="../bower/datatables.net-buttons/buttons.colVis.min.js"></script>
+
+<!-- SlimScroll -->
+<script src="../bower/admin-lte/plugins/slimScroll/jquery.slimscroll.min.js"></script>
+<!-- FastClick -->
+<script src="../bower/admin-lte/plugins/fastclick/fastclick.js"></script>
+<!-- Salvattore -->
+<script src="../bower/salvattore/salvattore.min.js"></script>
+<!-- AnchorJS -->
+<script src="../bower/anchor-js/anchor.min.js"></script>
+<!-- CodeMirror -->
+<script src="../bower/codemirror/codemirror.js"></script>
+<script src="../bower/codemirror/sql.js"></script>
+<!-- AdminLTE App -->
+<script src="../bower/admin-lte/dist/js/app.min.js"></script>
+<script src="table.js"></script>
+<script src="../schemaSpy.js"></script>
+</body>
+</html>

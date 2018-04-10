@@ -1,0 +1,1268 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>CENSUS_DATA - WFMSB622 Database</title>
+  <!-- Tell the browser to be responsive to screen width -->
+  <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+  <!-- Bootstrap 3.3.5 -->
+  <link rel="stylesheet" href="../bower/admin-lte/bootstrap/css/bootstrap.min.css">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="../bower/font-awesome/css/font-awesome.min.css">
+  <!-- Ionicons -->
+  <link rel="stylesheet" href="../bower/ionicons/css/ionicons.min.css">
+  <!-- DataTables -->
+  <link rel="stylesheet" href="../bower/datatables.net-bs/css/dataTables.bootstrap.min.css">
+  <link rel="stylesheet" href="../bower/datatables.net-buttons-bs/css/buttons.bootstrap.min.css">
+  <!-- Code Mirror -->
+  <link rel="stylesheet" href="../bower/codemirror/codemirror.css">
+  <!-- Fonts -->
+  <link href='../fonts/indieflower/indie-flower.css' rel='stylesheet' type='text/css'>
+  <link href='../fonts/source-sans-pro/source-sans-pro.css' rel='stylesheet' type='text/css'>
+
+  <!-- Theme style -->
+  <link rel="stylesheet" href="../bower/admin-lte/dist/css/AdminLTE.min.css">
+  <!-- Salvattore -->
+  <link rel="stylesheet" href="../bower/salvattore/salvattore.css">
+  <!-- AdminLTE Skins. Choose a skin from the css/skins
+       folder instead of downloading all of them to reduce the load. -->
+  <link rel="stylesheet" href="../bower/admin-lte/dist/css/skins/_all-skins.min.css">
+  <!-- SchemaSpy -->
+  <link rel="stylesheet" href="../schemaSpy.css">
+  
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+  <script src="../bower/html5shiv/html5shiv.min.js"></script>
+  <script src="../bower/respond/respond.min.js"></script>
+  <![endif]-->
+</head>
+<!-- ADD THE CLASS layout-top-nav TO REMOVE THE SIDEBAR. -->
+<body class="hold-transition skin-blue layout-top-nav">
+<div class="wrapper">
+  <header class="main-header">
+    <nav class="navbar navbar-static-top">
+      <div class="container">
+        <div class="navbar-header">
+          <a href="../index.html" class="navbar-brand"><b>WFMSB622</b> Database</a>
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse">
+            <i class="fa fa-bars"></i>
+          </button>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse pull-left" id="navbar-collapse">
+          <ul class="nav navbar-nav">
+            <li><a href="../index.html">Tables <span class="sr-only">(current)</span></a></li>            
+			<!--<li><a href="../components.html" title="List of system components">Components</a></li>-->
+			<li><a href="../columns.html" title="All of the columns in the schema">Columns</a></li>
+			<li><a href="../constraints.html" title="Useful for diagnosing error messages that just give constraint name or number">Constraints</a></li>
+			<li><a href="../relationships.html" title="Diagram of table relationships">Relationships</a></li>
+			<li><a href="../orphans.html" title="View of tables with neither parents nor children">Orphan&nbsp;Tables</a></li>				
+			<li><a href="../anomalies.html" title="Things that might not be quite right">Anomalies</a></li>
+          </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+        <!-- Navbar Right Menu -->
+
+      </div>
+      <!-- /.container-fluid -->
+    </nav>
+  </header>
+  <!-- Main content -->
+  <!-- Full Width Column -->
+  <div class="content-wrapper">
+          <!-- Content Header (Page header) -->
+      <section class="content-header">
+        <h1>CENSUS_DATA</h1></br>
+		      </section>
+      <!-- Main content -->
+      <section class="content">
+		<div class="box box-primary">
+			<div class="box-header with-border">
+			  <span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span>
+              <h3 id="Columns" class="box-title">Columns</h3>
+              <div class="box-tools pull-right">
+                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
+                </button>
+                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+              </div>
+            </div>	
+            <div class="box-body">
+				<table id="standard_table" class="table table-bordered table-striped dataTable" role="grid">
+				<thead align='left'>
+				<tr>
+				  <th>Column</th>
+				  <th>Type</th>
+				  <th>Size</th>
+				  <th title='Are nulls allowed?'>Nulls</th>
+				  <th title='Is column automatically updated?'>Auto</th>
+				  <th title='Default value'>Default</th>
+				  <th title='Columns in tables that reference this column'>Children</th>
+				  <th title='Columns in tables that are referenced by this column'>Parents</th>
+				  <th title='Comments' class="toggle"><span>Comments</span></th>
+				</tr>
+				</thead>
+				<tbody>
+				<tr>
+				 <td class='primaryKey' title='Primary Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="CENSDT_ID">CENSDT_ID</span></td>
+				 <td>NUMBER</td>
+				 <td>38</td>
+				 <td title=''></td>
+				 <td title=''></td>
+				 <td>null</td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				   <tr>
+					<td title="VIEW_CENSUSDT_REQ.CENSDT_ID&#39;s name implies that it&#39;s a child of CENSUS_DATA.CENSDT_ID, but it doesn&#39;t reference that column.">
+						<a href='VIEW_CENSUSDT_REQ.html'>VIEW_CENSUSDT_REQ</a><span class='relatedKey'>.CENSDT_ID</span>
+					</td>
+					<td class="constraint detail">
+						Implied Constraint <span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span>
+					</td>
+				   </tr>
+				  </table>				 
+				 </td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>					 
+				 </td>
+				 <td></td>
+				</tr>
+				<tr>
+				 <td><span id="CENSDT_USAGE">CENSDT_USAGE</span></td>
+				 <td>NUMBER</td>
+				 <td>38</td>
+				 <td title=''></td>
+				 <td title=''></td>
+				 <td>null</td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>				 
+				 </td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>					 
+				 </td>
+				 <td></td>
+				</tr>
+				<tr>
+				 <td class='foreignKey' title='Foreign Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="CENSTM_ID">CENSTM_ID</span></td>
+				 <td>NUMBER</td>
+				 <td>38</td>
+				 <td title=''></td>
+				 <td title=''></td>
+				 <td>null</td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>				 
+				 </td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				   <tr>
+					<td title="CENSUS_DATA.CENSTM_ID references CENSUS_TEAM.CENSTM_ID via FK_CENSDT_TEAMID">
+						<a href='CENSUS_TEAM.html'>CENSUS_TEAM</a><span class='relatedKey'>.CENSTM_ID</span>
+					</td>
+					<td class="constraint detail">
+						FK_CENSDT_TEAMID <span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span>
+					</td>
+				   </tr>
+				  </table>					 
+				 </td>
+				 <td></td>
+				</tr>
+				<tr>
+				 <td class='foreignKey' title='Foreign Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="JOB_ID">JOB_ID</span></td>
+				 <td>NUMBER</td>
+				 <td>38</td>
+				 <td title='nullable'>√</td>
+				 <td title=''></td>
+				 <td>null</td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>				 
+				 </td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				   <tr>
+					<td title="CENSUS_DATA.JOB_ID references JOB.JOB_ID via FK_CENSDT_JOB_ID">
+						<a href='JOB.html'>JOB</a><span class='relatedKey'>.JOB_ID</span>
+					</td>
+					<td class="constraint detail">
+						FK_CENSDT_JOB_ID <span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span>
+					</td>
+				   </tr>
+				  </table>					 
+				 </td>
+				 <td></td>
+				</tr>
+				<tr>
+				 <td class='foreignKey' title='Foreign Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="DP_ID">DP_ID</span></td>
+				 <td>NUMBER</td>
+				 <td>38</td>
+				 <td title='nullable'>√</td>
+				 <td title=''></td>
+				 <td>null</td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>				 
+				 </td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				   <tr>
+					<td title="CENSUS_DATA.DP_ID references DAY_PART.DP_ID via FK_CENSDT_DAYPRT">
+						<a href='DAY_PART.html'>DAY_PART</a><span class='relatedKey'>.DP_ID</span>
+					</td>
+					<td class="constraint detail">
+						FK_CENSDT_DAYPRT <span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span>
+					</td>
+				   </tr>
+				  </table>					 
+				 </td>
+				 <td></td>
+				</tr>
+				<tr>
+				 <td class='indexedColumn' title='Indexed'><i class='fa fa-sitemap fa-rotate-120' style='padding-right: 5px;'></i><span id="CENSDT_DATE">CENSDT_DATE</span></td>
+				 <td>DATE</td>
+				 <td>7</td>
+				 <td title='nullable'>√</td>
+				 <td title=''></td>
+				 <td>null</td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>				 
+				 </td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>					 
+				 </td>
+				 <td></td>
+				</tr>
+				<tr>
+				 <td><span id="CENSDT_REQUIRED">CENSDT_REQUIRED</span></td>
+				 <td>NUMBER</td>
+				 <td>38</td>
+				 <td title='nullable'>√</td>
+				 <td title=''></td>
+				 <td>null</td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>				 
+				 </td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>					 
+				 </td>
+				 <td></td>
+				</tr>
+				<tr>
+				 <td><span id="CENSDT_FIELD1">CENSDT_FIELD1</span></td>
+				 <td>NUMBER</td>
+				 <td>38</td>
+				 <td title='nullable'>√</td>
+				 <td title=''></td>
+				 <td>null</td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>				 
+				 </td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>					 
+				 </td>
+				 <td></td>
+				</tr>
+				<tr>
+				 <td><span id="CENSDT_FIELD2">CENSDT_FIELD2</span></td>
+				 <td>NUMBER</td>
+				 <td>38</td>
+				 <td title='nullable'>√</td>
+				 <td title=''></td>
+				 <td>null</td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>				 
+				 </td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>					 
+				 </td>
+				 <td></td>
+				</tr>
+				<tr>
+				 <td><span id="CENSDT_FIELD3">CENSDT_FIELD3</span></td>
+				 <td>NUMBER</td>
+				 <td>38</td>
+				 <td title='nullable'>√</td>
+				 <td title=''></td>
+				 <td>null</td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>				 
+				 </td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>					 
+				 </td>
+				 <td></td>
+				</tr>
+				<tr>
+				 <td><span id="CENSDT_FIELD4">CENSDT_FIELD4</span></td>
+				 <td>NUMBER</td>
+				 <td>38</td>
+				 <td title='nullable'>√</td>
+				 <td title=''></td>
+				 <td>null</td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>				 
+				 </td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>					 
+				 </td>
+				 <td></td>
+				</tr>
+				<tr>
+				 <td><span id="CENSDT_FIELD5">CENSDT_FIELD5</span></td>
+				 <td>NUMBER</td>
+				 <td>38</td>
+				 <td title='nullable'>√</td>
+				 <td title=''></td>
+				 <td>null</td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>				 
+				 </td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>					 
+				 </td>
+				 <td></td>
+				</tr>
+				<tr>
+				 <td><span id="CLIENT_ID">CLIENT_ID</span></td>
+				 <td>NUMBER</td>
+				 <td>38</td>
+				 <td title=''></td>
+				 <td title=''></td>
+				 <td>1  </td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>				 
+				 </td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>					 
+				 </td>
+				 <td></td>
+				</tr>
+				<tr>
+				 <td class='foreignKey' title='Foreign Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="STSKL_ID">STSKL_ID</span></td>
+				 <td>NUMBER</td>
+				 <td>38</td>
+				 <td title='nullable'>√</td>
+				 <td title=''></td>
+				 <td>null</td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>				 
+				 </td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				   <tr>
+					<td title="CENSUS_DATA.STSKL_ID references ST_SKILL.STSKL_ID via FK_CENSDAT_STSKLID">
+						<a href='ST_SKILL.html'>ST_SKILL</a><span class='relatedKey'>.STSKL_ID</span>
+					</td>
+					<td class="constraint detail">
+						FK_CENSDAT_STSKLID <span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span>
+					</td>
+				   </tr>
+				  </table>					 
+				 </td>
+				 <td></td>
+				</tr>
+				<tr>
+				 <td class='foreignKey' title='Foreign Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="ACT_ID">ACT_ID</span></td>
+				 <td>NUMBER</td>
+				 <td>38</td>
+				 <td title='nullable'>√</td>
+				 <td title=''></td>
+				 <td>null</td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>				 
+				 </td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				   <tr>
+					<td title="CENSUS_DATA.ACT_ID references SO_ACTIVITY.ACT_ID via FK_CENSDAT_ACTID">
+						<a href='SO_ACTIVITY.html'>SO_ACTIVITY</a><span class='relatedKey'>.ACT_ID</span>
+					</td>
+					<td class="constraint detail">
+						FK_CENSDAT_ACTID <span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span>
+					</td>
+				   </tr>
+				  </table>					 
+				 </td>
+				 <td></td>
+				</tr>
+				<tr>
+				 <td class='foreignKey' title='Foreign Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="PROJ_ID">PROJ_ID</span></td>
+				 <td>NUMBER</td>
+				 <td>38</td>
+				 <td title='nullable'>√</td>
+				 <td title=''></td>
+				 <td>null</td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>				 
+				 </td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				   <tr>
+					<td title="CENSUS_DATA.PROJ_ID references PROJECT.PROJ_ID via FK_CENSDAT_PROJTID">
+						<a href='PROJECT.html'>PROJECT</a><span class='relatedKey'>.PROJ_ID</span>
+					</td>
+					<td class="constraint detail">
+						FK_CENSDAT_PROJTID <span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span>
+					</td>
+				   </tr>
+				  </table>					 
+				 </td>
+				 <td></td>
+				</tr>
+				<tr>
+				 <td class='foreignKey' title='Foreign Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="DOCK_ID">DOCK_ID</span></td>
+				 <td>NUMBER</td>
+				 <td>38</td>
+				 <td title='nullable'>√</td>
+				 <td title=''></td>
+				 <td>null</td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>				 
+				 </td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				   <tr>
+					<td title="CENSUS_DATA.DOCK_ID references DOCKET.DOCK_ID via FK_CENSDAT_DOCKID">
+						<a href='DOCKET.html'>DOCKET</a><span class='relatedKey'>.DOCK_ID</span>
+					</td>
+					<td class="constraint detail">
+						FK_CENSDAT_DOCKID <span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span>
+					</td>
+				   </tr>
+				  </table>					 
+				 </td>
+				 <td></td>
+				</tr>
+				<tr>
+				 <td class='foreignKey' title='Foreign Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="DEPT_ID">DEPT_ID</span></td>
+				 <td>NUMBER</td>
+				 <td>38</td>
+				 <td title='nullable'>√</td>
+				 <td title=''></td>
+				 <td>null</td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>				 
+				 </td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				   <tr>
+					<td title="CENSUS_DATA.DEPT_ID references DEPARTMENT.DEPT_ID via FK_CENSDAT_DEPTID">
+						<a href='DEPARTMENT.html'>DEPARTMENT</a><span class='relatedKey'>.DEPT_ID</span>
+					</td>
+					<td class="constraint detail">
+						FK_CENSDAT_DEPTID <span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span>
+					</td>
+				   </tr>
+				  </table>					 
+				 </td>
+				 <td></td>
+				</tr>
+				<tr>
+				 <td><span id="CENSDT_PRIORITY">CENSDT_PRIORITY</span></td>
+				 <td>NUMBER</td>
+				 <td>38</td>
+				 <td title='nullable'>√</td>
+				 <td title=''></td>
+				 <td>null</td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>				 
+				 </td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>					 
+				 </td>
+				 <td></td>
+				</tr>
+				<tr>
+				 <td><span id="CENSDT_SKL_LEVEL">CENSDT_SKL_LEVEL</span></td>
+				 <td>NUMBER</td>
+				 <td>38</td>
+				 <td title='nullable'>√</td>
+				 <td title=''></td>
+				 <td>null</td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>				 
+				 </td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>					 
+				 </td>
+				 <td></td>
+				</tr>
+				<tr>
+				 <td><span id="CENSDT_FLAG1">CENSDT_FLAG1</span></td>
+				 <td>CHAR</td>
+				 <td>1</td>
+				 <td title='nullable'>√</td>
+				 <td title=''></td>
+				 <td>null</td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>				 
+				 </td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>					 
+				 </td>
+				 <td></td>
+				</tr>
+				<tr>
+				 <td><span id="CENSDT_FLAG2">CENSDT_FLAG2</span></td>
+				 <td>CHAR</td>
+				 <td>1</td>
+				 <td title='nullable'>√</td>
+				 <td title=''></td>
+				 <td>null</td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>				 
+				 </td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>					 
+				 </td>
+				 <td></td>
+				</tr>
+				<tr>
+				 <td><span id="CENSDT_FLAG3">CENSDT_FLAG3</span></td>
+				 <td>CHAR</td>
+				 <td>1</td>
+				 <td title='nullable'>√</td>
+				 <td title=''></td>
+				 <td>null</td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>				 
+				 </td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>					 
+				 </td>
+				 <td></td>
+				</tr>
+				<tr>
+				 <td><span id="CENSDT_FLAG4">CENSDT_FLAG4</span></td>
+				 <td>CHAR</td>
+				 <td>1</td>
+				 <td title='nullable'>√</td>
+				 <td title=''></td>
+				 <td>null</td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>				 
+				 </td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>					 
+				 </td>
+				 <td></td>
+				</tr>
+				<tr>
+				 <td><span id="CENSDT_FLAG5">CENSDT_FLAG5</span></td>
+				 <td>CHAR</td>
+				 <td>1</td>
+				 <td title='nullable'>√</td>
+				 <td title=''></td>
+				 <td>null</td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>				 
+				 </td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>					 
+				 </td>
+				 <td></td>
+				</tr>
+				<tr>
+				 <td><span id="CENSDT_FLAG6">CENSDT_FLAG6</span></td>
+				 <td>CHAR</td>
+				 <td>1</td>
+				 <td title='nullable'>√</td>
+				 <td title=''></td>
+				 <td>null</td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>				 
+				 </td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>					 
+				 </td>
+				 <td></td>
+				</tr>
+				<tr>
+				 <td><span id="CENSDT_FLAG7">CENSDT_FLAG7</span></td>
+				 <td>CHAR</td>
+				 <td>1</td>
+				 <td title='nullable'>√</td>
+				 <td title=''></td>
+				 <td>null</td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>				 
+				 </td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>					 
+				 </td>
+				 <td></td>
+				</tr>
+				<tr>
+				 <td><span id="CENSDT_FLAG8">CENSDT_FLAG8</span></td>
+				 <td>CHAR</td>
+				 <td>1</td>
+				 <td title='nullable'>√</td>
+				 <td title=''></td>
+				 <td>null</td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>				 
+				 </td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>					 
+				 </td>
+				 <td></td>
+				</tr>
+				<tr>
+				 <td><span id="CENSDT_FLAG9">CENSDT_FLAG9</span></td>
+				 <td>CHAR</td>
+				 <td>1</td>
+				 <td title='nullable'>√</td>
+				 <td title=''></td>
+				 <td>null</td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>				 
+				 </td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>					 
+				 </td>
+				 <td></td>
+				</tr>
+				<tr>
+				 <td><span id="CENSDT_FLAG10">CENSDT_FLAG10</span></td>
+				 <td>CHAR</td>
+				 <td>1</td>
+				 <td title='nullable'>√</td>
+				 <td title=''></td>
+				 <td>null</td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>				 
+				 </td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>					 
+				 </td>
+				 <td></td>
+				</tr>
+				<tr>
+				 <td><span id="CENSDT_UDF1">CENSDT_UDF1</span></td>
+				 <td>VARCHAR2</td>
+				 <td>40</td>
+				 <td title='nullable'>√</td>
+				 <td title=''></td>
+				 <td>null</td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>				 
+				 </td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>					 
+				 </td>
+				 <td></td>
+				</tr>
+				<tr>
+				 <td><span id="CENSDT_UDF2">CENSDT_UDF2</span></td>
+				 <td>VARCHAR2</td>
+				 <td>40</td>
+				 <td title='nullable'>√</td>
+				 <td title=''></td>
+				 <td>null</td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>				 
+				 </td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>					 
+				 </td>
+				 <td></td>
+				</tr>
+				<tr>
+				 <td><span id="CENSDT_UDF3">CENSDT_UDF3</span></td>
+				 <td>VARCHAR2</td>
+				 <td>40</td>
+				 <td title='nullable'>√</td>
+				 <td title=''></td>
+				 <td>null</td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>				 
+				 </td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>					 
+				 </td>
+				 <td></td>
+				</tr>
+				<tr>
+				 <td><span id="CENSDT_UDF4">CENSDT_UDF4</span></td>
+				 <td>VARCHAR2</td>
+				 <td>40</td>
+				 <td title='nullable'>√</td>
+				 <td title=''></td>
+				 <td>null</td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>				 
+				 </td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>					 
+				 </td>
+				 <td></td>
+				</tr>
+				<tr>
+				 <td><span id="CENSDT_UDF5">CENSDT_UDF5</span></td>
+				 <td>VARCHAR2</td>
+				 <td>40</td>
+				 <td title='nullable'>√</td>
+				 <td title=''></td>
+				 <td>null</td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>				 
+				 </td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>					 
+				 </td>
+				 <td></td>
+				</tr>
+				<tr>
+				 <td><span id="CENSDT_UDF6">CENSDT_UDF6</span></td>
+				 <td>VARCHAR2</td>
+				 <td>40</td>
+				 <td title='nullable'>√</td>
+				 <td title=''></td>
+				 <td>null</td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>				 
+				 </td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>					 
+				 </td>
+				 <td></td>
+				</tr>
+				<tr>
+				 <td><span id="CENSDT_UDF7">CENSDT_UDF7</span></td>
+				 <td>VARCHAR2</td>
+				 <td>40</td>
+				 <td title='nullable'>√</td>
+				 <td title=''></td>
+				 <td>null</td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>				 
+				 </td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>					 
+				 </td>
+				 <td></td>
+				</tr>
+				<tr>
+				 <td><span id="CENSDT_UDF8">CENSDT_UDF8</span></td>
+				 <td>VARCHAR2</td>
+				 <td>40</td>
+				 <td title='nullable'>√</td>
+				 <td title=''></td>
+				 <td>null</td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>				 
+				 </td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>					 
+				 </td>
+				 <td></td>
+				</tr>
+				<tr>
+				 <td><span id="CENSDT_UDF9">CENSDT_UDF9</span></td>
+				 <td>VARCHAR2</td>
+				 <td>40</td>
+				 <td title='nullable'>√</td>
+				 <td title=''></td>
+				 <td>null</td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>				 
+				 </td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>					 
+				 </td>
+				 <td></td>
+				</tr>
+				<tr>
+				 <td><span id="CENSDT_UDF10">CENSDT_UDF10</span></td>
+				 <td>VARCHAR2</td>
+				 <td>40</td>
+				 <td title='nullable'>√</td>
+				 <td title=''></td>
+				 <td>null</td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>				 
+				 </td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>					 
+				 </td>
+				 <td></td>
+				</tr>
+								</tbody>
+				</table>
+				<p title='40 columns'>Table contained <span id="recordNumber">0</span> rows<p/>
+			</div>
+		</div>
+		<div class="box box-primary">		
+			<div class="box-header with-border">
+              <i class="fa fa-sitemap"></i>
+
+              <h3 id="Indexes" class="box-title">Indexes</h3>
+
+              <div class="box-tools pull-right">
+                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
+                </button>
+                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+              </div>
+            </div>	
+			<div class="box-body">
+				<table id="indexes_table" class="table table-bordered table-striped dataTable" role="grid">
+				<thead>
+				 <tr>
+				  <th>Constraint Name</th>
+				  <th>Type</th>
+				  <th>Sort</th>
+				  <th>Column(s)</th>
+				 </tr>
+				</thead>
+				<tbody>
+				 <tr>
+				  <td class='primaryKey' title='Primary Key'><i class='icon ion-key iconkey'></i> PK_CENSUS_DATA</td>
+				  <td>Primary key</td>
+				  <td><span title='Ascending'>Asc</span></td>
+				  <td>CENSDT_ID</td>
+				 </tr>				 
+				 <tr>
+				  <td title='Indexed'>IDX_CENSDT_TMDTUSE</td>
+				  <td>Performance</td>
+				  <td><span title='Ascending'>Asc</span>/<span title='Ascending'>Asc</span></td>
+				  <td>CENSTM_ID + CENSDT_DATE</td>
+				 </tr>				 
+				</tbody>
+				</table>   			  
+			</div><!-- /.box-body -->
+		</div>
+				<div class="box box-primary">		
+			<div class="box-header with-border">
+              <i class="fa fa-code-fork"></i>
+
+              <h3 id="Relationships" class="box-title">Relationships</h3>
+
+              <div class="box-tools pull-right">
+                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
+                </button>
+                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+              </div>
+            </div>	
+			<div class="box-body">	
+			<div class="nav-tabs-custom" style="cursor: move;">
+            <!-- Tabs within a box -->
+			<h5>Close relationships within degrees of separation</h5>
+            <ul class="nav nav-tabs pull-left ui-sortable-handle">
+			  			              <li class="active"><a href="#oneDegreeImg-chart" data-toggle="tab" aria-expanded="true">One</a></li>			  			 
+			  			              <li class=""><a href="#twodegreesDegreeImg-chart" data-toggle="tab" aria-expanded="true">Two degrees</a></li>			  			 
+			  			              <li class=""><a href="#oneimpliedDegreeImg-chart" data-toggle="tab" aria-expanded="true">One implied</a></li>			  			 
+			  			              <li class=""><a href="#twoimpliedDegreeImg-chart" data-toggle="tab" aria-expanded="true">Two implied</a></li>			  			 
+            </ul>
+            <div class="tab-content no-padding">            
+				<div class="chart tab-pane active" id="oneDegreeImg-chart" style="position: relative; overflow-x:auto;">					
+					<map id="oneDegreeRelationshipsDiagram" name="oneDegreeRelationshipsDiagram">
+<area shape="rect" id="node1" href="CENSUS_DATA.html" title="CENSUS_DATA" alt="" coords="551,275,861,1517">
+<area shape="rect" id="node2" href="SO_ACTIVITY.html" title="SO_ACTIVITY" alt="" coords="268,720,495,955">
+<area shape="rect" id="node3" href="CENSUS_TEAM.html" title="CENSUS_TEAM" alt="" coords="266,5,497,152">
+<area shape="rect" id="node4" href="DEPARTMENT.html" title="DEPARTMENT" alt="" coords="278,1319,485,1524">
+<area shape="rect" id="node5" href="DOCKET.html" title="DOCKET" alt="" coords="262,1008,501,1301">
+<area shape="rect" id="node6" href="DAY_PART.html" title="DAY_PART" alt="" coords="286,363,477,509">
+<area shape="rect" id="node7" href="JOB.html" title="JOB" alt="" coords="265,169,498,345">
+<area shape="rect" id="node8" href="PROJECT.html" title="PROJECT" alt="" coords="5,1029,212,1205">
+<area shape="rect" id="node9" href="ST_SKILL.html" title="ST_SKILL" alt="" coords="256,527,507,703">
+</map>
+
+					<a name='diagram'><img id='oneDegreeImg' src='../diagrams/CENSUS_DATA.1degree.png' usemap='#oneDegreeRelationshipsDiagram' class='diagram' border='0' alt='' align='left'></a>							
+				</div>
+				<div class="chart tab-pane " id="twodegreesDegreeImg-chart" style="position: relative; overflow-x:auto;">					
+					<map id="twoDegreesRelationshipsDiagram" name="twoDegreesRelationshipsDiagram">
+<area shape="rect" id="node1" href="AGG_USER_WRK.html" title="AGG_USER_WRK" alt="" coords="957,8295,1163,8383">
+<area shape="rect" id="node2" href="DEPARTMENT.html" title="DEPARTMENT" alt="" coords="611,7369,818,7575">
+<area shape="rect" id="node3" href="DOCKET.html" title="DOCKET" alt="" coords="595,7808,834,8101">
+<area shape="rect" id="node4" href="JOB.html" title="JOB" alt="" coords="598,6185,831,6361">
+<area shape="rect" id="node5" href="PROJECT.html" title="PROJECT" alt="" coords="313,7576,520,7752">
+<area shape="rect" id="node6" href="TIME_CODE.html" title="TIME_CODE" alt="" coords="332,8121,501,8209">
+<area shape="rect" id="node7" href="WORKBRAIN_TEAM.html" title="WORKBRAIN_TEAM" alt="" coords="13,5273,237,5361">
+<area shape="rect" id="node18" href="LABOR_METRIC_SEC.html" title="LABOR_METRIC_SEC" alt="" coords="5,7637,244,7725">
+<area shape="rect" id="node20" href="ACTIVITY_SET.html" title="ACTIVITY_SET" alt="" coords="324,7980,509,8068">
+<area shape="rect" id="node21" href="MACHINE.html" title="MACHINE" alt="" coords="342,7769,491,7857">
+<area shape="rect" id="node22" href="PART.html" title="PART" alt="" coords="356,7875,477,7963">
+<area shape="rect" id="node41" href="COLOUR.html" title="COLOUR" alt="" coords="51,2311,198,2399">
+<area shape="rect" id="node8" href="AS_EMP_TEAM_PRIORITY_BY_SHIFT.html" title="AS_EMP_TEAM_PRIORITY_BY_SHIFT" alt="" coords="884,5451,1236,5539">
+<area shape="rect" id="node9" href="CENSUS_DATA.html" title="CENSUS_DATA" alt="" coords="905,4013,1215,5256">
+<area shape="rect" id="node10" href="SO_ACTIVITY.html" title="SO_ACTIVITY" alt="" coords="601,2325,828,2560">
+<area shape="rect" id="node11" href="CENSUS_TEAM.html" title="CENSUS_TEAM" alt="" coords="599,4397,830,4544">
+<area shape="rect" id="node12" href="DAY_PART.html" title="DAY_PART" alt="" coords="619,752,810,899">
+<area shape="rect" id="node13" href="ST_SKILL.html" title="ST_SKILL" alt="" coords="589,3168,840,3344">
+<area shape="rect" id="node69" href="SO_SCHEDULE_GROUP.html" title="SO_SCHEDULE_GROUP" alt="" coords="288,2252,545,2340">
+<area shape="rect" id="node17" href="DAY_PART_SET.html" title="DAY_PART_SET" alt="" coords="318,784,515,872">
+<area shape="rect" id="node90" href="ST_SKILL_TYPE.html" title="ST_SKILL_TYPE" alt="" coords="317,3229,517,3317">
+<area shape="rect" id="node14" href="CLOCK_PRESET.html" title="CLOCK_PRESET" alt="" coords="958,8716,1162,8804">
+<area shape="rect" id="node15" href="CRIT_CLAUSE_JOB.html" title="CRIT_CLAUSE_JOB" alt="" coords="948,6399,1172,6487">
+<area shape="rect" id="node16" href="CS_STAFFING_LEVEL.html" title="CS_STAFFING_LEVEL" alt="" coords="941,3908,1179,3996">
+<area shape="rect" id="node19" href="DEPARTMENT_RDR_GRP.html" title="DEPARTMENT_RDR_GRP" alt="" coords="926,7557,1194,7645">
+<area shape="rect" id="node23" href="DOCKET_RDR_GRP.html" title="DOCKET_RDR_GRP" alt="" coords="946,8505,1174,8593">
+<area shape="rect" id="node24" href="EMP_DEF_LAB.html" title="EMP_DEF_LAB" alt="" coords="965,8400,1155,8488">
+<area shape="rect" id="node25" href="EMP_SCHD_DTL_LAYER.html" title="EMP_SCHD_DTL_LAYER" alt="" coords="930,5661,1190,5749">
+<area shape="rect" id="node26" href="EMPLOYEE_JOB.html" title="EMPLOYEE_JOB" alt="" coords="958,6504,1162,6592">
+<area shape="rect" id="node27" href="EMPLOYEE_JOB_POSTING.html" title="EMPLOYEE_JOB_POSTING" alt="" coords="919,6609,1201,6697">
+<area shape="rect" id="node28" href="EMPLOYEE_SCHED_DTL.html" title="EMPLOYEE_SCHED_DTL" alt="" coords="928,5767,1192,5855">
+<area shape="rect" id="node29" href="ES_ACT_TYPE_MAP.html" title="ES_ACT_TYPE_MAP" alt="" coords="947,1693,1173,1781">
+<area shape="rect" id="node30" href="ES_ACTIVITY_REASON.html" title="ES_ACTIVITY_REASON" alt="" coords="937,1799,1183,1887">
+<area shape="rect" id="node31" href="ES_ACTIVITY_SHIFT_STATUS.html" title="ES_ACTIVITY_SHIFT_STATUS" alt="" coords="912,1904,1208,1992">
+<area shape="rect" id="node32" href="ES_CLIST_EMPLOYEE.html" title="ES_CLIST_EMPLOYEE" alt="" coords="937,6715,1183,6803">
+<area shape="rect" id="node33" href="ES_JOB_ASSOCIATION.html" title="ES_JOB_ASSOCIATION" alt="" coords="935,6820,1185,6908">
+<area shape="rect" id="node34" href="ES_JOB_TEAM_SKILL.html" title="ES_JOB_TEAM_SKILL" alt="" coords="1308,5519,1549,5607">
+<area shape="rect" id="node35" href="JOB_TEAM.html" title="JOB_TEAM" alt="" coords="979,5872,1141,5960">
+<area shape="rect" id="node36" href="ES_RELIEF_ACTIVITY.html" title="ES_RELIEF_ACTIVITY" alt="" coords="941,1272,1179,1360">
+<area shape="rect" id="node37" href="ES_ROTROW_ASGMT.html" title="ES_ROTROW_ASGMT" alt="" coords="940,1377,1180,1465">
+<area shape="rect" id="node38" href="ES_ROTROW_CONFLICTS.html" title="ES_ROTROW_CONFLICTS" alt="" coords="923,7979,1197,8067">
+<area shape="rect" id="node39" href="ES_ROW_LM.html" title="ES_ROW_LM" alt="" coords="973,8084,1147,8172">
+<area shape="rect" id="node40" href="ES_SHIFT_ATTRIBUTE.html" title="ES_SHIFT_ATTRIBUTE" alt="" coords="937,568,1183,656">
+<area shape="rect" id="node42" href="ES_SHIFT_BREAK.html" title="ES_SHIFT_BREAK" alt="" coords="1322,663,1535,751">
+<area shape="rect" id="node43" href="ES_SHIFT_DAY_PART.html" title="ES_SHIFT_DAY_PART" alt="" coords="1309,479,1548,567">
+<area shape="rect" id="node44" href="ES_SHIFT_DETAIL.html" title="ES_SHIFT_DETAIL" alt="" coords="953,7663,1167,7751">
+<area shape="rect" id="node45" href="ES_SHIFT_DETAIL_LAYER.html" title="ES_SHIFT_DETAIL_LAYER" alt="" coords="925,7452,1195,7540">
+<area shape="rect" id="node46" href="ES_SHIFT_HIST_DET.html" title="ES_SHIFT_HIST_DET" alt="" coords="943,7768,1177,7856">
+<area shape="rect" id="node47" href="ES_SHIFT_HIST_SKILL.html" title="ES_SHIFT_HIST_SKILL" alt="" coords="937,2855,1183,2943">
+<area shape="rect" id="node48" href="ES_SHIFT_SUMMARY_SKILL.html" title="ES_SHIFT_SUMMARY_SKILL" alt="" coords="915,2960,1205,3048">
+<area shape="rect" id="node49" href="ES_SHIFT_TYPE_TEAM.html" title="ES_SHIFT_TYPE_TEAM" alt="" coords="935,5556,1185,5644">
+<area shape="rect" id="node50" href="ES_SHIFTPREF_DETAIL.html" title="ES_SHIFTPREF_DETAIL" alt="" coords="933,216,1187,304">
+<area shape="rect" id="node51" href="ES_SHIFTPREF_DETAIL_HISTORY.html" title="ES_SHIFTPREF_DETAIL_HISTORY" alt="" coords="895,321,1225,409">
+<area shape="rect" id="node52" href="ES_STAFFING_REQ.html" title="ES_STAFFING_REQ" alt="" coords="948,956,1172,1044">
+<area shape="rect" id="node53" href="ES_TMPL_SHIFT_REQ.html" title="ES_TMPL_SHIFT_REQ" alt="" coords="938,815,1182,903">
+<area shape="rect" id="node54" href="ES_TMPL_SHIFT_REQ_SHIFT_SKL.html" title="ES_TMPL_SHIFT_REQ_SHIFT_SKL" alt="" coords="893,3065,1227,3153">
+<area shape="rect" id="node55" href="ES_TMPL_STAFF_REQ.html" title="ES_TMPL_STAFF_REQ" alt="" coords="937,2045,1183,2133">
+<area shape="rect" id="node56" href="ES_TMPL_STAFF_REQ_SKILL.html" title="ES_TMPL_STAFF_REQ_SKILL" alt="" coords="1280,2080,1577,2168">
+<area shape="rect" id="node57" href="ES_WORKLOAD_CENSUS.html" title="ES_WORKLOAD_CENSUS" alt="" coords="926,5,1194,93">
+<area shape="rect" id="node58" href="ES_WORKLOAD_REQ.html" title="ES_WORKLOAD_REQ" alt="" coords="941,673,1179,761">
+<area shape="rect" id="node59" href="JOB_RATE.html" title="JOB_RATE" alt="" coords="980,6925,1140,7013">
+<area shape="rect" id="node60" href="JOB_RDR_GRP.html" title="JOB_RDR_GRP" alt="" coords="963,5977,1157,6065">
+<area shape="rect" id="node61" href="LABOR_SHORTCUT_DTL.html" title="LABOR_SHORTCUT_DTL" alt="" coords="927,8189,1193,8277">
+<area shape="rect" id="node62" href="MP_DAILY_OVERRIDE.html" title="MP_DAILY_OVERRIDE" alt="" coords="939,7241,1181,7329">
+<area shape="rect" id="node63" href="MP_TEMPLATE_OVERRIDE.html" title="MP_TEMPLATE_OVERRIDE" alt="" coords="921,7136,1199,7224">
+<area shape="rect" id="node64" href="MP_TEMPLATE_REQUIREMENT.html" title="MP_TEMPLATE_REQUIREMENT" alt="" coords="903,7347,1217,7435">
+<area shape="rect" id="node65" href="PROJECT_RDR_GRP.html" title="PROJECT_RDR_GRP" alt="" coords="597,8299,832,8387">
+<area shape="rect" id="node66" href="RTSS_SHIFT.html" title="RTSS_SHIFT" alt="" coords="973,3381,1147,3469">
+<area shape="rect" id="node67" href="SB_SCHD_BID_SPAT.html" title="SB_SCHD_BID_SPAT" alt="" coords="943,6083,1177,6171">
+<area shape="rect" id="node68" href="SCHED_COST_DETAIL.html" title="SCHED_COST_DETAIL" alt="" coords="937,7873,1183,7961">
+<area shape="rect" id="node70" href="SHIFT_PATTERN_SHIFT_LABOR.html" title="SHIFT_PATTERN_SHIFT_LABOR" alt="" coords="902,7031,1218,7119">
+<area shape="rect" id="node71" href="SHIFT_PREMIUM_ZONE.html" title="SHIFT_PREMIUM_ZONE" alt="" coords="933,8611,1187,8699">
+<area shape="rect" id="node72" href="SO_CLIENT_STFDEF.html" title="SO_CLIENT_STFDEF" alt="" coords="943,2539,1177,2627">
+<area shape="rect" id="node73" href="SO_CLIENTYP_STFDEF.html" title="SO_CLIENTYP_STFDEF" alt="" coords="933,3697,1187,3785">
+<area shape="rect" id="node74" href="SO_DAY_PART_OVR.html" title="SO_DAY_PART_OVR" alt="" coords="945,111,1175,199">
+<area shape="rect" id="node75" href="SO_DISTRIB_DETAIL.html" title="SO_DISTRIB_DETAIL" alt="" coords="943,463,1177,551">
+<area shape="rect" id="node76" href="SO_EMP_GRP_ACTRUL.html" title="SO_EMP_GRP_ACTRUL" alt="" coords="933,1483,1187,1571">
+<area shape="rect" id="node77" href="SO_EVENT_DETAIL.html" title="SO_EVENT_DETAIL" alt="" coords="949,1061,1171,1149">
+<area shape="rect" id="node78" href="SO_HIST_INT_REQ.html" title="SO_HIST_INT_REQ" alt="" coords="950,2328,1170,2416">
+<area shape="rect" id="node79" href="SO_INTERVAL_REQ.html" title="SO_INTERVAL_REQ" alt="" coords="947,2223,1173,2311">
+<area shape="rect" id="node80" href="SO_POSN_SET_ELMTS.html" title="SO_POSN_SET_ELMTS" alt="" coords="934,6188,1186,6276">
+<area shape="rect" id="node81" href="SO_SHIFT_ACTIVITY.html" title="SO_SHIFT_ACTIVITY" alt="" coords="1314,1167,1543,1255">
+<area shape="rect" id="node82" href="SO_SHIFT_DETAIL.html" title="SO_SHIFT_DETAIL" alt="" coords="952,1167,1168,1255">
+<area shape="rect" id="node83" href="SO_SHIFT_REQ.html" title="SO_SHIFT_REQ" alt="" coords="962,3487,1158,3575">
+<area shape="rect" id="node84" href="SO_TASK_TMPLT.html" title="SO_TASK_TMPLT" alt="" coords="955,1588,1165,1676">
+<area shape="rect" id="node85" href="SR_DETAIL.html" title="SR_DETAIL" alt="" coords="1347,2451,1510,2539">
+<area shape="rect" id="node86" href="SR_SUMMARY.html" title="SR_SUMMARY" alt="" coords="967,2749,1153,2837">
+<area shape="rect" id="node87" href="SR_SHIFT_OFFSET.html" title="SR_SHIFT_OFFSET" alt="" coords="949,3592,1171,3680">
+<area shape="rect" id="node88" href="ST_EMP_SKILL.html" title="ST_EMP_SKILL" alt="" coords="963,3276,1157,3364">
+<area shape="rect" id="node89" href="ST_JOB_SKILL.html" title="ST_JOB_SKILL" alt="" coords="965,3803,1155,3891">
+<area shape="rect" id="node91" href="ST_SKILL_COURSE.html" title="ST_SKILL_COURSE" alt="" coords="947,3171,1173,3259">
+<area shape="rect" id="node92" href="ST_SKILL_TEAM.html" title="ST_SKILL_TEAM" alt="" coords="959,2644,1161,2732">
+<area shape="rect" id="node93" href="TARGET_DETAIL_JOB.html" title="TARGET_DETAIL_JOB" alt="" coords="939,6293,1181,6381">
+<area shape="rect" id="node94" href="TM_ACTIONITEM.html" title="TM_ACTIONITEM" alt="" coords="957,2433,1163,2521">
+<area shape="rect" id="node95" href="TM_ACTIONITEM_JOB.html" title="TM_ACTIONITEM_JOB" alt="" coords="1306,5201,1551,5289">
+<area shape="rect" id="node96" href="UNSTFD_SHIFT.html" title="UNSTFD_SHIFT" alt="" coords="963,5273,1157,5361">
+<area shape="rect" id="node97" href="WORK_DETAIL.html" title="WORK_DETAIL" alt="" coords="965,8821,1155,8909">
+</map>
+
+					<a name='diagram'><img id='twodegreesDegreeImg' src='../diagrams/CENSUS_DATA.2degrees.png' usemap='#twoDegreesRelationshipsDiagram' class='diagram' border='0' alt='' align='left'></a>							
+				</div>
+				<div class="chart tab-pane " id="oneimpliedDegreeImg-chart" style="position: relative; overflow-x:auto;">					
+					<map id="oneDegreeRelationshipsDiagramImplied" name="oneDegreeRelationshipsDiagramImplied">
+<area shape="rect" id="node1" href="CENSUS_DATA.html" title="CENSUS_DATA" alt="" coords="551,245,861,1488">
+<area shape="rect" id="node2" href="SO_ACTIVITY.html" title="SO_ACTIVITY" alt="" coords="268,333,495,568">
+<area shape="rect" id="node3" href="CENSUS_TEAM.html" title="CENSUS_TEAM" alt="" coords="266,5,497,152">
+<area shape="rect" id="node4" href="DEPARTMENT.html" title="DEPARTMENT" alt="" coords="278,1319,485,1524">
+<area shape="rect" id="node5" href="DOCKET.html" title="DOCKET" alt="" coords="262,1008,501,1301">
+<area shape="rect" id="node6" href="DAY_PART.html" title="DAY_PART" alt="" coords="286,169,477,316">
+<area shape="rect" id="node7" href="JOB.html" title="JOB" alt="" coords="265,585,498,761">
+<area shape="rect" id="node8" href="PROJECT.html" title="PROJECT" alt="" coords="5,1029,212,1205">
+<area shape="rect" id="node9" href="ST_SKILL.html" title="ST_SKILL" alt="" coords="256,779,507,955">
+<area shape="rect" id="node10" href="VIEW_CENSUSDT_REQ.html" title="VIEW_CENSUSDT_REQ" alt="" coords="905,165,1152,347">
+</map>
+
+					<a name='diagram'><img id='oneimpliedDegreeImg' src='../diagrams/CENSUS_DATA.implied1degrees.png' usemap='#oneDegreeRelationshipsDiagramImplied' class='diagram' border='0' alt='' align='left'></a>							
+				</div>
+				<div class="chart tab-pane " id="twoimpliedDegreeImg-chart" style="position: relative; overflow-x:auto;">					
+					<map id="twoDegreesRelationshipsDiagramImplied" name="twoDegreesRelationshipsDiagramImplied">
+<area shape="rect" id="node1" href="AGG_USER_WRK.html" title="AGG_USER_WRK" alt="" coords="957,11348,1163,11436">
+<area shape="rect" id="node2" href="DEPARTMENT.html" title="DEPARTMENT" alt="" coords="611,10827,818,11032">
+<area shape="rect" id="node3" href="DOCKET.html" title="DOCKET" alt="" coords="595,11884,834,12177">
+<area shape="rect" id="node4" href="JOB.html" title="JOB" alt="" coords="598,8496,831,8672">
+<area shape="rect" id="node5" href="PROJECT.html" title="PROJECT" alt="" coords="313,11681,520,11857">
+<area shape="rect" id="node6" href="TIME_CODE.html" title="TIME_CODE" alt="" coords="332,11121,501,11209">
+<area shape="rect" id="node7" href="WORKBRAIN_TEAM.html" title="WORKBRAIN_TEAM" alt="" coords="13,5748,237,5836">
+<area shape="rect" id="node18" href="LABOR_METRIC_SEC.html" title="LABOR_METRIC_SEC" alt="" coords="5,11121,244,11209">
+<area shape="rect" id="node20" href="ACTIVITY_SET.html" title="ACTIVITY_SET" alt="" coords="324,13603,509,13691">
+<area shape="rect" id="node21" href="MACHINE.html" title="MACHINE" alt="" coords="342,13392,491,13480">
+<area shape="rect" id="node22" href="PART.html" title="PART" alt="" coords="356,13497,477,13585">
+<area shape="rect" id="node41" href="COLOUR.html" title="COLOUR" alt="" coords="51,1036,198,1124">
+<area shape="rect" id="node8" href="AS_EMP_TEAM_PRIORITY_BY_SHIFT.html" title="AS_EMP_TEAM_PRIORITY_BY_SHIFT" alt="" coords="884,9889,1236,9977">
+<area shape="rect" id="node9" href="CENSUS_DATA.html" title="CENSUS_DATA" alt="" coords="905,5065,1215,6308">
+<area shape="rect" id="node10" href="SO_ACTIVITY.html" title="SO_ACTIVITY" alt="" coords="601,2337,828,2572">
+<area shape="rect" id="node11" href="CENSUS_TEAM.html" title="CENSUS_TEAM" alt="" coords="599,5716,830,5863">
+<area shape="rect" id="node12" href="DAY_PART.html" title="DAY_PART" alt="" coords="619,856,810,1003">
+<area shape="rect" id="node13" href="ST_SKILL.html" title="ST_SKILL" alt="" coords="589,3868,840,4044">
+<area shape="rect" id="node70" href="SO_SCHEDULE_GROUP.html" title="SO_SCHEDULE_GROUP" alt="" coords="288,4668,545,4756">
+<area shape="rect" id="node17" href="DAY_PART_SET.html" title="DAY_PART_SET" alt="" coords="318,60,515,148">
+<area shape="rect" id="node91" href="ST_SKILL_TYPE.html" title="ST_SKILL_TYPE" alt="" coords="317,4024,517,4112">
+<area shape="rect" id="node14" href="CLOCK_PRESET.html" title="CLOCK_PRESET" alt="" coords="958,12136,1162,12224">
+<area shape="rect" id="node15" href="CRIT_CLAUSE_JOB.html" title="CRIT_CLAUSE_JOB" alt="" coords="948,9147,1172,9235">
+<area shape="rect" id="node16" href="CS_STAFFING_LEVEL.html" title="CS_STAFFING_LEVEL" alt="" coords="941,4749,1179,4837">
+<area shape="rect" id="node19" href="DEPARTMENT_RDR_GRP.html" title="DEPARTMENT_RDR_GRP" alt="" coords="926,10639,1194,10727">
+<area shape="rect" id="node23" href="DOCKET_RDR_GRP.html" title="DOCKET_RDR_GRP" alt="" coords="946,13311,1174,13399">
+<area shape="rect" id="node24" href="EMP_DEF_LAB.html" title="EMP_DEF_LAB" alt="" coords="965,12347,1155,12435">
+<area shape="rect" id="node25" href="EMP_SCHD_DTL_LAYER.html" title="EMP_SCHD_DTL_LAYER" alt="" coords="930,7851,1190,7939">
+<area shape="rect" id="node26" href="EMPLOYEE_JOB.html" title="EMPLOYEE_JOB" alt="" coords="958,13133,1162,13221">
+<area shape="rect" id="node27" href="EMPLOYEE_JOB_POSTING.html" title="EMPLOYEE_JOB_POSTING" alt="" coords="919,12956,1201,13044">
+<area shape="rect" id="node28" href="EMPLOYEE_SCHED_DTL.html" title="EMPLOYEE_SCHED_DTL" alt="" coords="928,7956,1192,8044">
+<area shape="rect" id="node29" href="ES_ACT_TYPE_MAP.html" title="ES_ACT_TYPE_MAP" alt="" coords="947,2237,1173,2325">
+<area shape="rect" id="node30" href="ES_ACTIVITY_REASON.html" title="ES_ACTIVITY_REASON" alt="" coords="937,2343,1183,2431">
+<area shape="rect" id="node31" href="ES_ACTIVITY_SHIFT_STATUS.html" title="ES_ACTIVITY_SHIFT_STATUS" alt="" coords="912,1569,1208,1657">
+<area shape="rect" id="node32" href="ES_CLIST_EMPLOYEE.html" title="ES_CLIST_EMPLOYEE" alt="" coords="937,8689,1183,8777">
+<area shape="rect" id="node33" href="ES_JOB_ASSOCIATION.html" title="ES_JOB_ASSOCIATION" alt="" coords="935,8795,1185,8883">
+<area shape="rect" id="node34" href="ES_JOB_TEAM_SKILL.html" title="ES_JOB_TEAM_SKILL" alt="" coords="1343,4445,1584,4533">
+<area shape="rect" id="node35" href="JOB_TEAM.html" title="JOB_TEAM" alt="" coords="979,4960,1141,5048">
+<area shape="rect" id="node36" href="ES_RELIEF_ACTIVITY.html" title="ES_RELIEF_ACTIVITY" alt="" coords="941,1675,1179,1763">
+<area shape="rect" id="node37" href="ES_ROTROW_ASGMT.html" title="ES_ROTROW_ASGMT" alt="" coords="940,1780,1180,1868">
+<area shape="rect" id="node38" href="ES_ROTROW_CONFLICTS.html" title="ES_ROTROW_CONFLICTS" alt="" coords="923,11745,1197,11833">
+<area shape="rect" id="node39" href="ES_ROW_LM.html" title="ES_ROW_LM" alt="" coords="973,11851,1147,11939">
+<area shape="rect" id="node40" href="ES_SHIFT_ATTRIBUTE.html" title="ES_SHIFT_ATTRIBUTE" alt="" coords="937,487,1183,575">
+<area shape="rect" id="node42" href="ES_SHIFT_BREAK.html" title="ES_SHIFT_BREAK" alt="" coords="1357,519,1570,607">
+<area shape="rect" id="node43" href="ES_SHIFT_DAY_PART.html" title="ES_SHIFT_DAY_PART" alt="" coords="1344,413,1583,501">
+<area shape="rect" id="node44" href="ES_SHIFT_DETAIL.html" title="ES_SHIFT_DETAIL" alt="" coords="953,10744,1167,10832">
+<area shape="rect" id="node45" href="ES_SHIFT_DETAIL_LAYER.html" title="ES_SHIFT_DETAIL_LAYER" alt="" coords="925,10885,1195,10973">
+<area shape="rect" id="node46" href="ES_SHIFT_HIST_DET.html" title="ES_SHIFT_HIST_DET" alt="" coords="943,11243,1177,11331">
+<area shape="rect" id="node47" href="ES_SHIFT_HIST_SKILL.html" title="ES_SHIFT_HIST_SKILL" alt="" coords="937,3651,1183,3739">
+<area shape="rect" id="node48" href="ES_SHIFT_SUMMARY_SKILL.html" title="ES_SHIFT_SUMMARY_SKILL" alt="" coords="915,3756,1205,3844">
+<area shape="rect" id="node49" href="ES_SHIFT_TYPE_TEAM.html" title="ES_SHIFT_TYPE_TEAM" alt="" coords="935,8061,1185,8149">
+<area shape="rect" id="node50" href="ES_SHIFTPREF_DETAIL.html" title="ES_SHIFTPREF_DETAIL" alt="" coords="933,345,1187,433">
+<area shape="rect" id="node51" href="ES_SHIFTPREF_DETAIL_HISTORY.html" title="ES_SHIFTPREF_DETAIL_HISTORY" alt="" coords="1299,289,1628,377">
+<area shape="rect" id="node52" href="ES_STAFFING_REQ.html" title="ES_STAFFING_REQ" alt="" coords="948,1323,1172,1411">
+<area shape="rect" id="node53" href="ES_TMPL_SHIFT_REQ.html" title="ES_TMPL_SHIFT_REQ" alt="" coords="938,1145,1182,1233">
+<area shape="rect" id="node54" href="ES_TMPL_SHIFT_REQ_SHIFT_SKL.html" title="ES_TMPL_SHIFT_REQ_SHIFT_SKL" alt="" coords="893,3861,1227,3949">
+<area shape="rect" id="node55" href="ES_TMPL_STAFF_REQ.html" title="ES_TMPL_STAFF_REQ" alt="" coords="937,3368,1183,3456">
+<area shape="rect" id="node56" href="ES_TMPL_STAFF_REQ_SKILL.html" title="ES_TMPL_STAFF_REQ_SKILL" alt="" coords="1315,3420,1612,3508">
+<area shape="rect" id="node57" href="ES_WORKLOAD_CENSUS.html" title="ES_WORKLOAD_CENSUS" alt="" coords="926,968,1194,1056">
+<area shape="rect" id="node58" href="ES_WORKLOAD_REQ.html" title="ES_WORKLOAD_REQ" alt="" coords="941,4376,1179,4464">
+<area shape="rect" id="node59" href="JOB_RATE.html" title="JOB_RATE" alt="" coords="980,9571,1140,9659">
+<area shape="rect" id="node60" href="JOB_RDR_GRP.html" title="JOB_RDR_GRP" alt="" coords="963,8936,1157,9024">
+<area shape="rect" id="node61" href="JP_JOB_POSTING.html" title="JP_JOB_POSTING" alt="" coords="953,9252,1167,9340">
+<area shape="rect" id="node62" href="LABOR_SHORTCUT_DTL.html" title="LABOR_SHORTCUT_DTL" alt="" coords="927,11535,1193,11623">
+<area shape="rect" id="node63" href="MP_DAILY_OVERRIDE.html" title="MP_DAILY_OVERRIDE" alt="" coords="939,10076,1181,10164">
+<area shape="rect" id="node64" href="MP_TEMPLATE_OVERRIDE.html" title="MP_TEMPLATE_OVERRIDE" alt="" coords="921,10287,1199,10375">
+<area shape="rect" id="node65" href="MP_TEMPLATE_REQUIREMENT.html" title="MP_TEMPLATE_REQUIREMENT" alt="" coords="903,10181,1217,10269">
+<area shape="rect" id="node66" href="PROJECT_RDR_GRP.html" title="PROJECT_RDR_GRP" alt="" coords="597,11563,832,11651">
+<area shape="rect" id="node67" href="RTSS_SHIFT.html" title="RTSS_SHIFT" alt="" coords="973,4165,1147,4253">
+<area shape="rect" id="node68" href="SB_SCHD_BID_SPAT.html" title="SB_SCHD_BID_SPAT" alt="" coords="943,9676,1177,9764">
+<area shape="rect" id="node69" href="SCHED_COST_DETAIL.html" title="SCHED_COST_DETAIL" alt="" coords="937,10533,1183,10621">
+<area shape="rect" id="node71" href="SHIFT_PATTERN_SHIFT_LABOR.html" title="SHIFT_PATTERN_SHIFT_LABOR" alt="" coords="902,10428,1218,10516">
+<area shape="rect" id="node72" href="SHIFT_PREMIUM_ZONE.html" title="SHIFT_PREMIUM_ZONE" alt="" coords="933,12241,1187,12329">
+<area shape="rect" id="node73" href="SO_CLIENT_STFDEF.html" title="SO_CLIENT_STFDEF" alt="" coords="943,2556,1177,2644">
+<area shape="rect" id="node74" href="SO_CLIENTYP_STFDEF.html" title="SO_CLIENTYP_STFDEF" alt="" coords="933,6860,1187,6948">
+<area shape="rect" id="node75" href="SO_DAY_PART_OVR.html" title="SO_DAY_PART_OVR" alt="" coords="945,709,1175,797">
+<area shape="rect" id="node76" href="SO_DISTRIB_DETAIL.html" title="SO_DISTRIB_DETAIL" alt="" coords="943,204,1177,292">
+<area shape="rect" id="node77" href="SO_EMP_GRP_ACTRUL.html" title="SO_EMP_GRP_ACTRUL" alt="" coords="933,1885,1187,1973">
+<area shape="rect" id="node78" href="SO_EVENT_DETAIL.html" title="SO_EVENT_DETAIL" alt="" coords="949,1464,1171,1552">
+<area shape="rect" id="node79" href="SO_HIST_INT_REQ.html" title="SO_HIST_INT_REQ" alt="" coords="950,2697,1170,2785">
+<area shape="rect" id="node80" href="SO_INTERVAL_REQ.html" title="SO_INTERVAL_REQ" alt="" coords="947,2803,1173,2891">
+<area shape="rect" id="node81" href="SO_POSN_SET_ELMTS.html" title="SO_POSN_SET_ELMTS" alt="" coords="934,9041,1186,9129">
+<area shape="rect" id="node82" href="SO_SHIFT_ACTIVITY.html" title="SO_SHIFT_ACTIVITY" alt="" coords="1349,6432,1578,6520">
+<area shape="rect" id="node83" href="SO_SHIFT_DETAIL.html" title="SO_SHIFT_DETAIL" alt="" coords="952,6577,1168,6665">
+<area shape="rect" id="node84" href="SO_SHIFT_REQ.html" title="SO_SHIFT_REQ" alt="" coords="962,4481,1158,4569">
+<area shape="rect" id="node85" href="SO_TASK_TMPLT.html" title="SO_TASK_TMPLT" alt="" coords="955,2096,1165,2184">
+<area shape="rect" id="node86" href="SR_DETAIL.html" title="SR_DETAIL" alt="" coords="1382,913,1545,1001">
+<area shape="rect" id="node87" href="SR_SUMMARY.html" title="SR_SUMMARY" alt="" coords="967,2908,1153,2996">
+<area shape="rect" id="node88" href="SR_SHIFT_OFFSET.html" title="SR_SHIFT_OFFSET" alt="" coords="949,1991,1171,2079">
+<area shape="rect" id="node89" href="ST_EMP_SKILL.html" title="ST_EMP_SKILL" alt="" coords="963,3263,1157,3351">
+<area shape="rect" id="node90" href="ST_JOB_SKILL.html" title="ST_JOB_SKILL" alt="" coords="965,6755,1155,6843">
+<area shape="rect" id="node92" href="ST_SKILL_COURSE.html" title="ST_SKILL_COURSE" alt="" coords="947,3121,1173,3209">
+<area shape="rect" id="node93" href="ST_SKILL_TEAM.html" title="ST_SKILL_TEAM" alt="" coords="959,4271,1161,4359">
+<area shape="rect" id="node94" href="TARGET_DETAIL_JOB.html" title="TARGET_DETAIL_JOB" alt="" coords="939,9393,1181,9481">
+<area shape="rect" id="node95" href="TM_ACTIONITEM.html" title="TM_ACTIONITEM" alt="" coords="957,3545,1163,3633">
+<area shape="rect" id="node96" href="TM_ACTIONITEM_JOB.html" title="TM_ACTIONITEM_JOB" alt="" coords="1341,6573,1586,6661">
+<area shape="rect" id="node97" href="UNSTFD_SHIFT.html" title="UNSTFD_SHIFT" alt="" coords="963,4855,1157,4943">
+<area shape="rect" id="node98" href="VIEW_CENSUSDT_REQ.html" title="VIEW_CENSUSDT_REQ" alt="" coords="1340,5633,1587,5815">
+<area shape="rect" id="node99" href="VIEW_DAY_PART_BY_TEAM.html" title="VIEW_DAY_PART_BY_TEAM" alt="" coords="921,87,1199,151">
+<area shape="rect" id="node100" href="VIEW_DOCKET.html" title="VIEW_DOCKET" alt="" coords="967,13605,1153,13669">
+<area shape="rect" id="node101" href="VIEW_EMP_DEF_LAB.html" title="VIEW_EMP_DEF_LAB" alt="" coords="1348,12380,1579,12444">
+<area shape="rect" id="node102" href="VIEW_EMPLOYEE_JOB.html" title="VIEW_EMPLOYEE_JOB" alt="" coords="1341,13085,1586,13149">
+<area shape="rect" id="node103" href="VIEW_EMPLOYEE_JOB_POSTING.html" title="VIEW_EMPLOYEE_JOB_POSTING" alt="" coords="1302,13003,1625,13067">
+<area shape="rect" id="node104" href="VIEW_ES_EFFECTIVE_SHIFT_DATA.html" title="VIEW_ES_EFFECTIVE_SHIFT_DATA" alt="" coords="1298,624,1629,688">
+<area shape="rect" id="node105" href="VIEW_ES_ROTATION_DAYPART.html" title="VIEW_ES_ROTATION_DAYPART" alt="" coords="907,815,1213,879">
+<area shape="rect" id="node106" href="VIEW_JOB_RATE.html" title="VIEW_JOB_RATE" alt="" coords="1363,9527,1564,9591">
+<area shape="rect" id="node107" href="VIEW_MOD_EMPLOYEE_JOB.html" title="VIEW_MOD_EMPLOYEE_JOB" alt="" coords="1319,13191,1608,13255">
+<area shape="rect" id="node108" href="VIEW_MOD_EMPLOYEE_JOB_POSTING.html" title="VIEW_MOD_EMPLOYEE_JOB_POSTING" alt="" coords="1280,12900,1647,12964">
+<area shape="rect" id="node109" href="VIEW_MOD_WORK_DETAIL.html" title="VIEW_MOD_WORK_DETAIL" alt="" coords="1326,8383,1601,8447">
+<area shape="rect" id="node110" href="WORK_DETAIL.html" title="WORK_DETAIL" alt="" coords="965,11640,1155,11728">
+<area shape="rect" id="node111" href="VIEW_PAYEXP_ADJUSTMENT.html" title="VIEW_PAYEXP_ADJUSTMENT" alt="" coords="914,8203,1206,8267">
+<area shape="rect" id="node112" href="VIEW_PAYEXP_CURRENT.html" title="VIEW_PAYEXP_CURRENT" alt="" coords="928,11453,1192,11517">
+<area shape="rect" id="node113" href="VIEW_SB_SHIFT.html" title="VIEW_SB_SHIFT" alt="" coords="1366,9711,1561,9775">
+<area shape="rect" id="node114" href="VIEW_SHIFT_PREMIUM_ZONE_FULL.html" title="VIEW_SHIFT_PREMIUM_ZONE_FULL" alt="" coords="1293,12492,1634,12556">
+<area shape="rect" id="node115" href="VIEW_SO_ACTSFTHR.html" title="VIEW_SO_ACTSFTHR" alt="" coords="1723,6359,1956,6423">
+<area shape="rect" id="node116" href="VIEW_SO_AVAIL_INFO.html" title="VIEW_SO_AVAIL_INFO" alt="" coords="942,7652,1178,7716">
+<area shape="rect" id="node117" href="VIEW_SO_CL_STFDEF.html" title="VIEW_SO_CL_STFDEF" alt="" coords="941,4668,1179,4732">
+<area shape="rect" id="node118" href="VIEW_SO_DAILY_SKD.html" title="VIEW_SO_DAILY_SKD" alt="" coords="1722,6440,1957,6504">
+<area shape="rect" id="node119" href="VIEW_SO_EMP_CSTDET.html" title="VIEW_SO_EMP_CSTDET" alt="" coords="933,6965,1187,7029">
+<area shape="rect" id="node120" href="VIEW_SO_EMP_POS.html" title="VIEW_SO_EMP_POS" alt="" coords="947,7047,1173,7111">
+<area shape="rect" id="node121" href="VIEW_SO_EMP_WORK.html" title="VIEW_SO_EMP_WORK" alt="" coords="940,7128,1180,7192">
+<area shape="rect" id="node122" href="VIEW_SO_EMPPOS_SKL.html" title="VIEW_SO_EMPPOS_SKL" alt="" coords="933,4587,1187,4651">
+<area shape="rect" id="node123" href="VIEW_SO_INT_REQ.html" title="VIEW_SO_INT_REQ" alt="" coords="1354,2908,1573,2972">
+<area shape="rect" id="node124" href="VIEW_SO_NET_STAFF.html" title="VIEW_SO_NET_STAFF" alt="" coords="941,7209,1179,7273">
+<area shape="rect" id="node125" href="VIEW_SO_NETSTF_REQ.html" title="VIEW_SO_NETSTF_REQ" alt="" coords="933,7291,1187,7355">
+<area shape="rect" id="node126" href="VIEW_SO_NETSTFRAW.html" title="VIEW_SO_NETSTFRAW" alt="" coords="937,7372,1183,7436">
+<area shape="rect" id="node127" href="VIEW_SO_POSPAY.html" title="VIEW_SO_POSPAY" alt="" coords="953,7489,1167,7553">
+<area shape="rect" id="node128" href="VIEW_SO_PROD_RESPS.html" title="VIEW_SO_PROD_RESPS" alt="" coords="933,7571,1187,7635">
+<area shape="rect" id="node129" href="VIEW_SO_SCHED.html" title="VIEW_SO_SCHED" alt="" coords="1361,6751,1566,6815">
+<area shape="rect" id="node130" href="VIEW_SO_SKDEMPACT.html" title="VIEW_SO_SKDEMPACT" alt="" coords="1716,6677,1963,6741">
+<area shape="rect" id="node131" href="VIEW_ST_EMP_SKILL.html" title="VIEW_ST_EMP_SKILL" alt="" coords="1346,3211,1581,3275">
+<area shape="rect" id="node132" href="VIEW_ST_JOB_SKILL.html" title="VIEW_ST_JOB_SKILL" alt="" coords="1347,6832,1579,6896">
+<area shape="rect" id="node133" href="VIEW_ST_SKILL.html" title="VIEW_ST_SKILL" alt="" coords="963,4003,1157,4067">
+<area shape="rect" id="node134" href="VIEW_ST_SKILL_COURSE.html" title="VIEW_ST_SKILL_COURSE" alt="" coords="1330,3100,1597,3164">
+<area shape="rect" id="node135" href="VIEW_VR_EMPLOYEE_SCHEDULE.html" title="VIEW_VR_EMPLOYEE_SCHEDULE" alt="" coords="897,8572,1223,8636">
+<area shape="rect" id="node136" href="VIEW_WORK_DETAIL.html" title="VIEW_WORK_DETAIL" alt="" coords="1348,11333,1579,11397">
+<area shape="rect" id="node137" href="VIEW_WORK_DETAIL_ADJUST.html" title="VIEW_WORK_DETAIL_ADJUST" alt="" coords="1691,13308,1988,13372">
+<area shape="rect" id="node138" href="WORK_DETAIL_ADJUST.html" title="WORK_DETAIL_ADJUST" alt="" coords="1335,12709,1591,12797">
+<area shape="rect" id="node139" href="VL_CLOCK_PRESET.html" title="VL_CLOCK_PRESET" alt="" coords="1350,12100,1577,12164">
+<area shape="rect" id="node140" href="VL_DAY_PART.html" title="VL_DAY_PART" alt="" coords="969,5,1151,69">
+<area shape="rect" id="node141" href="VL_DEPARTMENT.html" title="VL_DEPARTMENT" alt="" coords="955,7733,1165,7797">
+<area shape="rect" id="node142" href="VL_DOCKET.html" title="VL_DOCKET" alt="" coords="975,13524,1145,13588">
+<area shape="rect" id="node143" href="VL_JOB.html" title="VL_JOB" alt="" coords="993,9995,1127,10059">
+<area shape="rect" id="node144" href="VL_JP_JOB_POSTING.html" title="VL_JP_JOB_POSTING" alt="" coords="1344,9432,1583,9496">
+<area shape="rect" id="node145" href="VL_PROJECT.html" title="VL_PROJECT" alt="" coords="627,11373,803,11437">
+<area shape="rect" id="node146" href="VL_SHIFT_PREMIUM_ZONE.html" title="VL_SHIFT_PREMIUM_ZONE" alt="" coords="1325,11973,1602,12037">
+<area shape="rect" id="node147" href="VL_SO_ACTIVITY.html" title="VL_SO_ACTIVITY" alt="" coords="959,628,1161,692">
+<area shape="rect" id="node148" href="VL_SO_CLIENT_STFDEF.html" title="VL_SO_CLIENT_STFDEF" alt="" coords="1335,2556,1591,2620">
+<area shape="rect" id="node149" href="VL_SO_EVENT_DETAIL.html" title="VL_SO_EVENT_DETAIL" alt="" coords="1341,1464,1586,1528">
+<area shape="rect" id="node150" href="VL_ST_SKILL.html" title="VL_ST_SKILL" alt="" coords="973,4084,1147,4148">
+</map>
+
+					<a name='diagram'><img id='twoimpliedDegreeImg' src='../diagrams/CENSUS_DATA.implied2degrees.png' usemap='#twoDegreesRelationshipsDiagramImplied' class='diagram' border='0' alt='' align='left'></a>							
+				</div>
+			  			</div>
+			</div>
+		  </div><!-- /.box-body -->
+		</div>
+	      </section>
+    
+  </div>
+  <!-- /.content-wrapper -->
+  <footer class="main-footer">
+    <div>
+      <div class="pull-right hidden-xs">
+        <a href="https://github.com/schemaspy/schemaspy" title="GitHub for SchemaSpy"><i class="fa fa-github-square fa-2x"></i></a>
+        <a href="http://stackoverflow.com/questions/tagged/schemaspy" title="StackOverflow for SchemaSpy"><i class="fa fa-stack-overflow fa-2x"></i></a>
+      </div>
+      <strong>Generated by <a href="http://schemaspy.org/" class="logo-text"><i class="fa fa-database"></i> SchemaSpy 6.0.0-rc2</a></strong>
+    </div>
+    <!-- /.container -->
+  </footer>
+</div>
+<!-- ./wrapper -->
+
+<!-- jQuery 2.2.3 -->
+<script src="../bower/admin-lte/plugins/jQuery/jquery-2.2.3.min.js"></script>
+<script src="../bower/admin-lte/plugins/jQueryUI/jquery-ui.min.js"></script>
+<!-- Bootstrap 3.3.5 -->
+<script src="../bower/admin-lte/bootstrap/js/bootstrap.min.js"></script>
+<!-- DataTables -->
+<script src="../bower/datatables.net/jquery.dataTables.min.js"></script>
+<script src="../bower/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
+<script src="../bower/datatables.net-buttons/dataTables.buttons.min.js"></script>
+<script src="../bower/datatables.net-buttons-bs/js/buttons.bootstrap.min.js"></script>
+<script src="../bower/datatables.net-buttons/buttons.html5.min.js"></script>
+<script src="../bower/datatables.net-buttons/buttons.print.min.js"></script>
+<script src="../bower/datatables.net-buttons/buttons.colVis.min.js"></script>
+
+<!-- SlimScroll -->
+<script src="../bower/admin-lte/plugins/slimScroll/jquery.slimscroll.min.js"></script>
+<!-- FastClick -->
+<script src="../bower/admin-lte/plugins/fastclick/fastclick.js"></script>
+<!-- Salvattore -->
+<script src="../bower/salvattore/salvattore.min.js"></script>
+<!-- AnchorJS -->
+<script src="../bower/anchor-js/anchor.min.js"></script>
+<!-- CodeMirror -->
+<script src="../bower/codemirror/codemirror.js"></script>
+<script src="../bower/codemirror/sql.js"></script>
+<!-- AdminLTE App -->
+<script src="../bower/admin-lte/dist/js/app.min.js"></script>
+<script src="table.js"></script>
+<script src="../schemaSpy.js"></script>
+</body>
+</html>

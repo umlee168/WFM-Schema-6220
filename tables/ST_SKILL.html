@@ -1,0 +1,965 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>ST_SKILL - WFMSB622 Database</title>
+  <!-- Tell the browser to be responsive to screen width -->
+  <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+  <!-- Bootstrap 3.3.5 -->
+  <link rel="stylesheet" href="../bower/admin-lte/bootstrap/css/bootstrap.min.css">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="../bower/font-awesome/css/font-awesome.min.css">
+  <!-- Ionicons -->
+  <link rel="stylesheet" href="../bower/ionicons/css/ionicons.min.css">
+  <!-- DataTables -->
+  <link rel="stylesheet" href="../bower/datatables.net-bs/css/dataTables.bootstrap.min.css">
+  <link rel="stylesheet" href="../bower/datatables.net-buttons-bs/css/buttons.bootstrap.min.css">
+  <!-- Code Mirror -->
+  <link rel="stylesheet" href="../bower/codemirror/codemirror.css">
+  <!-- Fonts -->
+  <link href='../fonts/indieflower/indie-flower.css' rel='stylesheet' type='text/css'>
+  <link href='../fonts/source-sans-pro/source-sans-pro.css' rel='stylesheet' type='text/css'>
+
+  <!-- Theme style -->
+  <link rel="stylesheet" href="../bower/admin-lte/dist/css/AdminLTE.min.css">
+  <!-- Salvattore -->
+  <link rel="stylesheet" href="../bower/salvattore/salvattore.css">
+  <!-- AdminLTE Skins. Choose a skin from the css/skins
+       folder instead of downloading all of them to reduce the load. -->
+  <link rel="stylesheet" href="../bower/admin-lte/dist/css/skins/_all-skins.min.css">
+  <!-- SchemaSpy -->
+  <link rel="stylesheet" href="../schemaSpy.css">
+  
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+  <script src="../bower/html5shiv/html5shiv.min.js"></script>
+  <script src="../bower/respond/respond.min.js"></script>
+  <![endif]-->
+</head>
+<!-- ADD THE CLASS layout-top-nav TO REMOVE THE SIDEBAR. -->
+<body class="hold-transition skin-blue layout-top-nav">
+<div class="wrapper">
+  <header class="main-header">
+    <nav class="navbar navbar-static-top">
+      <div class="container">
+        <div class="navbar-header">
+          <a href="../index.html" class="navbar-brand"><b>WFMSB622</b> Database</a>
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse">
+            <i class="fa fa-bars"></i>
+          </button>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse pull-left" id="navbar-collapse">
+          <ul class="nav navbar-nav">
+            <li><a href="../index.html">Tables <span class="sr-only">(current)</span></a></li>            
+			<!--<li><a href="../components.html" title="List of system components">Components</a></li>-->
+			<li><a href="../columns.html" title="All of the columns in the schema">Columns</a></li>
+			<li><a href="../constraints.html" title="Useful for diagnosing error messages that just give constraint name or number">Constraints</a></li>
+			<li><a href="../relationships.html" title="Diagram of table relationships">Relationships</a></li>
+			<li><a href="../orphans.html" title="View of tables with neither parents nor children">Orphan&nbsp;Tables</a></li>				
+			<li><a href="../anomalies.html" title="Things that might not be quite right">Anomalies</a></li>
+          </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+        <!-- Navbar Right Menu -->
+
+      </div>
+      <!-- /.container-fluid -->
+    </nav>
+  </header>
+  <!-- Main content -->
+  <!-- Full Width Column -->
+  <div class="content-wrapper">
+          <!-- Content Header (Page header) -->
+      <section class="content-header">
+        <h1>ST_SKILL</h1></br>
+		      </section>
+      <!-- Main content -->
+      <section class="content">
+		<div class="box box-primary">
+			<div class="box-header with-border">
+			  <span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span>
+              <h3 id="Columns" class="box-title">Columns</h3>
+              <div class="box-tools pull-right">
+                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
+                </button>
+                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+              </div>
+            </div>	
+            <div class="box-body">
+				<table id="standard_table" class="table table-bordered table-striped dataTable" role="grid">
+				<thead align='left'>
+				<tr>
+				  <th>Column</th>
+				  <th>Type</th>
+				  <th>Size</th>
+				  <th title='Are nulls allowed?'>Nulls</th>
+				  <th title='Is column automatically updated?'>Auto</th>
+				  <th title='Default value'>Default</th>
+				  <th title='Columns in tables that reference this column'>Children</th>
+				  <th title='Columns in tables that are referenced by this column'>Parents</th>
+				  <th title='Comments' class="toggle"><span>Comments</span></th>
+				</tr>
+				</thead>
+				<tbody>
+				<tr>
+				 <td class='primaryKey' title='Primary Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="STSKL_ID">STSKL_ID</span></td>
+				 <td>NUMBER</td>
+				 <td>38</td>
+				 <td title=''></td>
+				 <td title=''></td>
+				 <td>null</td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				   <tr>
+					<td title="CENSUS_DATA.STSKL_ID references ST_SKILL.STSKL_ID via FK_CENSDAT_STSKLID">
+						<a href='CENSUS_DATA.html'>CENSUS_DATA</a><span class='relatedKey'>.STSKL_ID</span>
+					</td>
+					<td class="constraint detail">
+						FK_CENSDAT_STSKLID <span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span>
+					</td>
+				   </tr>
+				   <tr>
+					<td title="EMP_SCHD_DTL_LAYER.STSKL_ID references ST_SKILL.STSKL_ID via FK_ESCHDL_STSKL_ID">
+						<a href='EMP_SCHD_DTL_LAYER.html'>EMP_SCHD_DTL_LAYER</a><span class='relatedKey'>.STSKL_ID</span>
+					</td>
+					<td class="constraint detail">
+						FK_ESCHDL_STSKL_ID <span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span>
+					</td>
+				   </tr>
+				   <tr>
+					<td title="EMPLOYEE_SCHED_DTL.STSKL_ID references ST_SKILL.STSKL_ID via FK_ESCHD_STSKL_ID">
+						<a href='EMPLOYEE_SCHED_DTL.html'>EMPLOYEE_SCHED_DTL</a><span class='relatedKey'>.STSKL_ID</span>
+					</td>
+					<td class="constraint detail">
+						FK_ESCHD_STSKL_ID <span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span>
+					</td>
+				   </tr>
+				   <tr>
+					<td title="ES_JOB_TEAM_SKILL.STSKL_ID references ST_SKILL.STSKL_ID via FK_EJTS_STSKL_ID">
+						<a href='ES_JOB_TEAM_SKILL.html'>ES_JOB_TEAM_SKILL</a><span class='relatedKey'>.STSKL_ID</span>
+					</td>
+					<td class="constraint detail">
+						FK_EJTS_STSKL_ID <span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span>
+					</td>
+				   </tr>
+				   <tr>
+					<td title="ES_SHIFT_HIST_SKILL.STSKL_ID references ST_SKILL.STSKL_ID via FK_SSTSKL_STSKLID">
+						<a href='ES_SHIFT_HIST_SKILL.html'>ES_SHIFT_HIST_SKILL</a><span class='relatedKey'>.STSKL_ID</span>
+					</td>
+					<td class="constraint detail">
+						FK_SSTSKL_STSKLID <span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span>
+					</td>
+				   </tr>
+				   <tr>
+					<td title="ES_SHIFT_SUMMARY_SKILL.STSKL_ID references ST_SKILL.STSKL_ID via FK_STSKL_STSKLD">
+						<a href='ES_SHIFT_SUMMARY_SKILL.html'>ES_SHIFT_SUMMARY_SKILL</a><span class='relatedKey'>.STSKL_ID</span>
+					</td>
+					<td class="constraint detail">
+						FK_STSKL_STSKLD <span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span>
+					</td>
+				   </tr>
+				   <tr>
+					<td title="ES_TMPL_SHIFT_REQ_SHIFT_SKL.STSKL_ID references ST_SKILL.STSKL_ID via FK_ETSRSS_STSKL_ID">
+						<a href='ES_TMPL_SHIFT_REQ_SHIFT_SKL.html'>ES_TMPL_SHIFT_REQ_SHIFT_SKL</a><span class='relatedKey'>.STSKL_ID</span>
+					</td>
+					<td class="constraint detail">
+						FK_ETSRSS_STSKL_ID <span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span>
+					</td>
+				   </tr>
+				   <tr>
+					<td title="ES_TMPL_STAFF_REQ_SKILL.STSKL_ID references ST_SKILL.STSKL_ID via FK_ETSRS_STSKL_ID">
+						<a href='ES_TMPL_STAFF_REQ_SKILL.html'>ES_TMPL_STAFF_REQ_SKILL</a><span class='relatedKey'>.STSKL_ID</span>
+					</td>
+					<td class="constraint detail">
+						FK_ETSRS_STSKL_ID <span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span>
+					</td>
+				   </tr>
+				   <tr>
+					<td title="RTSS_SHIFT.STSKL_ID references ST_SKILL.STSKL_ID via FK_RTSSHFT_STSKLID">
+						<a href='RTSS_SHIFT.html'>RTSS_SHIFT</a><span class='relatedKey'>.STSKL_ID</span>
+					</td>
+					<td class="constraint detail">
+						FK_RTSSHFT_STSKLID <span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span>
+					</td>
+				   </tr>
+				   <tr>
+					<td title="SO_CLIENT_STFDEF.STSKL_ID references ST_SKILL.STSKL_ID via FK_CSD_STSKL_ID">
+						<a href='SO_CLIENT_STFDEF.html'>SO_CLIENT_STFDEF</a><span class='relatedKey'>.STSKL_ID</span>
+					</td>
+					<td class="constraint detail">
+						FK_CSD_STSKL_ID <span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span>
+					</td>
+				   </tr>
+				   <tr>
+					<td title="SO_CLIENTYP_STFDEF.STSKL_ID references ST_SKILL.STSKL_ID via FK_CTSD_STSKL_ID">
+						<a href='SO_CLIENTYP_STFDEF.html'>SO_CLIENTYP_STFDEF</a><span class='relatedKey'>.STSKL_ID</span>
+					</td>
+					<td class="constraint detail">
+						FK_CTSD_STSKL_ID <span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span>
+					</td>
+				   </tr>
+				   <tr>
+					<td title="SO_HIST_INT_REQ.STSKL_ID references ST_SKILL.STSKL_ID via FK_HSTINTRQ_STSKL">
+						<a href='SO_HIST_INT_REQ.html'>SO_HIST_INT_REQ</a><span class='relatedKey'>.STSKL_ID</span>
+					</td>
+					<td class="constraint detail">
+						FK_HSTINTRQ_STSKL <span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span>
+					</td>
+				   </tr>
+				   <tr>
+					<td title="SO_INTERVAL_REQ.STSKL_ID references ST_SKILL.STSKL_ID via FK_INTRQ_STSKL_ID">
+						<a href='SO_INTERVAL_REQ.html'>SO_INTERVAL_REQ</a><span class='relatedKey'>.STSKL_ID</span>
+					</td>
+					<td class="constraint detail">
+						FK_INTRQ_STSKL_ID <span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span>
+					</td>
+				   </tr>
+				   <tr>
+					<td title="SO_SHIFT_REQ.STSKL_ID references ST_SKILL.STSKL_ID via FK_SHRQ_STSKL_ID">
+						<a href='SO_SHIFT_REQ.html'>SO_SHIFT_REQ</a><span class='relatedKey'>.STSKL_ID</span>
+					</td>
+					<td class="constraint detail">
+						FK_SHRQ_STSKL_ID <span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span>
+					</td>
+				   </tr>
+				   <tr>
+					<td title="SR_SUMMARY.STSKL_ID references ST_SKILL.STSKL_ID via FK_SRSMRY_SKILID">
+						<a href='SR_SUMMARY.html'>SR_SUMMARY</a><span class='relatedKey'>.STSKL_ID</span>
+					</td>
+					<td class="constraint detail">
+						FK_SRSMRY_SKILID <span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span>
+					</td>
+				   </tr>
+				   <tr>
+					<td title="ST_EMP_SKILL.STSKL_ID references ST_SKILL.STSKL_ID via FK_SES_STSKL_ID">
+						<a href='ST_EMP_SKILL.html'>ST_EMP_SKILL</a><span class='relatedKey'>.STSKL_ID</span>
+					</td>
+					<td class="constraint detail">
+						FK_SES_STSKL_ID <span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span>
+					</td>
+				   </tr>
+				   <tr>
+					<td title="ST_JOB_SKILL.STSKL_ID references ST_SKILL.STSKL_ID via FK_SJS_STSKL_ID">
+						<a href='ST_JOB_SKILL.html'>ST_JOB_SKILL</a><span class='relatedKey'>.STSKL_ID</span>
+					</td>
+					<td class="constraint detail">
+						FK_SJS_STSKL_ID <span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span>
+					</td>
+				   </tr>
+				   <tr>
+					<td title="ST_SKILL_COURSE.STSKL_ID references ST_SKILL.STSKL_ID via FK_STC_STSKL_ID">
+						<a href='ST_SKILL_COURSE.html'>ST_SKILL_COURSE</a><span class='relatedKey'>.STSKL_ID</span>
+					</td>
+					<td class="constraint detail">
+						FK_STC_STSKL_ID <span title='Cascade on delete:&#10;Deletion of parent deletes child'>C</span>
+					</td>
+				   </tr>
+				   <tr>
+					<td title="ST_SKILL_TEAM.STSKL_ID references ST_SKILL.STSKL_ID via FK_SST_STSKL_ID">
+						<a href='ST_SKILL_TEAM.html'>ST_SKILL_TEAM</a><span class='relatedKey'>.STSKL_ID</span>
+					</td>
+					<td class="constraint detail">
+						FK_SST_STSKL_ID <span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span>
+					</td>
+				   </tr>
+				   <tr>
+					<td title="TM_ACTIONITEM.STSKL_ID references ST_SKILL.STSKL_ID via FK_ACTIONITEM_STSKL_ID">
+						<a href='TM_ACTIONITEM.html'>TM_ACTIONITEM</a><span class='relatedKey'>.STSKL_ID</span>
+					</td>
+					<td class="constraint detail">
+						FK_ACTIONITEM_STSKL_ID <span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span>
+					</td>
+				   </tr>
+				   <tr>
+					<td title="UNSTFD_SHIFT.STSKL_ID references ST_SKILL.STSKL_ID via FK_UNSTSHFT_SKILID">
+						<a href='UNSTFD_SHIFT.html'>UNSTFD_SHIFT</a><span class='relatedKey'>.STSKL_ID</span>
+					</td>
+					<td class="constraint detail">
+						FK_UNSTSHFT_SKILID <span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span>
+					</td>
+				   </tr>
+				   <tr>
+					<td title="VIEW_SO_CL_STFDEF.STSKL_ID&#39;s name implies that it&#39;s a child of ST_SKILL.STSKL_ID, but it doesn&#39;t reference that column.">
+						<a href='VIEW_SO_CL_STFDEF.html'>VIEW_SO_CL_STFDEF</a><span class='relatedKey'>.STSKL_ID</span>
+					</td>
+					<td class="constraint detail">
+						Implied Constraint <span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span>
+					</td>
+				   </tr>
+				   <tr>
+					<td title="VIEW_SO_EMPPOS_SKL.STSKL_ID&#39;s name implies that it&#39;s a child of ST_SKILL.STSKL_ID, but it doesn&#39;t reference that column.">
+						<a href='VIEW_SO_EMPPOS_SKL.html'>VIEW_SO_EMPPOS_SKL</a><span class='relatedKey'>.STSKL_ID</span>
+					</td>
+					<td class="constraint detail">
+						Implied Constraint <span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span>
+					</td>
+				   </tr>
+				   <tr>
+					<td title="VIEW_SO_INT_REQ.STSKL_ID&#39;s name implies that it&#39;s a child of ST_SKILL.STSKL_ID, but it doesn&#39;t reference that column.">
+						<a href='VIEW_SO_INT_REQ.html'>VIEW_SO_INT_REQ</a><span class='relatedKey'>.STSKL_ID</span>
+					</td>
+					<td class="constraint detail">
+						Implied Constraint <span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span>
+					</td>
+				   </tr>
+				   <tr>
+					<td title="VIEW_ST_EMP_SKILL.STSKL_ID&#39;s name implies that it&#39;s a child of ST_SKILL.STSKL_ID, but it doesn&#39;t reference that column.">
+						<a href='VIEW_ST_EMP_SKILL.html'>VIEW_ST_EMP_SKILL</a><span class='relatedKey'>.STSKL_ID</span>
+					</td>
+					<td class="constraint detail">
+						Implied Constraint <span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span>
+					</td>
+				   </tr>
+				   <tr>
+					<td title="VIEW_ST_JOB_SKILL.STSKL_ID&#39;s name implies that it&#39;s a child of ST_SKILL.STSKL_ID, but it doesn&#39;t reference that column.">
+						<a href='VIEW_ST_JOB_SKILL.html'>VIEW_ST_JOB_SKILL</a><span class='relatedKey'>.STSKL_ID</span>
+					</td>
+					<td class="constraint detail">
+						Implied Constraint <span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span>
+					</td>
+				   </tr>
+				   <tr>
+					<td title="VIEW_ST_SKILL.STSKL_ID&#39;s name implies that it&#39;s a child of ST_SKILL.STSKL_ID, but it doesn&#39;t reference that column.">
+						<a href='VIEW_ST_SKILL.html'>VIEW_ST_SKILL</a><span class='relatedKey'>.STSKL_ID</span>
+					</td>
+					<td class="constraint detail">
+						Implied Constraint <span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span>
+					</td>
+				   </tr>
+				   <tr>
+					<td title="VIEW_ST_SKILL_COURSE.STSKL_ID&#39;s name implies that it&#39;s a child of ST_SKILL.STSKL_ID, but it doesn&#39;t reference that column.">
+						<a href='VIEW_ST_SKILL_COURSE.html'>VIEW_ST_SKILL_COURSE</a><span class='relatedKey'>.STSKL_ID</span>
+					</td>
+					<td class="constraint detail">
+						Implied Constraint <span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span>
+					</td>
+				   </tr>
+				   <tr>
+					<td title="VL_SO_CLIENT_STFDEF.STSKL_ID&#39;s name implies that it&#39;s a child of ST_SKILL.STSKL_ID, but it doesn&#39;t reference that column.">
+						<a href='VL_SO_CLIENT_STFDEF.html'>VL_SO_CLIENT_STFDEF</a><span class='relatedKey'>.STSKL_ID</span>
+					</td>
+					<td class="constraint detail">
+						Implied Constraint <span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span>
+					</td>
+				   </tr>
+				   <tr>
+					<td title="VL_ST_SKILL.STSKL_ID&#39;s name implies that it&#39;s a child of ST_SKILL.STSKL_ID, but it doesn&#39;t reference that column.">
+						<a href='VL_ST_SKILL.html'>VL_ST_SKILL</a><span class='relatedKey'>.STSKL_ID</span>
+					</td>
+					<td class="constraint detail">
+						Implied Constraint <span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span>
+					</td>
+				   </tr>
+				  </table>				 
+				 </td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>					 
+				 </td>
+				 <td></td>
+				</tr>
+				<tr>
+				 <td class='indexedColumn' title='Indexed'><i class='fa fa-sitemap fa-rotate-120' style='padding-right: 5px;'></i><span id="STSKL_NAME">STSKL_NAME</span></td>
+				 <td>VARCHAR2</td>
+				 <td>40</td>
+				 <td title=''></td>
+				 <td title=''></td>
+				 <td>null</td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>				 
+				 </td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>					 
+				 </td>
+				 <td></td>
+				</tr>
+				<tr>
+				 <td><span id="STSKL_DESC">STSKL_DESC</span></td>
+				 <td>VARCHAR2</td>
+				 <td>100</td>
+				 <td title=''></td>
+				 <td title=''></td>
+				 <td>null</td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>				 
+				 </td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>					 
+				 </td>
+				 <td></td>
+				</tr>
+				<tr>
+				 <td class='foreignKey' title='Foreign Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="STSKLTYP_ID">STSKLTYP_ID</span></td>
+				 <td>NUMBER</td>
+				 <td>38</td>
+				 <td title=''></td>
+				 <td title=''></td>
+				 <td>null</td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>				 
+				 </td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				   <tr>
+					<td title="ST_SKILL.STSKLTYP_ID references ST_SKILL_TYPE.STSKLTYP_ID via FK_ST_STSKLTYP_ID">
+						<a href='ST_SKILL_TYPE.html'>ST_SKILL_TYPE</a><span class='relatedKey'>.STSKLTYP_ID</span>
+					</td>
+					<td class="constraint detail">
+						FK_ST_STSKLTYP_ID <span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span>
+					</td>
+				   </tr>
+				  </table>					 
+				 </td>
+				 <td></td>
+				</tr>
+				<tr>
+				 <td><span id="STSKL_FLAG1">STSKL_FLAG1</span></td>
+				 <td>VARCHAR2</td>
+				 <td>1</td>
+				 <td title='nullable'>√</td>
+				 <td title=''></td>
+				 <td>null</td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>				 
+				 </td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>					 
+				 </td>
+				 <td></td>
+				</tr>
+				<tr>
+				 <td><span id="STSKL_FLAG2">STSKL_FLAG2</span></td>
+				 <td>VARCHAR2</td>
+				 <td>1</td>
+				 <td title='nullable'>√</td>
+				 <td title=''></td>
+				 <td>null</td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>				 
+				 </td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>					 
+				 </td>
+				 <td></td>
+				</tr>
+				<tr>
+				 <td><span id="STSKL_FLAG3">STSKL_FLAG3</span></td>
+				 <td>VARCHAR2</td>
+				 <td>1</td>
+				 <td title='nullable'>√</td>
+				 <td title=''></td>
+				 <td>null</td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>				 
+				 </td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>					 
+				 </td>
+				 <td></td>
+				</tr>
+				<tr>
+				 <td><span id="STSKL_FLAG4">STSKL_FLAG4</span></td>
+				 <td>VARCHAR2</td>
+				 <td>1</td>
+				 <td title='nullable'>√</td>
+				 <td title=''></td>
+				 <td>null</td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>				 
+				 </td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>					 
+				 </td>
+				 <td></td>
+				</tr>
+				<tr>
+				 <td><span id="STSKL_FLAG5">STSKL_FLAG5</span></td>
+				 <td>VARCHAR2</td>
+				 <td>1</td>
+				 <td title='nullable'>√</td>
+				 <td title=''></td>
+				 <td>null</td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>				 
+				 </td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>					 
+				 </td>
+				 <td></td>
+				</tr>
+				<tr>
+				 <td><span id="STSKL_UDF1">STSKL_UDF1</span></td>
+				 <td>VARCHAR2</td>
+				 <td>40</td>
+				 <td title='nullable'>√</td>
+				 <td title=''></td>
+				 <td>null</td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>				 
+				 </td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>					 
+				 </td>
+				 <td></td>
+				</tr>
+				<tr>
+				 <td><span id="STSKL_UDF2">STSKL_UDF2</span></td>
+				 <td>VARCHAR2</td>
+				 <td>40</td>
+				 <td title='nullable'>√</td>
+				 <td title=''></td>
+				 <td>null</td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>				 
+				 </td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>					 
+				 </td>
+				 <td></td>
+				</tr>
+				<tr>
+				 <td><span id="STSKL_UDF3">STSKL_UDF3</span></td>
+				 <td>VARCHAR2</td>
+				 <td>40</td>
+				 <td title='nullable'>√</td>
+				 <td title=''></td>
+				 <td>null</td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>				 
+				 </td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>					 
+				 </td>
+				 <td></td>
+				</tr>
+				<tr>
+				 <td><span id="STSKL_UDF4">STSKL_UDF4</span></td>
+				 <td>VARCHAR2</td>
+				 <td>40</td>
+				 <td title='nullable'>√</td>
+				 <td title=''></td>
+				 <td>null</td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>				 
+				 </td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>					 
+				 </td>
+				 <td></td>
+				</tr>
+				<tr>
+				 <td><span id="STSKL_UDF5">STSKL_UDF5</span></td>
+				 <td>VARCHAR2</td>
+				 <td>40</td>
+				 <td title='nullable'>√</td>
+				 <td title=''></td>
+				 <td>null</td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>				 
+				 </td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>					 
+				 </td>
+				 <td></td>
+				</tr>
+				<tr>
+				 <td><span id="CLIENT_ID">CLIENT_ID</span></td>
+				 <td>NUMBER</td>
+				 <td>38</td>
+				 <td title=''></td>
+				 <td title=''></td>
+				 <td>1  </td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>				 
+				 </td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>					 
+				 </td>
+				 <td></td>
+				</tr>
+				<tr>
+				 <td><span id="STSKL_SCHED_RELATED">STSKL_SCHED_RELATED</span></td>
+				 <td>CHAR</td>
+				 <td>1</td>
+				 <td title=''></td>
+				 <td title=''></td>
+				 <td>&#39;Y&#39;  </td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>				 
+				 </td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>					 
+				 </td>
+				 <td></td>
+				</tr>
+								</tbody>
+				</table>
+				<p title='16 columns'>Table contained <span id="recordNumber">1</span> rows<p/>
+			</div>
+		</div>
+		<div class="box box-primary">		
+			<div class="box-header with-border">
+              <i class="fa fa-sitemap"></i>
+
+              <h3 id="Indexes" class="box-title">Indexes</h3>
+
+              <div class="box-tools pull-right">
+                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
+                </button>
+                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+              </div>
+            </div>	
+			<div class="box-body">
+				<table id="indexes_table" class="table table-bordered table-striped dataTable" role="grid">
+				<thead>
+				 <tr>
+				  <th>Constraint Name</th>
+				  <th>Type</th>
+				  <th>Sort</th>
+				  <th>Column(s)</th>
+				 </tr>
+				</thead>
+				<tbody>
+				 <tr>
+				  <td class='primaryKey' title='Primary Key'><i class='icon ion-key iconkey'></i> PK_ST_SKILL</td>
+				  <td>Primary key</td>
+				  <td><span title='Ascending'>Asc</span></td>
+				  <td>STSKL_ID</td>
+				 </tr>				 
+				 <tr>
+				  <td class='uniqueKey' title='Unique Key'><i class='icon ion-key iconkey'></i> UK_STSKL_NAMETYPID</td>
+				  <td>Must be unique</td>
+				  <td><span title='Ascending'>Asc</span>/<span title='Ascending'>Asc</span></td>
+				  <td>STSKL_NAME + STSKLTYP_ID</td>
+				 </tr>				 
+				</tbody>
+				</table>   			  
+			</div><!-- /.box-body -->
+		</div>
+				<div class="box box-primary">		
+			<div class="box-header with-border">
+              <i class="fa fa-code-fork"></i>
+
+              <h3 id="Relationships" class="box-title">Relationships</h3>
+
+              <div class="box-tools pull-right">
+                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
+                </button>
+                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+              </div>
+            </div>	
+			<div class="box-body">	
+			<div class="nav-tabs-custom" style="cursor: move;">
+            <!-- Tabs within a box -->
+			<h5>Close relationships within degrees of separation</h5>
+            <ul class="nav nav-tabs pull-left ui-sortable-handle">
+			  			              <li class="active"><a href="#oneDegreeImg-chart" data-toggle="tab" aria-expanded="true">One</a></li>			  			 
+			  			              <li class=""><a href="#twodegreesDegreeImg-chart" data-toggle="tab" aria-expanded="true">Two degrees</a></li>			  			 
+			  			              <li class=""><a href="#oneimpliedDegreeImg-chart" data-toggle="tab" aria-expanded="true">One implied</a></li>			  			 
+			  			              <li class=""><a href="#twoimpliedDegreeImg-chart" data-toggle="tab" aria-expanded="true">Two implied</a></li>			  			 
+            </ul>
+            <div class="tab-content no-padding">            
+				<div class="chart tab-pane active" id="oneDegreeImg-chart" style="position: relative; overflow-x:auto;">					
+					<map id="oneDegreeRelationshipsDiagram" name="oneDegreeRelationshipsDiagram">
+<area shape="rect" id="node1" href="CENSUS_DATA.html" title="CENSUS_DATA" alt="" coords="787,5,1003,387">
+<area shape="rect" id="node2" href="ST_SKILL.html" title="ST_SKILL" alt="" coords="331,3315,684,3853">
+<area shape="rect" id="node19" href="ST_SKILL_TYPE.html" title="ST_SKILL_TYPE" alt="" coords="5,3405,287,3552">
+<area shape="rect" id="node3" href="EMP_SCHD_DTL_LAYER.html" title="EMP_SCHD_DTL_LAYER" alt="" coords="765,404,1025,961">
+<area shape="rect" id="node4" href="EMPLOYEE_SCHED_DTL.html" title="EMPLOYEE_SCHED_DTL" alt="" coords="763,979,1027,1536">
+<area shape="rect" id="node5" href="ES_JOB_TEAM_SKILL.html" title="ES_JOB_TEAM_SKILL" alt="" coords="765,1553,1025,1788">
+<area shape="rect" id="node6" href="ES_SHIFT_HIST_SKILL.html" title="ES_SHIFT_HIST_SKILL" alt="" coords="771,1805,1018,1981">
+<area shape="rect" id="node7" href="ES_SHIFT_SUMMARY_SKILL.html" title="ES_SHIFT_SUMMARY_SKILL" alt="" coords="750,1999,1039,2175">
+<area shape="rect" id="node8" href="ES_TMPL_SHIFT_REQ_SHIFT_SKL.html" title="ES_TMPL_SHIFT_REQ_SHIFT_SKL" alt="" coords="728,2192,1061,2368">
+<area shape="rect" id="node9" href="ES_TMPL_STAFF_REQ_SKILL.html" title="ES_TMPL_STAFF_REQ_SKILL" alt="" coords="746,2385,1043,2561">
+<area shape="rect" id="node10" href="RTSS_SHIFT.html" title="RTSS_SHIFT" alt="" coords="774,2579,1015,2813">
+<area shape="rect" id="node11" href="SO_CLIENT_STFDEF.html" title="SO_CLIENT_STFDEF" alt="" coords="777,2831,1013,3212">
+<area shape="rect" id="node12" href="SO_CLIENTYP_STFDEF.html" title="SO_CLIENTYP_STFDEF" alt="" coords="768,3229,1021,3464">
+<area shape="rect" id="node13" href="SO_HIST_INT_REQ.html" title="SO_HIST_INT_REQ" alt="" coords="782,3481,1007,3775">
+<area shape="rect" id="node14" href="SO_INTERVAL_REQ.html" title="SO_INTERVAL_REQ" alt="" coords="745,3792,1044,4115">
+<area shape="rect" id="node15" href="SO_SHIFT_REQ.html" title="SO_SHIFT_REQ" alt="" coords="791,4132,998,4425">
+<area shape="rect" id="node16" href="SR_SUMMARY.html" title="SR_SUMMARY" alt="" coords="794,4443,995,4795">
+<area shape="rect" id="node17" href="ST_EMP_SKILL.html" title="ST_EMP_SKILL" alt="" coords="769,4812,1020,4988">
+<area shape="rect" id="node18" href="ST_JOB_SKILL.html" title="ST_JOB_SKILL" alt="" coords="797,5005,993,5181">
+<area shape="rect" id="node20" href="ST_SKILL_COURSE.html" title="ST_SKILL_COURSE" alt="" coords="782,5199,1007,5375">
+<area shape="rect" id="node21" href="ST_SKILL_TEAM.html" title="ST_SKILL_TEAM" alt="" coords="794,5392,995,5568">
+<area shape="rect" id="node22" href="TM_ACTIONITEM.html" title="TM_ACTIONITEM" alt="" coords="757,5585,1033,5791">
+<area shape="rect" id="node23" href="UNSTFD_SHIFT.html" title="UNSTFD_SHIFT" alt="" coords="779,5808,1010,6219">
+</map>
+
+					<a name='diagram'><img id='oneDegreeImg' src='../diagrams/ST_SKILL.1degree.png' usemap='#oneDegreeRelationshipsDiagram' class='diagram' border='0' alt='' align='left'></a>							
+				</div>
+				<div class="chart tab-pane " id="twodegreesDegreeImg-chart" style="position: relative; overflow-x:auto;">					
+					<map id="twoDegreesRelationshipsDiagram" name="twoDegreesRelationshipsDiagram">
+<area shape="rect" id="node1" href="CENSUS_DATA.html" title="CENSUS_DATA" alt="" coords="1055,2071,1271,2453">
+<area shape="rect" id="node2" href="SO_ACTIVITY.html" title="SO_ACTIVITY" alt="" coords="687,2230,864,2318">
+<area shape="rect" id="node3" href="CENSUS_TEAM.html" title="CENSUS_TEAM" alt="" coords="317,2330,511,2418">
+<area shape="rect" id="node4" href="DEPARTMENT.html" title="DEPARTMENT" alt="" coords="683,1507,868,1595">
+<area shape="rect" id="node5" href="DOCKET.html" title="DOCKET" alt="" coords="703,1613,848,1701">
+<area shape="rect" id="node6" href="DAY_PART.html" title="DAY_PART" alt="" coords="696,2402,855,2490">
+<area shape="rect" id="node7" href="JOB.html" title="JOB" alt="" coords="705,3089,846,3177">
+<area shape="rect" id="node8" href="PROJECT.html" title="PROJECT" alt="" coords="337,1655,491,1743">
+<area shape="rect" id="node9" href="ST_SKILL.html" title="ST_SKILL" alt="" coords="599,4014,952,4553">
+<area shape="rect" id="node15" href="TIME_CODE.html" title="TIME_CODE" alt="" coords="329,821,499,909">
+<area shape="rect" id="node31" href="SO_SCHEDULE_GROUP.html" title="SO_SCHEDULE_GROUP" alt="" coords="285,5895,543,5983">
+<area shape="rect" id="node10" href="WORKBRAIN_TEAM.html" title="WORKBRAIN_TEAM" alt="" coords="5,2426,229,2514">
+<area shape="rect" id="node55" href="ST_SKILL_TYPE.html" title="ST_SKILL_TYPE" alt="" coords="273,4105,555,4251">
+<area shape="rect" id="node11" href="EMP_SCHD_DTL_LAYER.html" title="EMP_SCHD_DTL_LAYER" alt="" coords="1033,699,1293,1257">
+<area shape="rect" id="node12" href="EMPLOYEE.html" title="EMPLOYEE" alt="" coords="331,3483,497,3571">
+<area shape="rect" id="node13" href="EMPLOYEE_SCHEDULE.html" title="EMPLOYEE_SCHEDULE" alt="" coords="647,666,903,754">
+<area shape="rect" id="node14" href="HOUR_TYPE.html" title="HOUR_TYPE" alt="" coords="31,593,204,681">
+<area shape="rect" id="node17" href="SHIFT.html" title="SHIFT" alt="" coords="339,666,489,754">
+<area shape="rect" id="node16" href="EMPLOYEE_SCHED_DTL.html" title="EMPLOYEE_SCHED_DTL" alt="" coords="1031,125,1295,682">
+<area shape="rect" id="node18" href="ES_JOB_TEAM_SKILL.html" title="ES_JOB_TEAM_SKILL" alt="" coords="1400,3333,1660,3567">
+<area shape="rect" id="node19" href="JOB_TEAM.html" title="JOB_TEAM" alt="" coords="1082,3194,1243,3282">
+<area shape="rect" id="node20" href="ES_SHIFT_HIST_SKILL.html" title="ES_SHIFT_HIST_SKILL" alt="" coords="1407,3641,1653,3817">
+<area shape="rect" id="node21" href="ES_SHIFT_HISTORY.html" title="ES_SHIFT_HISTORY" alt="" coords="1048,3565,1277,3653">
+<area shape="rect" id="node22" href="ES_SHIFT_SUMMARY.html" title="ES_SHIFT_SUMMARY" alt="" coords="657,3565,894,3653">
+<area shape="rect" id="node23" href="ES_SHIFT_SUMMARY_SKILL.html" title="ES_SHIFT_SUMMARY_SKILL" alt="" coords="1018,3670,1307,3846">
+<area shape="rect" id="node24" href="ES_TMPL_SHIFT_REQ_SHIFT_SKL.html" title="ES_TMPL_SHIFT_REQ_SHIFT_SKL" alt="" coords="996,5421,1329,5597">
+<area shape="rect" id="node25" href="ES_TMPL_SHIFT_REQ_SHIFT.html" title="ES_TMPL_SHIFT_REQ_SHIFT" alt="" coords="627,5453,923,5541">
+<area shape="rect" id="node26" href="ES_TMPL_STAFF_REQ.html" title="ES_TMPL_STAFF_REQ" alt="" coords="1039,3089,1286,3177">
+<area shape="rect" id="node27" href="ES_TMPL_STAFF_REQ_SKILL.html" title="ES_TMPL_STAFF_REQ_SKILL" alt="" coords="1381,3111,1679,3287">
+<area shape="rect" id="node28" href="ES_TMPL_STAFF_REQ_SKILL_DAY.html" title="ES_TMPL_STAFF_REQ_SKILL_DAY" alt="" coords="1731,3114,2067,3202">
+<area shape="rect" id="node29" href="RTSS_SHIFT.html" title="RTSS_SHIFT" alt="" coords="1042,2542,1283,2777">
+<area shape="rect" id="node30" href="RTSS_SHIFT_REQ.html" title="RTSS_SHIFT_REQ" alt="" coords="1423,2545,1637,2633">
+<area shape="rect" id="node35" href="SO_CLIENT_TYPE.html" title="SO_CLIENT_TYPE" alt="" coords="11,5353,224,5441">
+<area shape="rect" id="node32" href="SO_CLIENT_STFDEF.html" title="SO_CLIENT_STFDEF" alt="" coords="1045,4237,1281,4618">
+<area shape="rect" id="node33" href="SO_DISTRIBUTION.html" title="SO_DISTRIBUTION" alt="" coords="665,6157,885,6245">
+<area shape="rect" id="node34" href="SO_CLIENTYP_STFDEF.html" title="SO_CLIENTYP_STFDEF" alt="" coords="1036,4829,1289,5063">
+<area shape="rect" id="node36" href="SO_SHIFT_STAFF_REQ.html" title="SO_SHIFT_STAFF_REQ" alt="" coords="650,4949,901,5037">
+<area shape="rect" id="node37" href="SO_HIST_INT_REQ.html" title="SO_HIST_INT_REQ" alt="" coords="1417,3978,1643,4271">
+<area shape="rect" id="node38" href="SO_INTERVAL_TYPE.html" title="SO_INTERVAL_TYPE" alt="" coords="659,5563,891,5651">
+<area shape="rect" id="node39" href="SO_REGEN_SCHEDULE.html" title="SO_REGEN_SCHEDULE" alt="" coords="1035,5843,1291,5931">
+<area shape="rect" id="node42" href="SO_SCHEDULE.html" title="SO_SCHEDULE" alt="" coords="679,5895,872,5983">
+<area shape="rect" id="node40" href="SO_INTERVAL_OVER.html" title="SO_INTERVAL_OVER" alt="" coords="1413,3873,1647,3961">
+<area shape="rect" id="node41" href="SO_INTERVAL_REQ.html" title="SO_INTERVAL_REQ" alt="" coords="1013,5081,1312,5403">
+<area shape="rect" id="node43" href="SO_LOCPROP_WORKLD.html" title="SO_LOCPROP_WORKLD" alt="" coords="1399,4289,1661,4377">
+<area shape="rect" id="node44" href="SO_PREFERREDTIME_SOURCE.html" title="SO_PREFERREDTIME_SOURCE" alt="" coords="1373,6111,1687,6199">
+<area shape="rect" id="node45" href="SO_SCHEDULED_SHIFT.html" title="SO_SCHEDULED_SHIFT" alt="" coords="1034,5949,1291,6037">
+<area shape="rect" id="node46" href="SO_SHIFT_REQ.html" title="SO_SHIFT_REQ" alt="" coords="1427,5695,1633,5989">
+<area shape="rect" id="node47" href="SO_STDVOL_OVER.html" title="SO_STDVOL_OVER" alt="" coords="1419,4394,1641,4482">
+<area shape="rect" id="node48" href="SO_STFDEF_DIST_OVR.html" title="SO_STFDEF_DIST_OVR" alt="" coords="1403,6006,1657,6094">
+<area shape="rect" id="node49" href="SO_VOLUME_WORKLOAD.html" title="SO_VOLUME_WORKLOAD" alt="" coords="1395,6217,1665,6305">
+<area shape="rect" id="node50" href="SR_DETAIL.html" title="SR_DETAIL" alt="" coords="1449,1705,1611,1793">
+<area shape="rect" id="node51" href="SR_SUMMARY.html" title="SR_SUMMARY" alt="" coords="1062,1702,1263,2054">
+<area shape="rect" id="node52" href="SR_SUM_PRIORITY.html" title="SR_SUM_PRIORITY" alt="" coords="1418,807,1642,895">
+<area shape="rect" id="node53" href="ST_EMP_SKILL.html" title="ST_EMP_SKILL" alt="" coords="1037,3863,1288,4039">
+<area shape="rect" id="node54" href="ST_JOB_SKILL.html" title="ST_JOB_SKILL" alt="" coords="1065,3371,1261,3547">
+<area shape="rect" id="node56" href="ST_SKILL_COURSE.html" title="ST_SKILL_COURSE" alt="" coords="1050,5614,1275,5790">
+<area shape="rect" id="node57" href="ST_COURSE.html" title="ST_COURSE" alt="" coords="689,5675,862,5763">
+<area shape="rect" id="node58" href="ST_SKILL_TEAM.html" title="ST_SKILL_TEAM" alt="" coords="1062,4635,1263,4811">
+<area shape="rect" id="node59" href="TM_ACTIONITEM.html" title="TM_ACTIONITEM" alt="" coords="1025,2830,1301,3035">
+<area shape="rect" id="node60" href="TM_TASK.html" title="TM_TASK" alt="" coords="699,2862,851,2950">
+<area shape="rect" id="node61" href="TM_ACTIONITEM_JOB.html" title="TM_ACTIONITEM_JOB" alt="" coords="1407,2991,1653,3079">
+<area shape="rect" id="node62" href="TM_ACTITEM_ASSIGNMENT.html" title="TM_ACTITEM_ASSIGNMENT" alt="" coords="1387,2757,1673,2845">
+<area shape="rect" id="node63" href="TM_ACTITEM_RESOURCE.html" title="TM_ACTITEM_RESOURCE" alt="" coords="1393,2862,1667,2950">
+<area shape="rect" id="node64" href="UNSTFD_SHIFT.html" title="UNSTFD_SHIFT" alt="" coords="1047,1274,1278,1685">
+</map>
+
+					<a name='diagram'><img id='twodegreesDegreeImg' src='../diagrams/ST_SKILL.2degrees.png' usemap='#twoDegreesRelationshipsDiagram' class='diagram' border='0' alt='' align='left'></a>							
+				</div>
+				<div class="chart tab-pane " id="oneimpliedDegreeImg-chart" style="position: relative; overflow-x:auto;">					
+					<map id="oneDegreeRelationshipsDiagramImplied" name="oneDegreeRelationshipsDiagramImplied">
+<area shape="rect" id="node1" href="CENSUS_DATA.html" title="CENSUS_DATA" alt="" coords="787,885,1003,1267">
+<area shape="rect" id="node2" href="ST_SKILL.html" title="ST_SKILL" alt="" coords="331,3668,684,4207">
+<area shape="rect" id="node19" href="ST_SKILL_TYPE.html" title="ST_SKILL_TYPE" alt="" coords="5,6872,287,7019">
+<area shape="rect" id="node3" href="EMP_SCHD_DTL_LAYER.html" title="EMP_SCHD_DTL_LAYER" alt="" coords="765,1284,1025,1841">
+<area shape="rect" id="node4" href="EMPLOYEE_SCHED_DTL.html" title="EMPLOYEE_SCHED_DTL" alt="" coords="763,1859,1027,2416">
+<area shape="rect" id="node5" href="ES_JOB_TEAM_SKILL.html" title="ES_JOB_TEAM_SKILL" alt="" coords="765,2433,1025,2668">
+<area shape="rect" id="node6" href="ES_SHIFT_HIST_SKILL.html" title="ES_SHIFT_HIST_SKILL" alt="" coords="771,2685,1018,2861">
+<area shape="rect" id="node7" href="ES_SHIFT_SUMMARY_SKILL.html" title="ES_SHIFT_SUMMARY_SKILL" alt="" coords="750,2879,1039,3055">
+<area shape="rect" id="node8" href="ES_TMPL_SHIFT_REQ_SHIFT_SKL.html" title="ES_TMPL_SHIFT_REQ_SHIFT_SKL" alt="" coords="728,3072,1061,3248">
+<area shape="rect" id="node9" href="ES_TMPL_STAFF_REQ_SKILL.html" title="ES_TMPL_STAFF_REQ_SKILL" alt="" coords="746,3265,1043,3441">
+<area shape="rect" id="node10" href="RTSS_SHIFT.html" title="RTSS_SHIFT" alt="" coords="774,3459,1015,3693">
+<area shape="rect" id="node11" href="SO_CLIENT_STFDEF.html" title="SO_CLIENT_STFDEF" alt="" coords="777,4309,1013,4691">
+<area shape="rect" id="node12" href="SO_CLIENTYP_STFDEF.html" title="SO_CLIENTYP_STFDEF" alt="" coords="768,3747,1021,3981">
+<area shape="rect" id="node13" href="SO_HIST_INT_REQ.html" title="SO_HIST_INT_REQ" alt="" coords="782,3999,1007,4292">
+<area shape="rect" id="node14" href="SO_INTERVAL_REQ.html" title="SO_INTERVAL_REQ" alt="" coords="745,5424,1044,5747">
+<area shape="rect" id="node15" href="SO_SHIFT_REQ.html" title="SO_SHIFT_REQ" alt="" coords="791,4708,998,5001">
+<area shape="rect" id="node16" href="SR_SUMMARY.html" title="SR_SUMMARY" alt="" coords="794,5019,995,5371">
+<area shape="rect" id="node17" href="ST_EMP_SKILL.html" title="ST_EMP_SKILL" alt="" coords="769,692,1020,868">
+<area shape="rect" id="node18" href="ST_JOB_SKILL.html" title="ST_JOB_SKILL" alt="" coords="797,233,993,409">
+<area shape="rect" id="node20" href="ST_SKILL_COURSE.html" title="ST_SKILL_COURSE" alt="" coords="782,463,1007,639">
+<area shape="rect" id="node21" href="ST_SKILL_TEAM.html" title="ST_SKILL_TEAM" alt="" coords="794,5800,995,5976">
+<area shape="rect" id="node22" href="TM_ACTIONITEM.html" title="TM_ACTIONITEM" alt="" coords="757,5993,1033,6199">
+<area shape="rect" id="node23" href="UNSTFD_SHIFT.html" title="UNSTFD_SHIFT" alt="" coords="779,6216,1010,6627">
+<area shape="rect" id="node24" href="VIEW_SO_CL_STFDEF.html" title="VIEW_SO_CL_STFDEF" alt="" coords="775,6644,1014,6825">
+<area shape="rect" id="node25" href="VIEW_SO_EMPPOS_SKL.html" title="VIEW_SO_EMPPOS_SKL" alt="" coords="767,5,1022,216">
+<area shape="rect" id="node26" href="VIEW_SO_INT_REQ.html" title="VIEW_SO_INT_REQ" alt="" coords="1105,5485,1404,5725">
+<area shape="rect" id="node27" href="VIEW_ST_EMP_SKILL.html" title="VIEW_ST_EMP_SKILL" alt="" coords="1129,2155,1380,2307">
+<area shape="rect" id="node28" href="VIEW_ST_JOB_SKILL.html" title="VIEW_ST_JOB_SKILL" alt="" coords="1139,296,1371,448">
+<area shape="rect" id="node29" href="VIEW_ST_SKILL.html" title="VIEW_ST_SKILL" alt="" coords="798,6843,991,6965">
+<area shape="rect" id="node30" href="VIEW_ST_SKILL_COURSE.html" title="VIEW_ST_SKILL_COURSE" alt="" coords="1121,527,1388,679">
+<area shape="rect" id="node31" href="VL_SO_CLIENT_STFDEF.html" title="VL_SO_CLIENT_STFDEF" alt="" coords="1127,5169,1383,5439">
+<area shape="rect" id="node32" href="VL_ST_SKILL.html" title="VL_ST_SKILL" alt="" coords="769,6983,1020,7105">
+</map>
+
+					<a name='diagram'><img id='oneimpliedDegreeImg' src='../diagrams/ST_SKILL.implied1degrees.png' usemap='#oneDegreeRelationshipsDiagramImplied' class='diagram' border='0' alt='' align='left'></a>							
+				</div>
+				<div class="chart tab-pane " id="twoimpliedDegreeImg-chart" style="position: relative; overflow-x:auto;">					
+					<map id="twoDegreesRelationshipsDiagramImplied" name="twoDegreesRelationshipsDiagramImplied">
+<area shape="rect" id="node1" href="CENSUS_DATA.html" title="CENSUS_DATA" alt="" coords="1331,2224,1547,2605">
+<area shape="rect" id="node2" href="SO_ACTIVITY.html" title="SO_ACTIVITY" alt="" coords="963,2815,1140,2903">
+<area shape="rect" id="node3" href="CENSUS_TEAM.html" title="CENSUS_TEAM" alt="" coords="955,2273,1148,2361">
+<area shape="rect" id="node4" href="DEPARTMENT.html" title="DEPARTMENT" alt="" coords="959,1509,1144,1597">
+<area shape="rect" id="node5" href="DOCKET.html" title="DOCKET" alt="" coords="979,1368,1124,1456">
+<area shape="rect" id="node6" href="DAY_PART.html" title="DAY_PART" alt="" coords="972,2132,1131,2220">
+<area shape="rect" id="node7" href="JOB.html" title="JOB" alt="" coords="981,3491,1122,3579">
+<area shape="rect" id="node8" href="PROJECT.html" title="PROJECT" alt="" coords="613,1581,767,1669">
+<area shape="rect" id="node9" href="ST_SKILL.html" title="ST_SKILL" alt="" coords="875,5016,1228,5555">
+<area shape="rect" id="node15" href="TIME_CODE.html" title="TIME_CODE" alt="" coords="605,923,775,1011">
+<area shape="rect" id="node31" href="SO_SCHEDULE_GROUP.html" title="SO_SCHEDULE_GROUP" alt="" coords="561,5103,819,5191">
+<area shape="rect" id="node10" href="WORKBRAIN_TEAM.html" title="WORKBRAIN_TEAM" alt="" coords="281,2116,505,2204">
+<area shape="rect" id="node56" href="ST_SKILL_TYPE.html" title="ST_SKILL_TYPE" alt="" coords="549,7336,831,7483">
+<area shape="rect" id="node11" href="EMP_SCHD_DTL_LAYER.html" title="EMP_SCHD_DTL_LAYER" alt="" coords="1309,169,1569,727">
+<area shape="rect" id="node12" href="EMPLOYEE.html" title="EMPLOYEE" alt="" coords="607,6528,773,6616">
+<area shape="rect" id="node13" href="EMPLOYEE_SCHEDULE.html" title="EMPLOYEE_SCHEDULE" alt="" coords="923,279,1179,367">
+<area shape="rect" id="node14" href="HOUR_TYPE.html" title="HOUR_TYPE" alt="" coords="307,849,480,937">
+<area shape="rect" id="node17" href="SHIFT.html" title="SHIFT" alt="" coords="615,279,765,367">
+<area shape="rect" id="node16" href="EMPLOYEE_SCHED_DTL.html" title="EMPLOYEE_SCHED_DTL" alt="" coords="1307,744,1571,1301">
+<area shape="rect" id="node18" href="ES_JOB_TEAM_SKILL.html" title="ES_JOB_TEAM_SKILL" alt="" coords="1676,4919,1936,5153">
+<area shape="rect" id="node19" href="JOB_TEAM.html" title="JOB_TEAM" alt="" coords="1358,4293,1519,4381">
+<area shape="rect" id="node20" href="ES_SHIFT_HIST_SKILL.html" title="ES_SHIFT_HIST_SKILL" alt="" coords="1683,6491,1929,6667">
+<area shape="rect" id="node21" href="ES_SHIFT_HISTORY.html" title="ES_SHIFT_HISTORY" alt="" coords="1324,6668,1553,6756">
+<area shape="rect" id="node22" href="ES_SHIFT_SUMMARY.html" title="ES_SHIFT_SUMMARY" alt="" coords="933,6528,1170,6616">
+<area shape="rect" id="node23" href="ES_SHIFT_SUMMARY_SKILL.html" title="ES_SHIFT_SUMMARY_SKILL" alt="" coords="1294,6475,1583,6651">
+<area shape="rect" id="node24" href="ES_TMPL_SHIFT_REQ_SHIFT_SKL.html" title="ES_TMPL_SHIFT_REQ_SHIFT_SKL" alt="" coords="1272,6967,1605,7143">
+<area shape="rect" id="node25" href="ES_TMPL_SHIFT_REQ_SHIFT.html" title="ES_TMPL_SHIFT_REQ_SHIFT" alt="" coords="903,6999,1199,7087">
+<area shape="rect" id="node26" href="ES_TMPL_STAFF_REQ.html" title="ES_TMPL_STAFF_REQ" alt="" coords="1315,3313,1562,3401">
+<area shape="rect" id="node27" href="ES_TMPL_STAFF_REQ_SKILL.html" title="ES_TMPL_STAFF_REQ_SKILL" alt="" coords="1657,3684,1955,3860">
+<area shape="rect" id="node28" href="ES_TMPL_STAFF_REQ_SKILL_DAY.html" title="ES_TMPL_STAFF_REQ_SKILL_DAY" alt="" coords="2007,3687,2343,3775">
+<area shape="rect" id="node29" href="RTSS_SHIFT.html" title="RTSS_SHIFT" alt="" coords="1318,2695,1559,2929">
+<area shape="rect" id="node30" href="RTSS_SHIFT_REQ.html" title="RTSS_SHIFT_REQ" alt="" coords="1699,2697,1913,2785">
+<area shape="rect" id="node33" href="SO_DISTRIBUTION.html" title="SO_DISTRIBUTION" alt="" coords="283,5103,503,5191">
+<area shape="rect" id="node36" href="SO_CLIENT_TYPE.html" title="SO_CLIENT_TYPE" alt="" coords="287,5433,500,5521">
+<area shape="rect" id="node32" href="SO_CLIENT_STFDEF.html" title="SO_CLIENT_STFDEF" alt="" coords="1321,5373,1557,5755">
+<area shape="rect" id="node34" href="SO_SHIFT_STAFF_REQ.html" title="SO_SHIFT_STAFF_REQ" alt="" coords="926,6007,1177,6095">
+<area shape="rect" id="node37" href="SO_INTERVAL_TYPE.html" title="SO_INTERVAL_TYPE" alt="" coords="5,4220,237,4308">
+<area shape="rect" id="node35" href="SO_CLIENTYP_STFDEF.html" title="SO_CLIENTYP_STFDEF" alt="" coords="1312,6115,1565,6349">
+<area shape="rect" id="node38" href="SO_EMPLOYEE_GROUP.html" title="SO_EMPLOYEE_GROUP" alt="" coords="922,4660,1181,4748">
+<area shape="rect" id="node39" href="SO_HIST_INT_REQ.html" title="SO_HIST_INT_REQ" alt="" coords="1693,3299,1919,3592">
+<area shape="rect" id="node40" href="SO_REGEN_SCHEDULE.html" title="SO_REGEN_SCHEDULE" alt="" coords="1311,4011,1567,4099">
+<area shape="rect" id="node43" href="SO_SCHEDULE.html" title="SO_SCHEDULE" alt="" coords="955,4116,1148,4204">
+<area shape="rect" id="node41" href="SO_INTERVAL_OVER.html" title="SO_INTERVAL_OVER" alt="" coords="1689,5457,1923,5545">
+<area shape="rect" id="node42" href="SO_INTERVAL_REQ.html" title="SO_INTERVAL_REQ" alt="" coords="1289,3671,1588,3993">
+<area shape="rect" id="node44" href="SO_LOCPROP_WORKLD.html" title="SO_LOCPROP_WORKLD" alt="" coords="1675,5563,1937,5651">
+<area shape="rect" id="node45" href="SO_PREFERREDTIME_SOURCE.html" title="SO_PREFERREDTIME_SOURCE" alt="" coords="1649,5247,1963,5335">
+<area shape="rect" id="node46" href="SO_SCHEDULED_SHIFT.html" title="SO_SCHEDULED_SHIFT" alt="" coords="1310,4152,1567,4240">
+<area shape="rect" id="node47" href="SO_SHIFT_REQ.html" title="SO_SHIFT_REQ" alt="" coords="1703,4256,1909,4549">
+<area shape="rect" id="node48" href="SO_STDVOL_OVER.html" title="SO_STDVOL_OVER" alt="" coords="1695,5352,1917,5440">
+<area shape="rect" id="node49" href="SO_STFDEF_DIST_OVR.html" title="SO_STFDEF_DIST_OVR" alt="" coords="1679,6684,1933,6772">
+<area shape="rect" id="node50" href="SO_VOLUME_WORKLOAD.html" title="SO_VOLUME_WORKLOAD" alt="" coords="1671,6385,1941,6473">
+<area shape="rect" id="node51" href="SR_DETAIL.html" title="SR_DETAIL" alt="" coords="1725,1321,1887,1409">
+<area shape="rect" id="node52" href="SR_SUMMARY.html" title="SR_SUMMARY" alt="" coords="1338,1319,1539,1671">
+<area shape="rect" id="node53" href="SR_SUM_PRIORITY.html" title="SR_SUM_PRIORITY" alt="" coords="1694,639,1918,727">
+<area shape="rect" id="node54" href="ST_EMP_SKILL.html" title="ST_EMP_SKILL" alt="" coords="1313,6773,1564,6949">
+<area shape="rect" id="node55" href="ST_JOB_SKILL.html" title="ST_JOB_SKILL" alt="" coords="1341,4699,1537,4875">
+<area shape="rect" id="node57" href="ST_SKILL_COURSE.html" title="ST_SKILL_COURSE" alt="" coords="1326,7444,1551,7620">
+<area shape="rect" id="node58" href="ST_COURSE.html" title="ST_COURSE" alt="" coords="965,7505,1138,7593">
+<area shape="rect" id="node59" href="ST_SKILL_TEAM.html" title="ST_SKILL_TEAM" alt="" coords="1338,4892,1539,5068">
+<area shape="rect" id="node60" href="TM_ACTIONITEM.html" title="TM_ACTIONITEM" alt="" coords="1301,2947,1577,3152">
+<area shape="rect" id="node61" href="TM_TASK.html" title="TM_TASK" alt="" coords="975,2979,1127,3067">
+<area shape="rect" id="node62" href="TM_ACTIONITEM_JOB.html" title="TM_ACTIONITEM_JOB" alt="" coords="1683,3129,1929,3217">
+<area shape="rect" id="node63" href="TM_ACTITEM_ASSIGNMENT.html" title="TM_ACTITEM_ASSIGNMENT" alt="" coords="1663,2823,1949,2911">
+<area shape="rect" id="node64" href="TM_ACTITEM_RESOURCE.html" title="TM_ACTITEM_RESOURCE" alt="" coords="1669,2949,1943,3037">
+<area shape="rect" id="node65" href="UNSTFD_SHIFT.html" title="UNSTFD_SHIFT" alt="" coords="1323,1724,1554,2135">
+<area shape="rect" id="node66" href="VIEW_CENSUSDT_REQ.html" title="VIEW_CENSUSDT_REQ" alt="" coords="1683,2407,1929,2471">
+<area shape="rect" id="node67" href="VIEW_SO_CL_STFDEF.html" title="VIEW_SO_CL_STFDEF" alt="" coords="1319,5916,1558,6097">
+<area shape="rect" id="node68" href="VIEW_SO_EMPPOS_SKL.html" title="VIEW_SO_EMPPOS_SKL" alt="" coords="1311,4471,1566,4681">
+<area shape="rect" id="node69" href="VIEW_SO_INT_REQ.html" title="VIEW_SO_INT_REQ" alt="" coords="1657,3948,1955,4188">
+<area shape="rect" id="node70" href="VIEW_ST_EMP_SKILL.html" title="VIEW_ST_EMP_SKILL" alt="" coords="1681,6789,1931,6941">
+<area shape="rect" id="node71" href="VIEW_ST_JOB_SKILL.html" title="VIEW_ST_JOB_SKILL" alt="" coords="1690,4699,1922,4851">
+<area shape="rect" id="node72" href="VIEW_ST_SKILL.html" title="VIEW_ST_SKILL" alt="" coords="1342,7637,1535,7760">
+<area shape="rect" id="node73" href="VIEW_ST_SKILL_COURSE.html" title="VIEW_ST_SKILL_COURSE" alt="" coords="1673,7444,1939,7596">
+<area shape="rect" id="node74" href="VL_SO_CLIENT_STFDEF.html" title="VL_SO_CLIENT_STFDEF" alt="" coords="1678,5668,1934,5937">
+<area shape="rect" id="node75" href="VL_ST_SKILL.html" title="VL_ST_SKILL" alt="" coords="1313,7160,1564,7283">
+<area shape="rect" id="node76" href="VL_ST_SKILL_TYPE.html" title="VL_ST_SKILL_TYPE" alt="" coords="940,7611,1163,7675">
+</map>
+
+					<a name='diagram'><img id='twoimpliedDegreeImg' src='../diagrams/ST_SKILL.implied2degrees.png' usemap='#twoDegreesRelationshipsDiagramImplied' class='diagram' border='0' alt='' align='left'></a>							
+				</div>
+			  			</div>
+			</div>
+		  </div><!-- /.box-body -->
+		</div>
+	      </section>
+    
+  </div>
+  <!-- /.content-wrapper -->
+  <footer class="main-footer">
+    <div>
+      <div class="pull-right hidden-xs">
+        <a href="https://github.com/schemaspy/schemaspy" title="GitHub for SchemaSpy"><i class="fa fa-github-square fa-2x"></i></a>
+        <a href="http://stackoverflow.com/questions/tagged/schemaspy" title="StackOverflow for SchemaSpy"><i class="fa fa-stack-overflow fa-2x"></i></a>
+      </div>
+      <strong>Generated by <a href="http://schemaspy.org/" class="logo-text"><i class="fa fa-database"></i> SchemaSpy 6.0.0-rc2</a></strong>
+    </div>
+    <!-- /.container -->
+  </footer>
+</div>
+<!-- ./wrapper -->
+
+<!-- jQuery 2.2.3 -->
+<script src="../bower/admin-lte/plugins/jQuery/jquery-2.2.3.min.js"></script>
+<script src="../bower/admin-lte/plugins/jQueryUI/jquery-ui.min.js"></script>
+<!-- Bootstrap 3.3.5 -->
+<script src="../bower/admin-lte/bootstrap/js/bootstrap.min.js"></script>
+<!-- DataTables -->
+<script src="../bower/datatables.net/jquery.dataTables.min.js"></script>
+<script src="../bower/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
+<script src="../bower/datatables.net-buttons/dataTables.buttons.min.js"></script>
+<script src="../bower/datatables.net-buttons-bs/js/buttons.bootstrap.min.js"></script>
+<script src="../bower/datatables.net-buttons/buttons.html5.min.js"></script>
+<script src="../bower/datatables.net-buttons/buttons.print.min.js"></script>
+<script src="../bower/datatables.net-buttons/buttons.colVis.min.js"></script>
+
+<!-- SlimScroll -->
+<script src="../bower/admin-lte/plugins/slimScroll/jquery.slimscroll.min.js"></script>
+<!-- FastClick -->
+<script src="../bower/admin-lte/plugins/fastclick/fastclick.js"></script>
+<!-- Salvattore -->
+<script src="../bower/salvattore/salvattore.min.js"></script>
+<!-- AnchorJS -->
+<script src="../bower/anchor-js/anchor.min.js"></script>
+<!-- CodeMirror -->
+<script src="../bower/codemirror/codemirror.js"></script>
+<script src="../bower/codemirror/sql.js"></script>
+<!-- AdminLTE App -->
+<script src="../bower/admin-lte/dist/js/app.min.js"></script>
+<script src="table.js"></script>
+<script src="../schemaSpy.js"></script>
+</body>
+</html>
